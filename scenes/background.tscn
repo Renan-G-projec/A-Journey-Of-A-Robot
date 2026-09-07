@@ -1,20 +1,76 @@
 [gd_scene format=3 uid="uid://d2lp3oifvrs2l"]
 
-[ext_resource type="Texture2D" uid="uid://dxtt347p8xmmq" path="res://assets/sprites/basicSky.png" id="1_y0upk"]
+[ext_resource type="Script" uid="uid://dv201w42oyfft" path="res://scripts/background.gd" id="1_6vm3t"]
+[ext_resource type="Texture2D" uid="uid://bgfpf2sws0as8" path="res://assets/sprites/nebulaSpace.png" id="1_y0upk"]
 [ext_resource type="Texture2D" uid="uid://bieyxclcfwq8x" path="res://assets/sprites/planet.png" id="2_jougr"]
+[ext_resource type="Texture2D" uid="uid://cyh7xmvi4vkrr" path="res://assets/sprites/nebulaLayer6.png" id="3_l5f8m"]
+[ext_resource type="Texture2D" uid="uid://bejd2tx3nbotl" path="res://assets/sprites/nebulaLayer5.png" id="4_6vm3t"]
+[ext_resource type="Texture2D" uid="uid://beo4buvr14q35" path="res://assets/sprites/nebulaLayer4.png" id="5_8efq7"]
+[ext_resource type="Texture2D" uid="uid://m3v5s1beaebr" path="res://assets/sprites/nebulaLayer3.png" id="6_da6cc"]
+[ext_resource type="Texture2D" uid="uid://wuoy4c1d18jo" path="res://assets/sprites/nebulaLayer2.png" id="7_b6e46"]
+[ext_resource type="Texture2D" uid="uid://b7p28rx8d3k1e" path="res://assets/sprites/nebulaLayer1.png" id="8_td6w2"]
 
 [node name="Background" type="Node2D" unique_id=1208497318]
+script = ExtResource("1_6vm3t")
 
 [node name="Sky" type="Parallax2D" parent="." unique_id=42645975]
-repeat_size = Vector2(640, 0)
+scroll_scale = Vector2(0, 0)
 
-[node name="BasicSky" type="Sprite2D" parent="Sky" unique_id=651844325]
-position = Vector2(320, 180)
+[node name="NebulaSpace" type="Sprite2D" parent="Sky" unique_id=1886011013]
 texture = ExtResource("1_y0upk")
+centered = false
 
 [node name="PlanetAndStars" type="Parallax2D" parent="." unique_id=1336159804]
-scroll_scale = Vector2(0, 1)
+scroll_scale = Vector2(0, 0)
 
 [node name="Planet" type="Sprite2D" parent="PlanetAndStars" unique_id=1996885407]
-position = Vector2(320, 180)
+position = Vector2(324, 148)
 texture = ExtResource("2_jougr")
+
+[node name="Nebula6" type="Parallax2D" parent="." unique_id=1826335888]
+scroll_scale = Vector2(0.1, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer6" type="Sprite2D" parent="Nebula6" unique_id=995945976]
+texture = ExtResource("3_l5f8m")
+centered = false
+
+[node name="Nebula5" type="Parallax2D" parent="." unique_id=235529921]
+scroll_scale = Vector2(0.15, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer5" type="Sprite2D" parent="Nebula5" unique_id=692627363]
+texture = ExtResource("4_6vm3t")
+centered = false
+
+[node name="Nebula4" type="Parallax2D" parent="." unique_id=604235083]
+scroll_scale = Vector2(0.2, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer4" type="Sprite2D" parent="Nebula4" unique_id=1723655848]
+texture = ExtResource("5_8efq7")
+centered = false
+
+[node name="Nebula3" type="Parallax2D" parent="." unique_id=798314025]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer3" type="Sprite2D" parent="Nebula3" unique_id=760173513]
+texture = ExtResource("6_da6cc")
+centered = false
+
+[node name="Nebula2" type="Parallax2D" parent="." unique_id=549214694]
+scroll_scale = Vector2(0.4, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer2" type="Sprite2D" parent="Nebula2" unique_id=741457567]
+texture = ExtResource("7_b6e46")
+centered = false
+
+[node name="Nebula1" type="Parallax2D" parent="." unique_id=1443865730]
+scroll_scale = Vector2(0.5, 0)
+repeat_size = Vector2(640, 0)
+
+[node name="NebulaLayer1" type="Sprite2D" parent="Nebula1" unique_id=94230263]
+texture = ExtResource("8_td6w2")
+centered = false

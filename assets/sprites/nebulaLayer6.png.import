@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxtt347p8xmmq"
-path="res://.godot/imported/basicSky.png-6546403a0a76a89c992fb96d442f0d11.ctex"
+uid="uid://cyh7xmvi4vkrr"
+path="res://.godot/imported/nebulaLayer6.png-6759ce2d80ba9f70005db5671eae462b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/basicSky.png"
-dest_files=["res://.godot/imported/basicSky.png-6546403a0a76a89c992fb96d442f0d11.ctex"]
+source_file="res://assets/sprites/nebulaLayer6.png"
+dest_files=["res://.godot/imported/nebulaLayer6.png-6759ce2d80ba9f70005db5671eae462b.ctex"]
 
 [params]
 
