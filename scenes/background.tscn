@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2lp3oifvrs2l"]
+
+[ext_resource type="Texture2D" uid="uid://dxtt347p8xmmq" path="res://assets/sprites/basicSky.png" id="1_y0upk"]
+[ext_resource type="Texture2D" uid="uid://bieyxclcfwq8x" path="res://assets/sprites/planet.png" id="2_jougr"]
+
+[node name="Background" type="Node2D" unique_id=1208497318]
+
+[node name="Sky" type="Parallax2D" parent="." unique_id=42645975]
+repeat_size = Vector2(640, 0)
+
+[node name="BasicSky" type="Sprite2D" parent="Sky" unique_id=651844325]
+position = Vector2(320, 180)
+texture = ExtResource("1_y0upk")
+
+[node name="PlanetAndStars" type="Parallax2D" parent="." unique_id=1336159804]
+scroll_scale = Vector2(0, 1)
+
+[node name="Planet" type="Sprite2D" parent="PlanetAndStars" unique_id=1996885407]
+position = Vector2(320, 180)
+texture = ExtResource("2_jougr")
