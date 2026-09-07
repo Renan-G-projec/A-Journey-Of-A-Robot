@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dunsoeybawqx3"]
+
+[ext_resource type="Texture2D" uid="uid://dxtt347p8xmmq" path="res://assets/sprites/basicSky.png" id="1_72e8q"]
+[ext_resource type="Texture2D" uid="uid://bieyxclcfwq8x" path="res://assets/sprites/planet.png" id="2_d2op2"]
+
+[node name="MainGame" type="Node2D" unique_id=1068834764]
+
+[node name="BasicSky" type="Sprite2D" parent="." unique_id=1987763246]
+position = Vector2(320, 180)
+texture = ExtResource("1_72e8q")
+
+[node name="PlanetAndStars" type="Parallax2D" parent="." unique_id=1459848000]
+
+[node name="Planet" type="Sprite2D" parent="PlanetAndStars" unique_id=1988728554]
+position = Vector2(320, 180)
+texture = ExtResource("2_d2op2")
