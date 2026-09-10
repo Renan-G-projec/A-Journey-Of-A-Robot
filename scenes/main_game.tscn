@@ -8,7 +8,6 @@
 [node name="MainGame" type="Node2D" unique_id=1068834764]
 
 [node name="Background" parent="." unique_id=1208497318 instance=ExtResource("3_0rdsr")]
-groundY = 180
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
 position = Vector2(329, 31)
