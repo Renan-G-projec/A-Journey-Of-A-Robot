@@ -9,10 +9,10 @@ extends CharacterBody2D
 const jetpack_max_fuel: float = 100.0
 var jetpack_current_fuel: float = 100.0
 var jetpack_consume_rate: float = 10.0
-var jetpack_impulse: float = 40.0
-var jetpack_max_velocity: float = 230.0 
 var jetpack_is_active: bool = false
 
+var jetpack_impulse: float = 980 * 2
+var jetpack_max_velocity: float = 980 * 8
 
 func _physics_process(delta: float) -> void:
     if not is_on_floor():
@@ -21,8 +21,7 @@ func _physics_process(delta: float) -> void:
     jetpack_is_active = Input.is_action_pressed("UseJetpack") && jetpack_current_fuel > 0
     if jetpack_is_active:
         jetpack_current_fuel -= jetpack_consume_rate * delta
-        print(velocity.y)
-        velocity.y -= jetpack_impulse;
+        velocity.y -= jetpack_impulse * delta;
         velocity.y = max(velocity.y, -jetpack_max_velocity)
         
 
