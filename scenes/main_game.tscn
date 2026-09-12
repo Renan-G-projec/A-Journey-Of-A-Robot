@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dunsoeybawqx3"]
 
+[ext_resource type="Script" uid="uid://bnhtu844u6arp" path="res://scripts/main_game.gd" id="1_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://k7uec0kqr3hp" path="res://scenes/tmp_floor.tscn" id="2_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/background.tscn" id="3_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/player.tscn" id="3_d2op2"]
-[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_0rdsr"]
+[ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/resource_ui.tscn" id="5_ipu61"]
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
+script = ExtResource("1_0rdsr")
 
 [node name="Background" parent="." unique_id=1208497318 instance=ExtResource("3_0rdsr")]
 
@@ -15,6 +17,10 @@ position = Vector2(329, 31)
 [node name="tmpFloor" parent="." unique_id=496901746 instance=ExtResource("2_0rdsr")]
 position = Vector2(326, 360)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=909822429]
-position = Vector2(206, 137)
-texture = ExtResource("4_0rdsr")
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1364669269]
+
+[node name="ResourceUI" parent="GameUI" unique_id=1653505830 instance=ExtResource("5_ipu61")]
+offset_right = -16.0
+offset_bottom = -16.0
+
+[connection signal="fuel_changed" from="Player" to="." method="_on_player_fuel_changed"]

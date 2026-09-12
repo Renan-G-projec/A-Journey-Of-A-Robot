@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d0c18hhbo0vr1"]
+
+[ext_resource type="Script" uid="uid://c6f4faw0q1dvn" path="res://scripts/resource_ui.gd" id="1_2nqf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70vka"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l77h"]
+bg_color = Color(0.34480676, 0.10560141, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ipu61"]
+default_base_scale = 0.61
+ProgressBar/styles/background = SubResource("StyleBoxFlat_70vka")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_2l77h")
+
+[node name="ResourceUI" type="Control" unique_id=1653505830]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nqf5")
+
+[node name="Fuel" type="ProgressBar" parent="." unique_id=1878716213]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 16.0
+theme = SubResource("Theme_ipu61")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=60787185]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 14
+text = "Fuel:"
