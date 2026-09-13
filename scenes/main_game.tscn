@@ -23,3 +23,4 @@ offset_top = 16.0
 offset_right = -16.0
 
 [connection signal="fuel_changed" from="Player" to="." method="_on_player_fuel_changed"]
+[connection signal="mined_block" from="Player" to="." method="_on_player_mined_block"]

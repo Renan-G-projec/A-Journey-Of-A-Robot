@@ -5,7 +5,10 @@ extends CharacterBody2D
 @export var SPEED: float = 100.0
 @export var JUMP_VELOCITY: float = -400.0
 
+@onready var drill: Drill = $Drill
+
 signal fuel_changed(new_fuel: float)
+signal mined_block(tilemap_coords: Vector2i, damage: float)
 
 # Jetpack settings
 const jetpack_max_fuel: float = 100.0
@@ -27,7 +30,8 @@ func _physics_process(delta: float) -> void:
         velocity.y = max(velocity.y, -jetpack_max_velocity)
         fuel_changed.emit(jetpack_current_fuel)
         
-
+    if Input.is_action_pressed("MineFacingBlock"): drill.mine()
+    
     var direction := Input.get_axis("ui_left", "ui_right")
     if direction:
         velocity.x = direction * SPEED
@@ -35,3 +39,7 @@ func _physics_process(delta: float) -> void:
         velocity.x = move_toward(velocity.x, 0, SPEED)
 
     move_and_slide()
+
+
+func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
+    mined_block.emit(tilemap_position, damage)

@@ -1,3 +1,5 @@
+# Ad Maiorem Dei Gloriam!
+class_name Drill
 extends Node2D
 
 @onready var raycast: RayCast2D = $RayCast2D
@@ -6,8 +8,12 @@ extends Node2D
 
 # Size in tiles
 @export var range: int = 4
+@export var damage: float = 1
 
-signal mined_block(tilemap_position: Vector2i)
+var is_facing_block: bool = false
+var facing_block_coords: Vector2i = Vector2.ZERO
+
+signal mined_block(tilemap_position: Vector2i, damage: float)
 
 func _physics_process(delta: float) -> void:
     var mouse_pos: Vector2 = get_global_mouse_position()
@@ -23,9 +29,13 @@ func _physics_process(delta: float) -> void:
         
         var collision_tile: Vector2i = collider.local_to_map(collision_point)
         
-        selected_block_effect.visible = true;
+        is_facing_block = true;
+        facing_block_coords = collision_tile
         selected_block_effect.global_position = collider.to_global(collider.map_to_local(collision_tile))
         
-        mined_block.emit(collision_tile)
     else:
-        selected_block_effect.visible = false;
+        is_facing_block = false;
+    selected_block_effect.visible = is_facing_block
+
+func mine() -> void:
+    if (is_facing_block): mined_block.emit(facing_block_coords, damage)

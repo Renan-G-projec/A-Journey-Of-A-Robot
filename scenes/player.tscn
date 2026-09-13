@@ -22,5 +22,6 @@ zoom = Vector2(2, 2)
 process_callback = 0
 position_smoothing_speed = 7.0
 
-[node name="Driil" parent="." unique_id=1818039523 instance=ExtResource("3_qhqgy")]
-range = null
+[node name="Drill" parent="." unique_id=1818039523 instance=ExtResource("3_qhqgy")]
+
+[connection signal="mined_block" from="Drill" to="." method="_on_driil_mined_block"]
