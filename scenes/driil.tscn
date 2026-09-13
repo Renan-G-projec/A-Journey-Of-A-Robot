@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bemutxqtpltv"]
+
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="1_jlir2"]
+[ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://scripts/driil.gd" id="1_nystb"]
+
+[node name="Driil" type="Node2D" unique_id=1818039523]
+script = ExtResource("1_nystb")
+
+[node name="Pivot" type="Node2D" parent="." unique_id=774165111]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1024974286]
+position = Vector2(8, -4)
+scale = Vector2(0.06249999, 0.06250001)
+texture = ExtResource("1_jlir2")
+centered = false
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=808768737]
+target_position = Vector2(0, 0)
+
+[node name="SelectedBlockEffect" type="Sprite2D" parent="." unique_id=1057735066]
+position = Vector2(4, 4)
+scale = Vector2(0.0625, 0.0625)
+texture = ExtResource("1_jlir2")

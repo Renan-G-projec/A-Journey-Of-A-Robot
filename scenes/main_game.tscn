@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://dunsoeybawqx3"]
 
 [ext_resource type="Script" uid="uid://bnhtu844u6arp" path="res://scripts/main_game.gd" id="1_0rdsr"]
-[ext_resource type="PackedScene" uid="uid://k7uec0kqr3hp" path="res://scenes/tmp_floor.tscn" id="2_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/background.tscn" id="3_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/player.tscn" id="3_d2op2"]
 [ext_resource type="Texture2D" uid="uid://cbjt8q2f8iaj5" path="res://assets/sprites/planetTileset.png" id="3_ygxny"]
@@ -110,7 +109,7 @@ texture = ExtResource("3_ygxny")
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_ocxxs"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2147483649
 sources/0 = SubResource("TileSetAtlasSource_wi4c7")
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
@@ -124,9 +123,6 @@ tile_set = SubResource("TileSet_ocxxs")
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
 position = Vector2(329, 31)
-
-[node name="tmpFloor" parent="." unique_id=496901746 instance=ExtResource("2_0rdsr")]
-position = Vector2(326, 360)
 
 [node name="GameUI" type="CanvasLayer" parent="." unique_id=1364669269]
 
