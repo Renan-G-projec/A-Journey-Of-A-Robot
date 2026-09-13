@@ -17,3 +17,5 @@ texture = ExtResource("1_3vyb7")
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1230567338]
+zoom = Vector2(2, 2)
+process_callback = 0
