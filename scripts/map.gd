@@ -9,7 +9,6 @@ var tiles_life: Dictionary[Vector2i, float] = {}
 
 func damage_tile(tile: Vector2i, damage: float) -> void:
     var life: float = tiles_life.get_or_add(tile, tile_base_life)
-    print("LIFEc", life)
     if life - damage <= 0:
         destroy_tile(tile)
     else:

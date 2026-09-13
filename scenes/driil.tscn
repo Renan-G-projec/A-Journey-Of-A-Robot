@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="1_jlir2"]
 [ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://scripts/driil.gd" id="1_nystb"]
+[ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="3_ypvse"]
 
 [node name="Driil" type="Node2D" unique_id=1818039523]
 script = ExtResource("1_nystb")
@@ -18,7 +19,4 @@ centered = false
 target_position = Vector2(0, 0)
 
 [node name="SelectedBlockEffect" type="Sprite2D" parent="." unique_id=1057735066]
-visible = false
-position = Vector2(4, 4)
-scale = Vector2(0.0625, 0.0625)
-texture = ExtResource("1_jlir2")
+texture = ExtResource("3_ypvse")
