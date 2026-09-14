@@ -16,3 +16,4 @@ func damage_tile(tile: Vector2i, damage: float) -> void:
     
 func destroy_tile(tile: Vector2i) -> void:
     layer.set_cells_terrain_connect([tile], 0, -1)
+    tiles_life.erase(tile)
