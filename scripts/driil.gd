@@ -2,9 +2,14 @@
 class_name Drill
 extends Node2D
 
+## TODO: Refactor this file
+## This code mixes particle emission with raycasting and complex behavior
+## All the particle-related code shall be moved soon to it's own script
+
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var sprite: Node2D = $Pivot
 @onready var selected_block_effect: Sprite2D = $SelectedBlockEffect
+@onready var particles: GPUParticles2D = $GPUParticles2D
 
 # Size in tiles
 @export var range: int = 4
@@ -39,7 +44,12 @@ func _physics_process(delta: float) -> void:
         
         is_facing_block = true;
         facing_block_coords = collision_tile
-        selected_block_effect.global_position = collider.to_global(collider.map_to_local(collision_tile))
+        
+        var global_tile_position: Vector2 = collider.to_global(collider.map_to_local(collision_tile))
+        selected_block_effect.global_position = global_tile_position
+
+        # Here it updates in advance. Does not start emitting
+        particles.global_position = global_tile_position
         
     else:
         is_facing_block = false;
@@ -65,3 +75,18 @@ func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = sele
     
 func update_timers(delta: float) -> void:
     facing_block_animation_timer -= delta
+    
+func start_emitting_particles() -> void:
+    particles.emitting = true;
+
+func _process(_delta: float) -> void:
+    if particles.emitting:
+        var process_material: ShaderMaterial = particles.process_material as ShaderMaterial
+        if process_material:
+            process_material.set_shader_parameter("targetPos", sprite.global_position)
+            process_material.set_shader_parameter("initial_velocity", Vector2.from_angle(deg_to_rad(randi_range(0, 360))) * 48)
+            process_material.set_shader_parameter("initial_offset", Vector2(randi_range(-8, 8), randi_range(-4, 4)))
+
+func stop_emitting_particles() -> void:
+    particles.emitting = false
+        

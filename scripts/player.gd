@@ -30,7 +30,12 @@ func _physics_process(delta: float) -> void:
         velocity.y = max(velocity.y, -jetpack_max_velocity)
         fuel_changed.emit(jetpack_current_fuel)
         
-    if Input.is_action_pressed("MineFacingBlock"): drill.mine()
+    if Input.is_action_pressed("MineFacingBlock"):
+        if (drill.is_facing_block): drill.start_emitting_particles()
+        drill.mine()
+    else:
+        drill.stop_emitting_particles()
+    if !(drill.is_facing_block): drill.stop_emitting_particles()
     
     var direction := Input.get_axis("ui_left", "ui_right")
     if direction:
