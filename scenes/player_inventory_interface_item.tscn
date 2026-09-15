@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://2f31h78vfg4k"]
+
+[node name="PlayerInventoryInterfaceItem" type="HBoxContainer" unique_id=1920071123]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461198894]
+centered = false
+
+[node name="Label" type="Label" parent="." unique_id=1308497725]
+layout_mode = 2
