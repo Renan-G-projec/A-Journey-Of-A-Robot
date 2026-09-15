@@ -18,7 +18,6 @@ func destroy_tile(tile: Vector2i) -> void:
     layer.set_cells_terrain_connect([tile], 0, -1)
     tiles_life.erase(tile)
     
-    
 func _ready() -> void:
     layer.clear()
     var world_width: int = 30

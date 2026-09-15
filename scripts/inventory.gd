@@ -5,7 +5,7 @@ extends Resource
 signal inventory_item_changed(item: InventoryItem, new_qtd: int)
 
 func add_item(item: InventoryItem, qtd: int) -> void:
-    data[item] = data.get(item, 0)
+    data[item] = data.get(item, 0) + qtd
     inventory_item_changed.emit(item, data[item])
 
 func remove_item(item: InventoryItem, qtd: int) -> void:
