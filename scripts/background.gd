@@ -6,12 +6,12 @@ extends Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-    if (!camera): return
-    
-    var cameraDiff: float = camera.global_position.y - groundY
-    for c in children:
-        if c is Parallax2D:
-            if (cameraDiff < 0):
-                c.scroll_offset.y = c.scroll_scale.x * -cameraDiff
-            else:
-                c.scroll_offset.y = -cameraDiff 
+	if (!camera): return
+	
+	var cameraDiff: float = camera.global_position.y - groundY
+	for c in children:
+		if c is Parallax2D:
+			if (cameraDiff < 0):
+				c.scroll_offset.y = c.scroll_scale.x * -cameraDiff
+			else:
+				c.scroll_offset.y = -cameraDiff 
