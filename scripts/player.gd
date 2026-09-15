@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @export var SPEED: float = 100.0
 @export var JUMP_VELOCITY: float = -400.0
+@export var inventory: Inventory
 
 @onready var drill: Drill = $Drill
 
