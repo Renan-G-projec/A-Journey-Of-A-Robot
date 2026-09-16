@@ -21,8 +21,11 @@ func destroy_tile(tile: Vector2i) -> void:
 	layer.set_cells_terrain_connect([tile], 0, -1)
 	tiles_life.erase(tile)
 	
-func _ready() -> void: 
+func _ready() -> void:
+	fast_noise_lite.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH 
+	fast_noise_lite.frequency = 0.07
 	layer.clear()
+	fast_noise_lite.seed = randi()
 	generateMap()
 	
 	#var world_width: int = 30 
@@ -49,14 +52,28 @@ func _ready() -> void:
 	
 func generateMap() -> void: 
 	print("Generating map cells...")
-	for x in range (30):
-		for y in range (30):
-			layer.set_cell(Vector2i(x, y), 0, Vector2i(1, 1))
-	print("Finished setting cells!")
-	var used_cells := layer.get_used_cells()
-	print("Cells in memory: ", used_cells.size())
+	var world_width: int = 30
+	var world_height: int = 30
+	var spike_height: int = 4 
+	var top_wall: int = 5
+	var bottom_wall: int = 25
+	var tiles_to_place: Array[Vector2i] = []
+	var min_body_thickness: int = 15
+	
+	for x in range (world_width):
+		var top_noise := fast_noise_lite.get_noise_1d(x+500)
+		var current_top := top_wall + int(top_noise * spike_height)
+	
+		var bottom_noise := fast_noise_lite.get_noise_1d((x*-10)-500)
+		var current_bottom := top_wall + min_body_thickness + int(bottom_noise * spike_height)
+		
+		for y in range(current_top, current_bottom):
+			tiles_to_place.push_back(Vector2i(x, y))
+		
+	layer.set_cells_terrain_connect(tiles_to_place, 0, 0)
+	print("Total tiles placed: ", tiles_to_place.size())
 
-			
+
 	
 	
 	
