@@ -23,7 +23,7 @@ func destroy_tile(tile: Vector2i) -> void:
 	
 func _ready() -> void:
 	fast_noise_lite.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH 
-	fast_noise_lite.frequency = 0.07
+	fast_noise_lite.frequency = 0.3
 	layer.clear()
 	fast_noise_lite.seed = randi()
 	generateMap()
@@ -54,17 +54,18 @@ func generateMap() -> void:
 	print("Generating map cells...")
 	var world_width: int = 30
 	var world_height: int = 30
-	var spike_height: int = 4 
-	var top_wall: int = 5
-	var bottom_wall: int = 25
+	
+	var spike_height: int = 10
+	
+	var top_wall: int = 5 
 	var tiles_to_place: Array[Vector2i] = []
-	var min_body_thickness: int = 15
+	var min_body_thickness: int = 10
 	
 	for x in range (world_width):
-		var top_noise := fast_noise_lite.get_noise_1d(x+500)
-		var current_top := top_wall + int(top_noise * spike_height)
 	
-		var bottom_noise := fast_noise_lite.get_noise_1d((x*-10)-500)
+		var current_top := top_wall
+		
+		var bottom_noise := fast_noise_lite.get_noise_1d((x*25)+500)
 		var current_bottom := top_wall + min_body_thickness + int(bottom_noise * spike_height)
 		
 		for y in range(current_top, current_bottom):
