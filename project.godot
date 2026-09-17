@@ -13,7 +13,6 @@ config_version=5
 config/name="A-Journey-Of-A-Robot"
 run/main_scene="uid://dunsoeybawqx3"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -35,6 +34,10 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[gui]
+
+theme/default_font_antialiasing=0
 
 [input]
 

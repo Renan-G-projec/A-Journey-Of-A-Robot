@@ -4,8 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/background.tscn" id="3_0rdsr"]
 [ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/player.tscn" id="3_d2op2"]
 [ext_resource type="PackedScene" uid="uid://cddsuml8frkxk" path="res://scenes/map.tscn" id="3_ipu61"]
-[ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/resource_ui.tscn" id="5_ipu61"]
-[ext_resource type="PackedScene" uid="uid://difvr8k6spgf5" path="res://scenes/player_inventory_interface.tscn" id="5_ygxny"]
+[ext_resource type="PackedScene" uid="uid://m16kd1u0mdjh" path="res://scenes/game_ui.tscn" id="5_ipu61"]
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
 script = ExtResource("1_0rdsr")
@@ -17,14 +16,7 @@ script = ExtResource("1_0rdsr")
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
 position = Vector2(329, 31)
 
-[node name="GameUI" type="CanvasLayer" parent="." unique_id=1364669269]
-
-[node name="PlayerInventoryInterface" parent="GameUI" unique_id=257689911 instance=ExtResource("5_ygxny")]
-offset_left = 200.0
-
-[node name="ResourceUI" parent="GameUI" unique_id=1653505830 instance=ExtResource("5_ipu61")]
-offset_top = 16.0
-offset_right = -16.0
+[node name="GameUI" parent="." unique_id=435670059 instance=ExtResource("5_ipu61")]
 
 [connection signal="fuel_changed" from="Player" to="." method="_on_player_fuel_changed"]
 [connection signal="mined_block" from="Player" to="." method="_on_player_mined_block"]

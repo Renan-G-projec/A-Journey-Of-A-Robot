@@ -11,7 +11,7 @@ func _ready() -> void:
         container.add_child(item_instance)
         var sprite: Sprite2D = item_instance.get_node("Sprite2D")
         sprite.texture = i.texture
-        var label: Label = item_instance.get_node("Label")
+        var label: RichTextLabel = item_instance.get_node("Label")
         label.text = str(player_inventory.data[i])
         label.position.x += 20 # 16px of sprite2d + 4 padding
         

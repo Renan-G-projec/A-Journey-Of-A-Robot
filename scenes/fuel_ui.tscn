@@ -22,7 +22,7 @@ default_base_scale = 0.61
 ProgressBar/styles/background = SubResource("StyleBoxFlat_70vka")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_2l77h")
 
-[node name="ResourceUI" type="Control" unique_id=1653505830]
+[node name="FuelUI" type="Control" unique_id=1653505830]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,18 +33,19 @@ script = ExtResource("1_2nqf5")
 
 [node name="Fuel" type="ProgressBar" parent="." unique_id=1878716213]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 8.0
-offset_right = 136.0
-offset_bottom = 16.0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 9.999997
+scale = Vector2(0.25, 0.25)
 theme = SubResource("Theme_ipu61")
 value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="." unique_id=60787185]
 layout_mode = 0
-offset_left = 8.0
-offset_right = 48.0
+offset_right = 33.0
 offset_bottom = 20.0
+scale = Vector2(0.25, 0.25)
 theme_override_font_sizes/font_size = 14
 text = "Fuel:"
