@@ -3,6 +3,7 @@ class_name Map
 extends Node2D
 
 @onready var layer: TileMapLayer = $PlanetLayer1
+@onready var ore: TileMapLayer= $OreLayer1
 
 @export var tile_base_life: float = 100.0
 var tiles_life: Dictionary[Vector2i, float] = {}
@@ -24,8 +25,8 @@ func destroy_tile(tile: Vector2i) -> void:
 func _ready() -> void:
 	fast_noise_lite.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH 
 	fast_noise_lite.frequency = 0.3
-	layer.clear()
 	fast_noise_lite.seed = randi()
+	layer.clear()
 	generateMap()
 
 	
@@ -54,7 +55,8 @@ func _ready() -> void:
 func generateMap() -> void: 
 	print("Generating map cells...")
 	var tiles_placed: int = generateTile()
-	generateOre(tiles_placed)
+	var updated_tiles_placed: int = removeTiles(tiles_placed)
+	generateOre(updated_tiles_placed)
 	
 func generateTile() -> int:
 	
@@ -65,7 +67,7 @@ func generateTile() -> int:
 	
 	var top_wall: int = 5 
 	var tiles_to_place: Array[Vector2i] = []
-	var min_body_thickness: int = 10
+	var min_body_thickness: int = 20
 	
 	for x in range (world_width):
 	
@@ -85,16 +87,17 @@ func generateTile() -> int:
 	
 	return int(tiles_placed)
 
-func generateOre (tiles_placed:int) -> void:
+func generateOre (updated_tiles_placed:int) -> void:
+	
 	print("generateOre")
-	print("tiles_placed: ", tiles_placed)
+	print("tiles_placed: ", updated_tiles_placed)
 	var rng := RandomNumberGenerator.new()
 
 	var coal_frequency: float = 0.1
-	var iron_frequency: float = 0.2
+	var iron_frequency: float = 0.05
 	
-	var coal_tiles: int = roundi(tiles_placed * coal_frequency )
-	var iron_tiles: int = roundi(tiles_placed * iron_frequency )
+	var coal_tiles: int = roundi(updated_tiles_placed * coal_frequency )
+	var iron_tiles: int = roundi(updated_tiles_placed * iron_frequency )
 	print("Coal Tiles: ", coal_tiles )
 	print("Iron Tiles: ", iron_tiles )
 	
@@ -102,17 +105,53 @@ func generateOre (tiles_placed:int) -> void:
 	for i in range(coal_tiles):
 		var is_empty: bool = true 
 		while is_empty:
-			var random_cord := Vector2i(rng.randi_range(0,29), rng.randi_range(5,35))
+			var random_cord := Vector2i(rng.randi_range(1,29), rng.randi_range(7,35))
 			print("Random Coordiante", random_cord)
 			if layer.get_cell_source_id(random_cord) != -1: 
 				print("Tile Exists ")
-				layer.set_cell(random_cord, 1, Vector2i(0,0))
+				ore.set_cell(random_cord, 1, Vector2i(0,0))
 				is_empty = false
 		
 			else: 
 				print("Tile Does Not Exist")
 				is_empty = true 
+	
+	for i in range(iron_tiles):
+		var is_empty: bool = true 
+		while is_empty:
+			var random_cord := Vector2i(rng.randi_range(1,29), rng.randi_range(7,35))
+			print("Random Coordiante", random_cord)
+			if layer.get_cell_source_id(random_cord) != -1: 
+				print("Tile Exists ")
+				ore.set_cell(random_cord, 1, Vector2i(1,0))
+				is_empty = false
+		
+			else: 
+				print("Tile Does Not Exist")
+				is_empty = true 
+
+func removeTiles (tiles_placed:int)	-> int:
+	var removable_value: float = 0.2
+	var tiles_removed: int = 0 
+	for x in range (1,29):
+		for y in range(8,35):
+			var coords := Vector2i(x,y)
+	
+			if layer.get_cell_source_id(coords) != -1: 
+				var noise_val := fast_noise_lite.get_noise_2d(x,y)
 				
+				if noise_val > removable_value:
+					layer.erase_cell(coords)
+					tiles_removed = tiles_removed + 1
+				else: 
+					continue
+			else: 
+				continue
+	var updated_tiles_placed := tiles_placed - tiles_removed
+	return updated_tiles_placed
+			
+	
+	
 			
 		
 		
