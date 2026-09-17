@@ -27,6 +27,7 @@ func _ready() -> void:
 	layer.clear()
 	fast_noise_lite.seed = randi()
 	generateMap()
+
 	
 	#var world_width: int = 30 
 	#var layer_1_height: int = 15 
@@ -52,6 +53,11 @@ func _ready() -> void:
 	
 func generateMap() -> void: 
 	print("Generating map cells...")
+	var tiles_placed: int = generateTile()
+	generateOre(tiles_placed)
+	
+func generateTile() -> int:
+	
 	var world_width: int = 30
 	var world_height: int = 30
 	
@@ -72,7 +78,47 @@ func generateMap() -> void:
 			tiles_to_place.push_back(Vector2i(x, y))
 		
 	layer.set_cells_terrain_connect(tiles_to_place, 0, 0)
-	print("Total tiles placed: ", tiles_to_place.size())
+	
+	var tiles_placed: int = tiles_to_place.size()
+	
+	print("Total tiles placed: ", tiles_placed)
+	
+	return int(tiles_placed)
+
+func generateOre (tiles_placed:int) -> void:
+	print("generateOre")
+	print("tiles_placed: ", tiles_placed)
+	var rng := RandomNumberGenerator.new()
+
+	var coal_frequency: float = 0.1
+	var iron_frequency: float = 0.2
+	
+	var coal_tiles: int = roundi(tiles_placed * coal_frequency )
+	var iron_tiles: int = roundi(tiles_placed * iron_frequency )
+	print("Coal Tiles: ", coal_tiles )
+	print("Iron Tiles: ", iron_tiles )
+	
+	
+	for i in range(coal_tiles):
+		var is_empty: bool = true 
+		while is_empty:
+			var random_cord := Vector2i(rng.randi_range(0,29), rng.randi_range(5,35))
+			print("Random Coordiante", random_cord)
+			if layer.get_cell_source_id(random_cord) != -1: 
+				print("Tile Exists ")
+				layer.set_cell(random_cord, 1, Vector2i(0,0))
+				is_empty = false
+		
+			else: 
+				print("Tile Does Not Exist")
+				is_empty = true 
+				
+			
+		
+		
+		
+	
+	
 
 
 	
