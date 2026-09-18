@@ -5,11 +5,16 @@ extends Node2D
 @onready var layer: TileMapLayer = $PlanetLayer1
 @onready var ore: TileMapLayer= $OreLayer1
 
+# Ore loading
+@onready var coal: InventoryItem = preload("res://resources/coal_ore.tres")
+@onready var iron: InventoryItem = preload("res://resources/iron_ore.tres")
+@onready var copper: InventoryItem = preload("res://resources/copper_ore.tres")
+
 @export var tile_base_life: float = 100.0
 var tiles_life: Dictionary[Vector2i, float] = {}
 var fast_noise_lite := FastNoiseLite.new()
 
-
+signal ore_block_destructed(ore: InventoryItem)
 
 # Global Variables For Map Generation
 
@@ -37,6 +42,10 @@ var empty_tile_frequency: float = 0.2
 func damage_tile(tile: Vector2i, damage: float) -> void:
     var life: float = tiles_life.get_or_add(tile, tile_base_life)
     if life - damage <= 0:
+        var mined_ore: InventoryItem = get_ore_at_coord(tile)
+        if mined_ore: 
+            ore_block_destructed.emit(mined_ore)
+            ore.erase_cell(tile)
         destroy_tile(tile)
     else:
         tiles_life[tile] -= damage
@@ -135,17 +144,15 @@ func removeTiles (tiles_placed:int)	-> int:
                 continue
     var updated_tiles_placed := tiles_placed - tiles_removed
     return updated_tiles_placed
-            
-    
-    
-            
-        
-        
-        
-    
-    
 
-
-    
-    
+func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
+    var ore_id: Vector2i = ore.get_cell_atlas_coords(local_map_coords)
+    match ore_id.x: 
+        0:
+            return coal
+        1:
+            return iron
+        2:
+            return copper
+    return null
     

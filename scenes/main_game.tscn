@@ -18,5 +18,6 @@ position = Vector2(329, 31)
 
 [node name="GameUI" parent="." unique_id=435670059 instance=ExtResource("5_ipu61")]
 
+[connection signal="ore_block_destructed" from="Map" to="." method="_on_map_ore_block_destructed"]
 [connection signal="fuel_changed" from="Player" to="." method="_on_player_fuel_changed"]
 [connection signal="mined_block" from="Player" to="." method="_on_player_mined_block"]

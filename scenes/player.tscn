@@ -8,6 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
 
 [node name="Player" type="CharacterBody2D" unique_id=698178977]
+position = Vector2(1, 0)
 script = ExtResource("1_g2els")
 inventory = ExtResource("2_dqkch")
 

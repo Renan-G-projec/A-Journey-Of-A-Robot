@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2f31h78vfg4k"]
 
 [ext_resource type="FontFile" uid="uid://cre136w0y35r1" path="res://fonts/PIXBOB LITE.ttf" id="1_e77e7"]
+[ext_resource type="Script" uid="uid://c2sanviqt8js4" path="res://scripts/player_inventory_interface_item.gd" id="1_krtxs"]
 
 [node name="PlayerInventoryInterfaceItem" type="Control" unique_id=1163283900]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_krtxs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461198894]
 centered = false
