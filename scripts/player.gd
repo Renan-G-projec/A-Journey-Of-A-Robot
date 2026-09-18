@@ -7,6 +7,9 @@ extends CharacterBody2D
 @export var inventory: Inventory
 
 @onready var drill: Drill = $Drill
+@onready var sprite: AnimatedSprite2D = $Sprite
+
+var facing_direction: int = 1
 
 signal fuel_changed(new_fuel: float)
 signal mined_block(tilemap_coords: Vector2i, damage: float)
@@ -25,7 +28,6 @@ func _physics_process(delta: float) -> void:
 
     jetpack_is_active = Input.is_action_pressed("UseJetpack") && jetpack_current_fuel > 0
     if jetpack_is_active:
-        print(jetpack_current_fuel)
         jetpack_current_fuel -= delta
         velocity.y -= jetpack_impulse * delta;
         velocity.y = max(velocity.y, -jetpack_max_velocity)
@@ -38,14 +40,28 @@ func _physics_process(delta: float) -> void:
         drill.stop_emitting_particles()
     if !(drill.is_facing_block): drill.stop_emitting_particles()
     
-    var direction := Input.get_axis("ui_left", "ui_right")
+    var direction := Input.get_axis("GoLeft", "GoRight")
     if direction:
         velocity.x = direction * SPEED
     else:
         velocity.x = move_toward(velocity.x, 0, SPEED)
 
     move_and_slide()
+    update_state()
 
 
 func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
     mined_block.emit(tilemap_position, damage)
+    
+func update_state() -> void:
+    var going_direction: int = Input.get_axis("GoLeft", "GoRight")
+    if going_direction < 0:
+        sprite.play("runningLeft")
+        facing_direction = going_direction
+    elif going_direction > 0:
+        sprite.play("runningRight")
+        facing_direction = going_direction
+    else:
+        if (facing_direction < 0): sprite.play("idleLeft")
+        else: sprite.play("idleRight")
+        
