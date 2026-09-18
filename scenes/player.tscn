@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://yy8secdne8fe" path="res://resources/player_inventory.tres" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://whd0u2irj51h" path="res://assets/sprites/robot-Sheet.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://bemutxqtpltv" path="res://scenes/driil.tscn" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://ci6lgg81quwwb" path="res://scripts/jetpack.gd" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_dqkch")
@@ -165,5 +166,8 @@ position_smoothing_speed = 7.0
 
 [node name="Drill" parent="." unique_id=1818039523 instance=ExtResource("3_qhqgy")]
 position = Vector2(0, -7)
+
+[node name="Jetpack" type="Node" parent="." unique_id=117200082]
+script = ExtResource("5_qlg0r")
 
 [connection signal="mined_block" from="Drill" to="." method="_on_driil_mined_block"]

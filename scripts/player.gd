@@ -8,31 +8,20 @@ extends CharacterBody2D
 
 @onready var drill: Drill = $Drill
 @onready var sprite: AnimatedSprite2D = $Sprite
+@onready var jetpack: Jetpack = $Jetpack
 
 var facing_direction: int = 1
 
 signal fuel_changed(new_fuel: float)
 signal mined_block(tilemap_coords: Vector2i, damage: float)
 
-# Jetpack settings. FUEL MEASURED IN SECONDS
-const jetpack_max_fuel: float = 5.0
-var jetpack_current_fuel: float = 5.0
-var jetpack_is_active: bool = false
-
-var jetpack_impulse: float = 980 * 2
-var jetpack_max_velocity: float = 980 * 8
-
 func _physics_process(delta: float) -> void:
     if not is_on_floor():
         velocity += get_gravity() * delta
 
-    jetpack_is_active = Input.is_action_pressed("UseJetpack") && jetpack_current_fuel > 0
-    if jetpack_is_active:
-        jetpack_current_fuel -= delta
-        velocity.y -= jetpack_impulse * delta;
-        velocity.y = max(velocity.y, -jetpack_max_velocity)
-        fuel_changed.emit(jetpack_current_fuel)
-        
+    jetpack.is_active = Input.is_action_pressed("UseJetpack")
+    velocity.y += jetpack.get_jetpack_velocity(delta)
+    
     if Input.is_action_pressed("MineFacingBlock"):
         if (drill.is_facing_block): drill.start_emitting_particles()
         drill.mine()
