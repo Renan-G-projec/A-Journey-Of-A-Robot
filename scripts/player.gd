@@ -11,10 +11,9 @@ extends CharacterBody2D
 signal fuel_changed(new_fuel: float)
 signal mined_block(tilemap_coords: Vector2i, damage: float)
 
-# Jetpack settings
-const jetpack_max_fuel: float = 100.0
-var jetpack_current_fuel: float = 100.0
-var jetpack_consume_rate: float = 1.0
+# Jetpack settings. FUEL MEASURED IN SECONDS
+const jetpack_max_fuel: float = 5.0
+var jetpack_current_fuel: float = 5.0
 var jetpack_is_active: bool = false
 
 var jetpack_impulse: float = 980 * 2
@@ -26,7 +25,8 @@ func _physics_process(delta: float) -> void:
 
     jetpack_is_active = Input.is_action_pressed("UseJetpack") && jetpack_current_fuel > 0
     if jetpack_is_active:
-        jetpack_current_fuel -= jetpack_consume_rate * delta
+        print(jetpack_current_fuel)
+        jetpack_current_fuel -= delta
         velocity.y -= jetpack_impulse * delta;
         velocity.y = max(velocity.y, -jetpack_max_velocity)
         fuel_changed.emit(jetpack_current_fuel)
