@@ -5,6 +5,6 @@ extends Control
 @onready var sprite: Sprite2D = $Sprite2D
 
 func display_item(item: InventoryItem, qtd: int) -> void:
-    sprite.texture = item.texture
-    label.text = str(qtd)
-    label.position.x = 20
+	sprite.texture = item.texture
+	label.text = str(qtd)
+	label.position.x = 20

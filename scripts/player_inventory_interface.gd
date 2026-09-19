@@ -14,11 +14,11 @@ extends Control
 @onready var item_labels: Dictionary[InventoryItem, PlayerInventoryInterfaceItem] = {coal: coal_label, iron: iron_label, copper: copper_label}
 
 func _ready() -> void:
-    coal_label.display_item(coal, player_inventory.data.get(coal, 0))
-    iron_label.display_item(iron, player_inventory.data.get(iron, 0))
-    copper_label.display_item(copper, player_inventory.data.get(copper, 0))
-    
-    player_inventory.inventory_item_changed.connect(_on_player_inventory_item_changed)
-    
+	coal_label.display_item(coal, player_inventory.data.get(coal, 0))
+	iron_label.display_item(iron, player_inventory.data.get(iron, 0))
+	copper_label.display_item(copper, player_inventory.data.get(copper, 0))
+	
+	player_inventory.inventory_item_changed.connect(_on_player_inventory_item_changed)
+	
 func _on_player_inventory_item_changed(item: InventoryItem, new_qtd: int) -> void:
-    item_labels[item].display_item(item, new_qtd)
+	item_labels[item].display_item(item, new_qtd)
