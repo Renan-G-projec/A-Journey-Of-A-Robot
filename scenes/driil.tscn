@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="3_ypvse"]
 [ext_resource type="Texture2D" uid="uid://c1pyy2io1t04e" path="res://assets/sprites/bigParticle.png" id="4_aubse"]
 [ext_resource type="Shader" uid="uid://dp7je6monj61j" path="res://shaders/driil_particles.gdshader" id="4_d3qb6"]
+[ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://scripts/drill_particles.gd" id="6_oha4g"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ypvse"]
 shader = ExtResource("4_d3qb6")
@@ -41,3 +42,4 @@ texture = ExtResource("4_aubse")
 lifetime = 5.0
 visibility_rect = Rect2(-2, -2, 4, 4)
 process_material = SubResource("ShaderMaterial_ypvse")
+script = ExtResource("6_oha4g")

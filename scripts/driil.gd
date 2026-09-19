@@ -20,10 +20,10 @@ extends Node2D
 var is_facing_block: bool = false
 var facing_block_coords: Vector2i = Vector2.ZERO
 
+signal mined_block(tilemap_position: Vector2i, damage: float)
+
 var facing_block_animation_timer: float = 0
 const facing_block_animation_time: float = 0.3
-
-signal mined_block(tilemap_position: Vector2i, damage: float)
 
 func _physics_process(delta: float) -> void:
 	var mouse_pos: Vector2 = get_global_mouse_position()
@@ -48,31 +48,33 @@ func _physics_process(delta: float) -> void:
 		var global_tile_position: Vector2 = collider.to_global(collider.map_to_local(collision_tile))
 		selected_block_effect.global_position = global_tile_position
 
-		# Here it updates in advance. Does not start emitting
-		particles.global_position = global_tile_position
-		
-	else:
-		is_facing_block = false;
-	
-	update_selected_block_effect(changed_facing_block)
-	update_timers(delta)
+        # Here it updates in advance. Does not start emitting
+        particles.global_position = global_tile_position
+        
+    else:
+        is_facing_block = false;
+        
+    update_timers(delta)
+    update_selected_block_effect(changed_facing_block)
 
 func mine() -> void:
-	if (is_facing_block): 
-		mined_block.emit(facing_block_coords, damage)
-		if (facing_block_animation_timer < 0): 
-			selected_block_effect.queue_redraw()
-			update_selected_block_effect(true, Vector2(0.7, 0.7))
-			facing_block_animation_timer = facing_block_animation_time
+    if (is_facing_block): 
+        mined_block.emit(facing_block_coords, damage)
+        if (facing_block_animation_timer < 0): 
+            selected_block_effect.queue_redraw()
+            update_selected_block_effect(true, Vector2(0.7, 0.7))
+            facing_block_animation_timer = facing_block_animation_time
+        
 
 func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = select_lerp_effect, step: float = select_lerp_effect_step) -> void:
-	selected_block_effect.visible = is_facing_block
-	if (!is_facing_block): return
-	if (reset_lerp):
-		selected_block_effect.scale = effect_scale
-	selected_block_effect.scale.x = lerp(selected_block_effect.scale.x, 1.0, step)
-	selected_block_effect.scale.y = lerp(selected_block_effect.scale.y, 1.0, step)
-	
+    selected_block_effect.visible = is_facing_block
+    if (!is_facing_block): return
+    if (reset_lerp):
+        selected_block_effect.scale = effect_scale
+    selected_block_effect.scale.x = lerp(selected_block_effect.scale.x, 1.0, step)
+    selected_block_effect.scale.y = lerp(selected_block_effect.scale.y, 1.0, step)
+    
+
 func update_timers(delta: float) -> void:
 	facing_block_animation_timer -= delta
 	

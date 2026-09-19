@@ -21,7 +21,7 @@ signal ore_block_destructed(ore: InventoryItem)
 # Global Variables For Map Generation
 
 # Controls the width + height of the world 
-var world_width: int = 30
+var world_width: int = 130
 var world_height: int = 30 # From the top wall, so generation goes up to y = 35 HARD CAP
 
 # Where the map starts the generation from 
@@ -39,7 +39,7 @@ var max_world_y: int = top_wall + min_body_thickness + spike_height
 # Ore + Empty Tile Frequencys 
 var coal_frequency: float = 0.1
 var iron_frequency: float = 0.05
-var empty_tile_frequency: float = 0.2
+var empty_tile_frequency: float = 0.3
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -77,35 +77,31 @@ func _ready() -> void:
 	layer.clear()
 	generateMap()
 
-# The root function, which starts the ga,e
+# The root function, which starts the game
 func generateMap() -> void: 
-	print("Generating map cells...")
-	var tiles_placed: int = generateTile()
-	var updated_tiles_placed: int = removeTiles(tiles_placed)
-	createMainbase()
-	generateOre(updated_tiles_placed)
-	
+
+    var tiles_placed: int = generateTile()
+    var updated_tiles_placed: int = removeTiles(tiles_placed)
+    generateOre(updated_tiles_placed)
+    
 # Generates the Map Tiles
 func generateTile() -> int:
-	
-	var tiles_to_place: Array[Vector2i] = []
-	
-	for x in range (world_width):
-	
-		var current_top := top_wall
-		var bottom_noise := fast_noise_lite.get_noise_1d((x*25)+500)
-		var current_bottom := top_wall + min_body_thickness + int(bottom_noise * spike_height)
-		
-		for y in range(current_top, current_bottom):
-			tiles_to_place.push_back(Vector2i(x, y))
-		
-	layer.set_cells_terrain_connect(tiles_to_place, 0, 0)
-	
-	var tiles_placed: int = tiles_to_place.size()
-	
-	print("Total tiles placed: ", tiles_placed)
-	
-	return int(tiles_placed)
+    
+    var tiles_to_place: Array[Vector2i] = []
+    
+    for x in range (world_width):
+    
+        var current_top := top_wall + 14 * fast_noise_lite.get_noise_1d(x*0.05)
+        var bottom_noise := fast_noise_lite.get_noise_1d((x*25)+500)
+        var current_bottom := top_wall + min_body_thickness + int(bottom_noise * spike_height)
+        
+        for y in range(current_top, current_bottom):
+            tiles_to_place.push_back(Vector2i(x, y))
+        
+    layer.set_cells_terrain_connect(tiles_to_place, 0, 0)
+    
+    var tiles_placed: int = tiles_to_place.size()
+    return int(tiles_placed)
 
 # Get the data ready, before calling placeOres
 func generateOre (updated_tiles_placed:int) -> void:
