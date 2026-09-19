@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0c18hhbo0vr1"]
 
 [ext_resource type="Script" uid="uid://c6f4faw0q1dvn" path="res://scripts/fuel_ui.gd" id="1_2nqf5"]
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="2_a8odj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70vka"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -29,23 +30,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 script = ExtResource("1_2nqf5")
 
 [node name="Fuel" type="ProgressBar" parent="." unique_id=1878716213]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 2.0
-offset_right = 97.0
-offset_bottom = 9.999997
-scale = Vector2(0.25, 0.25)
+offset_left = 11.0
+offset_right = 63.0
+offset_bottom = 3.0
 theme = SubResource("Theme_ipu61")
 value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="." unique_id=60787185]
 layout_mode = 0
-offset_right = 33.0
-offset_bottom = 20.0
+offset_right = 35.0
+offset_bottom = 16.0
 scale = Vector2(0.25, 0.25)
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("2_a8odj")
+theme_override_font_sizes/font_size = 16
 text = "Fuel:"

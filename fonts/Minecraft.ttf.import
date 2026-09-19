@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cre136w0y35r1"
-path="res://.godot/imported/PIXBOB LITE.ttf-9409ae3326b51b6e9be1bb7e931395c0.fontdata"
+uid="uid://crac75pvc8fh1"
+path="res://.godot/imported/Minecraft.ttf-e6722a4c8b9733825dcf3450454c3442.fontdata"
 
 [deps]
 
-source_file="res://fonts/PIXBOB LITE.ttf"
-dest_files=["res://.godot/imported/PIXBOB LITE.ttf-9409ae3326b51b6e9be1bb7e931395c0.fontdata"]
+source_file="res://fonts/Minecraft.ttf"
+dest_files=["res://.godot/imported/Minecraft.ttf-e6722a4c8b9733825dcf3450454c3442.fontdata"]
 
 [params]
 

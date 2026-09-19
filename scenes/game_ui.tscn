@@ -8,11 +8,12 @@ scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="FuelUI" parent="." unique_id=1653505830 instance=ExtResource("2_u001w")]
+offset_top = 8.0
 offset_right = -16.0
-offset_bottom = -16.0
+offset_bottom = -8.0
 
 [node name="PlayerInventoryInterface" parent="." unique_id=257689911 instance=ExtResource("1_rns2u")]
 offset_left = 288.0
-offset_top = 16.0
+offset_top = 12.0
 offset_right = -124.0
-offset_bottom = 24.0
+offset_bottom = 20.0
