@@ -12,7 +12,6 @@ extends CharacterBody2D
 
 var facing_direction: int = 1
 
-signal fuel_changed(new_fuel: float)
 signal mined_block(tilemap_coords: Vector2i, damage: float)
 
 func _physics_process(delta: float) -> void:
