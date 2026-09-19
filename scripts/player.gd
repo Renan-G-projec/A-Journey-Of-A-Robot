@@ -15,8 +15,8 @@ var facing_direction: int = 1
 signal mined_block(tilemap_coords: Vector2i, damage: float)
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+    if not is_on_floor():
+        velocity += get_gravity() * delta
 
 
 	jetpack.is_active = Input.is_action_pressed("UseJetpack")
@@ -43,14 +43,13 @@ func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	mined_block.emit(tilemap_position, damage)
 	
 func update_state() -> void:
-	var going_direction: int = Input.get_axis("GoLeft", "GoRight")
-	if going_direction < 0:
-		sprite.play("runningLeft")
-		facing_direction = going_direction
-	elif going_direction > 0:
-		sprite.play("runningRight")
-		facing_direction = going_direction
-	else:
-		if (facing_direction < 0): sprite.play("idleLeft")
-		else: sprite.play("idleRight")
-		
+    var going_direction: int = Input.get_axis("GoLeft", "GoRight")
+    if going_direction < 0:
+        sprite.play("runningLeft")
+        facing_direction = going_direction
+    elif going_direction > 0:
+        sprite.play("runningRight")
+        facing_direction = going_direction
+    else:
+        if (facing_direction < 0): sprite.play("idleLeft")
+        else: sprite.play("idleRight")

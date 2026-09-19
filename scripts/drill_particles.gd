@@ -1,7 +1,7 @@
 extends GPUParticles2D
 
 
-@onready var sprite: Sprite2D = $"../Pivot/Sprite2D"
+@onready var sprite: AnimatedSprite2D = $"../Pivot/Sprite2D"
 
 func _process(delta: float) -> void:
     if emitting:

@@ -1,11 +1,40 @@
 [gd_scene format=3 uid="uid://bemutxqtpltv"]
 
-[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="1_jlir2"]
 [ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://scripts/driil.gd" id="1_nystb"]
+[ext_resource type="Texture2D" uid="uid://raho3cg8icxc" path="res://assets/sprites/drill.png" id="2_oha4g"]
 [ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="3_ypvse"]
 [ext_resource type="Texture2D" uid="uid://c1pyy2io1t04e" path="res://assets/sprites/bigParticle.png" id="4_aubse"]
 [ext_resource type="Shader" uid="uid://dp7je6monj61j" path="res://shaders/driil_particles.gdshader" id="4_d3qb6"]
 [ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://scripts/drill_particles.gd" id="6_oha4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ws6u"]
+atlas = ExtResource("2_oha4g")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb5bj"]
+atlas = ExtResource("2_oha4g")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xldem"]
+atlas = ExtResource("2_oha4g")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocxxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ws6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb5bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xldem")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 30.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ypvse"]
 shader = ExtResource("4_d3qb6")
@@ -20,11 +49,12 @@ script = ExtResource("1_nystb")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=774165111]
 
-[node name="Sprite2D" type="Sprite2D" parent="Pivot" unique_id=1024974286]
-position = Vector2(8, -4)
-scale = Vector2(0.06249999, 0.06250001)
-texture = ExtResource("1_jlir2")
-centered = false
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Pivot" unique_id=517338204]
+position = Vector2(12, 0)
+scale = Vector2(0.55, 0.55)
+sprite_frames = SubResource("SpriteFrames_ocxxs")
+autoplay = "default"
+frame_progress = 0.14105907
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=808768737]
 target_position = Vector2(0, 0)
@@ -34,7 +64,7 @@ visible = false
 texture = ExtResource("3_ypvse")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=554675850]
-position = Vector2(16, 0)
+position = Vector2(12, 0)
 scale = Vector2(0.06249999, 0.06250001)
 emitting = false
 amount = 90
