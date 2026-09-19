@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="A-Journey-Of-A-Robot"
-run/main_scene="uid://dunsoeybawqx3"
+run/main_scene="uid://bn0e01vcbuygv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]

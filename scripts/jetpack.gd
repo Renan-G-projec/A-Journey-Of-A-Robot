@@ -4,10 +4,10 @@ extends Node
 
 # This file exists only to encapsulate the jetpack logic and remove it from the player script
 # Jetpack settings. FUEL MEASURED IN SECONDS
-@export var max_fuel: float = 100.0
-@export var current_fuel: float = 100.0
+@export var max_fuel: float = 4.0
+@export var current_fuel: float = 4.0
 @export var impulse: float = 980 * 1.4
-@export var refuel_rate: float = 0.05
+@export var refuel_rate: float = 0.1
 
 var is_active: bool = false
 
