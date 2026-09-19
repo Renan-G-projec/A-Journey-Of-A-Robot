@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://m16kd1u0mdjh"]
 
 [ext_resource type="PackedScene" uid="uid://difvr8k6spgf5" path="res://scenes/player_inventory_interface.tscn" id="1_rns2u"]
+[ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://scripts/game_ui.gd" id="1_u001w"]
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/fuel_ui.tscn" id="2_u001w"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
-scale = Vector2(2, 2)
-transform = Transform2D(2, 0, 0, 2, 0, 0)
+script = ExtResource("1_u001w")
 
 [node name="FuelUI" parent="." unique_id=1653505830 instance=ExtResource("2_u001w")]
-offset_top = 8.0
+offset_top = 4.0
 offset_right = -16.0
-offset_bottom = -8.0
+offset_bottom = -12.0
 
 [node name="PlayerInventoryInterface" parent="." unique_id=257689911 instance=ExtResource("1_rns2u")]
-offset_left = 288.0
-offset_top = 12.0
-offset_right = -124.0
-offset_bottom = 20.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 10.0
+offset_right = -40.0
+offset_bottom = 10.0
+grow_horizontal = 2
