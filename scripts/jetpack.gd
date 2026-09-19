@@ -18,6 +18,7 @@ func get_jetpack_velocity(delta: float) -> float:
 func _physics_process(delta: float) -> void:
     if is_active: 
         current_fuel -= delta
+        current_fuel = max(current_fuel, 0)
     else:
         current_fuel += refuel_rate * delta
         current_fuel = min(current_fuel, max_fuel)

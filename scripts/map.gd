@@ -19,7 +19,7 @@ signal ore_block_destructed(ore: InventoryItem)
 # Global Variables For Map Generation
 
 # Controls the width + height of the world 
-var world_width: int = 30
+var world_width: int = 130
 var world_height: int = 30 # From the top wall, so generation goes up to y = 35 HARD CAP
 
 # Where the map starts the generation from 
