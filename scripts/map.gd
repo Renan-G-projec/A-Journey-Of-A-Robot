@@ -5,6 +5,7 @@ extends Node2D
 @onready var layer: TileMapLayer = $PlanetLayer1
 @onready var ore: TileMapLayer= $OreLayer1
 @onready var mainbase: TileMapLayer = $Mainbase
+@onready var techtree: PopupMenu = $PopupMenu
 
 # Ore loading
 @onready var coal: InventoryItem = preload("res://resources/coal_ore.tres")
@@ -39,6 +40,19 @@ var max_world_y: int = top_wall + min_body_thickness + spike_height
 var coal_frequency: float = 0.1
 var iron_frequency: float = 0.05
 var empty_tile_frequency: float = 0.2
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var local_mouse_postion: Vector2 = to_local(get_global_mouse_position())
+		var tile_coords: Vector2 = mainbase.local_to_map(local_mouse_postion)
+		var source_id: int = mainbase.get_cell_source_id(tile_coords) 
+		
+		if source_id != -1:
+			techtree.show()
+			
+			
+			
+	
 
 func damage_tile(tile: Vector2i, damage: float) -> void:
 	var life: float = tiles_life.get_or_add(tile, tile_base_life)
