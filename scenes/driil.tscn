@@ -58,6 +58,7 @@ frame_progress = 0.14105907
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=808768737]
 target_position = Vector2(0, 0)
+collision_mask = 2
 
 [node name="SelectedBlockEffect" type="Sprite2D" parent="." unique_id=1057735066]
 visible = false

@@ -4,8 +4,6 @@ extends Node2D
 
 @onready var layer: TileMapLayer = $PlanetLayer1
 @onready var ore: TileMapLayer= $OreLayer1
-@onready var mainbase: TileMapLayer = $Mainbase
-@onready var techtree: PopupMenu = $PopupMenu
 
 # Ore loading
 @onready var coal: InventoryItem = preload("res://resources/coal_ore.tres")
@@ -16,6 +14,7 @@ extends Node2D
 var tiles_life: Dictionary[Vector2i, float] = {}
 var fast_noise_lite := FastNoiseLite.new()
 
+@onready var mainbase: MainBase = $MainBase
 signal ore_block_destructed(ore: InventoryItem)
 
 # Global Variables For Map Generation
@@ -41,14 +40,6 @@ var coal_frequency: float = 0.1
 var iron_frequency: float = 0.05
 var empty_tile_frequency: float = 0.3
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var local_mouse_postion: Vector2 = to_local(get_global_mouse_position())
-		var tile_coords: Vector2 = mainbase.local_to_map(local_mouse_postion)
-		var source_id: int = mainbase.get_cell_source_id(tile_coords) 
-		if source_id != -1:
-			techtree.show()
-
 func damage_tile(tile: Vector2i, damage: float) -> void:
 	var life: float = tiles_life.get_or_add(tile, tile_base_life)
 	if life - damage <= 0:
@@ -71,6 +62,7 @@ func _ready() -> void:
 	fast_noise_lite.seed = randi()
 	layer.clear()
 	generateMap()
+	create_bainbase()
 
 # The root function, which starts the game
 func generateMap() -> void: 
@@ -86,7 +78,7 @@ func generateTile() -> int:
 	
 	for x in range (world_width):
 	
-		var current_top := top_wall + 14 * fast_noise_lite.get_noise_1d(x*0.05)
+		var current_top := top_wall + 4 * fast_noise_lite.get_noise_1d(x*0.05)
 		var bottom_noise := fast_noise_lite.get_noise_1d((x*25)+500)
 		var current_bottom := top_wall + min_body_thickness + int(bottom_noise * spike_height)
 		
@@ -164,12 +156,10 @@ func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	return null
 
 # Creates the mainbase itself
-func createMainbase() -> void:
-	var start_x : int = (world_width/2)-3
-	var start_y :int = top_wall
-	for x in range(start_x,(world_width/2)+4):
-		for y in range(top_wall, top_wall+3):
-			var atlas_x: int = x - start_x
-			var atlas_y: int = y - start_y
-			mainbase.set_cell(Vector2i(x,y-5),0,Vector2i(atlas_x, atlas_y))
+func create_bainbase() -> void:
+	var start_x: int = (world_width/2)
+	var start_y: int = top_wall + 1
 	
+	mainbase.position.x = start_x * layer.tile_set.tile_size.x
+	mainbase.position.y = start_y * layer.tile_set.tile_size.y 
+	print(mainbase.position)

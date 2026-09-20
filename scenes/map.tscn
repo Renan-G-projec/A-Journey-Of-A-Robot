@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cbjt8q2f8iaj5" path="res://assets/sprites/planetTileset.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://oow0oh87qu11" path="res://scripts/map.gd" id="1_paxxb"]
+[ext_resource type="PackedScene" uid="uid://nx0q84pdxlno" path="res://scenes/main_base.tscn" id="2_2klcf"]
 [ext_resource type="Texture2D" uid="uid://b0hivy1d01jer" path="res://assets/sprites/oreTileset.png" id="3_gldc4"]
-[ext_resource type="Texture2D" uid="uid://coyut8tx0773a" path="res://assets/sprites/mainbase.png" id="4_0cso3"]
-[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="5_2klcf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_paxxb"]
 texture = ExtResource("1_4xfga")
@@ -406,7 +405,8 @@ texture = ExtResource("1_4xfga")
 17:5/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSet" id="TileSet_ygxny"]
-physics_layer_0/collision_layer = 2147483649
+physics_layer_0/collision_layer = 2147483650
+physics_layer_0/collision_mask = 0
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Tiling"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
@@ -422,84 +422,15 @@ texture = ExtResource("3_gldc4")
 [sub_resource type="TileSet" id="TileSet_gldc4"]
 sources/1 = SubResource("TileSetAtlasSource_gldc4")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2klcf"]
-texture = ExtResource("4_0cso3")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:2/0 = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_xslbe"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_2klcf")
-
-[sub_resource type="GDScript" id="GDScript_0cso3"]
-script/source = "extends TileMapLayer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Map" type="Node2D" unique_id=1104527884]
 script = ExtResource("1_paxxb")
 
 [node name="PlanetLayer1" type="TileMapLayer" parent="." unique_id=1186679010]
-position = Vector2(1, -26)
+position = Vector2(128, 232)
 tile_set = SubResource("TileSet_ygxny")
 
 [node name="OreLayer1" type="TileMapLayer" parent="." unique_id=990303313]
-position = Vector2(1, -26)
+position = Vector2(128, 232)
 tile_set = SubResource("TileSet_gldc4")
 
-[node name="Mainbase" type="TileMapLayer" parent="." unique_id=471153989]
-tile_set = SubResource("TileSet_xslbe")
-script = SubResource("GDScript_0cso3")
-
-[node name="PopupMenu" type="PopupMenu" parent="." unique_id=166482884]
-oversampling_override = 1.0
-initial_position = 1
-size = Vector2i(248, 188)
-visible = true
-item_count = 1
-item_0/icon = ExtResource("5_2klcf")
-item_0/id = 0
+[node name="MainBase" parent="." unique_id=699425722 instance=ExtResource("2_2klcf")]
