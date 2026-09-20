@@ -10,17 +10,23 @@ var typing: bool = false
 var growing: bool = false
 
 @onready var initial_scale_x: float = scale.x
+@export var current_mission: Mission
 
 func _ready() -> void:
 	scale.x = 0
 
-func display(mission_text: String = text) -> void:
+func display() -> void:
 	growing = true
 	current_char = 0
 	scale.x = 0
-	text = mission_text
 	visible_characters = 0
 	text_timer = text_velocity
+	
+	text = ""
+	
+	update_text()
+	for item in current_mission.items:
+		item.changed_progress.connect(_on_mission_item_changed_progress)
 	
 	queue_redraw()
 
@@ -38,3 +44,11 @@ func _process(delta: float) -> void:
 			visible_characters += 1
 			if visible_characters >= text.length():
 				typing = false
+
+func update_text() -> void:
+	text = ""
+	for item in current_mission.items:
+		text += item.content + " [color=lime]" + str(item.progress) + "/" + str(item.maximum) + "[/color]\n"
+
+func _on_mission_item_changed_progress(_progress: int) -> void:
+	update_text()

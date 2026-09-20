@@ -2,6 +2,7 @@
 extends CanvasLayer
 
 @onready var transition_rect: ColorRect = $TransitionRect
+@onready var mission: MissionUI = $MissionUI
 var in_transition: bool = false
 
 # This script will just adjust the UI zoom accordingly with the camera.

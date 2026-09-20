@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://scripts/game_ui.gd" id="1_u001w"]
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/fuel_ui.tscn" id="2_u001w"]
 [ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://scenes/mission_ui.tscn" id="4_u2dgd"]
+[ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/initial_mission.tres" id="5_bt76a"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
@@ -32,6 +33,7 @@ offset_right = 128.0
 offset_bottom = 66.0
 text = "Grab 15 coal ores
 Grab 10 iron ores"
+current_mission = ExtResource("5_bt76a")
 
 [node name="TransitionRect" type="ColorRect" parent="." unique_id=707873548]
 visible = false
