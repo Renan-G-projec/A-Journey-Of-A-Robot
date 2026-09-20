@@ -434,3 +434,4 @@ position = Vector2(128, 232)
 tile_set = SubResource("TileSet_gldc4")
 
 [node name="MainBase" parent="." unique_id=699425722 instance=ExtResource("2_2klcf")]
+visible = false

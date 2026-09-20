@@ -9,14 +9,14 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l77h"]
-bg_color = Color(0.34480676, 0.10560141, 0, 1)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_ipu61"]
 default_base_scale = 0.61

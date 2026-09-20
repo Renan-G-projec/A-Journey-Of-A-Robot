@@ -2,11 +2,13 @@ extends Node2D
 
 @onready var player_inventory: Inventory = preload("res://resources/player_inventory.tres")
 @onready var map: Map = $Map
+@onready var mission_ui: MissionUI = $GameUI/MissionUI
 @onready var fuel_ui: FuelUI = $GameUI/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
 
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
+	mission_ui.display()
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 	map.damage_tile(tilemap_coords, damage) 

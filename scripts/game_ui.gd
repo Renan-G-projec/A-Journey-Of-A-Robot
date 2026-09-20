@@ -8,7 +8,6 @@ var in_transition: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	scale = get_viewport().get_camera_2d().zoom
 	transition_rect.color.a = 1.0
 	in_transition = true
 

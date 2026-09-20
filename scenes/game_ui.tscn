@@ -3,26 +3,40 @@
 [ext_resource type="PackedScene" uid="uid://difvr8k6spgf5" path="res://scenes/player_inventory_interface.tscn" id="1_rns2u"]
 [ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://scripts/game_ui.gd" id="1_u001w"]
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/fuel_ui.tscn" id="2_u001w"]
+[ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://scenes/mission_ui.tscn" id="4_u2dgd"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
 
 [node name="FuelUI" parent="." unique_id=1653505830 instance=ExtResource("2_u001w")]
-offset_top = 4.0
-offset_right = -16.0
-offset_bottom = -12.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -568.0
+offset_bottom = -348.0
 
 [node name="PlayerInventoryInterface" parent="." unique_id=257689911 instance=ExtResource("1_rns2u")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -40.0
-offset_top = 10.0
-offset_right = -40.0
-offset_bottom = 10.0
+offset_left = 248.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 16.0
 grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="MissionUI" parent="." unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 66.0
+text = "Grab 15 coal ores
+Grab 10 iron ores"
 
 [node name="TransitionRect" type="ColorRect" parent="." unique_id=707873548]
+visible = false
 offset_right = 640.0
 offset_bottom = 360.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
 color = Color(0, 0, 0, 0)
