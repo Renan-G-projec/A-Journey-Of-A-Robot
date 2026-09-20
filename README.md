@@ -8,9 +8,6 @@ A 2D Game about mining on a planet while managing the planet stability
 The game is made on the Godot Engine tool and is about mining on a planet. The project is on early stage, so no many features are implemented by now.
 This was made by 2 friends for Hackclub Thirdspace.
 
-## Wiki / Planning Page 
-[Notion Doc](https://app.notion.com/p/Game-Design-Plan-3d382c2080d080548bdbe39b169256bd)
-
 ## Mechanics
 The main game mechanic is mining. The player have a drill and has to mine some ores.
 - The player have a jetpack with fuel that recharges
