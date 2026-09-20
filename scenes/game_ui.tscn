@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/fuel_ui.tscn" id="2_u001w"]
 [ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://scenes/mission_ui.tscn" id="4_u2dgd"]
 [ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/initial_mission.tres" id="5_bt76a"]
+[ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/coord_ui.gd" id="6_djwj0"]
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="6_e0pfi"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
@@ -27,13 +29,28 @@ grow_horizontal = 2
 scale = Vector2(2, 2)
 
 [node name="MissionUI" parent="." unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+anchor_top = 0.125
+anchor_bottom = 0.125
 offset_left = 8.0
-offset_top = 24.0
+offset_top = -21.0
 offset_right = 128.0
-offset_bottom = 66.0
+offset_bottom = 21.0
 text = "Grab 15 coal ores
 Grab 10 iron ores"
 current_mission = ExtResource("5_bt76a")
+
+[node name="CoordsUI" type="Label" parent="." unique_id=824360746]
+anchors_preset = -1
+anchor_top = 0.26000002
+anchor_bottom = 0.26000002
+offset_left = 8.0
+offset_top = -5.600006
+offset_right = 69.0
+offset_bottom = 5.399994
+theme_override_fonts/font = ExtResource("6_e0pfi")
+theme_override_font_sizes/font_size = 10
+text = "Coordinates:"
+script = ExtResource("6_djwj0")
 
 [node name="TransitionRect" type="ColorRect" parent="." unique_id=707873548]
 visible = false

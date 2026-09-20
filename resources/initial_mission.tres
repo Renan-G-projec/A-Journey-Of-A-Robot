@@ -6,13 +6,13 @@
 [sub_resource type="Resource" id="Resource_gy68k"]
 script = ExtResource("2_7kpql")
 content = "Mine 10 coal ores"
-maximum = 1
+maximum = 10
 metadata/_custom_type_script = "uid://cqc3miai3hcux"
 
 [sub_resource type="Resource" id="Resource_7kpql"]
 script = ExtResource("2_7kpql")
 content = "Mine 5 iron ores"
-maximum = 1
+maximum = 10
 metadata/_custom_type_script = "uid://cqc3miai3hcux"
 
 [resource]

@@ -11,7 +11,8 @@ script = ExtResource("1_0rdsr")
 
 [node name="Background" parent="." unique_id=1208497318 instance=ExtResource("3_0rdsr")]
 
-[node name="Map" parent="." unique_id=1104527884 instance=ExtResource("3_ipu61")]
+[node name="Map" parent="." unique_id=1104527884 node_paths=PackedStringArray("player") instance=ExtResource("3_ipu61")]
+player = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
 position = Vector2(160, 0)

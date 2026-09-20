@@ -6,6 +6,9 @@ extends Node2D
 @onready var mission_ui: MissionUI = $GameUI/MissionUI
 @onready var fuel_ui: FuelUI = $GameUI/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
+@onready var coords_ui: CoordsUI = $GameUI/CoordsUI
+@onready var layer1: TileMapLayer = $Map/PlanetLayer1
+@onready var player: Player = $Player
 
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
@@ -23,3 +26,11 @@ func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
 		
 	if initial_mission.is_completed():
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _process(delta: float) -> void:
+
+	if layer1:
+		var relative_pos := layer1.to_local(player.global_position)
+		var current_pos := layer1.local_to_map(relative_pos)
+		coords_ui.update_text(current_pos.x, current_pos.y)
