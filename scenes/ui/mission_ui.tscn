@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="1_1dy7u"]
 [ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="2_55xhi"]
-[ext_resource type="Script" uid="uid://buwe2a0d5kxs1" path="res://scripts/mission_ui.gd" id="3_55xhi"]
+[ext_resource type="Script" uid="uid://buwe2a0d5kxs1" path="res://scripts/ui/mission_ui.gd" id="3_55xhi"]
 
 [node name="MissionUI" type="RichTextLabel" unique_id=1778661354]
 anchors_preset = -1

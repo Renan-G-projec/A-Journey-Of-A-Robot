@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dunsoeybawqx3"]
 
-[ext_resource type="Script" uid="uid://bnhtu844u6arp" path="res://scripts/main_game.gd" id="1_0rdsr"]
-[ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/background.tscn" id="3_0rdsr"]
-[ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/player.tscn" id="3_d2op2"]
-[ext_resource type="PackedScene" uid="uid://cddsuml8frkxk" path="res://scenes/map.tscn" id="3_ipu61"]
-[ext_resource type="PackedScene" uid="uid://m16kd1u0mdjh" path="res://scenes/game_ui.tscn" id="5_ipu61"]
-[ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://scenes/machine.tscn" id="6_ygxny"]
+[ext_resource type="Script" uid="uid://bnhtu844u6arp" path="res://scripts/game/main_game.gd" id="1_0rdsr"]
+[ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/game/background.tscn" id="3_0rdsr"]
+[ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/game/player.tscn" id="3_d2op2"]
+[ext_resource type="PackedScene" uid="uid://cddsuml8frkxk" path="res://scenes/game/map.tscn" id="3_ipu61"]
+[ext_resource type="PackedScene" uid="uid://m16kd1u0mdjh" path="res://scenes/ui/game_ui.tscn" id="5_ipu61"]
+[ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://scenes/game/machine.tscn" id="6_ygxny"]
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
 script = ExtResource("1_0rdsr")

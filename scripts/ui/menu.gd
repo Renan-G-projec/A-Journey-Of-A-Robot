@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		if (transition_rect.color.a > 0.97):
 			# Changes to 1 because changing scene can be delayed and the screen should not be transparent
 			transition_rect.color.a = 1
-			get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+			get_tree().change_scene_to_file("res://scenes/game/main_game.tscn")
 	
 func _on_start_game_button_pressed() -> void:
 	on_transition = true

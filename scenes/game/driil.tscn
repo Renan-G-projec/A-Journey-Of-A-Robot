@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bemutxqtpltv"]
 
-[ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://scripts/driil.gd" id="1_nystb"]
+[ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://scripts/game/driil.gd" id="1_nystb"]
 [ext_resource type="Texture2D" uid="uid://raho3cg8icxc" path="res://assets/sprites/drill.png" id="2_oha4g"]
 [ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="3_ypvse"]
 [ext_resource type="Texture2D" uid="uid://c1pyy2io1t04e" path="res://assets/sprites/bigParticle.png" id="4_aubse"]
 [ext_resource type="Shader" uid="uid://dp7je6monj61j" path="res://shaders/driil_particles.gdshader" id="4_d3qb6"]
-[ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://scripts/drill_particles.gd" id="6_oha4g"]
+[ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://scripts/ui/drill_particles.gd" id="6_oha4g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ws6u"]
 atlas = ExtResource("2_oha4g")

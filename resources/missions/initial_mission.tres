@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Mission" format=3 uid="uid://ckfnpssy0lsnt"]
 
-[ext_resource type="Script" uid="uid://dgjhyv2dq546r" path="res://scripts/mission.gd" id="1_gy68k"]
-[ext_resource type="Script" uid="uid://cqc3miai3hcux" path="res://scripts/mission_item.gd" id="2_7kpql"]
+[ext_resource type="Script" uid="uid://dgjhyv2dq546r" path="res://scripts/resources/mission.gd" id="1_gy68k"]
+[ext_resource type="Script" uid="uid://cqc3miai3hcux" path="res://scripts/resources/mission_item.gd" id="2_7kpql"]
 
 [sub_resource type="Resource" id="Resource_gy68k"]
 script = ExtResource("2_7kpql")

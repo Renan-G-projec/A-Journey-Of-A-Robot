@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Inventory" format=3 uid="uid://yy8secdne8fe"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_uptie"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="2_1njko"]
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="2_85a8j"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="3_hfe8y"]
+
+[resource]
+script = ExtResource("2_1njko")
+data = Dictionary[ExtResource("1_uptie"), int]({
+ExtResource("2_85a8j"): 4,
+ExtResource("3_hfe8y"): 1
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"

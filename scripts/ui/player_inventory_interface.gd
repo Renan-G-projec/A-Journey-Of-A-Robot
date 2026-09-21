@@ -1,11 +1,11 @@
 # Ad Maiorem Dei GLoriam!
 extends Control
 
-@onready var player_inventory: Inventory = preload("res://resources/player_inventory.tres")
+@onready var player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
 
-@onready var coal: InventoryItem = preload("res://resources/coal_ore.tres")
-@onready var iron: InventoryItem = preload("res://resources/iron_ore.tres")
-@onready var copper: InventoryItem = preload("res://resources/copper_ore.tres")
+@onready var coal: InventoryItem = preload("res://resources/items/coal_ore.tres")
+@onready var iron: InventoryItem = preload("res://resources/items/iron_ore.tres")
+@onready var copper: InventoryItem = preload("res://resources/items/copper_ore.tres")
 
 @onready var coal_label: PlayerInventoryInterfaceItem = $VBoxContainer/coal
 @onready var iron_label: PlayerInventoryInterfaceItem = $VBoxContainer/iron

@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var player_inventory: Inventory = preload("res://resources/player_inventory.tres")
-@onready var initial_mission: Mission = preload("res://resources/initial_mission.tres")
+@onready var player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
+@onready var initial_mission: Mission = preload("res://resources/missions/initial_mission.tres")
 @onready var map: Map = $Map
 @onready var mission_ui: MissionUI = $GameUI/MissionUI
 @onready var fuel_ui: FuelUI = $GameUI/FuelUI

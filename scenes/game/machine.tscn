@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bkg5px6rfrwxc"]
 
-[ext_resource type="Script" uid="uid://nb8iqeox5fd2" path="res://scripts/machine_scene.gd" id="1_a5lir"]
-[ext_resource type="Resource" uid="uid://budo64b5w2sg5" path="res://resources/copper_smelter.tres" id="2_73k52"]
-[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="3_448ux"]
+[ext_resource type="Script" uid="uid://nb8iqeox5fd2" path="res://scripts/game/machine_scene.gd" id="1_go3l1"]
+[ext_resource type="Resource" uid="uid://budo64b5w2sg5" path="res://resources/machines/copper_smelter.tres" id="2_16yxu"]
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="3_wcua3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
 size = Vector2(64, 64)
 
 [node name="Machine" type="Node2D" unique_id=1638857421]
-script = ExtResource("1_a5lir")
-data = ExtResource("2_73k52")
+script = ExtResource("1_go3l1")
+data = ExtResource("2_16yxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1553108057]
 scale = Vector2(0.24999999, 0.24999999)
-texture = ExtResource("3_448ux")
+texture = ExtResource("3_wcua3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834325648]
 collision_layer = 0
@@ -22,6 +22,7 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="InputPanel" type="Panel" parent="." unique_id=804752484]
+visible = false
 offset_left = -8.0
 offset_top = -40.0
 offset_right = 8.0

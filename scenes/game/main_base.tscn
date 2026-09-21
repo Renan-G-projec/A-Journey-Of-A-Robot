@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://nx0q84pdxlno"]
 
 [ext_resource type="Texture2D" uid="uid://coyut8tx0773a" path="res://assets/sprites/mainbase.png" id="1_0vol3"]
-[ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://scripts/main_base.gd" id="1_7x50c"]
+[ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://scripts/game/main_base.gd" id="1_7x50c"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="3_0mp7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]

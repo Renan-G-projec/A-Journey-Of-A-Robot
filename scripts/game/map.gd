@@ -8,9 +8,9 @@ extends Node2D
 @onready var ore: TileMapLayer = $OreLayer1
 
 # Ore loading
-@onready var coal: InventoryItem = preload("res://resources/coal_ore.tres")
-@onready var iron: InventoryItem = preload("res://resources/iron_ore.tres")
-@onready var copper: InventoryItem = preload("res://resources/copper_ore.tres")
+@onready var coal: InventoryItem = preload("res://resources/items/coal_ore.tres")
+@onready var iron: InventoryItem = preload("res://resources/items/iron_ore.tres")
+@onready var copper: InventoryItem = preload("res://resources/items/copper_ore.tres")
 
 @export var tile_base_life: float = 100.0
 var tiles_life: Dictionary[Vector2i, float] = {}

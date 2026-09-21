@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn0e01vcbuygv"]
 
-[ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scripts/menu.gd" id="1_con2f"]
-[ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/background.tscn" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scripts/ui/menu.gd" id="1_con2f"]
+[ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://scenes/game/background.tscn" id="1_yqeox"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="2_vjb58"]
 [ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="4_mhnvy"]
 [ext_resource type="StyleBox" uid="uid://dfw4s6ixw8gew" path="res://assets/styles/menu_buttons_hover.tres" id="5_4ytvr"]

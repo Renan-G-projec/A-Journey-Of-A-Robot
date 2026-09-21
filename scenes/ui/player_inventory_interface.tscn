@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://difvr8k6spgf5"]
 
-[ext_resource type="Script" uid="uid://c6ty3pp55cfuq" path="res://scripts/player_inventory_interface.gd" id="1_1c7iv"]
-[ext_resource type="PackedScene" uid="uid://2f31h78vfg4k" path="res://scenes/player_inventory_interface_item.tscn" id="2_t00ax"]
+[ext_resource type="Script" uid="uid://c6ty3pp55cfuq" path="res://scripts/ui/player_inventory_interface.gd" id="1_1c7iv"]
+[ext_resource type="PackedScene" uid="uid://2f31h78vfg4k" path="res://scenes/ui/player_inventory_interface_item.tscn" id="2_t00ax"]
 
 [node name="PlayerInventoryInterface" type="Control" unique_id=257689911]
 layout_mode = 3

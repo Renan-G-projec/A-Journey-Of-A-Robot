@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Machine" format=3 uid="uid://budo64b5w2sg5"]
 
-[ext_resource type="Script" uid="uid://b62jxijw510eo" path="res://scripts/machine.gd" id="1_ih6jt"]
-[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/inventoryItem.gd" id="1_r6ffr"]
-[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/copper_ore.tres" id="2_ckyxg"]
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/coal_ore.tres" id="3_8t866"]
-[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/inventory.gd" id="4_0paef"]
+[ext_resource type="Script" uid="uid://b62jxijw510eo" path="res://scripts/resources/machine.gd" id="1_ih6jt"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_r6ffr"]
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="2_ckyxg"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="3_8t866"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="4_0paef"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="6_ckyxg"]
 
 [sub_resource type="Resource" id="Resource_1071v"]

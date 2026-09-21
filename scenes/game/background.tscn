@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2lp3oifvrs2l"]
 
-[ext_resource type="Script" uid="uid://dv201w42oyfft" path="res://scripts/background.gd" id="1_6vm3t"]
+[ext_resource type="Script" uid="uid://dv201w42oyfft" path="res://scripts/game/background.gd" id="1_6vm3t"]
 [ext_resource type="Texture2D" uid="uid://bgfpf2sws0as8" path="res://assets/sprites/nebulaSpace.png" id="1_y0upk"]
 [ext_resource type="Texture2D" uid="uid://bieyxclcfwq8x" path="res://assets/sprites/planet.png" id="2_jougr"]
 [ext_resource type="Texture2D" uid="uid://cyh7xmvi4vkrr" path="res://assets/sprites/nebulaLayer6.png" id="3_l5f8m"]

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://m16kd1u0mdjh"]
 
-[ext_resource type="PackedScene" uid="uid://difvr8k6spgf5" path="res://scenes/player_inventory_interface.tscn" id="1_rns2u"]
-[ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://scripts/game_ui.gd" id="1_u001w"]
-[ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/fuel_ui.tscn" id="2_u001w"]
-[ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://scenes/mission_ui.tscn" id="4_u2dgd"]
-[ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/initial_mission.tres" id="5_bt76a"]
-[ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/coord_ui.gd" id="6_djwj0"]
+[ext_resource type="PackedScene" uid="uid://difvr8k6spgf5" path="res://scenes/ui/player_inventory_interface.tscn" id="1_rns2u"]
+[ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://scripts/ui/game_ui.gd" id="1_u001w"]
+[ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://scenes/ui/fuel_ui.tscn" id="2_u001w"]
+[ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://scenes/ui/mission_ui.tscn" id="4_u2dgd"]
+[ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/missions/initial_mission.tres" id="5_bt76a"]
+[ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/ui/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="6_e0pfi"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
