@@ -15,7 +15,7 @@ enum MachineState {
 		machine_processing_timer = machine_processing_time
 		update_editor_sprite()
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var input_panel: Panel = $InputPanel
 
 var in_inv: Inventory = null
@@ -25,11 +25,13 @@ var machine_processing_time: float = 0
 var machine_processing_timer: float = machine_processing_time
 
 func update_editor_sprite() -> void:
-	if sprite and data and data.texture:
-		sprite.texture = data.texture
+	if sprite and data and data.sprite:
+		sprite.sprite_frames = data.sprite
 
 func _ready() -> void:
 	input_panel.visible = false
+	sync_sprite_with_state()
+	update_editor_sprite()
 	
 # The collision mask assures that only the player layer will trigger these signals
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -60,13 +62,13 @@ func take_input_resources() -> void:
 			items_to_remove.add_item(item, data.input.get_item(item))
 		else:
 			return
-	state = MachineState.PROCESSING
+	set_state(MachineState.PROCESSING)
 	
 	in_inv.remove_items(items_to_remove)
 
 func put_output_resources() -> void:
 	if !out_inv || state != MachineState.FULL: return
-	state = MachineState.FREE
+	set_state(MachineState.FREE)
 	
 	out_inv.add_items(data.output)
 	
@@ -83,8 +85,21 @@ func update_processing_time(delta: float) -> void:
 	if state != MachineState.PROCESSING: return
 	machine_processing_timer -= delta
 	if machine_processing_timer <= 0.0:
-		state = MachineState.FULL
+		set_state(MachineState.FULL)
 		machine_processing_timer = machine_processing_time
+		
+func sync_sprite_with_state() -> void:
+	match state:
+		MachineState.FREE:
+			sprite.play("free")
+		MachineState.PROCESSING:
+			sprite.play("processing")
+		MachineState.FULL:
+			sprite.play("full")
+
+func set_state(new_state: MachineState) -> void:
+	state = new_state
+	sync_sprite_with_state()
 
 func _process(delta: float) -> void:
 	update_input()

@@ -19,9 +19,48 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 script = ExtResource("4_0paef")
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3l54"]
+atlas = ExtResource("6_ckyxg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdu5v"]
+atlas = ExtResource("6_ckyxg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p156m"]
+atlas = ExtResource("6_ckyxg")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go3l1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3l54")
+}],
+"loop": 1,
+"name": &"free",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdu5v")
+}],
+"loop": 1,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p156m")
+}],
+"loop": 1,
+"name": &"processing",
+"speed": 5.0
+}]
+
 [resource]
 script = ExtResource("1_ih6jt")
 input = SubResource("Resource_1071v")
 output = SubResource("Resource_1wx8c")
-texture = ExtResource("6_ckyxg")
+sprite = SubResource("SpriteFrames_go3l1")
 metadata/_custom_type_script = "uid://b62jxijw510eo"

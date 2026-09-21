@@ -1,21 +1,21 @@
 [gd_resource type="Resource" script_class="Mission" format=3 uid="uid://ckfnpssy0lsnt"]
 
-[ext_resource type="Script" uid="uid://dgjhyv2dq546r" path="res://scripts/resources/mission.gd" id="1_gy68k"]
-[ext_resource type="Script" uid="uid://cqc3miai3hcux" path="res://scripts/resources/mission_item.gd" id="2_7kpql"]
+[ext_resource type="Script" uid="uid://cqc3miai3hcux" path="res://scripts/resources/mission_item.gd" id="1_kb3fx"]
+[ext_resource type="Script" uid="uid://dgjhyv2dq546r" path="res://scripts/resources/mission.gd" id="2_d2kny"]
 
 [sub_resource type="Resource" id="Resource_gy68k"]
-script = ExtResource("2_7kpql")
+script = ExtResource("1_kb3fx")
 content = "Mine 10 coal ores"
 maximum = 10
 metadata/_custom_type_script = "uid://cqc3miai3hcux"
 
 [sub_resource type="Resource" id="Resource_7kpql"]
-script = ExtResource("2_7kpql")
+script = ExtResource("1_kb3fx")
 content = "Mine 5 iron ores"
-maximum = 10
+maximum = 5
 metadata/_custom_type_script = "uid://cqc3miai3hcux"
 
 [resource]
-script = ExtResource("1_gy68k")
-items = Array[ExtResource("2_7kpql")]([SubResource("Resource_gy68k"), SubResource("Resource_7kpql")])
+script = ExtResource("2_d2kny")
+items = Array[ExtResource("1_kb3fx")]([SubResource("Resource_gy68k"), SubResource("Resource_7kpql")])
 metadata/_custom_type_script = "uid://dgjhyv2dq546r"
