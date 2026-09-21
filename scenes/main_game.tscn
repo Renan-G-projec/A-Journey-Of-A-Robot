@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ca7k54w3cw001" path="res://scenes/player.tscn" id="3_d2op2"]
 [ext_resource type="PackedScene" uid="uid://cddsuml8frkxk" path="res://scenes/map.tscn" id="3_ipu61"]
 [ext_resource type="PackedScene" uid="uid://m16kd1u0mdjh" path="res://scenes/game_ui.tscn" id="5_ipu61"]
+[ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://scenes/machine.tscn" id="6_ygxny"]
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
 script = ExtResource("1_0rdsr")
@@ -13,6 +14,9 @@ script = ExtResource("1_0rdsr")
 
 [node name="Map" parent="." unique_id=1104527884 node_paths=PackedStringArray("player") instance=ExtResource("3_ipu61")]
 player = NodePath("../Player")
+
+[node name="Machine" parent="." unique_id=1638857421 instance=ExtResource("6_ygxny")]
+position = Vector2(48, 328)
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
 position = Vector2(160, 0)
