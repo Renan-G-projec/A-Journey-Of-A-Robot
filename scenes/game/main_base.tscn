@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://nx0q84pdxlno"]
+
+[ext_resource type="Texture2D" uid="uid://coyut8tx0773a" path="res://assets/sprites/mainbase.png" id="1_0vol3"]
+[ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://scripts/game/main_base.gd" id="1_7x50c"]
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="3_0mp7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
+size = Vector2(112, 56)
+
+[node name="MainBase" type="Node2D" unique_id=699425722]
+script = ExtResource("1_7x50c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980374303]
+position = Vector2(0, -24)
+texture = ExtResource("1_0vol3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1125824423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254950940]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_ocxxs")
+
+[node name="TechTree" type="PopupMenu" parent="." unique_id=1461047847]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(248, 188)
+item_count = 1
+item_0/icon = ExtResource("3_0mp7v")
+item_0/id = 0

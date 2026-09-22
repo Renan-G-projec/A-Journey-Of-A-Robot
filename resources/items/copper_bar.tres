@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dofq3p1g0fv5w"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_34h6c"]
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="2_gwmrl"]
+
+[resource]
+script = ExtResource("1_34h6c")
+name = "Copper Bar"
+texture = ExtResource("2_gwmrl")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

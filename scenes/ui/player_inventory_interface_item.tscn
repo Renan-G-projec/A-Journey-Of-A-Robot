@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://2f31h78vfg4k"]
+
+[ext_resource type="Script" uid="uid://c2sanviqt8js4" path="res://scripts/ui/player_inventory_interface_item.gd" id="1_krtxs"]
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="2_krtxs"]
+[ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="2_xamj8"]
+
+[node name="PlayerInventoryInterfaceItem" type="Control" unique_id=1163283900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_krtxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1461198894]
+position = Vector2(-1, -1)
+texture = ExtResource("2_xamj8")
+centered = false
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=380815318]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 64.0
+offset_bottom = 16.0
+theme_override_fonts/normal_font = ExtResource("2_krtxs")
+theme_override_font_sizes/normal_font_size = 8
+text = "0
+"
+vertical_alignment = 1

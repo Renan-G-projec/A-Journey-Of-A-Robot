@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://btutqnkv4hfmc"]
+
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="1_1dy7u"]
+[ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="2_55xhi"]
+[ext_resource type="Script" uid="uid://buwe2a0d5kxs1" path="res://scripts/ui/mission_ui.gd" id="3_55xhi"]
+
+[node name="MissionUI" type="RichTextLabel" unique_id=1778661354]
+anchors_preset = -1
+offset_right = 192.0
+offset_bottom = 96.0
+theme_override_fonts/normal_font = ExtResource("1_1dy7u")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = ExtResource("2_55xhi")
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+script = ExtResource("3_55xhi")
