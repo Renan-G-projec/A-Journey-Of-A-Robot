@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://chs5ip7fes88t"]
+
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://bofnca6iykrje" path="res://scripts/resources/node.gd" id="2_epypp"]
+
+[node name="Techtree_node" type="Button" unique_id=2096825410]
+toggle_mode = true
+icon = ExtResource("1_0e48y")
+script = ExtResource("2_epypp")

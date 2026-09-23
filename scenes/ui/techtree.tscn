@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4nf3m3efiyqh"]
+
+[ext_resource type="PackedScene" uid="uid://chs5ip7fes88t" path="res://scenes/ui/techtree_node.tscn" id="1_8kas3"]
+
+[node name="Techtree" type="Control" unique_id=861137030]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Techtree_node" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = -313.0
+offset_top = 15.0
+offset_right = -145.0
+offset_bottom = 183.0
