@@ -69,7 +69,6 @@ func take_input_resources() -> void:
 func put_output_resources() -> void:
 	if !out_inv || state != MachineState.FULL: return
 	set_state(MachineState.FREE)
-	
 	out_inv.add_items(data.output)
 	
 func update_input() -> void:
