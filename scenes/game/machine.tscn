@@ -8,7 +8,15 @@
 atlas = ExtResource("3_go3l1")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_uonoc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdu5v"]
+atlas = ExtResource("3_go3l1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p156m"]
+atlas = ExtResource("3_go3l1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go3l1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -18,12 +26,18 @@ animations = [{
 "name": &"free",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdu5v")
+}],
 "loop": 1,
 "name": &"full",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p156m")
+}],
 "loop": 1,
 "name": &"processing",
 "speed": 5.0
@@ -38,8 +52,8 @@ data = ExtResource("2_16yxu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708262700]
 scale = Vector2(0.24999999, 0.24999999)
-sprite_frames = SubResource("SpriteFrames_uonoc")
-animation = &"full"
+sprite_frames = SubResource("SpriteFrames_go3l1")
+animation = &"free"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834325648]
 collision_layer = 0

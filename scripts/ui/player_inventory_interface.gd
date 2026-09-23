@@ -1,24 +1,35 @@
 # Ad Maiorem Dei GLoriam!
+@tool
 extends Control
 
-@onready var player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
+@export var player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
+@onready var container: VBoxContainer = $VBoxContainer
 
-@onready var coal: InventoryItem = preload("res://resources/items/coal_ore.tres")
-@onready var iron: InventoryItem = preload("res://resources/items/iron_ore.tres")
-@onready var copper: InventoryItem = preload("res://resources/items/copper_ore.tres")
+@onready var container_item: PackedScene = preload("res://scenes/ui/player_inventory_interface_item.tscn")
 
-@onready var coal_label: PlayerInventoryInterfaceItem = $VBoxContainer/coal
-@onready var iron_label: PlayerInventoryInterfaceItem = $VBoxContainer/iron
-@onready var copper_label: PlayerInventoryInterfaceItem = $VBoxContainer/copper
-
-@onready var item_labels: Dictionary[InventoryItem, PlayerInventoryInterfaceItem] = {coal: coal_label, iron: iron_label, copper: copper_label}
+var items_shown: Array[InventoryItem]
 
 func _ready() -> void:
-	coal_label.display_item(coal, player_inventory.data.get(coal, 0))
-	iron_label.display_item(iron, player_inventory.data.get(iron, 0))
-	copper_label.display_item(copper, player_inventory.data.get(copper, 0))
-	
 	player_inventory.inventory_item_changed.connect(_on_player_inventory_item_changed)
+	fetch_inventory()
 	
 func _on_player_inventory_item_changed(item: InventoryItem, new_qtd: int) -> void:
-	item_labels[item].display_item(item, new_qtd)
+	var item_index: int = items_shown.find(item)
+	var children: Array[Node] = container.get_children()
+	if item_index >= 0:
+		var item_interface: PlayerInventoryInterfaceItem = children[item_index] as PlayerInventoryInterfaceItem
+		if item_interface: item_interface.display_item(item, new_qtd)
+	else:
+		var item_to_display := container_item.instantiate()
+		container.add_child(item_to_display)
+		item_to_display.display_item(item, player_inventory.get_item(item))
+		items_shown.push_back(item)
+
+func fetch_inventory() -> void:
+	items_shown = []
+	for i in container.get_children(): i.queue_free()
+	for item in player_inventory.data:
+		var item_to_display := container_item.instantiate()
+		container.add_child(item_to_display)
+		item_to_display.display_item(item, player_inventory.get_item(item))
+		items_shown.push_back(item)

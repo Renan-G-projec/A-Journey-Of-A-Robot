@@ -4,11 +4,13 @@
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="2_1njko"]
 [ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="2_85a8j"]
 [ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="3_hfe8y"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="4_k12gj"]
 
 [resource]
 script = ExtResource("2_1njko")
 data = Dictionary[ExtResource("1_uptie"), int]({
-ExtResource("2_85a8j"): 4,
-ExtResource("3_hfe8y"): 1
+ExtResource("3_hfe8y"): 0,
+ExtResource("2_85a8j"): 0,
+ExtResource("4_k12gj"): 0
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
