@@ -1,6 +1,7 @@
 # Ad Maiorem Dei Gloriam!
 class_name PlayerInventoryInterfaceItem
 extends Control
+
 @onready var label: RichTextLabel = $Label
 @onready var sprite: Sprite2D = $Sprite2D
 
