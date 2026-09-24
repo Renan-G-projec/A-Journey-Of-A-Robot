@@ -16,7 +16,7 @@ enum MachineState {
 		update_editor_sprite()
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var input_panel: Panel = $InputPanel
+@onready var panel: InputPanel = $InputPanel
 
 var in_inv: Inventory = null
 var out_inv: Inventory = null
@@ -29,13 +29,16 @@ func update_editor_sprite() -> void:
 		sprite.sprite_frames = data.sprite
 
 func _ready() -> void:
-	input_panel.visible = false
+	panel.visible = false
 	sync_sprite_with_state()
 	update_editor_sprite()
 	
+	for input in data.input.data:
+		panel.add_input(input, data.input.data[input])
+	
 # The collision mask assures that only the player layer will trigger these signals
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	input_panel.visible = true;
+	panel.visible = true;
 	
 	listening_for_input = body is Player
 	
@@ -46,7 +49,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	input_panel.visible = false;
+	panel.visible = false;
 
 	listening_for_input = !(body is Player)
 	

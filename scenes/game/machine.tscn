@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://nb8iqeox5fd2" path="res://scripts/game/machine_scene.gd" id="1_go3l1"]
 [ext_resource type="Resource" uid="uid://budo64b5w2sg5" path="res://resources/machines/copper_smelter.tres" id="2_16yxu"]
 [ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="3_go3l1"]
+[ext_resource type="PackedScene" uid="uid://c5fyly0fnhxia" path="res://scenes/ui/input_panel.tscn" id="4_16yxu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16yxu"]
 atlas = ExtResource("3_go3l1")
@@ -144,6 +145,7 @@ data = ExtResource("2_16yxu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708262700]
 sprite_frames = SubResource("SpriteFrames_go3l1")
 animation = &"free"
+frame_progress = 0.5640856
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834325648]
 collision_layer = 0
@@ -151,12 +153,9 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=51214618]
 shape = SubResource("RectangleShape2D_ocxxs")
 
-[node name="InputPanel" type="Panel" parent="." unique_id=804752484]
-visible = false
-offset_left = -8.0
-offset_top = -40.0
-offset_right = 8.0
-offset_bottom = -24.0
+[node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
+offset_top = -32.0
+offset_bottom = -18.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
