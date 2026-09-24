@@ -1,16 +1,90 @@
 [gd_scene format=3 uid="uid://c4nf3m3efiyqh"]
 
 [ext_resource type="PackedScene" uid="uid://chs5ip7fes88t" path="res://scenes/ui/techtree_node.tscn" id="1_8kas3"]
+[ext_resource type="Script" uid="uid://wipqk7nssg8e" path="res://scripts/ui/techtree.gd" id="1_uak1h"]
+[ext_resource type="Texture2D" uid="uid://bosgkrmrth7tg" path="res://assets/sprites/iron_ore.png" id="4_n3ral"]
+[ext_resource type="Texture2D" uid="uid://bfmk18budti48" path="res://assets/sprites/copper_ore.png" id="5_151rp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d2kny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmhcj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syhwj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jsxaf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aeoh2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_86ywn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbp0s"]
 
 [node name="Techtree" type="Control" unique_id=861137030]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 128.0
+offset_bottom = 80.0
+script = ExtResource("1_uak1h")
 
-[node name="Techtree_node" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
+[node name="A" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -313.0
-offset_top = 15.0
-offset_right = -145.0
-offset_bottom = 183.0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2kny")
+icon = ExtResource("5_151rp")
+
+[node name="B" parent="." unique_id=1304348069 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 49.0
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bmhcj")
+icon = ExtResource("4_n3ral")
+
+[node name="C" parent="." unique_id=1097369655 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 112.0
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syhwj")
+icon = ExtResource("4_n3ral")
+
+[node name="D" parent="." unique_id=1630890213 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 32.0
+offset_bottom = 81.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jsxaf")
+icon = ExtResource("5_151rp")
+
+[node name="E" parent="." unique_id=109521910 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 81.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aeoh2")
+icon = ExtResource("5_151rp")
+
+[node name="F" parent="." unique_id=1371278899 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 64.0
+offset_right = 96.0
+offset_bottom = 80.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_86ywn")
+icon = ExtResource("5_151rp")
+
+[node name="G" parent="." unique_id=190434061 instance=ExtResource("1_8kas3")]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 80.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fbp0s")
+icon = ExtResource("5_151rp")

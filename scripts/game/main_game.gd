@@ -10,6 +10,9 @@ extends Node2D
 @onready var layer1: TileMapLayer = $Map/PlanetLayer1
 @onready var player: Player = $Player
 
+
+var techtree: bool = false
+
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
 	mission_ui.display()
@@ -34,3 +37,6 @@ func _process(delta: float) -> void:
 		var relative_pos := layer1.to_local(player.global_position)
 		var current_pos := layer1.local_to_map(relative_pos)
 		coords_ui.update_text(current_pos.x, current_pos.y)
+	
+	if Input.is_action_just_pressed("OpenTechTree"):
+		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")

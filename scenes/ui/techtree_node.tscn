@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bofnca6iykrje" path="res://scripts/resources/node.gd" id="2_epypp"]
 
 [node name="Techtree_node" type="Button" unique_id=2096825410]
+offset_right = 168.0
+offset_bottom = 168.0
 toggle_mode = true
 icon = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
