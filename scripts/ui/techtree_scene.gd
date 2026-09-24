@@ -11,13 +11,4 @@ func _process(delta: float) -> void:
 
 
 func _on_sub_viewport_container_resized() -> void:
-	$SubViewportContainer/SubViewport.size = $SubViewportContainer.size
-
-
-func _on_button_pressed() -> void:
-	$SubViewportContainer/SubViewport/Techtree.reset_nodes() # Replace with function body.
-
-
-func _on_h_slider_value_changed(value: float) -> void:
-	$ViewportContainer/Viewport/Camera2D.zoom.x = value
-	$ViewportContainer/Viewport/Camera2D.zoom.y = value
+	$SubViewportContainer/SubViewport.size = $SubViewportContainer.size# Replace with function body.

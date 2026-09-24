@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://hx00a0a61yb3"]
 
 [ext_resource type="Script" uid="uid://bftk4itewiwoe" path="res://scripts/ui/techtree_scene.gd" id="1_1x505"]
-[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="1_xoi5o"]
 [ext_resource type="PackedScene" uid="uid://c4nf3m3efiyqh" path="res://scenes/ui/techtree.tscn" id="2_1x505"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkk7v"]
-
 [node name="MarginContainer" type="MarginContainer" unique_id=2062859002]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.156
+anchor_bottom = 0.178
+offset_right = 0.15999603
+offset_bottom = -0.08000183
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1x505")
@@ -19,35 +18,19 @@ layout_mode = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=411035646]
 handle_input_locally = false
-size = Vector2i(150, 150)
+size = Vector2i(100, 64)
 render_target_update_mode = 4
 
 [node name="Techtree" parent="SubViewportContainer/SubViewport" unique_id=861137030 instance=ExtResource("2_1x505")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
+anchors_preset = -1
+anchor_right = 0.8
+anchor_bottom = 0.42700002
+offset_right = 20.0
+offset_bottom = 28.671999
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport" unique_id=380389726]
-position = Vector2(128, 128)
-
-[node name="Button" type="Button" parent="SubViewportContainer" unique_id=1292479820]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_xoi5o")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_dkk7v")
-text = "RESET"
-
-[node name="HSlider" type="HSlider" parent="SubViewportContainer" unique_id=1239533236]
-layout_mode = 2
-min_value = 1.0
-max_value = 5.0
-step = 0.25
-value = 1.0
+anchor_mode = 0
 
 [connection signal="resized" from="SubViewportContainer" to="." method="_on_sub_viewport_container_resized"]
-[connection signal="pressed" from="SubViewportContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="value_changed" from="SubViewportContainer/HSlider" to="." method="_on_h_slider_value_changed"]
