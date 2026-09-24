@@ -4,6 +4,10 @@
 [ext_resource type="Resource" uid="uid://budo64b5w2sg5" path="res://resources/machines/copper_smelter.tres" id="2_16yxu"]
 [ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="3_go3l1"]
 [ext_resource type="PackedScene" uid="uid://c5fyly0fnhxia" path="res://scenes/ui/input_panel.tscn" id="4_16yxu"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="5_suq68"]
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="6_kts8q"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="7_j6ra2"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="8_35ie4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16yxu"]
 atlas = ExtResource("3_go3l1")
@@ -138,6 +142,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
 size = Vector2(64, 64)
 
+[sub_resource type="Resource" id="Resource_1071v"]
+script = ExtResource("8_35ie4")
+data = Dictionary[ExtResource("5_suq68"), int]({
+ExtResource("6_kts8q"): 4,
+ExtResource("7_j6ra2"): 1
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
 [node name="Machine" type="Node2D" unique_id=1638857421]
 script = ExtResource("1_go3l1")
 data = ExtResource("2_16yxu")
@@ -145,7 +157,7 @@ data = ExtResource("2_16yxu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708262700]
 sprite_frames = SubResource("SpriteFrames_go3l1")
 animation = &"free"
-frame_progress = 0.5640856
+frame_progress = 0.51299644
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834325648]
 collision_layer = 0
@@ -154,8 +166,11 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
-offset_top = -32.0
-offset_bottom = -18.0
+visible = false
+offset_top = -48.0
+offset_right = 64.0
+offset_bottom = 0.0
+input = SubResource("Resource_1071v")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

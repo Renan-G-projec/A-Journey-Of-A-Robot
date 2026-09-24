@@ -4,8 +4,8 @@
 [ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="1_qsgeh"]
 
 [node name="Panel" type="PanelContainer" unique_id=1016321527]
-offset_right = 14.0
-offset_bottom = 14.0
+offset_right = 2.0
+offset_bottom = 2.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
 size_flags_vertical = 4
