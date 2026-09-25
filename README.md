@@ -20,6 +20,9 @@ The main game mechanic is mining. The player have a drill and has to mine some o
     - The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
 - The game have a menu
 
+## Installation
+Download the files from GitHub as a ZIP file, unzip the folder, and install Godot. Then, import these files as a new project to run it locally.
+
 ## Future plans
 The game isn't complete yet. The next features are planned:
 - [] Make the main base
