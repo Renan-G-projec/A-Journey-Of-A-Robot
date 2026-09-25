@@ -3,7 +3,7 @@ class_name Map
 extends Node2D
 
 @export var player: Player
-@onready var spawn: Marker2D = $Spawn
+@onready var spawn: Marker2D = $MainBase/Spawn
 @onready var layer: TileMapLayer = $PlanetLayer1
 @onready var ore: TileMapLayer = $OreLayer1
 
@@ -66,7 +66,7 @@ func _ready() -> void:
 	generateMap()
 	if player and spawn:
 		player.global_position = spawn.global_position
-	# create_mainbase()
+		mainbase.global_position = spawn.global_position
 
 # The root function, which starts the game
 func generateMap() -> void:
@@ -238,12 +238,3 @@ func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 		2:
 			return copper
 	return null
-
-# Creates the mainbase itself
-func create_mainbase() -> void:
-	var start_x: int = (world_width/2)
-	var start_y: int = top_wall + 1
-
-	mainbase.position.x = start_x * layer.tile_set.tile_size.x
-	mainbase.position.y = start_y * layer.tile_set.tile_size.y
-	print(mainbase.position)

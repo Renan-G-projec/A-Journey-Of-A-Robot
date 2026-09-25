@@ -19,18 +19,22 @@ enum MenuState {
 
 var state: MenuState = MenuState.CLOSED
 
+@export var menus: Dictionary[EventBus.MenuType, Control]
+
 func _ready() -> void:
 	overlay.color.a = 0.0
 	panel.scale.x = 0.0
 	EventBus.request_open_menu.connect(_on_menu_requested)
+	EventBus.request_close_menu.connect(_on_menu_close_requested)
 
 func _on_menu_requested(type: EventBus.MenuType) -> void:
-	match type:
-		EventBus.MenuType.PAUSE:
-			if state == MenuState.CLOSED:
-				open_menu()
-			else:
-				close_menu()
+	if state != MenuState.OPEN:
+		open_menu()
+	set_current_menu(type)
+	
+func _on_menu_close_requested() -> void:
+	close_menu()
+	
 
 func _process(_delta: float) -> void:
 	match state:
@@ -55,3 +59,7 @@ func open_menu() -> void:
 
 func close_menu() -> void:
 	state = MenuState.CLOSING
+
+func set_current_menu(type: EventBus.MenuType) -> void:
+	for menu in menus:
+		menus[menu].visible = menu == type

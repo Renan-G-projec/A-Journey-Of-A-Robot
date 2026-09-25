@@ -532,6 +532,6 @@ position = Vector2(128, 232)
 tile_set = SubResource("TileSet_gldc4")
 
 [node name="MainBase" parent="." unique_id=699425722 instance=ExtResource("2_2klcf")]
-visible = false
+position = Vector2(128, 231)
 
-[node name="Spawn" type="Marker2D" parent="." unique_id=1051603631]
+[node name="Spawn" type="Marker2D" parent="MainBase" unique_id=1051603631]

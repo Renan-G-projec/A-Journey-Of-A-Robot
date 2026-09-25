@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/missions/initial_mission.tres" id="5_bt76a"]
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/ui/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="6_e0pfi"]
-[ext_resource type="PackedScene" uid="uid://y8oxopog6vr7" path="res://scenes/ui/menu_manager.tscn" id="8_yvtb5"]
+[ext_resource type="PackedScene" uid="uid://y8oxopog6vr7" path="res://scenes/ui/ui_manager.tscn" id="8_yvtb5"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
