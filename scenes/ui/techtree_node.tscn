@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chs5ip7fes88t"]
 
-[ext_resource type="Texture2D" uid="uid://ddbgc2yc1450k" path="res://assets/sprites/robotStage1TechTree.png" id="1_ggpi4"]
+[ext_resource type="Texture2D" uid="uid://ddbgc2yc1450k" path="res://assets/sprites/playerStage1TechTree.png" id="1_ggpi4"]
 [ext_resource type="Script" uid="uid://bofnca6iykrje" path="res://scripts/resources/node.gd" id="2_epypp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r78b4"]

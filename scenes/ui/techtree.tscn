@@ -42,7 +42,7 @@ offset_right = 112.0
 offset_bottom = 64.0
 script = ExtResource("1_uak1h")
 
-[node name="A" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
+[node name="player_stage1" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 48.0
 offset_right = 64.0
@@ -55,7 +55,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_1x505")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_uve0u")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o3sd2")
 
-[node name="B" parent="." unique_id=1304348069 instance=ExtResource("1_8kas3")]
+[node name="drill_stage1" parent="." unique_id=1304348069 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 32.0
@@ -71,7 +71,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_28683")
 disabled = true
 icon = ExtResource("4_n3ral")
 
-[node name="C" parent="." unique_id=1097369655 instance=ExtResource("1_8kas3")]
+[node name="furnance_stage1" parent="." unique_id=1097369655 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 32.0

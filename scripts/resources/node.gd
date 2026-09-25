@@ -1,5 +1,20 @@
 extends Button
 
+@export var coal_ore := preload("res://resources/items/coal_ore.tres") as InventoryItem 
+@export var iron_ore := preload("res://resources/items/iron_ore.tres") as InventoryItem
+@export var copper_ore := preload("res://resources/items/copper_ore.tres") as InventoryItem
+@onready var player_stage_1: Button = $"."
+
+var inventory := preload("res://resources/inventories/player_inventory.tres") as Inventory
+
+var coal_ore_count: int = 0 
+var iron_ore_count: int = 0
+var copper_ore_count: int = 0
+
+var coal_ore_cost: int = 0
+var iron_ore_cost: int = 0
+var coppor_ore_cost: int = 0
+
 var neighbors: Array = [] : set = set_neighbors
 var lines : Array = []
 var neighbor_lines : Array = []
@@ -32,7 +47,39 @@ func _process(delta: float) -> void:
 
 
 func _on_toggled(toggled_on: bool) -> void:
-	if toggled_on:
+	print("NAME", self.name)
+	if self.name == "player_stage1":
+		coal_ore_cost = 2
+		iron_ore_cost = 0
+		coppor_ore_cost = 0
+	elif self.name == "drill_stage1":
+		coal_ore_cost = 0
+		iron_ore_cost = 2
+		coppor_ore_cost = 0
+	elif self.name == "furnance_stage1":
+		coal_ore_cost = 0
+		iron_ore_cost = 0
+		coppor_ore_cost = 2
+
+	if toggled_on and coal_ore_count > coal_ore_cost and iron_ore_count > iron_ore_cost and copper_ore_count > coppor_ore_cost:
 		for neighbor: Button in neighbors: 
 			neighbor.disabled = false
-		disabled = true
+		self.disabled = true
+		inventory.remove_item(coal_ore,coal_ore_cost)
+		inventory.remove_item(iron_ore,iron_ore_cost)
+		inventory.remove_item(copper_ore,coppor_ore_cost)
+	
+		
+func _ready() -> void:
+
+	if inventory != null:
+		print("Inventory Loaded")
+		inventory.inventory_item_changed.connect(on_inventory_change)
+
+func on_inventory_change(item: InventoryItem, new_qtd: int) -> void:
+	if item == coal_ore:
+		coal_ore_count = new_qtd
+	elif item == iron_ore:
+		iron_ore_count = new_qtd
+	elif item == copper_ore:
+		copper_ore_count = new_qtd
