@@ -7,17 +7,28 @@
 [ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/missions/initial_mission.tres" id="5_bt76a"]
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/ui/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="6_e0pfi"]
+[ext_resource type="PackedScene" uid="uid://y8oxopog6vr7" path="res://scenes/ui/menu_manager.tscn" id="8_yvtb5"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
 
-[node name="FuelUI" parent="." unique_id=1653505830 instance=ExtResource("2_u001w")]
+[node name="Control" type="Control" parent="." unique_id=695698216]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FuelUI" parent="Control" unique_id=1653505830 instance=ExtResource("2_u001w")]
+layout_mode = 1
 offset_left = 8.0
 offset_top = 8.0
 offset_right = -568.0
 offset_bottom = -348.0
 
-[node name="PlayerInventoryInterface" parent="." unique_id=257689911 instance=ExtResource("1_rns2u")]
+[node name="PlayerInventoryInterface" parent="Control" unique_id=257689911 instance=ExtResource("1_rns2u")]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -28,7 +39,8 @@ offset_bottom = 16.0
 grow_horizontal = 2
 scale = Vector2(2, 2)
 
-[node name="MissionUI" parent="." unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+[node name="MissionUI" parent="Control" unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+layout_mode = 1
 anchor_top = 0.125
 anchor_bottom = 0.125
 offset_left = 8.0
@@ -39,7 +51,8 @@ text = "Grab 15 coal ores
 Grab 10 iron ores"
 current_mission = ExtResource("5_bt76a")
 
-[node name="CoordsUI" type="Label" parent="." unique_id=824360746]
+[node name="CoordsUI" type="Label" parent="Control" unique_id=824360746]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.26000002
 anchor_bottom = 0.26000002
@@ -52,10 +65,13 @@ theme_override_font_sizes/font_size = 10
 text = "Coordinates:"
 script = ExtResource("6_djwj0")
 
-[node name="TransitionRect" type="ColorRect" parent="." unique_id=707873548]
+[node name="TransitionRect" type="ColorRect" parent="Control" unique_id=707873548]
 visible = false
+layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 color = Color(0, 0, 0, 0)
+
+[node name="MenuManager" parent="." unique_id=1331567166 instance=ExtResource("8_yvtb5")]

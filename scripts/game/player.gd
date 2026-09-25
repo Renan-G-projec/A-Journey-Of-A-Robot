@@ -38,7 +38,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_state()
 
-
 func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	mined_block.emit(tilemap_position, damage)
 	

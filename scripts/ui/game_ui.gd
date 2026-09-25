@@ -1,8 +1,8 @@
 # Ad Maiorem Dei Gloriam!
 extends CanvasLayer
 
-@onready var transition_rect: ColorRect = $TransitionRect
-@onready var mission: MissionUI = $MissionUI
+@onready var transition_rect: ColorRect = $Control/TransitionRect
+@onready var mission: MissionUI = $Control/MissionUI
 var in_transition: bool = false
 
 # This script will just adjust the UI zoom accordingly with the camera.

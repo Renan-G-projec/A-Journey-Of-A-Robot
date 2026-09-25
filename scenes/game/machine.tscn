@@ -157,7 +157,6 @@ data = ExtResource("2_16yxu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708262700]
 sprite_frames = SubResource("SpriteFrames_go3l1")
 animation = &"free"
-frame_progress = 0.51299644
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834325648]
 collision_layer = 0
@@ -166,9 +165,9 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
-visible = false
+offset_left = -16.0
 offset_top = -48.0
-offset_right = 64.0
+offset_right = 48.0
 offset_bottom = 0.0
 input = SubResource("Resource_1071v")
 

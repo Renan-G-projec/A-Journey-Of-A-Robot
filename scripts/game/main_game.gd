@@ -3,10 +3,10 @@ extends Node2D
 @onready var player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
 @onready var initial_mission: Mission = preload("res://resources/missions/initial_mission.tres")
 @onready var map: Map = $Map
-@onready var mission_ui: MissionUI = $GameUI/MissionUI
-@onready var fuel_ui: FuelUI = $GameUI/FuelUI
+@onready var mission_ui: MissionUI = $GameUI/Control/MissionUI
+@onready var fuel_ui: FuelUI = $GameUI/Control/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
-@onready var coords_ui: CoordsUI = $GameUI/CoordsUI
+@onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
 @onready var layer1: TileMapLayer = $Map/PlanetLayer1
 @onready var player: Player = $Player
 
@@ -40,3 +40,5 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("OpenTechTree"):
 		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")
+	if Input.is_action_just_pressed("PauseGame"):
+		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
