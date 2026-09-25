@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5fyly0fnhxia"]
+
+[ext_resource type="Script" uid="uid://bhrlxp8b2qb5l" path="res://scripts/ui/input_panel.gd" id="1_gsi3p"]
+[ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="1_qsgeh"]
+
+[node name="Panel" type="PanelContainer" unique_id=1016321527]
+offset_right = 2.0
+offset_bottom = 2.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("1_qsgeh")
+script = ExtResource("1_gsi3p")
+
+[node name="InputPanel" type="VBoxContainer" parent="." unique_id=344237744]
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1

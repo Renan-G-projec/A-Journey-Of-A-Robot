@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://bnnevp5xdtdqr"]
+
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="1_0d62a"]
+
+[resource]
+default_font = ExtResource("1_0d62a")
+default_font_size = 14
+Label/font_sizes/font_size = 14

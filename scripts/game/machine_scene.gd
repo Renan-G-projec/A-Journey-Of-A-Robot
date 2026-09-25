@@ -2,6 +2,9 @@
 @tool
 extends Node2D
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var panel: InputPanel = $InputPanel
+
 enum MachineState {
 	FREE,
 	PROCESSING,
@@ -11,12 +14,10 @@ enum MachineState {
 @export var data: Machine:
 	set(value):
 		data = value
-		machine_processing_time = value.process_time;
+		machine_processing_time = value.process_time
 		machine_processing_timer = machine_processing_time
-		update_editor_sprite()
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var input_panel: Panel = $InputPanel
+		update_editor_sprite()
 
 var in_inv: Inventory = null
 var out_inv: Inventory = null
@@ -27,15 +28,17 @@ var machine_processing_timer: float = machine_processing_time
 func update_editor_sprite() -> void:
 	if sprite and data and data.sprite:
 		sprite.sprite_frames = data.sprite
+	if panel and data:
+		panel.input = data.input
 
 func _ready() -> void:
-	input_panel.visible = false
+	panel.visible = false
 	sync_sprite_with_state()
 	update_editor_sprite()
 	
 # The collision mask assures that only the player layer will trigger these signals
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	input_panel.visible = true;
+	panel.visible = true;
 	
 	listening_for_input = body is Player
 	
@@ -46,7 +49,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	input_panel.visible = false;
+	panel.visible = false;
 
 	listening_for_input = !(body is Player)
 	
