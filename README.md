@@ -32,6 +32,11 @@ and then open on Godot.
 
 ## Input mapping
 - The input mapping is the following:
+- D / Right -> Goes right
+- A / Left -> Goes left
+- E -> Interacts with special elements (such as machines and the main base. Not used on v1.0.0)
+- Space -> Activates the jetpack
+- Click -> Mines the ores 
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
