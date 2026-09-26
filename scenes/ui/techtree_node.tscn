@@ -1,30 +1,39 @@
 [gd_scene format=3 uid="uid://chs5ip7fes88t"]
 
 [ext_resource type="Texture2D" uid="uid://ddbgc2yc1450k" path="res://assets/sprites/playerStage1TechTree.png" id="1_ggpi4"]
-[ext_resource type="Script" uid="uid://bofnca6iykrje" path="res://scripts/resources/node.gd" id="2_epypp"]
+[ext_resource type="Script" uid="uid://bofnca6iykrje" path="res://scripts/ui/techtree_node.gd" id="2_epypp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r78b4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggpi4"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3ral"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_151rp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28683"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quyhe"]
-
-[node name="Techtree_node" type="Button" unique_id=2096825410]
+[node name="TechtreeNode" type="Button" unique_id=2096825410]
 offset_right = 16.0
 offset_bottom = 16.0
 theme_override_colors/icon_focus_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_pressed_color = Color(0.827451, 0.827451, 0.827451, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_r78b4")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_n3ral")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_151rp")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_28683")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_quyhe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ggpi4")
 toggle_mode = true
 icon = ExtResource("1_ggpi4")
 script = ExtResource("2_epypp")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=128180163]
+z_index = -1
+width = 4.0
 
 [connection signal="toggled" from="." to="." method="_on_toggled"]

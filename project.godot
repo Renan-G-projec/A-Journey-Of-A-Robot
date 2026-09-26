@@ -13,6 +13,8 @@ config_version=5
 config/name="A-Journey-Of-A-Robot"
 run/main_scene="uid://bn0e01vcbuygv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/use_filter=false
 
 [autoload]
 
