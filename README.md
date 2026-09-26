@@ -8,6 +8,9 @@ A 2D Game about mining on a planet while managing the planet stability
 The game is made on the Godot Engine tool and is about mining on a planet. The project is on early stage, so no many features are implemented by now.
 This was made by 2 friends for Hackclub Thirdspace.
 
+## How to run
+Go to the itch.io page https://huntorbehunted83.itch.io/journey-of-a-robot and play it directly on your browser! Optionally, you can build it from source [right here](#build-from-source)
+
 ## Mechanics
 The main game mechanic is mining. The player have a drill and has to mine some ores.
 - The player have a jetpack with fuel that recharges
@@ -20,15 +23,22 @@ The main game mechanic is mining. The player have a drill and has to mine some o
     - The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
 - The game have a menu
 
-## Installation
-Download the files from GitHub as a ZIP file, unzip the folder, and install Godot. Then, import these files as a new project to run it locally.
+## Build from source
+You can download the github source code as a ZIP, unzip it and import on the Godot Game Engine. Alternativelly, you can use git:
+```bash
+git clone https://github.com/Renan-G-Projec/A-Journey-Of-A-Robot.git
+```
+and then open on Godot.
+
+## Input mapping
+- The input mapping is the following:
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
-- [] Make the main base
-- [] Make a tech-tree system
+- [] Make the main base (in progress...)
+- [] Make a tech-tree system (in progress...)
 - [] Make a crafting system
-- [] Add a smelting system 
+- [x] Add a smelting system 
 - [] Add more layers (1/7)
 
 
