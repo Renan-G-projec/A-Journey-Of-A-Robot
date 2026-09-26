@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 
 
 func _on_toggled(toggled_on: bool) -> void:
-	print("NAME", self.name)
+	print("NAME", self.name, coal_ore_count, iron_ore_count, copper_ore_count)
 	if self.name == "player_stage1":
 		coal_ore_cost = 2
 		iron_ore_cost = 0
@@ -77,6 +77,7 @@ func _ready() -> void:
 		coal_ore_count = inventory.get_item(coal_ore)
 		iron_ore_count = inventory.get_item(iron_ore)
 		copper_ore_count = inventory.get_item(copper_ore)
+		print("Coal: ", coal_ore_count, "Iron: ", iron_ore_count, "Copper", copper_ore_count )
 
 func on_inventory_change(item: InventoryItem, new_qtd: int) -> void:
 	if item == coal_ore:
@@ -85,4 +86,5 @@ func on_inventory_change(item: InventoryItem, new_qtd: int) -> void:
 		iron_ore_count = new_qtd
 	elif item == copper_ore:
 		copper_ore_count = new_qtd
+	print("Coal: ", coal_ore_count, "Iron: ", iron_ore_count, "Copper", copper_ore_count )
 		

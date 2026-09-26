@@ -9,35 +9,46 @@ extends Node2D
 @onready var coords_ui: CoordsUI = $GameUI/CoordsUI
 @onready var layer1: TileMapLayer = $Map/PlanetLayer1
 @onready var player: Player = $Player
-@onready var techtree: MarginContainer = $Techtree
+@onready var techtree: MarginContainer = $GameUI/Techtree
 @onready var background: Node2D = $Background
 @onready var machine: Node2D = $Machine
 @onready var game_ui: CanvasLayer = $GameUI
 
 
 var is_tech_tree_open:bool = false
+var is_scene_changing: bool = false
+
 
 func _ready() -> void:
+	print("GAME SCENE READY")
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	fuel_ui.set_jetpack(jetpack)
 	if initial_mission and initial_mission.items.size() >= 2:
 		initial_mission.items[0].set_progress(0)
 		initial_mission.items[1].set_progress(0)
 
+
 	mission_ui.display()
-	techtree.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	techtree.visible = false
+	techtree.process_mode = Node.PROCESS_MODE_ALWAYS
+	techtree.visible = false 
+
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
+	if is_scene_changing: return
 	map.damage_tile(tilemap_coords, damage) 
 
 func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
+	if is_scene_changing: return
 	player_inventory.add_item(ore, 1)
 	if ore.name == "Coal":
 		initial_mission.items[0].set_progress(initial_mission.items[0].progress + 1)
 	elif ore.name == "Iron":
 		initial_mission.items[1].set_progress(initial_mission.items[1].progress + 1)
 		
-	if initial_mission.is_completed():
+	if initial_mission.is_completed() and not is_scene_changing:
+		is_scene_changing = true
+		get_tree().paused = false 
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 
@@ -53,11 +64,11 @@ func _process(delta: float) -> void:
 		print("Tech Tree Opened", is_tech_tree_open)
 		if is_tech_tree_open == true:
 			techtree.visible = false 
-			#get_tree().paused = false 
+			get_tree().paused = false 
 			is_tech_tree_open = false
 		else:
 			techtree.visible = true
-			#get_tree().paused = true
+			get_tree().paused = true
 			is_tech_tree_open = true
 			
 			

@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://resources/missions/initial_mission.tres" id="5_bt76a"]
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://scripts/ui/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="6_e0pfi"]
+[ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://scenes/ui/techtree_scene.tscn" id="8_yvtb5"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
@@ -59,3 +60,16 @@ offset_bottom = 360.0
 mouse_filter = 2
 mouse_behavior_recursive = 1
 color = Color(0, 0, 0, 0)
+
+[node name="Techtree" parent="." unique_id=2062859002 instance=ExtResource("8_yvtb5")]
+top_level = true
+z_index = 1000
+anchor_top = 0.35000002
+anchor_right = 0.16700001
+anchor_bottom = 0.531
+offset_left = 4.0
+offset_right = -2.880005
+offset_bottom = -1.1600037
+grow_horizontal = 1
+grow_vertical = 1
+offset_transform_enabled = true
