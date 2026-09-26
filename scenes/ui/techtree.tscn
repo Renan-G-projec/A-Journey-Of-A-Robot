@@ -1,88 +1,41 @@
 [gd_scene format=3 uid="uid://c4nf3m3efiyqh"]
 
 [ext_resource type="PackedScene" uid="uid://chs5ip7fes88t" path="res://scenes/ui/techtree_node.tscn" id="1_8kas3"]
-[ext_resource type="Script" uid="uid://wipqk7nssg8e" path="res://scripts/ui/techtree.gd" id="1_uak1h"]
 [ext_resource type="Texture2D" uid="uid://bb8scfhg75f3b" path="res://assets/sprites/drillStage1TechTree.png" id="4_n3ral"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="5_151rp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocdmj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xoi5o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1x505"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uve0u"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3sd2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmhcj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r78b4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3ral"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_151rp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28683"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syhwj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quyhe"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kope0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yucib"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m0jy"]
-
-[node name="Techtree" type="Control" unique_id=861137030]
+[node name="Techtree" type="Control" unique_id=922205304]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 112.0
-offset_bottom = 64.0
-script = ExtResource("1_uak1h")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="player_stage1" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
+[node name="Root" parent="." unique_id=2096825410 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 48.0
-offset_right = 64.0
-offset_bottom = 40.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ocdmj")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xoi5o")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_1x505")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_uve0u")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_o3sd2")
+upgrade_name = "Main base"
+upgrade_description = "The start of... everything?
+How you got in this planet?"
 
-[node name="drill_stage1" parent="." unique_id=1304348069 instance=ExtResource("1_8kas3")]
+[node name="drill_stage1" parent="Root" unique_id=1304348069 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 32.0
-offset_right = 33.0
-offset_bottom = 48.0
+offset_top = 34.0
+offset_bottom = 54.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_bmhcj")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_r78b4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_n3ral")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_151rp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_28683")
 disabled = true
 icon = ExtResource("4_n3ral")
 
-[node name="furnance_stage1" parent="." unique_id=1097369655 instance=ExtResource("1_8kas3")]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 32.0
-offset_right = 96.0
-offset_bottom = 48.0
+[node name="furnance_stage1" parent="Root" unique_id=1097369655 instance=ExtResource("1_8kas3")]
+layout_mode = 1
+offset_left = 40.0
+offset_right = 60.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_syhwj")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_quyhe")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_kope0")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_yucib")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6m0jy")
 disabled = true
 icon = ExtResource("5_151rp")

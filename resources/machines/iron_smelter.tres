@@ -1,76 +1,86 @@
-[gd_scene format=3 uid="uid://bkg5px6rfrwxc"]
+[gd_resource type="Resource" script_class="Machine" format=3 uid="uid://bg3br0p6666vh"]
 
-[ext_resource type="Script" uid="uid://nb8iqeox5fd2" path="res://scripts/game/machine_scene.gd" id="1_go3l1"]
-[ext_resource type="Resource" uid="uid://budo64b5w2sg5" path="res://resources/machines/copper_smelter.tres" id="2_16yxu"]
-[ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="3_go3l1"]
-[ext_resource type="PackedScene" uid="uid://c5fyly0fnhxia" path="res://scenes/ui/input_panel.tscn" id="4_16yxu"]
-[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="5_suq68"]
-[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="6_kts8q"]
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="7_j6ra2"]
-[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="8_35ie4"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_ky3hs"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="3_2ia2n"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="3_53fti"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="4_4loav"]
+[ext_resource type="Script" uid="uid://b62jxijw510eo" path="res://scripts/resources/machine.gd" id="6_1qwcs"]
+[ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="7_f0xo2"]
+
+[sub_resource type="Resource" id="Resource_1071v"]
+script = ExtResource("4_4loav")
+data = Dictionary[ExtResource("1_ky3hs"), int]({
+ExtResource("3_53fti"): 1,
+ExtResource("3_2ia2n"): 4
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[sub_resource type="Resource" id="Resource_1wx8c"]
+script = ExtResource("4_4loav")
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16yxu"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcua3"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(96, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jjnr"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqevt"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_suq68"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kts8q"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6ra2"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35ie4"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4n5m2"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_axjdp"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2lbtv"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sydv2"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eaank"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aadvy"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_opp5i"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5axb"]
-atlas = ExtResource("3_go3l1")
+atlas = ExtResource("7_f0xo2")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_go3l1"]
@@ -139,38 +149,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
-size = Vector2(64, 64)
-
-[sub_resource type="Resource" id="Resource_1071v"]
-script = ExtResource("8_35ie4")
-data = Dictionary[ExtResource("5_suq68"), int]({
-ExtResource("6_kts8q"): 4,
-ExtResource("7_j6ra2"): 1
-})
-metadata/_custom_type_script = "uid://crbcquplyyvye"
-
-[node name="Machine" type="Node2D" unique_id=1638857421]
-script = ExtResource("1_go3l1")
-data = ExtResource("2_16yxu")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708262700]
-sprite_frames = SubResource("SpriteFrames_go3l1")
-animation = &"free"
-
-[node name="Area2D" type="Area2D" parent="." unique_id=834325648]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=51214618]
-shape = SubResource("RectangleShape2D_ocxxs")
-
-[node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
-visible = false
-offset_left = -48.0
-offset_top = -48.0
-offset_right = 16.0
-offset_bottom = 0.0
+[resource]
+script = ExtResource("6_1qwcs")
 input = SubResource("Resource_1071v")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+output = SubResource("Resource_1wx8c")
+sprite = SubResource("SpriteFrames_go3l1")
+metadata/_custom_type_script = "uid://b62jxijw510eo"

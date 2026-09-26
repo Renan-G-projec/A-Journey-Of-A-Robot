@@ -14,6 +14,7 @@ var growing: bool = false
 
 func _ready() -> void:
 	scale.x = 0
+	update_text()
 
 func display() -> void:
 	growing = true
