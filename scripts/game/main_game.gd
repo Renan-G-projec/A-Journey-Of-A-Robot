@@ -9,13 +9,23 @@ extends Node2D
 @onready var coords_ui: CoordsUI = $GameUI/CoordsUI
 @onready var layer1: TileMapLayer = $Map/PlanetLayer1
 @onready var player: Player = $Player
+@onready var techtree: MarginContainer = $Techtree
+@onready var background: Node2D = $Background
+@onready var machine: Node2D = $Machine
+@onready var game_ui: CanvasLayer = $GameUI
 
 
-var techtree: bool = false
+var is_tech_tree_open:bool = false
 
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
+	if initial_mission and initial_mission.items.size() >= 2:
+		initial_mission.items[0].set_progress(0)
+		initial_mission.items[1].set_progress(0)
+
 	mission_ui.display()
+	techtree.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	techtree.visible = false
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 	map.damage_tile(tilemap_coords, damage) 
@@ -32,11 +42,24 @@ func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
 
 
 func _process(delta: float) -> void:
-
-	if layer1:
-		var relative_pos := layer1.to_local(player.global_position)
-		var current_pos := layer1.local_to_map(relative_pos)
-		coords_ui.update_text(current_pos.x, current_pos.y)
+	if not get_tree().paused: 
+		if layer1 and player:
+			var relative_pos := layer1.to_local(player.global_position)
+			var current_pos := layer1.local_to_map(relative_pos)
+			coords_ui.update_text(current_pos.x, current_pos.y)
+	
 	
 	if Input.is_action_just_pressed("OpenTechTree"):
-		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")
+		print("Tech Tree Opened", is_tech_tree_open)
+		if is_tech_tree_open == true:
+			techtree.visible = false 
+			#get_tree().paused = false 
+			is_tech_tree_open = false
+		else:
+			techtree.visible = true
+			#get_tree().paused = true
+			is_tech_tree_open = true
+			
+			
+
+		

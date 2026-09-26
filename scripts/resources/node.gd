@@ -3,7 +3,6 @@ extends Button
 @export var coal_ore := preload("res://resources/items/coal_ore.tres") as InventoryItem 
 @export var iron_ore := preload("res://resources/items/iron_ore.tres") as InventoryItem
 @export var copper_ore := preload("res://resources/items/copper_ore.tres") as InventoryItem
-@onready var player_stage_1: Button = $"."
 
 var inventory := preload("res://resources/inventories/player_inventory.tres") as Inventory
 
@@ -75,6 +74,9 @@ func _ready() -> void:
 	if inventory != null:
 		print("Inventory Loaded")
 		inventory.inventory_item_changed.connect(on_inventory_change)
+		coal_ore_count = inventory.get_item(coal_ore)
+		iron_ore_count = inventory.get_item(iron_ore)
+		copper_ore_count = inventory.get_item(copper_ore)
 
 func on_inventory_change(item: InventoryItem, new_qtd: int) -> void:
 	if item == coal_ore:
@@ -83,3 +85,4 @@ func on_inventory_change(item: InventoryItem, new_qtd: int) -> void:
 		iron_ore_count = new_qtd
 	elif item == copper_ore:
 		copper_ore_count = new_qtd
+		

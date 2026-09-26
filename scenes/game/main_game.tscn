@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cddsuml8frkxk" path="res://scenes/game/map.tscn" id="3_ipu61"]
 [ext_resource type="PackedScene" uid="uid://m16kd1u0mdjh" path="res://scenes/ui/game_ui.tscn" id="5_ipu61"]
 [ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://scenes/game/machine.tscn" id="6_ygxny"]
+[ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://scenes/ui/techtree_scene.tscn" id="7_ef7fl"]
 
 [node name="MainGame" type="Node2D" unique_id=1068834764]
+process_mode = 1
 script = ExtResource("1_0rdsr")
 
 [node name="Background" parent="." unique_id=1208497318 instance=ExtResource("3_0rdsr")]
@@ -22,6 +24,14 @@ position = Vector2(48, 296)
 position = Vector2(160, 0)
 
 [node name="GameUI" parent="." unique_id=435670059 instance=ExtResource("5_ipu61")]
+
+[node name="Techtree" parent="." unique_id=2062859002 instance=ExtResource("7_ef7fl")]
+process_mode = 3
+visible = false
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 102.0
+offset_bottom = 67.0
 
 [connection signal="ore_block_destructed" from="Map" to="." method="_on_map_ore_block_destructed"]
 [connection signal="mined_block" from="Player" to="." method="_on_player_mined_block"]
