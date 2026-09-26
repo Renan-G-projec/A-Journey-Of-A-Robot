@@ -1,7 +1,37 @@
 [gd_scene format=3 uid="uid://hx00a0a61yb3"]
 
+[ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="1_1x505"]
 [ext_resource type="Script" uid="uid://cn4gwdsfsbxev" path="res://scripts/ui/scroll_container.gd" id="1_xoi5o"]
 [ext_resource type="PackedScene" uid="uid://c4nf3m3efiyqh" path="res://scenes/ui/techtree.tscn" id="2_1x505"]
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_uve0u"]
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="5_o3sd2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3sd2"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2tlt"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65406823, 0.65406823, 0.65406823, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
 
 [node name="TechTreeUI" type="Control" unique_id=895753709]
 layout_mode = 3
@@ -12,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ScrollContainer" type="Control" parent="." unique_id=826988371]
+[node name="ScrollContainer" type="Panel" parent="." unique_id=14390172]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 4
@@ -20,16 +50,102 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 52.0
 offset_top = -128.0
-offset_right = 264.0
+offset_right = 376.0
 offset_bottom = 128.0
 grow_vertical = 2
-mouse_default_cursor_shape = 13
+mouse_default_cursor_shape = 6
+theme_override_styles/panel = ExtResource("1_1x505")
 script = ExtResource("1_xoi5o")
 
 [node name="Techtree" parent="ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="." unique_id=866635428]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -128.0
+offset_right = -48.0
+offset_bottom = 128.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_1x505")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=244150944]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -112.0
+offset_right = 72.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer" unique_id=339381664]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/CenterContainer" unique_id=516775828]
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_uve0u")
+
+[node name="UpgradeNameLabel" type="Label" parent="Panel/VBoxContainer" unique_id=483457065]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("5_o3sd2")
+theme_override_font_sizes/font_size = 12
+text = "Upgrade Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1159405958]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("5_o3sd2")
+theme_override_font_sizes/font_size = 8
+text = "Description
+This upgrade is a placeholder."
+
+[node name="RequirementsLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1483144531]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("5_o3sd2")
+theme_override_font_sizes/font_size = 8
+text = "Requires
+    - 10 iron
+    - 120 coal"
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1135553137]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("5_o3sd2")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_o3sd2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o3sd2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o3sd2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o3sd2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g2tlt")
+disabled = true
+text = "Upgrade"

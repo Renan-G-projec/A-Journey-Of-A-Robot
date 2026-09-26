@@ -21,6 +21,8 @@ func line_to_parent() -> void:
 	
 	line.add_point(size / 2)
 	line.add_point(line.to_local(parent.global_position + parent.size / 2))
+	
+	line.z_index = z_index - 1
 
 func _on_toggled(toggled_on: bool) -> void:
 	if !cost: return

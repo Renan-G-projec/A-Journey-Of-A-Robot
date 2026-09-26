@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://815utf3xu0mx" path="res://scripts/ui/menu_manager.gd" id="1_fypb7"]
 [ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="2_b2463"]
 [ext_resource type="PackedScene" uid="uid://y8pmf0omvia6" path="res://scenes/ui/main_base_menu.tscn" id="3_b2463"]
+[ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://scenes/ui/techtree_scene.tscn" id="3_js4l8"]
 
 [node name="UiManager" type="Control" unique_id=1331567166 node_paths=PackedStringArray("menus")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +16,8 @@ grow_vertical = 2
 script = ExtResource("1_fypb7")
 overlay_step = 0.2
 menus = {
-0: NodePath("MenuPanel/MainBaseMenu")
+0: NodePath("MenuPanel/MainBaseMenu"),
+1: NodePath("MenuPanel/TechTreeUI")
 }
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=182698967]
@@ -37,6 +40,10 @@ scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(320, 180)
 theme_override_styles/panel = ExtResource("2_b2463")
 metadata/_edit_group_ = true
+
+[node name="TechTreeUI" parent="MenuPanel" unique_id=895753709 instance=ExtResource("3_js4l8")]
+visible = false
+layout_mode = 1
 
 [node name="MainBaseMenu" parent="MenuPanel" unique_id=931917098 instance=ExtResource("3_b2463")]
 layout_mode = 1

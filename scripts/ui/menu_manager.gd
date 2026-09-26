@@ -22,6 +22,7 @@ var state: MenuState = MenuState.CLOSED
 @export var menus: Dictionary[EventBus.MenuType, Control]
 
 func _ready() -> void:
+	visible = true
 	overlay.color.a = 0.0
 	panel.scale.x = 0.0
 	EventBus.request_open_menu.connect(_on_menu_requested)
