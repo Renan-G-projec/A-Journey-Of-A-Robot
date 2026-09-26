@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://scenes/ui/techtree_scene.tscn" id="3_js4l8"]
 
 [node name="UiManager" type="Control" unique_id=1331567166 node_paths=PackedStringArray("menus")]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

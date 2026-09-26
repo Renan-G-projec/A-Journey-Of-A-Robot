@@ -74,9 +74,10 @@ mouse_filter = 2
 mouse_behavior_recursive = 1
 color = Color(0, 0, 0, 0)
 
-[node name="Techtree" parent="." unique_id=2062859002 instance=ExtResource("8_yvtb5")]
+[node name="Techtree" parent="." unique_id=2062859002 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
 top_level = true
 z_index = 1000
+anchors_preset = -1
 anchor_top = 0.35000002
 anchor_right = 0.16700001
 anchor_bottom = 0.531
@@ -86,4 +87,14 @@ offset_bottom = -1.1600037
 grow_horizontal = 1
 grow_vertical = 1
 offset_transform_enabled = true
-[node name="MenuManager" parent="." unique_id=1331567166 instance=ExtResource("8_yvtb5")]
+menus = {
+0: NodePath("MenuPanel/MainBaseMenu"),
+1: NodePath("MenuPanel/TechTreeUI")
+}
+
+[node name="MenuManager" parent="." unique_id=1331567166 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
+visible = true
+menus = {
+0: NodePath("MenuPanel/MainBaseMenu"),
+1: NodePath("MenuPanel/TechTreeUI")
+}

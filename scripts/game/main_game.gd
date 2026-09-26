@@ -9,7 +9,7 @@ extends Node2D
 @onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
 @onready var layer1: TileMapLayer = $Map/PlanetLayer1
 @onready var player: Player = $Player
-@onready var techtree: MarginContainer = $GameUI/Techtree
+@onready var techtree: Control = $GameUI/Techtree
 @onready var background: Node2D = $Background
 @onready var machine: Node2D = $Machine
 @onready var game_ui: CanvasLayer = $GameUI
@@ -71,9 +71,25 @@ func _process(delta: float) -> void:
 			get_tree().paused = true
 			is_tech_tree_open = true
 			
-			
-
 		
 		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")
 	if Input.is_action_just_pressed("PauseGame"):
 		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
+		
+
+Transport
+	JetPack1
+	JetPack2
+
+Drill 
+	Drill1
+		Parent
+			
+		Cost
+			Coal 10
+			Iron 100
+			Copper 5
+	Drill2
+		Parent
+			Drill1
+		Cost

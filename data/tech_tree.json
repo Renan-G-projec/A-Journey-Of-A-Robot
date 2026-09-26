@@ -1,0 +1,41 @@
+{
+  "mine": [
+	{
+	  "id": "mine_1",
+	  "name": "Basic Mining",
+	  "description": "Unlocks basic ore collection.",
+	  "cost": 1,
+	  "parents": []
+	},
+	{
+	  "id": "mine_2",
+	  "name": "Basic Mining",
+	  "description": "Unlocks basic ore collection.",
+	  "cost": 10,
+	  "parents": ["mine_1"]
+	},
+		{
+	  "id": "mine_3",
+	  "name": "Basic Mining",
+	  "description": "Unlocks basic ore collection.",
+	  "cost": 100,
+	  "parents": ["mine_2"]
+	}
+	]
+	"transport" : [
+	{
+	  "id": "jetpack_1",
+	  "name": "Basic Smelting",
+	  "description": "Turn mined ore into metal bars.",
+	  "cost": 1,
+	  "parents": []
+	},
+	{
+	  "id": "jetpack_2",
+	  "name": "Metal Tools",
+	  "description": "Unlocks stronger tools.",
+	  "cost": 3,
+	  "parents": ["jetpack_1", "mine_2"]
+	}
+  ]
+}
