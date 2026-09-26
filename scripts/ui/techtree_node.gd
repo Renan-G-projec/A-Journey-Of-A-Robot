@@ -34,7 +34,7 @@ func _on_toggled(toggled_on: bool) -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_TRANSFORM_CHANGED && Engine.is_editor_hint():
 		line_to_parent()
-	
+			
 func _ready() -> void:
 	set_notify_transform(true)
 	line_to_parent()
