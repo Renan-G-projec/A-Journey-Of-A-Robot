@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hx00a0a61yb3"]
 
 [ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="1_1x505"]
+[ext_resource type="Script" uid="uid://bdpekavetmwn6" path="res://scripts/ui/techtree_ui.gd" id="1_g2tlt"]
 [ext_resource type="Script" uid="uid://cn4gwdsfsbxev" path="res://scripts/ui/scroll_container.gd" id="1_xoi5o"]
 [ext_resource type="PackedScene" uid="uid://c4nf3m3efiyqh" path="res://scenes/ui/techtree.tscn" id="2_1x505"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_uve0u"]
@@ -41,6 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_g2tlt")
 
 [node name="ScrollContainer" type="Panel" parent="." unique_id=14390172]
 clip_contents = true

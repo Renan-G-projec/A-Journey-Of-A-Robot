@@ -166,9 +166,9 @@ shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
 visible = false
-offset_left = -32.0
+offset_left = -48.0
 offset_top = -48.0
-offset_right = 32.0
+offset_right = 16.0
 offset_bottom = 0.0
 input = SubResource("Resource_1071v")
 

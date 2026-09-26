@@ -18,7 +18,7 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[node name="TechtreeNode" type="Button" unique_id=2096825410]
+[node name="TechtreeNode" type="Button" unique_id=2096825410 groups=["TechtreeNode"]]
 custom_maximum_size = Vector2(20, 20)
 offset_right = 20.0
 offset_bottom = 20.0
@@ -37,4 +37,5 @@ script = ExtResource("2_epypp")
 z_index = -1
 width = 4.0
 
+[connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="toggled" from="." to="." method="_on_toggled"]
