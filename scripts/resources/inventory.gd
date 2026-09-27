@@ -24,3 +24,11 @@ func remove_items(items: Inventory) -> void:
 func add_items(items: Inventory) -> void:
 	for item in items.data:
 		add_item(item, items.get_item(item))
+
+func get_inventory_item(name: String) -> InventoryItem:
+	for item in data:
+		if item.name == name:
+			return item
+	return null
+	
+	

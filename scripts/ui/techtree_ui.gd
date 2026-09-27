@@ -15,7 +15,7 @@ func _ready() -> void:
 		node.request_ui_techtree_panel.connect(_on_ui_techtree_panel_requested)
 	var root: TechtreeNode = get_tree().get_first_node_in_group("TechtreeNode")
 	root.request_ui_techtree_panel.emit(root)
-
+	upgrade_button.pressed.connect(_on_button_pressed.bind(root))
 
 func _on_ui_techtree_panel_requested(node: TechtreeNode) -> void:
 	icon.texture = node.icon
@@ -26,3 +26,9 @@ func _on_ui_techtree_panel_requested(node: TechtreeNode) -> void:
 	upgrade_button.disabled = !node.unlocked
 	
 	current_node = node
+	
+func _on_button_pressed(node: TechtreeNode) -> void:
+	for child:Button in node.get_children():
+		if child is TechtreeNode:
+			child.disabled = false
+	

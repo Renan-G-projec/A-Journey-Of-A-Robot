@@ -26,7 +26,7 @@ extends Button
 	}
 }
 
-@export var cost: Dictionary[String, int] = {}
+@export var cost: Dictionary = {}
 
 @onready var line: Line2D = $Line2D
 
@@ -52,16 +52,19 @@ func _on_toggled(toggled_on: bool) -> void:
 	upgrade_name = name
 	cost = all_tech_cost[upgrade_name]
 
-	for item_name in cost:
+	for item_name:String in cost:
 		var required_amount: int = cost[item_name]
-		
-		if item > player_inventory.get_item(item): return 
-		
+		var inventory_item: InventoryItem = player_inventory.get_inventory_item(item_name)
+		var player_amount: int = player_inventory.get_item(inventory_item)
+
+		if required_amount > player_amount: 
+			return 
 		unlocked = true
 			
 	if unlocked: 
-		for key: InventoryItem in cost:
-			player_inventory.remove_item(key, cost[key])
+		for item_name:String in cost:
+			var inventory_item: InventoryItem = player_inventory.get_inventory_item(item_name)
+			player_inventory.remove_item(inventory_item, cost[item_name])
 	
 	
 func _notification(what: int) -> void:
@@ -78,10 +81,9 @@ func _on_pressed() -> void:
 
 func get_requirements_string() -> String:
 	var string: String = "Requirements:\n"
-	if !cost:
-		return string + "    - Free\n"
 	
-	for key: InventoryItem in cost:
-		string += "    - %d %s.\n" % [cost[key], key]
+	for item_name:String in cost:
+		var inventory_item: InventoryItem = player_inventory.get_inventory_item(item_name)
+		string += "    - %d %s.\n" % [cost[item_name], inventory_item]
 	
 	return string
