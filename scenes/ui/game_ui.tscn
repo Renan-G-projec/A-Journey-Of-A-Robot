@@ -66,7 +66,6 @@ text = "Coordinates:"
 script = ExtResource("6_djwj0")
 
 [node name="TransitionRect" type="ColorRect" parent="Control" unique_id=707873548]
-visible = false
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
@@ -75,6 +74,7 @@ mouse_behavior_recursive = 1
 color = Color(0, 0, 0, 0)
 
 [node name="Techtree" parent="." unique_id=2062859002 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
+visible = false
 top_level = true
 z_index = 1000
 anchors_preset = -1
@@ -93,7 +93,7 @@ menus = {
 }
 
 [node name="MenuManager" parent="." unique_id=1331567166 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
-visible = true
+visible = false
 menus = {
 0: NodePath("MenuPanel/MainBaseMenu"),
 1: NodePath("MenuPanel/TechTreeUI")

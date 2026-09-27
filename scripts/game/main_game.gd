@@ -76,20 +76,3 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("PauseGame"):
 		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
 		
-
-Transport
-	JetPack1
-	JetPack2
-
-Drill 
-	Drill1
-		Parent
-			
-		Cost
-			Coal 10
-			Iron 100
-			Copper 5
-	Drill2
-		Parent
-			Drill1
-		Cost
