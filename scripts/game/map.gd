@@ -4,8 +4,8 @@ extends Node2D
 
 @export var player: Player
 @onready var spawn: Marker2D = $MainBase/Spawn
-@onready var layer: TileMapLayer = $PlanetLayer1
-@onready var ore: TileMapLayer = $OreLayer1
+@onready var layer: TileMapLayer = $PlanetLayers
+@onready var ore: TileMapLayer = $OreLayer
 
 # Ore loading
 @onready var coal: InventoryItem = preload("res://resources/items/coal_ore.tres")
