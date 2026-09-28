@@ -34,9 +34,17 @@ and then open on Godot.
 - The input mapping is the following:
 - D / Right -> Goes right
 - A / Left -> Goes left
-- E -> Interacts with special elements (such as machines and the main base. Not used on v1.0.0)
+- E -> Interacts with special elements (such as machines and the main base)
 - Space -> Activates the jetpack
-- Click -> Mines the ores 
+- Click -> Mines the ores
+
+## Incomplete systems
+These systems are in development. They're NOT fully functional right now but should be connected easily in the future.
+
+- Tech tree:
+![Tech tree](public/TechtreeExample.gif)
+- Smelting ore machine:
+![Smelting machine](public/MachineExample.gif)
 
 ## Future plans
 The game isn't complete yet. The next features are planned:

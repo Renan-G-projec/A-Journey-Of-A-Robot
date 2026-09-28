@@ -50,13 +50,15 @@ func _process(_delta: float) -> void:
 		MenuState.CLOSING:
 			overlay.color.a = lerp(overlay.color.a, 0.0, overlay_step)
 			panel.scale.x = lerp(panel.scale.x, 0.0, overlay_step)
-			if overlay.color.a <= 0.002 && panel.scale.x <= 0.002:
+			if overlay.color.a <= 0.002 && panel.scale.x <= 0.1:
 				overlay.color.a = 0.0
 				panel.scale.x = 0.0
+				panel.visible = false
 				state = MenuState.CLOSED
 
 func open_menu() -> void:
 	state = MenuState.OPENING
+	panel.visible = true
 
 func close_menu() -> void:
 	state = MenuState.CLOSING
