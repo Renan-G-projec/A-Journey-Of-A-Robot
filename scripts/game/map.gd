@@ -71,6 +71,7 @@ func load_chunks_by_position(position: Vector2, radius: int) -> void:
 		if !_loaded_chunks.has(chunk):
 			_load_chunk(chunk)
 			_loaded_chunks.append(chunk)
+			await get_tree().physics_frame
 
 # This generates a part of the world denoted by CHUNK_WIDTH
 func _load_chunk(chunk_index: int) -> void:
@@ -93,7 +94,8 @@ func _load_chunk(chunk_index: int) -> void:
 				tiles_to_place.push_back(Vector2i(x + initial_x, y))
 		
 		BetterTerrain.set_cells(layer, tiles_to_place, layer_index + 1)
-	BetterTerrain.update_terrain_area(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
+		await get_tree().physics_frame
+	BetterTerrain.update_terrain_area_sliced(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
 
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	var ore_id: Vector2i = ore.get_cell_atlas_coords(local_map_coords)

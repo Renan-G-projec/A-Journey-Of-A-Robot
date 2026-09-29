@@ -1085,6 +1085,43 @@ func update_terrain_area(tm: TileMapLayer, area: Rect2i, and_surrounding_cells :
 	for c in additional_cells:
 		_update_tile_immediate(tm, c, ts_meta, types, cache)
 
+func update_terrain_area_sliced(tm: TileMapLayer, area: Rect2i, and_surrounding_cells := true) -> void:
+	if !tm or !tm.tile_set:
+		return
+	area = area.abs()
+	area.size += Vector2i.ONE
+	var edges = []
+	for x in range(area.position.x, area.end.x):
+		edges.append(Vector2i(x, area.position.y))
+		edges.append(Vector2i(x, area.end.y - 1))
+	for y in range(area.position.y + 1, area.end.y - 1):
+		edges.append(Vector2i(area.position.x, y))
+		edges.append(Vector2i(area.end.x - 1, y))
+	var additional_cells := []
+	var needed_cells := _widen_with_exclusion(tm, edges, area)
+	if and_surrounding_cells:
+		additional_cells = needed_cells
+		needed_cells = _widen_with_exclusion(tm, needed_cells, area)
+	var types := {}
+	for y in range(area.position.y, area.end.y):
+		for x in range(area.position.x, area.end.x):
+			var coord = Vector2i(x, y)
+			types[coord] = get_cell(tm, coord)
+	for c in needed_cells:
+		types[c] = get_cell(tm, c)
+	var ts_meta := _get_terrain_meta(tm.tile_set)
+	var cache := _get_cache(tm.tile_set)
+	var counter := 0
+	for y in range(area.position.y, area.end.y):
+		for x in range(area.position.x, area.end.x):
+			var coord := Vector2i(x, y)
+			_update_tile_immediate(tm, coord, ts_meta, types, cache)
+			counter += 1
+			if counter > 32:
+				counter = 0
+				await tm.get_tree().process_frame
+	for c in additional_cells:
+		_update_tile_immediate(tm, c, ts_meta, types, cache)
 
 ## For a [TileMapLayer], create a changeset that will
 ## be calculated via a [WorkerThreadPool], so it will not delay processing the current
