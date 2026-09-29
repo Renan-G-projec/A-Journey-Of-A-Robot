@@ -20,7 +20,7 @@ player = NodePath("../Player")
 position = Vector2(48, 296)
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
-position = Vector2(160, 0)
+position = Vector2(168, -424)
 
 [node name="GameUI" parent="." unique_id=435670059 instance=ExtResource("5_ipu61")]
 

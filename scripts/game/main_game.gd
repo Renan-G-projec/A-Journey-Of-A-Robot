@@ -7,7 +7,7 @@ extends Node2D
 @onready var fuel_ui: FuelUI = $GameUI/Control/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
 @onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
-@onready var layer1: TileMapLayer = $Map/PlanetLayer1
+@onready var layer1: TileMapLayer = $Map/PlanetLayers
 @onready var player: Player = $Player
 @onready var techtree: Control = $GameUI/Techtree
 @onready var background: Node2D = $Background
@@ -32,6 +32,7 @@ func _ready() -> void:
 	mission_ui.display()
 	techtree.process_mode = Node.PROCESS_MODE_ALWAYS
 	techtree.visible = false 
+	
 
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
@@ -75,4 +76,6 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")
 	if Input.is_action_just_pressed("PauseGame"):
 		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
-		
+
+func _physics_process(delta: float) -> void:
+	map.load_chunks_by_position(player.position, 4)
