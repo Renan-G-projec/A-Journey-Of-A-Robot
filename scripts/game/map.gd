@@ -89,11 +89,11 @@ func _load_chunk(chunk_index: int) -> void:
 		# Using the heights generates the tiles
 		var tiles_to_place: Array[Vector2i] = []
 		for x in range(0, CHUNK_WIDTH):
-			for y in range(PLANET_BOTTOM, PLANET_BOTTOM - heights[x], -1):
+			for y in range(layer_base_height + layer_base_variation, PLANET_BOTTOM - heights[x], -1):
 				tiles_to_place.push_back(Vector2i(x + initial_x, y))
 		
 		BetterTerrain.set_cells(layer, tiles_to_place, layer_index + 1)
-		BetterTerrain.update_terrain_cells(layer, tiles_to_place)
+	BetterTerrain.update_terrain_area(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
 
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	var ore_id: Vector2i = ore.get_cell_atlas_coords(local_map_coords)
