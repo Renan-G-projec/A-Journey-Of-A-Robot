@@ -15,7 +15,6 @@ const PLANET_BOTTOM := CHUNK_WIDTH * NUMBER_OF_LAYERS + 10
 @export var layers: Array[LayerData]
 
 @export var player: Player
-@onready var spawn: Marker2D = $MainBase/Spawn
 @onready var layer: TileMapLayer = $PlanetLayers
 @onready var ore_layer: TileMapLayer = $OreLayer
 
@@ -61,24 +60,20 @@ func _ready() -> void:
 	fast_noise_lite.seed = randi()
 	
 	layer.clear()
-	_load_chunk(0)
-	
-	if player and spawn:
-		player.global_position = spawn.global_position
-		mainbase.global_position = spawn.global_position
+	load_chunks_by_position(Vector2(0, 0), 0)
+	_generate_spawn()
 
 func load_chunks_by_position(position: Vector2, radius: int) -> void:
-	var chunk_index: int = position.x / layer.tile_set.tile_size.x / CHUNK_WIDTH
-	for chunk in range(chunk_index - radius, chunk_index + radius):
+	var chunk_index: int = floorf(position.x / layer.tile_set.tile_size.x / CHUNK_WIDTH)
+	for chunk in range(chunk_index - radius, chunk_index + radius + 1):
 		if !_loaded_chunks.has(chunk):
 			_load_chunk(chunk)
-			_loaded_chunks.append(chunk)
-			await get_tree().physics_frame
 
 # This generates a part of the world denoted by CHUNK_WIDTH
 func _load_chunk(chunk_index: int) -> void:
+	_loaded_chunks.append(chunk_index)
 	var initial_x: int = chunk_index * CHUNK_WIDTH
-	var final_x: int = chunk_index * CHUNK_WIDTH + CHUNK_WIDTH
+	var final_x: int = initial_x + CHUNK_WIDTH
 	
 	for layer_index in range(0, layers.size()):
 		var layer_base_height: int = (NUMBER_OF_LAYERS - layer_index) * layer_height
@@ -99,7 +94,7 @@ func _load_chunk(chunk_index: int) -> void:
 		_generate_ores_in_tiles(tiles_to_place, layers[layer_index])
 		await get_tree().physics_frame
 	BetterTerrain.update_terrain_area_sliced(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
-
+	
 func _generate_ores_in_tiles(tiles: Array[Vector2i], layer: LayerData) -> void:
 	const perlin_zoom := 0.2
 	const height_factor := 0.001
@@ -117,6 +112,12 @@ func _get_ore_in_atlas(ore: Enums.Ores) -> Vector2i:
 
 func _place_ore(position: Vector2i, ore: Enums.Ores) -> void:
 	ore_layer.set_cell(position, 1, _get_ore_in_atlas(ore))
+
+func _generate_spawn() -> void:
+	for x in range(0, CHUNK_WIDTH):
+		for y in range(0, layer_base_variation):
+			#destroy_tile(Vector2i(x, y))
+			pass
 
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	var ore_id: Vector2i = ore_layer.get_cell_atlas_coords(local_map_coords)

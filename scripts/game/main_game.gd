@@ -20,7 +20,6 @@ var is_scene_changing: bool = false
 
 
 func _ready() -> void:
-	print("GAME SCENE READY")
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	fuel_ui.set_jetpack(jetpack)

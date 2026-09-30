@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cbjt8q2f8iaj5" path="res://assets/sprites/planetTileset.png" id="1_4xfga"]
 [ext_resource type="Script" uid="uid://oow0oh87qu11" path="res://scripts/game/map.gd" id="1_paxxb"]
-[ext_resource type="PackedScene" uid="uid://nx0q84pdxlno" path="res://scenes/game/main_base.tscn" id="2_2klcf"]
 [ext_resource type="Script" uid="uid://vwol5d1gr122" path="res://scripts/resources/layer_data.gd" id="2_lkyxg"]
 [ext_resource type="Texture2D" uid="uid://b0hivy1d01jer" path="res://assets/sprites/oreTileset.png" id="3_gldc4"]
 
@@ -1404,7 +1403,3 @@ tile_set = SubResource("TileSet_ygxny")
 
 [node name="OreLayer" type="TileMapLayer" parent="." unique_id=990303313]
 tile_set = SubResource("TileSet_gldc4")
-
-[node name="MainBase" parent="." unique_id=699425722 instance=ExtResource("2_2klcf")]
-
-[node name="Spawn" type="Marker2D" parent="MainBase" unique_id=1051603631]
