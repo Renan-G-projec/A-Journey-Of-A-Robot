@@ -12,10 +12,12 @@ const PLANET_BOTTOM := CHUNK_WIDTH * NUMBER_OF_LAYERS + 10
 @export var layer_height: int = 20
 @export var layer_base_variation: int = 10
 
+@export var layers: Array[LayerData]
+
 @export var player: Player
 @onready var spawn: Marker2D = $MainBase/Spawn
 @onready var layer: TileMapLayer = $PlanetLayers
-@onready var ore: TileMapLayer = $OreLayer
+@onready var ore_layer: TileMapLayer = $OreLayer
 
 # Ore loading
 @onready var coal: InventoryItem = preload("res://resources/items/coal_ore.tres")
@@ -42,7 +44,7 @@ func damage_tile(tile: Vector2i, damage: float) -> void:
 		var mined_ore: InventoryItem = get_ore_at_coord(tile)
 		if mined_ore:
 			ore_block_destructed.emit(mined_ore)
-			ore.erase_cell(tile)
+			ore_layer.erase_cell(tile)
 		destroy_tile(tile)
 	else:
 		tiles_life[tile] -= damage
@@ -78,7 +80,7 @@ func _load_chunk(chunk_index: int) -> void:
 	var initial_x: int = chunk_index * CHUNK_WIDTH
 	var final_x: int = chunk_index * CHUNK_WIDTH + CHUNK_WIDTH
 	
-	for layer_index in range(0, NUMBER_OF_LAYERS):
+	for layer_index in range(0, layers.size()):
 		var layer_base_height: int = (NUMBER_OF_LAYERS - layer_index) * layer_height
 		
 		# Generates the array of heights.
@@ -93,12 +95,31 @@ func _load_chunk(chunk_index: int) -> void:
 			for y in range(layer_base_height + layer_base_variation, PLANET_BOTTOM - heights[x], -1):
 				tiles_to_place.push_back(Vector2i(x + initial_x, y))
 		
-		BetterTerrain.set_cells(layer, tiles_to_place, layer_index + 1)
+		BetterTerrain.set_cells(layer, tiles_to_place, layers[layer_index].terrain_id)
+		_generate_ores_in_tiles(tiles_to_place, layers[layer_index])
 		await get_tree().physics_frame
 	BetterTerrain.update_terrain_area_sliced(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
 
+func _generate_ores_in_tiles(tiles: Array[Vector2i], layer: LayerData) -> void:
+	const perlin_zoom := 0.2
+	const height_factor := 0.001
+	for ore in layer.ores_frequency:
+		for tile in tiles:
+			if absf(fast_noise_lite.get_noise_2d(tile.x * perlin_zoom, tile.y * perlin_zoom)) + max((-height_factor * tile.y), -0.1) < layer.ores_frequency[ore]:
+				_place_ore(tile, ore)
+
+func _get_ore_in_atlas(ore: Enums.Ores) -> Vector2i:
+	match ore:
+		Enums.Ores.COAL: return Vector2i(0, 0)
+		Enums.Ores.IRON: return Vector2i(1, 0)
+		Enums.Ores.COPPER: return Vector2i(2, 0)
+	return Vector2i(0, 0)
+
+func _place_ore(position: Vector2i, ore: Enums.Ores) -> void:
+	ore_layer.set_cell(position, 1, _get_ore_in_atlas(ore))
+
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
-	var ore_id: Vector2i = ore.get_cell_atlas_coords(local_map_coords)
+	var ore_id: Vector2i = ore_layer.get_cell_atlas_coords(local_map_coords)
 	match ore_id.x:
 		0:
 			return coal

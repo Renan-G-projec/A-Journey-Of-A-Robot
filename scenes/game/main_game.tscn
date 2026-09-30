@@ -14,7 +14,12 @@ script = ExtResource("1_0rdsr")
 [node name="Background" parent="." unique_id=1208497318 instance=ExtResource("3_0rdsr")]
 
 [node name="Map" parent="." unique_id=1104527884 node_paths=PackedStringArray("player") instance=ExtResource("3_ipu61")]
+perlin_zoom = null
+layer_height = null
+layer_base_variation = null
+layers = null
 player = NodePath("../Player")
+tile_base_life = null
 
 [node name="Machine" parent="." unique_id=1638857421 instance=ExtResource("6_ygxny")]
 position = Vector2(48, 296)
