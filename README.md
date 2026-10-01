@@ -18,9 +18,9 @@ The main game mechanic is mining. The player have a drill and has to mine some o
 - The game have one layer
 - The map is generated on runtime
   - The map has a total of 5 sections
-    - The premise of the map is that the farther the user goes away from the origin, the more varied the terrin will become. 
-    - The ores are placed by getting a all of the map coordinates, and then placing ores until that ore count has been reached
-    - The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
+	- The premise of the map is that the farther the user goes away from the origin, the more varied the terrin will become. 
+	- The ores are placed by getting a all of the map coordinates, and then placing ores until that ore count has been reached
+	- The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
 - The game have a menu
 
 ## Build from source
