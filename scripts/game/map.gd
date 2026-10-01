@@ -59,7 +59,6 @@ func _ready() -> void:
 	fast_noise_lite.frequency = 0.3
 	fast_noise_lite.seed = randi()
 	
-	layer.clear()
 	load_chunks_by_position(Vector2(0, 0), 0)
 	_generate_spawn()
 
@@ -122,11 +121,10 @@ func _generate_spawn() -> void:
 			tiles_to_destroy.push_back(Vector2i(x, y))
 			ore_layer.set_cell(Vector2i(x, y), -1)
 
-		# Little platform to the player stand on
-		BetterTerrain.set_cell(layer, Vector2i(x, -3), layers[0].terrain_id)
-
 	BetterTerrain.set_cells(layer, tiles_to_destroy, -1)
 	BetterTerrain.update_terrain_area(layer, Rect2i(-8, -8, 17, 9))
+	
+	player.position = mainbase.position
 	
 
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:

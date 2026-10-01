@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://scripts/game/main_base.gd" id="1_7x50c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
-size = Vector2(112, 56)
+size = Vector2(143, 65)
 
 [node name="MainBase" type="Node2D" unique_id=699425722]
 script = ExtResource("1_7x50c")
@@ -16,7 +16,7 @@ texture = ExtResource("1_0vol3")
 [node name="Area2D" type="Area2D" parent="." unique_id=1125824423]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254950940]
-position = Vector2(0, -28)
+position = Vector2(0, -22.5)
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
