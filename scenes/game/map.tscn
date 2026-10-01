@@ -1396,7 +1396,7 @@ sources/1 = SubResource("TileSetAtlasSource_gldc4")
 
 [node name="Map" type="Node2D" unique_id=1104527884]
 script = ExtResource("1_paxxb")
-layers = Array[Object]([SubResource("Resource_7g61j"), SubResource("Resource_lkyxg")])
+layers = Array[ExtResource("2_lkyxg")]([SubResource("Resource_7g61j"), SubResource("Resource_lkyxg")])
 
 [node name="PlanetLayers" type="TileMapLayer" parent="." unique_id=1186679010]
 tile_set = SubResource("TileSet_ygxny")

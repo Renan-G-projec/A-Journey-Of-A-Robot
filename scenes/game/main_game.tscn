@@ -16,15 +16,9 @@ script = ExtResource("1_0rdsr")
 player = NodePath("../Player")
 
 [node name="Player" parent="." unique_id=698178977 instance=ExtResource("3_d2op2")]
-position = Vector2(184, -56)
-SPEED = 400.0
-JUMP_VELOCITY = -200.0
-
-[node name="Player2" parent="." unique_id=1799492510 instance=ExtResource("3_d2op2")]
-position = Vector2(184, -56)
+position = Vector2(0, -64)
 
 [node name="GameUI" parent="." unique_id=435670059 instance=ExtResource("5_ipu61")]
 
 [connection signal="ore_block_destructed" from="Map" to="." method="_on_map_ore_block_destructed"]
 [connection signal="mined_block" from="Player" to="." method="_on_player_mined_block"]
-[connection signal="mined_block" from="Player2" to="." method="_on_player_mined_block"]

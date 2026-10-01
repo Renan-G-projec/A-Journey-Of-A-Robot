@@ -114,10 +114,20 @@ func _place_ore(position: Vector2i, ore: Enums.Ores) -> void:
 	ore_layer.set_cell(position, 1, _get_ore_in_atlas(ore))
 
 func _generate_spawn() -> void:
-	for x in range(0, CHUNK_WIDTH):
-		for y in range(0, layer_base_variation):
-			#destroy_tile(Vector2i(x, y))
-			pass
+	# TODO: Add some constants to allow easy editing
+	# Area cleaning
+	var tiles_to_destroy: Array[Vector2i] = []
+	for x in range(-8, 8):
+		for y in range(-8, -4):
+			tiles_to_destroy.push_back(Vector2i(x, y))
+			ore_layer.set_cell(Vector2i(x, y), -1)
+
+		# Little platform to the player stand on
+		BetterTerrain.set_cell(layer, Vector2i(x, -3), layers[0].terrain_id)
+
+	BetterTerrain.set_cells(layer, tiles_to_destroy, -1)
+	BetterTerrain.update_terrain_area(layer, Rect2i(-8, -8, 17, 9))
+	
 
 func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	var ore_id: Vector2i = ore_layer.get_cell_atlas_coords(local_map_coords)
