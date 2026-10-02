@@ -139,7 +139,7 @@ text = "Requires
     - 10 iron
     - 120 coal"
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1135553137]
+[node name="UpgradeButton" type="Button" parent="Panel/VBoxContainer" unique_id=1135553137]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("5_o3sd2")
@@ -151,3 +151,5 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o3sd2")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_g2tlt")
 disabled = true
 text = "Upgrade"
+
+[connection signal="pressed" from="Panel/VBoxContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]

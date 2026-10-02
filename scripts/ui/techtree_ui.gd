@@ -5,7 +5,7 @@ extends Control
 @onready var upgrade_name: Label = $Panel/VBoxContainer/UpgradeNameLabel
 @onready var upgrade_description: Label = $Panel/VBoxContainer/DescriptionLabel
 @onready var upgrade_requirements: Label = $Panel/VBoxContainer/RequirementsLabel
-@onready var upgrade_button: Button = $Panel/VBoxContainer/Button
+@onready var upgrade_button: Button = $Panel/VBoxContainer/UpgradeButton
 
 @export var current_player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
 var current_node: TechtreeNode
@@ -26,4 +26,10 @@ func _on_ui_techtree_panel_requested(node: TechtreeNode) -> void:
 	upgrade_button.disabled = TechtreeManager.has_upgrade(node.upgrade) || !current_player_inventory.has_items(node.upgrade.cost)
 	
 	current_node = node
-	
+
+func _on_upgrade_button_pressed() -> void:
+	if TechtreeManager.has_upgrade(current_node.upgrade) || !current_player_inventory.has_items(current_node.upgrade.cost): 
+		return
+	current_player_inventory.remove_items(current_node.upgrade.cost)
+	upgrade_button.disabled = true
+	TechtreeManager.add_upgrade(current_node.upgrade)
