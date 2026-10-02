@@ -9,9 +9,7 @@ extends Node2D
 @onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
 @onready var layer1: TileMapLayer = $Map/PlanetLayers
 @onready var player: Player = $Player
-@onready var techtree: Control = $GameUI/Techtree
 @onready var background: Node2D = $Background
-@onready var machine: Node2D = $Machine
 @onready var game_ui: CanvasLayer = $GameUI
 
 
@@ -56,20 +54,6 @@ func _process(delta: float) -> void:
 			var current_pos := layer1.local_to_map(relative_pos)
 			coords_ui.update_text(current_pos.x, current_pos.y)
 	
-	
-	if Input.is_action_just_pressed("OpenTechTree"):
-		print("Tech Tree Opened", is_tech_tree_open)
-		if is_tech_tree_open == true:
-			techtree.visible = false 
-			get_tree().paused = false 
-			is_tech_tree_open = false
-		else:
-			techtree.visible = true
-			get_tree().paused = true
-			is_tech_tree_open = true
-			
-		
-		get_tree().change_scene_to_file("res://scenes/ui/techtree_scene.tscn")
 	if Input.is_action_just_pressed("PauseGame"):
 		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
 
