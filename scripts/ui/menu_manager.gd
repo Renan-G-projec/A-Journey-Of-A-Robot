@@ -13,7 +13,7 @@ enum MenuState {
 
 @onready var overlay: ColorRect = $ColorRect
 @onready var panel: Panel = $MenuPanel
-
+@onready var comming_soon_popup: Button = $MenuPanel/ComingSoon
 @onready var panel_initial_x_scale: float = panel.scale.x
 @onready var overlay_alpha: float = overlay.color.a
 
@@ -27,6 +27,7 @@ func _ready() -> void:
 	panel.scale.x = 0.0
 	EventBus.request_open_menu.connect(_on_menu_requested)
 	EventBus.request_close_menu.connect(_on_menu_close_requested)
+	EventBus.request_comming_soon_popup.connect(_on_coming_soon_popup_requested)
 
 func _on_menu_requested(type: EventBus.MenuType) -> void:
 	if state != MenuState.OPEN:
@@ -66,3 +67,12 @@ func close_menu() -> void:
 func set_current_menu(type: EventBus.MenuType) -> void:
 	for menu in menus:
 		menus[menu].visible = menu == type
+
+func _on_coming_soon_popup_requested() -> void:
+	comming_soon_popup.visible = true
+	overlay.color.a = overlay_alpha * 2
+
+
+func _on_coming_soon_pressed() -> void:
+	comming_soon_popup.visible = false
+	overlay.color.a = overlay_alpha
