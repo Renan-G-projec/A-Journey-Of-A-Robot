@@ -10,7 +10,8 @@ extends Control
 var items_shown: Array[InventoryItem]
 
 func _ready() -> void:
-	player_inventory.inventory_item_changed.connect(_on_player_inventory_item_changed)
+	if !Engine.is_editor_hint():
+		player_inventory.inventory_item_changed.connect(_on_player_inventory_item_changed)
 	fetch_inventory()
 	
 func _on_player_inventory_item_changed(item: InventoryItem, new_qtd: int) -> void:

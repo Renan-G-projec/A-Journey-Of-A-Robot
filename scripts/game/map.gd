@@ -40,6 +40,7 @@ var _loaded_chunks: Array[int] = []
 func damage_tile(tile: Vector2i, damage: float) -> void:
 	var life: float = tiles_life.get_or_add(tile, tile_base_life)
 	if life - damage <= 0:
+		EventBus.block_mined.emit(BetterTerrain.get_cell(layer, tile))
 		var mined_ore: InventoryItem = get_ore_at_coord(tile)
 		if mined_ore:
 			ore_block_destructed.emit(mined_ore)

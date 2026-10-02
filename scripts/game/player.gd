@@ -9,10 +9,17 @@ extends CharacterBody2D
 @onready var drill: Drill = $Drill
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var jetpack: Jetpack = $Jetpack
+@onready var block_placer: BlockPlacer = $%BlockPlacer
 
 var facing_direction: int = 1
 
 signal mined_block(tilemap_coords: Vector2i, damage: float)
+
+var block_inventory: Dictionary[int, int]
+var current_placing_block: int = 1
+
+func _ready() -> void:
+	EventBus.block_mined.connect(_on_block_mined)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -34,6 +41,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if Input.is_action_just_pressed("PutFacingBlock") && block_inventory.get(current_placing_block, 0) > 0:
+		block_inventory[current_placing_block] -= 1
+		block_placer.place_block(current_placing_block)
 
 	move_and_slide()
 	update_state()
@@ -52,3 +63,6 @@ func update_state() -> void:
 	else:
 		if (facing_direction < 0): sprite.play("idleLeft")
 		else: sprite.play("idleRight")
+
+func _on_block_mined(block_type: int) -> void:
+	block_inventory[block_type] = 1 + block_inventory.get(block_type, 0)
