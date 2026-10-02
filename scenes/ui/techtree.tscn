@@ -30,3 +30,6 @@ theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("5_151rp")
 upgrade = ExtResource("3_2udi8")
+
+[connection signal="toggled" from="Root" to="Root" method="_on_toggled"]
+[connection signal="toggled" from="Root/Smelter" to="Root/Smelter" method="_on_toggled"]

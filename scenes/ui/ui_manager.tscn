@@ -17,8 +17,7 @@ script = ExtResource("1_fypb7")
 overlay_step = 0.2
 menus = {
 0: NodePath("MenuPanel/MainBaseMenu"),
-1: NodePath("MenuPanel/TechTreeUI"),
-2: NodePath("MenuPanel/CraftingUI")
+1: NodePath("MenuPanel/TechTreeUI")
 }
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=182698967]
@@ -40,13 +39,10 @@ grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(320, 180)
 theme_override_styles/panel = ExtResource("2_b2463")
+metadata/_edit_group_ = true
 
 [node name="TechTreeUI" parent="MenuPanel" unique_id=895753709 instance=ExtResource("3_js4l8")]
 layout_mode = 1
-
-[node name="CraftingUI" parent="MenuPanel" unique_id=83823365 instance=ExtResource("4_61ox6")]
-layout_mode = 1
-script = ExtResource("5_yp0ob")
 
 [node name="MainBaseMenu" parent="MenuPanel" unique_id=931917098 instance=ExtResource("3_b2463")]
 visible = false
@@ -75,3 +71,4 @@ theme_override_styles/hover = ExtResource("5_yp0ob")
 text = "Coming Soon..."
 
 [connection signal="pressed" from="MenuPanel/ComingSoon" to="." method="_on_coming_soon_pressed"]
+

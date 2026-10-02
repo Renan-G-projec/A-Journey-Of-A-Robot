@@ -29,9 +29,6 @@ func _ready() -> void:
 
 
 	mission_ui.display()
-	techtree.process_mode = Node.PROCESS_MODE_ALWAYS
-	techtree.visible = false 
-	
 
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
