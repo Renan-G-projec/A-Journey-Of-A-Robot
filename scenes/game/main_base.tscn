@@ -1,22 +1,44 @@
 [gd_scene format=3 uid="uid://nx0q84pdxlno"]
 
-[ext_resource type="Texture2D" uid="uid://coyut8tx0773a" path="res://assets/sprites/mainbase.png" id="1_0vol3"]
 [ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://scripts/game/main_base.gd" id="1_7x50c"]
+[ext_resource type="Texture2D" uid="uid://oy0iw14gh5gv" path="res://assets/sprites/mainBase.png" id="2_bvcfr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
 size = Vector2(143, 65)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oqkf"]
+atlas = ExtResource("2_bvcfr")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta1ju"]
+atlas = ExtResource("2_bvcfr")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocxxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oqkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta1ju")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="MainBase" type="Node2D" unique_id=699425722]
 script = ExtResource("1_7x50c")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980374303]
-position = Vector2(0, -24)
-texture = ExtResource("1_0vol3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1125824423]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=254950940]
-position = Vector2(0, -22.5)
+position = Vector2(0, -33)
 shape = SubResource("RectangleShape2D_ocxxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1784676245]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_ocxxs")
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
