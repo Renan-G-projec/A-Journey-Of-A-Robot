@@ -4,6 +4,8 @@
 [ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="2_b2463"]
 [ext_resource type="PackedScene" uid="uid://y8pmf0omvia6" path="res://scenes/ui/main_base_menu.tscn" id="3_b2463"]
 [ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://scenes/ui/techtree_scene.tscn" id="3_js4l8"]
+[ext_resource type="PackedScene" uid="uid://bo106h7edf70k" path="res://scenes/ui/crafting_scene.tscn" id="4_61ox6"]
+[ext_resource type="Script" uid="uid://cxhhwne6yof18" path="res://scripts/ui/crafting_ui.gd" id="5_yp0ob"]
 
 [node name="UiManager" type="Control" unique_id=1331567166 node_paths=PackedStringArray("menus")]
 layout_mode = 3
@@ -16,7 +18,8 @@ script = ExtResource("1_fypb7")
 overlay_step = 0.2
 menus = {
 0: NodePath("MenuPanel/MainBaseMenu"),
-1: NodePath("MenuPanel/TechTreeUI")
+1: NodePath("MenuPanel/TechTreeUI"),
+2: NodePath("MenuPanel/CraftingUI")
 }
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=182698967]
@@ -38,10 +41,13 @@ grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(320, 180)
 theme_override_styles/panel = ExtResource("2_b2463")
-metadata/_edit_group_ = true
 
 [node name="TechTreeUI" parent="MenuPanel" unique_id=895753709 instance=ExtResource("3_js4l8")]
 layout_mode = 1
+
+[node name="CraftingUI" parent="MenuPanel" unique_id=83823365 instance=ExtResource("4_61ox6")]
+layout_mode = 1
+script = ExtResource("5_yp0ob")
 
 [node name="MainBaseMenu" parent="MenuPanel" unique_id=931917098 instance=ExtResource("3_b2463")]
 layout_mode = 1

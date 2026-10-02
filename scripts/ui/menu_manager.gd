@@ -21,6 +21,9 @@ var state: MenuState = MenuState.CLOSED
 
 @export var menus: Dictionary[EventBus.MenuType, Control]
 
+
+
+
 func _ready() -> void:
 	visible = true
 	overlay.color.a = 0.0
@@ -65,4 +68,5 @@ func close_menu() -> void:
 
 func set_current_menu(type: EventBus.MenuType) -> void:
 	for menu in menus:
+		print(menu)
 		menus[menu].visible = menu == type

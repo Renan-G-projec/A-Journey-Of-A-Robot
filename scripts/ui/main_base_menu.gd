@@ -14,4 +14,4 @@ func _on_buildings_button_pressed() -> void:
 
 
 func _on_crafting_button_pressed() -> void:
-	EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
+	EventBus.request_open_menu.emit(EventBus.MenuType.CRAFTING)
