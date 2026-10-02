@@ -20,6 +20,7 @@ boot_splash/use_filter=false
 
 EventBus="*uid://cvxl6cydxoa8d"
 BetterTerrain="*uid://bbmladq2acrmd"
+TechtreeManager="*uid://cofbsrkrjh3w3"
 
 [debug]
 

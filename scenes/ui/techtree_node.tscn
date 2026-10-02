@@ -38,4 +38,3 @@ z_index = -1
 width = 4.0
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
-[connection signal="toggled" from="." to="." method="_on_toggled"]
