@@ -62,15 +62,15 @@ script = ExtResource("1_xoi5o")
 [node name="Techtree" parent="ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
 z_index = 2
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = -1
+anchor_left = 0.65400004
+anchor_top = 0.633
+anchor_right = 0.65400004
+anchor_bottom = 0.633
+offset_left = -69.89601
+offset_top = -54.048004
+offset_right = -29.896011
+offset_bottom = -14.048004
 
 [node name="Panel" type="Panel" parent="." unique_id=866635428]
 layout_mode = 1

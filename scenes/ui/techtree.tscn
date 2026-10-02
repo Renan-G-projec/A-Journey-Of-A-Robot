@@ -39,3 +39,12 @@ theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 disabled = true
 icon = ExtResource("5_151rp")
+
+[node name="furnance_stage2" parent="Root" unique_id=972143173 instance=ExtResource("1_8kas3")]
+layout_mode = 1
+offset_left = 40.0
+offset_right = 60.0
+theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
+theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
+disabled = true
+icon = ExtResource("5_151rp")
