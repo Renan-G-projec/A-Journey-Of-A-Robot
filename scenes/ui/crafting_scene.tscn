@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bo106h7edf70k"]
 
+[ext_resource type="Script" uid="uid://bhu5ftsl4d15" path="res://scenes/ui/crafting_ui.gd" id="1_4ifg1"]
 [ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="1_71b2k"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="2_4fx8h"]
 [ext_resource type="PackedScene" uid="uid://cghosfhpigliq" path="res://scenes/ui/crafting.tscn" id="2_4ifg1"]
@@ -39,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4ifg1")
 
 [node name="CraftingPanel" type="Panel" parent="." unique_id=1483135280]
 clip_contents = true
