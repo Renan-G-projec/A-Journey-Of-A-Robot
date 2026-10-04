@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CraftingUpgrade" format=3 uid="uid://dcnr5vdx4rxqd"]
 
-[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/ui/crafting_upgrade.gd" id="1_ol008"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/resources/crafting_upgrade.gd" id="1_ol008"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_uncx2"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="2_d4bb1"]
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="3_6ts6n"]

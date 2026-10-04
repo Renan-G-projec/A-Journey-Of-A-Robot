@@ -2,40 +2,38 @@ extends Control
 
 @onready var icon: TextureRect = $UpgradePanel/VBoxContainer/CenterContainer/TextureRect
 
+@onready var buildings: Control = $BuildingPanel/Buildings
 @onready var upgrade_name: Label = $UpgradePanel/VBoxContainer/UpgradeNameLabel
 @onready var upgrade_description: Label = $UpgradePanel/VBoxContainer/DescriptionLabel
 @onready var upgrade_requirements: Label = $UpgradePanel/VBoxContainer/RequirementsLabel
 @onready var upgrade_button: Button = $UpgradePanel/VBoxContainer/Button
 
-@export var current_player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
-
-
-var current_node: CraftingNode
+# Called when the node enters the scene tree for the first time.
+var current_node: BuildingNode
 var new_name: String
+var craft: CraftingUpgrade
 
 func _ready() -> void:
-	for nodes: CraftingNode in get_tree().get_nodes_in_group("CraftingNode"):
-		nodes.request_ui_crafting_panel.connect(_on_ui_crafting_panel_requested)
-	var root: CraftingNode = get_tree().get_first_node_in_group("CraftingNode")
-	root.request_ui_crafting_panel.emit(root)
+	for nodes: BuildingNode in get_tree().get_nodes_in_group("BuildingNode"):
+		nodes.request_ui_building_panel.connect(request_ui_building_panel)
+	var root: BuildingNode = get_tree().get_first_node_in_group("BuildingNode")
+	root.request_ui_building_panel.emit(root)
 
-func _on_ui_crafting_panel_requested(node: CraftingNode) -> void:
+func request_ui_building_panel(node: BuildingNode) -> void:
 	current_node = node 
 	icon.texture = node.icon
 	upgrade_name.text = node.upgrade.name
 	upgrade_description.text = node.upgrade.description
 	upgrade_requirements.text = node.upgrade.get_requirements_string()
-	upgrade_button.disabled = !current_player_inventory.has_items(node.upgrade.cost) 
+	craft = BuildingManger.list_prerequisties(node.upgrade)
+	print("CRAFT" , craft)
+	upgrade_button.disabled = !BuildingManger.are_prerequisites_met_for_building(current_node.upgrade) and  node.upgrade.amount[craft] >= 1
 
-	
-	
 	
 func _on_upgrade_button_pressed() -> void:
 	print("Upgrade Button Pressed")
-	if CraftingManger.are_prerequisites_met_for_crafting(current_node.upgrade):
-		current_player_inventory.remove_items(current_node.upgrade.cost)
+	if BuildingManger.are_prerequisites_met_for_building(current_node.upgrade):
 		upgrade_button.disabled = true
-		CraftingManger.add_upgrade(current_node.upgrade)
 		print("upgrade worked")
 	else:
 		print("upgrade Failed")

@@ -23,7 +23,6 @@ var state: MenuState = MenuState.CLOSED
 
 
 
-
 func _ready() -> void:
 	visible = true
 	overlay.color.a = 0.0

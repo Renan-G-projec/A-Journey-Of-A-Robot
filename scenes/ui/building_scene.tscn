@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://1r6oorpy2bjc"]
 
-[ext_resource type="Script" uid="uid://bhu5ftsl4d15" path="res://scripts/ui/crafting_ui.gd" id="1_w1fg0"]
+[ext_resource type="Script" uid="uid://bdss6j3dddqc1" path="res://scenes/ui/building_ui.gd" id="1_w1fg0"]
 [ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="2_aeq1p"]
-[ext_resource type="PackedScene" uid="uid://cghosfhpigliq" path="res://scenes/ui/crafting.tscn" id="3_yt83k"]
+[ext_resource type="PackedScene" uid="uid://cyc3uo56110th" path="res://scenes/ui/buildings.tscn" id="3_w1fg0"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_57wdr"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://fonts/Minecraft.ttf" id="5_7j1h3"]
 
@@ -56,17 +56,17 @@ grow_vertical = 2
 mouse_default_cursor_shape = 6
 theme_override_styles/panel = ExtResource("2_aeq1p")
 
-[node name="Crafting" parent="BuildingPanel" unique_id=1721540874 instance=ExtResource("3_yt83k")]
+[node name="Buildings" parent="BuildingPanel" unique_id=1721540874 instance=ExtResource("3_w1fg0")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.086
-anchor_top = 0.109000005
-anchor_right = 0.086
-anchor_bottom = 0.109000005
-offset_left = 0.13599968
-offset_top = 0.095998764
-offset_right = 128.136
-offset_bottom = 32.096
+anchor_left = 0.040000003
+anchor_top = 0.082
+anchor_right = 0.395
+anchor_bottom = 0.257
+offset_left = 4.039999
+offset_top = 0.00799942
+offset_right = 1.0199966
+offset_bottom = -3.7919998
 
 [node name="UpgradePanel" type="Panel" parent="." unique_id=714975557]
 layout_mode = 1
@@ -146,4 +146,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xsait")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_xsait")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_fxbve")
 disabled = true
-text = "Upgrade"
+text = "Build!"
+
+[connection signal="pressed" from="UpgradePanel/VBoxContainer/Button" to="." method="_on_upgrade_button_pressed"]

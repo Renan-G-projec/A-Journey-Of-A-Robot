@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CraftingUpgrade" format=3 uid="uid://c125bxqrxla8w"]
 
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_kv53r"]
-[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/ui/crafting_upgrade.gd" id="1_rwisn"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/resources/crafting_upgrade.gd" id="1_rwisn"]
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="2_l43jo"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="3_mv8y3"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://scripts/resources/techtree_upgrade.gd" id="4_l43jo"]

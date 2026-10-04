@@ -6,6 +6,7 @@ enum MenuType {
 	MAINBASE,
 	TECH_TREE,
 	CRAFTING,
+	BUILDING, 
 	PAUSE
 }
 

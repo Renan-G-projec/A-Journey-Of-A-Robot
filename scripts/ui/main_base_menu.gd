@@ -10,7 +10,7 @@ func _on_tech_tree_button_pressed() -> void:
 
 
 func _on_buildings_button_pressed() -> void:
-	EventBus.request_comming_soon_popup.emit()
+	EventBus.request_open_menu.emit(EventBus.MenuType.BUILDING)
 
 
 func _on_crafting_button_pressed() -> void:
