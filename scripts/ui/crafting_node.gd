@@ -1,9 +1,9 @@
-class_name CraftingNode
+class_name CraftButton
 extends Button
 
-@export var upgrade: CraftingUpgrade
+@export var craft_resource: CraftResource
 
-signal request_ui_crafting_panel(node: CraftingNode)
+signal request_ui_crafting_panel(node: CraftButton)
 
 
 # Called when the node enters the scene tree for the first time.

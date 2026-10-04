@@ -14,14 +14,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Smelter" parent="." unique_id=718377064 groups=["CraftingNode"] instance=ExtResource("1_k7ss6")]
+[node name="Smelter" parent="." unique_id=718377064 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
 offset_left = 32.0
 offset_right = 52.0
 icon = ExtResource("4_xjirk")
-upgrade = ExtResource("3_soryn")
+craft_resource = ExtResource("3_soryn")
 
-[node name="Drill" parent="." unique_id=158822291 groups=["CraftingNode"] instance=ExtResource("1_k7ss6")]
+[node name="Drill" parent="." unique_id=158822291 groups=["CraftButton"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
 icon = ExtResource("5_hb0je")
-upgrade = ExtResource("5_k7ss6")
+craft_resource = ExtResource("5_k7ss6")

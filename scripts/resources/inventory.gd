@@ -2,6 +2,7 @@ class_name Inventory
 extends Resource
 
 @export var data: Dictionary[InventoryItem, int] = {}
+@export var dadissmart: String
 signal inventory_item_changed(item: InventoryItem, new_qtd: int)
 
 func add_item(item: InventoryItem, qtd: int) -> void:

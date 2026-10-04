@@ -1,10 +1,12 @@
-class_name CraftingUpgrade 
+class_name CraftResource 
 extends Resource
+
 
 @export var name: String
 @export_multiline var description: String
 @export var cost: Inventory
 @export var id: int = 0
+@export var stock: int = 0
 @export var prerequisites: Array[TechtreeUpgrade] = []
 
 func get_requirements_string() -> String:
@@ -13,6 +15,6 @@ func get_requirements_string() -> String:
 		for item in cost.data:
 			string += "    - %d %s.\n" % [cost.get_item(item), item.name]
 	else:
-		string += "None!"
+		string += "None!" 
 	
 	return string

@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="CraftingUpgrade" format=3 uid="uid://dcnr5vdx4rxqd"]
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://dcnr5vdx4rxqd"]
 
-[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/resources/crafting_upgrade.gd" id="1_ol008"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_uncx2"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="2_d4bb1"]
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="3_6ts6n"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://scripts/resources/techtree_upgrade.gd" id="4_6ts6n"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://resources/upgrades/smeter.tres" id="5_nbeb5"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/resources/crafting_upgrade.gd" id="6_6ts6n"]
 
 [sub_resource type="Resource" id="Resource_h2rhj"]
 script = ExtResource("2_d4bb1")
@@ -15,7 +15,7 @@ ExtResource("3_6ts6n"): 10
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
-script = ExtResource("1_ol008")
+script = ExtResource("6_6ts6n")
 name = "Iron Smelter "
 description = "Time to Smelt! "
 cost = SubResource("Resource_h2rhj")

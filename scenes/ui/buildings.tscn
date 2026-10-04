@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dtrx03ds6ngif" path="res://scenes/ui/building_node.tscn" id="1_pgn8r"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="2_ir8li"]
-[ext_resource type="Resource" uid="uid://cuardbv7jon0h" path="res://resources/buildings/smelter.tres" id="3_oku8i"]
 
 [node name="Buildings" type="Control" unique_id=1721540874]
 layout_mode = 3
@@ -15,4 +14,3 @@ grow_vertical = 2
 [node name="BuildingNode" parent="." unique_id=2096825410 instance=ExtResource("1_pgn8r")]
 layout_mode = 0
 icon = ExtResource("2_ir8li")
-upgrade = ExtResource("3_oku8i")

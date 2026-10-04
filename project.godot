@@ -44,8 +44,8 @@ enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addon
 [global_group]
 
 TechtreeNode=""
-CraftingNode=""
-BuildingNode=""
+CraftButton=""
+BuildingButtons=""
 
 [gui]
 
