@@ -4,3 +4,4 @@
 Journey_Of_A_Robort_MacOS.zip
 build/*
 !build/.gitkeep
+!build/export-html.sh
