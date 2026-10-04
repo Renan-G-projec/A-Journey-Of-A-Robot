@@ -36,7 +36,12 @@ and then open on Godot.
 - E -> Interacts with special elements (such as machines and the main base)
 - Space -> Activates the jetpack
 - Click -> Mines the ores
-- Right-click -> Places the ores (obs: you need to mine it first! UI is not complete for this yet)
+- Right-click -> Places the ores
+
+## Notes
+- The UI for the block placing is not done yet. You can place the amount of blocks that you placed
+- The Machine input panel is unaligned. It will be fixed next week.
+- The building system (not the block placing, but building machines and placing on the map) is not complete yet.
 
 ## Incomplete systems
 These systems are in development. They're NOT fully functional right now but should be connected easily in the future.
@@ -47,7 +52,7 @@ These systems are in development. They're NOT fully functional right now but sho
 ![Smelting machine](public/v1/MachineExample.gif)
 - Crafting system:
 ![Crafting](public/v2/crafting_system_start.png)
-- Block placing
+- Block placing:
 ![Block placing](public/v2/block_placing.gif)
 
 ## Future plans
