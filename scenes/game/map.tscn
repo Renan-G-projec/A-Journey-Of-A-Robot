@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://vwol5d1gr122" path="res://scripts/resources/layer_data.gd" id="2_lkyxg"]
 [ext_resource type="Texture2D" uid="uid://b0hivy1d01jer" path="res://assets/sprites/oreTileset.png" id="3_gldc4"]
 [ext_resource type="PackedScene" uid="uid://nx0q84pdxlno" path="res://scenes/game/main_base.tscn" id="5_lkyxg"]
+[ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://scenes/game/machine.tscn" id="6_8kpgt"]
 
 [sub_resource type="Resource" id="Resource_7g61j"]
 script = ExtResource("2_lkyxg")
@@ -1416,3 +1417,6 @@ tile_set = SubResource("TileSet_gldc4")
 
 [node name="MainBase" parent="." unique_id=699425722 instance=ExtResource("5_lkyxg")]
 position = Vector2(0, -63)
+
+[node name="Machine" parent="." unique_id=1638857421 instance=ExtResource("6_8kpgt")]
+position = Vector2(92, -79)

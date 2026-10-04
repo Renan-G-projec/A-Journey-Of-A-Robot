@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c4nf3m3efiyqh"]
 
 [ext_resource type="PackedScene" uid="uid://chs5ip7fes88t" path="res://scenes/ui/techtree_node.tscn" id="1_8kas3"]
-[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://resources/upgrades/root.tres" id="2_ocdmj"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://resources/upgrades/smeter.tres" id="3_2udi8"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="5_151rp"]
 
@@ -20,7 +19,7 @@ layout_mode = 0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 toggle_mode = false
-upgrade = ExtResource("2_ocdmj")
+upgrade = ExtResource("3_2udi8")
 
 [node name="Smelter" parent="Root" unique_id=1097369655 instance=ExtResource("1_8kas3")]
 layout_mode = 1

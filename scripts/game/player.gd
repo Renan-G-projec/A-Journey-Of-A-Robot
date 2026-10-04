@@ -11,6 +11,8 @@ extends CharacterBody2D
 @onready var jetpack: Jetpack = $Jetpack
 @onready var block_placer: BlockPlacer = $%BlockPlacer
 
+
+
 var facing_direction: int = 1
 
 signal mined_block(tilemap_coords: Vector2i, damage: float)

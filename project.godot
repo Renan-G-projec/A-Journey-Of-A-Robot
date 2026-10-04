@@ -22,6 +22,7 @@ EventBus="*uid://cvxl6cydxoa8d"
 BetterTerrain="*uid://bbmladq2acrmd"
 TechtreeManager="*uid://cofbsrkrjh3w3"
 Global="*uid://boec13317xgs"
+CraftingManger="*uid://c1ny0pomvscir"
 
 [debug]
 
@@ -43,6 +44,7 @@ enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addon
 
 TechtreeNode=""
 CraftingNode=""
+BuildingNode=""
 
 [gui]
 

@@ -5,6 +5,7 @@ extends Resource
 @export_multiline var description: String
 @export var cost: Inventory
 @export var id: int = 0
+@export var prerequisites: Array[TechtreeUpgrade] = []
 
 func get_requirements_string() -> String:
 	var string: String = "Requirements:\n"

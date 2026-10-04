@@ -14,7 +14,7 @@ extends Node2D
 
 # Size in tiles
 @export var range: int = 4
-@export var damage: float = 1
+@export var damage: float = 10
 @export var select_lerp_effect: Vector2 = Vector2(1.4, 1.4)
 @export var select_lerp_effect_step: float = 0.2
 

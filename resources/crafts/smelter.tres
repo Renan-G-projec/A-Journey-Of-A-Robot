@@ -3,19 +3,21 @@
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://scripts/ui/crafting_upgrade.gd" id="1_ol008"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://scripts/resources/inventory_item.gd" id="1_uncx2"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="2_d4bb1"]
-[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="2_vih22"]
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://resources/items/iron_ore.tres" id="3_6ts6n"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://scripts/resources/techtree_upgrade.gd" id="4_6ts6n"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://resources/upgrades/smeter.tres" id="5_nbeb5"]
 
 [sub_resource type="Resource" id="Resource_h2rhj"]
 script = ExtResource("2_d4bb1")
 data = Dictionary[ExtResource("1_uncx2"), int]({
-ExtResource("2_vih22"): 5,
-ExtResource("3_6ts6n"): 5
+ExtResource("3_6ts6n"): 10
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_ol008")
+name = "Iron Smelter "
 description = "Time to Smelt! "
 cost = SubResource("Resource_h2rhj")
+prerequisites = Array[ExtResource("4_6ts6n")]([ExtResource("5_nbeb5")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

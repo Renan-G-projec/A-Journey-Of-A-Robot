@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://resources/items/coal_ore.tres" id="2_1vule"]
 [ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://resources/items/copper_ore.tres" id="3_6p0sw"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://scripts/resources/inventory.gd" id="4_bn021"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://resources/upgrades/root.tres" id="6_1vule"]
 
 [sub_resource type="Resource" id="Resource_pvojc"]
 script = ExtResource("4_bn021")
@@ -19,4 +20,5 @@ script = ExtResource("1_pvojc")
 name = "Smelter"
 description = "Where... You can smelt things?"
 cost = SubResource("Resource_pvojc")
+prerequisites = Array[ExtResource("1_pvojc")]([ExtResource("6_1vule")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

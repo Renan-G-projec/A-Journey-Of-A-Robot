@@ -8,7 +8,10 @@ extends Control
 @onready var upgrade_button: Button = $UpgradePanel/VBoxContainer/Button
 
 @export var current_player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
+
+
 var current_node: CraftingNode
+var new_name: String
 
 func _ready() -> void:
 	for nodes: CraftingNode in get_tree().get_nodes_in_group("CraftingNode"):
@@ -21,10 +24,16 @@ func _on_ui_crafting_panel_requested(node: CraftingNode) -> void:
 	upgrade_name.text = node.upgrade.name
 	upgrade_description.text = node.upgrade.description
 	upgrade_requirements.text = node.upgrade.get_requirements_string()
-	upgrade_button.disabled = !current_player_inventory.has_items(node.upgrade.cost)
-	
-	current_node = node
+	upgrade_button.disabled = !current_player_inventory.has_items(node.upgrade.cost) 
 
+	
+	
+	
 func _on_upgrade_button_pressed() -> void:
-	current_player_inventory.remove_items(current_node.upgrade.cost)
-	upgrade_button.disabled = true
+	print("Upgrade Button Pressed")
+	if CraftingManger.are_prerequisites_met_for_crafting(current_node):
+		current_player_inventory.remove_items(current_node.upgrade.cost)
+		upgrade_button.disabled = true
+		print("upgrade worked")
+	else:
+		print("upgrade Failed")

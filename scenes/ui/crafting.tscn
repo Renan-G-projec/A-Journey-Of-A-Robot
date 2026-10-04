@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://dcnr5vdx4rxqd" path="res://resources/crafts/smelter.tres" id="3_soryn"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="4_xjirk"]
 [ext_resource type="Texture2D" uid="uid://bb8scfhg75f3b" path="res://assets/sprites/drillStage1TechTree.png" id="5_hb0je"]
+[ext_resource type="Resource" uid="uid://c125bxqrxla8w" path="res://resources/crafts/drill.tres" id="5_k7ss6"]
 
 [node name="Crafting" type="Control" unique_id=1721540874]
 layout_mode = 3
@@ -13,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Furnace" parent="." unique_id=718377064 groups=["CraftingNode"] instance=ExtResource("1_k7ss6")]
+[node name="Smelter" parent="." unique_id=718377064 groups=["CraftingNode"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
 offset_left = 32.0
 offset_right = 52.0
@@ -23,3 +24,4 @@ upgrade = ExtResource("3_soryn")
 [node name="Drill" parent="." unique_id=158822291 groups=["CraftingNode"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
 icon = ExtResource("5_hb0je")
+upgrade = ExtResource("5_k7ss6")
