@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coyut8tx0773a"
-path="res://.godot/imported/mainbase.png-8eb4b4b472602b5b81ba54fc069cbcfc.ctex"
+uid="uid://dwx30dxh2t1pm"
+path="res://.godot/imported/crafting_system_start.png-c50f897804bfad8e3f7a9ddd6cb22e63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mainbase.png"
-dest_files=["res://.godot/imported/mainbase.png-8eb4b4b472602b5b81ba54fc069cbcfc.ctex"]
+source_file="res://public/v2/crafting_system_start.png"
+dest_files=["res://.godot/imported/crafting_system_start.png-c50f897804bfad8e3f7a9ddd6cb22e63.ctex"]
 
 [params]
 
