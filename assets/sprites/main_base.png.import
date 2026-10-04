@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfosadr0eaur"
-path="res://.godot/imported/littleParticle.png-2ed9b5f444fc724ac78aa05fa70d4f5a.ctex"
+uid="uid://35wrtd74fpjm"
+path="res://.godot/imported/main_base.png-977cb79dbd08e9aa0b4bd5910c1abc21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/littleParticle.png"
-dest_files=["res://.godot/imported/littleParticle.png-2ed9b5f444fc724ac78aa05fa70d4f5a.ctex"]
+source_file="res://assets/sprites/main_base.png"
+dest_files=["res://.godot/imported/main_base.png-977cb79dbd08e9aa0b4bd5910c1abc21.ctex"]
 
 [params]
 
