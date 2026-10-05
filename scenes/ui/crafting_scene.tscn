@@ -107,7 +107,8 @@ custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("2_4fx8h")
 
-[node name="UpgradeNameLabel" type="Label" parent="UpgradePanel/VBoxContainer" unique_id=1414597787]
+[node name="BuildName" type="Label" parent="UpgradePanel/VBoxContainer" unique_id=1414597787]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("3_4ifg1")
@@ -117,6 +118,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="UpgradePanel/VBoxContainer" unique_id=53159987]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/line_spacing = 3
@@ -126,6 +128,7 @@ text = "Description
 This upgrade is a placeholder."
 
 [node name="RequirementsLabel" type="Label" parent="UpgradePanel/VBoxContainer" unique_id=1548462158]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/line_spacing = 3
@@ -135,7 +138,8 @@ text = "Requires
     - 10 iron
     - 120 coal"
 
-[node name="Button" type="Button" parent="UpgradePanel/VBoxContainer" unique_id=1122209717]
+[node name="BuildButton" type="Button" parent="UpgradePanel/VBoxContainer" unique_id=1122209717]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("3_4ifg1")
@@ -148,4 +152,4 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_fxbve")
 disabled = true
 text = "Upgrade"
 
-[connection signal="pressed" from="UpgradePanel/VBoxContainer/Button" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="UpgradePanel/VBoxContainer/BuildButton" to="." method="_on_build_button_pressed"]

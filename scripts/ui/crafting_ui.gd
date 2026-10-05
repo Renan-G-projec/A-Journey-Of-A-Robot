@@ -2,13 +2,7 @@ extends Control
 
 @onready var icon: TextureRect = $UpgradePanel/VBoxContainer/CenterContainer/TextureRect
 
-@onready var upgrade_name: Label = $UpgradePanel/VBoxContainer/UpgradeNameLabel
-@onready var upgrade_description: Label = $UpgradePanel/VBoxContainer/DescriptionLabel
-@onready var upgrade_requirements: Label = $UpgradePanel/VBoxContainer/RequirementsLabel
-@onready var upgrade_button: Button = $UpgradePanel/VBoxContainer/Button
-
 @export var current_player_inventory: Inventory = preload("res://resources/inventories/player_inventory.tres")
-
 
 var craft_button: CraftButton
 var new_name: String
@@ -22,15 +16,12 @@ func _ready() -> void:
 func _on_ui_crafting_panel_requested(node: CraftButton) -> void:
 	craft_button = node 
 	icon.texture = node.icon
-	upgrade_name.text = node.craft_resource.name
-	upgrade_description.text = node.craft_resource.description
-	upgrade_requirements.text = node.craft_resource.get_requirements_string()
-	upgrade_button.disabled = !current_player_inventory.has_items(node.craft_resource.cost) 
-
+	%BuildName.text = node.craft_resource.name
+	%DescriptionLabel.text = node.craft_resource.description
+	%RequirementsLabel.text = node.craft_resource.get_requirements_string()
+	%BuildButton.disabled = !current_player_inventory.has_items(node.craft_resource.cost) || !TechtreeManager.has_upgrades(node.craft_resource.prerequisites)
 	
-	
-	
-func _on_upgrade_button_pressed() -> void:
+func _on_build_button_pressed() -> void:
 	print("Upgrade Button Pressed")
 	if CraftingManger.are_prerequisites_met_for_crafting(craft_button.craft_resource):
 		current_player_inventory.remove_items(craft_button.craft_resource.cost)

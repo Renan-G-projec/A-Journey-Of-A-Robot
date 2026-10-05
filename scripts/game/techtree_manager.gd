@@ -25,3 +25,10 @@ func are_prerequisites_met_for_tech(upgrade: TechtreeUpgrade) -> bool:
 			return false
 		
 	return true
+
+func has_upgrades(upgrades: Array[TechtreeUpgrade]) -> bool:
+	for upgrade in upgrades:
+		if !has_upgrade(upgrade):
+			return false
+	return true
+		
