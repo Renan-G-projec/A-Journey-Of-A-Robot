@@ -13,9 +13,11 @@ var current_node: BuildingButton
 var new_name: String
 var craft: CraftResource
 
-func _process(delta: float) -> void:
+func _ready() -> void:
 	for nodes: BuildingButton in get_tree().get_nodes_in_group("BuildingButtons"):
 		nodes.request_ui_building_panel.connect(request_ui_building_panel)
+
+func _process(delta: float) -> void:
 	var root: BuildingButton = get_tree().get_first_node_in_group("BuildingButtons")
 	root.request_ui_building_panel.emit(root)
 
