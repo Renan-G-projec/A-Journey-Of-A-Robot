@@ -2,7 +2,7 @@
 # A-Journey-Of-A-Robot
 A 2D Game about mining on a planet while managing the planet stability
 
-![Game screenshot](public/v2/main_base_showcase.png)
+![Game screenshot](.github/public/v2/main_base_showcase.png)
 
 ## About
 The game is made on the Godot Engine tool and is about mining on a planet. The project is on early stage, so no many features are implemented by now.
@@ -47,13 +47,13 @@ and then open on Godot.
 These systems are in development. They're NOT fully functional right now but should be connected easily in the future.
 
 - Tech tree:
-![Tech tree](public/v1/TechtreeExample.gif)
-- Smelting ore machine:
-![Smelting machine](public/v1/MachineExample.gif)
+![Tech tree](.github/public/v1/TechtreeExample.gif)
+- Smelting ore Machinee:
+![Smelting machine](.github/public/v1/MachineExample.gif)
 - Crafting system:
-![Crafting](public/v2/crafting_system_start.png)
+![Crafting](.github/plansublic/v2/crafting_system_start.png)
 - Block placing:
-![Block placing](public/v2/block_placing.gif)
+![Block placing](.github/public/v2/block_placing.gif)
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
