@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://b8is13ftfca7k"]
+
+[ext_resource type="Script" uid="uid://bfnoubonbsosn" path="res://features/dialogue/dialogue_sequence.gd" id="1_1cwij"]
+[ext_resource type="Script" uid="uid://b4ov2nqjw0mls" path="res://features/dialogue/dialogue.gd" id="2_m876r"]
+[ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="3_m876r"]
+[ext_resource type="Texture2D" uid="uid://c2ufx2k802mwg" path="res://assets/sprites/goldOreIcon.png" id="4_sq8tl"]
+[ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="5_b4rer"]
+
+[sub_resource type="Resource" id="Resource_kcpkg"]
+script = ExtResource("2_m876r")
+icon = ExtResource("3_m876r")
+dialogue = "Hello, im first!"
+metadata/_custom_type_script = "uid://b4ov2nqjw0mls"
+
+[sub_resource type="Resource" id="Resource_sq8tl"]
+script = ExtResource("2_m876r")
+icon = ExtResource("4_sq8tl")
+dialogue = "Second here"
+metadata/_custom_type_script = "uid://b4ov2nqjw0mls"
+
+[sub_resource type="Resource" id="Resource_b4rer"]
+script = ExtResource("2_m876r")
+icon = ExtResource("5_b4rer")
+dialogue = "Third [wave amp=3] Waaay [/wave]"
+metadata/_custom_type_script = "uid://b4ov2nqjw0mls"
+
+[resource]
+script = ExtResource("1_1cwij")
+sequence = Array[ExtResource("2_m876r")]([SubResource("Resource_kcpkg"), SubResource("Resource_sq8tl"), SubResource("Resource_b4rer")])
+metadata/_custom_type_script = "uid://bfnoubonbsosn"
