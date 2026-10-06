@@ -28,25 +28,8 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 
-	jetpack.is_active = Input.is_action_pressed("UseJetpack")
-	velocity.y += jetpack.get_jetpack_velocity(delta)
-	
-	if Input.is_action_pressed("MineFacingBlock"):
-		if (drill.is_facing_block): drill.start_emitting_particles()
-		drill.mine()
-	else:
-		drill.stop_emitting_particles()
-	if !(drill.is_facing_block): drill.stop_emitting_particles()
-	
-	var direction := Input.get_axis("GoLeft", "GoRight")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	if Input.is_action_just_pressed("PutFacingBlock") && block_inventory.get(current_placing_block, 0) > 0:
-		block_inventory[current_placing_block] -= 1
-		block_placer.place_block(current_placing_block)
+	if !Global.in_dialogue:
+		_update_inputs(delta)
 
 	move_and_slide()
 	update_state()
@@ -68,3 +51,24 @@ func update_state() -> void:
 
 func _on_block_mined(block_type: int) -> void:
 	block_inventory[block_type] = 1 + block_inventory.get(block_type, 0)
+
+func _update_inputs(delta: float) -> void:
+	jetpack.is_active = Input.is_action_pressed("UseJetpack")
+	velocity.y += jetpack.get_jetpack_velocity(delta)
+	
+	if Input.is_action_pressed("MineFacingBlock"):
+		if (drill.is_facing_block): drill.start_emitting_particles()
+		drill.mine()
+	else:
+		drill.stop_emitting_particles()
+	if !(drill.is_facing_block): drill.stop_emitting_particles()
+	
+	var direction := Input.get_axis("GoLeft", "GoRight")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if Input.is_action_just_pressed("PutFacingBlock") && block_inventory.get(current_placing_block, 0) > 0:
+		block_inventory[current_placing_block] -= 1
+		block_placer.place_block(current_placing_block)

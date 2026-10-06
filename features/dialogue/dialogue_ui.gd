@@ -8,13 +8,15 @@ var _current_dialogue_sequence: DialogueSequence
 var _current_dialogue_index: int = 0
 
 func load_dialogue_sequence(sequence: DialogueSequence) -> void:
+	_show()
 	_current_dialogue_sequence = sequence
 	_current_dialogue_index = 0
+	
 	var current_dialogue: Dialogue = _pop_dialogue()
 	_display_dialogue(current_dialogue.icon, current_dialogue.dialogue)
 
 func _ready() -> void:
-	load_dialogue_sequence(load("res://features/dialogue/data/test.tres"))
+	EventBus.request_start_dialogue_sequence.connect(load_dialogue_sequence)
 
 func _display_dialogue(icon: Texture2D, text: String) -> void:
 	if !visible:
@@ -51,7 +53,9 @@ func _pop_dialogue() -> Dialogue:
 	return _current_dialogue_sequence.sequence[_current_dialogue_index - 1]
 	
 func _hide() -> void:
+	Global.in_dialogue = false
 	visible = false
 
 func _show() -> void:
+	Global.in_dialogue = true
 	visible = true

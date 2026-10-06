@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://features/map/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="6_e0pfi"]
 [ext_resource type="PackedScene" uid="uid://y8oxopog6vr7" path="res://features/hud/ui_manager.tscn" id="8_yvtb5"]
+[ext_resource type="PackedScene" uid="uid://dqv06wk2a6uff" path="res://features/dialogue/dialogue_ui.tscn" id="9_0nfu8"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
@@ -77,5 +78,10 @@ color = Color(0, 0, 0, 0)
 visible = false
 menus = {
 0: NodePath("MenuPanel/MainBaseMenu"),
-1: NodePath("MenuPanel/TechTreeUI")
+1: NodePath("MenuPanel/TechTreeUI"),
+2: NodePath("MenuPanel/CraftingUI"),
+3: NodePath("MenuPanel/BuildingsUI")
 }
+
+[node name="DialogueUI" parent="." unique_id=839026784 instance=ExtResource("9_0nfu8")]
+visible = false

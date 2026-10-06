@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Machine" format=3 uid="uid://budo64b5w2sg5"]
+[gd_resource type="Resource" script_class="SmelterData" format=3 uid="uid://budo64b5w2sg5"]
 
 [ext_resource type="Script" uid="uid://b62jxijw510eo" path="res://features/smelter/machine_data.gd" id="1_ih6jt"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_r6ffr"]
