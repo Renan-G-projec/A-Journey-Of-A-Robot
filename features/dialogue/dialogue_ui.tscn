@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dqv06wk2a6uff"]
+
+[ext_resource type="Script" uid="uid://cinlnm6mu63ci" path="res://features/dialogue/dialogue_ui.gd" id="1_ldkx5"]
+[ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="1_of0ei"]
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="2_t6xs1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t6xs1"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[node name="DialogueUI" type="Control" unique_id=839026784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ldkx5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1281009410]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1489650106]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_of0ei")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel" unique_id=1829635781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Panel/HBoxContainer" unique_id=1537081193]
+unique_name_in_owner = true
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_t6xs1")
+expand_mode = 2
+
+[node name="Dialogue" type="RichTextLabel" parent="MarginContainer/Panel/HBoxContainer" unique_id=299347294]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_t6xs1")
+theme_override_fonts/bold_font = ExtResource("2_t6xs1")
+theme_override_fonts/bold_italics_font = ExtResource("2_t6xs1")
+theme_override_fonts/italics_font = ExtResource("2_t6xs1")
+theme_override_fonts/mono_font = ExtResource("2_t6xs1")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+
+[node name="Timer" type="Timer" parent="." unique_id=1500189558]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
