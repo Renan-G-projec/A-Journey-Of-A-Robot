@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d1886w4d427uf"]
+
+[ext_resource type="Texture2D" uid="uid://ddbgc2yc1450k" path="res://assets/sprites/playerStage1TechTree.png" id="1_nwijg"]
+[ext_resource type="Script" uid="uid://beifk5e5w8656" path="res://features/crafting/crafting_node.gd" id="2_e8xq4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggpi4"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[node name="CraftingNode" type="Button" unique_id=2096825410]
+custom_maximum_size = Vector2(20, 20)
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_colors/icon_focus_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
+theme_override_colors/icon_pressed_color = Color(0.827451, 0.827451, 0.827451, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ggpi4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ggpi4")
+toggle_mode = true
+icon = ExtResource("1_nwijg")
+script = ExtResource("2_e8xq4")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

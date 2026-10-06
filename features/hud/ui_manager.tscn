@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://y8oxopog6vr7"]
+
+[ext_resource type="Script" uid="uid://815utf3xu0mx" path="res://features/hud/menu_manager.gd" id="1_fypb7"]
+[ext_resource type="StyleBox" uid="uid://c6o0fad7w7b23" path="res://assets/styles/black_panel_ui.tres" id="2_b2463"]
+[ext_resource type="PackedScene" uid="uid://y8pmf0omvia6" path="res://features/mainbase/mainbase_ui.tscn" id="3_b2463"]
+[ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://features/techtree/techtree_scene.tscn" id="3_js4l8"]
+[ext_resource type="PackedScene" uid="uid://bo106h7edf70k" path="res://features/crafting/crafting_scene.tscn" id="3_yp0ob"]
+[ext_resource type="PackedScene" uid="uid://1r6oorpy2bjc" path="res://features/building/building_scene.tscn" id="5_ybivm"]
+[ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="5_yp0ob"]
+
+[node name="UiManager" type="Control" unique_id=1331567166 node_paths=PackedStringArray("menus")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fypb7")
+overlay_step = 0.2
+menus = {
+0: NodePath("MenuPanel/MainBaseMenu"),
+1: NodePath("MenuPanel/TechTreeUI"),
+2: NodePath("MenuPanel/CraftingUI"),
+3: NodePath("MenuPanel/BuildingsUI")
+}
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=182698967]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3882353)
+
+[node name="MenuPanel" type="Panel" parent="." unique_id=564312880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(320, 180)
+theme_override_styles/panel = ExtResource("2_b2463")
+metadata/_edit_group_ = true
+
+[node name="CraftingUI" parent="MenuPanel" unique_id=83823365 instance=ExtResource("3_yp0ob")]
+visible = false
+layout_mode = 1
+
+[node name="TechTreeUI" parent="MenuPanel" unique_id=895753709 instance=ExtResource("3_js4l8")]
+layout_mode = 1
+
+[node name="BuildingsUI" parent="MenuPanel" unique_id=984221584 instance=ExtResource("5_ybivm")]
+visible = false
+layout_mode = 1
+
+[node name="MainBaseMenu" parent="MenuPanel" unique_id=931917098 instance=ExtResource("3_b2463")]
+visible = false
+layout_mode = 1
+
+[node name="ComingSoon" type="Button" parent="MenuPanel" unique_id=734867797]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("5_yp0ob")
+theme_override_styles/pressed = ExtResource("5_yp0ob")
+theme_override_styles/hover = ExtResource("5_yp0ob")
+text = "Coming Soon..."
+
+[connection signal="pressed" from="MenuPanel/ComingSoon" to="." method="_on_coming_soon_pressed"]

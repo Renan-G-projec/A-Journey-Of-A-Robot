@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://cvjvmus2ylxx2"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_ba1fx"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_ss8pe"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_tk445"]
+
+[sub_resource type="Resource" id="Resource_ggpi4"]
+script = ExtResource("2_tk445")
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_ss8pe")
+name = "Root"
+description = "Where everything starts!"
+cost = SubResource("Resource_ggpi4")
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

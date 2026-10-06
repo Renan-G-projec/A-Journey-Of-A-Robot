@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://cuardbv7jon0h"]
+
+[ext_resource type="Resource" uid="uid://dcnr5vdx4rxqd" path="res://features/smelter/smelter_crafting.tres" id="2_u688i"]
+[ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="3_7861n"]
+
+[resource]
+script = ExtResource("3_7861n")
+name = "Smelter"
+description = "TDF "
+craft_connection = ExtResource("2_u688i")
+metadata/_custom_type_script = "uid://dw2gwutjx4hku"

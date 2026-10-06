@@ -41,6 +41,14 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/better-terrain/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://core/": "blue",
+"res://features/": "purple",
+"res://scenes/": "yellow"
+}
+
 [global_group]
 
 TechtreeNode=""
