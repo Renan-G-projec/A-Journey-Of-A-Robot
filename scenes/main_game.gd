@@ -26,7 +26,7 @@ func _ready() -> void:
 
 
 	mission_ui.display()
-	EventBus.request_start_dialogue_sequence.emit(load("res://features/dialogue/data/test.tres"))
+	#EventBus.request_start_dialogue_sequence.emit(load("res://features/dialogue/data/test.tres"))
 
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
