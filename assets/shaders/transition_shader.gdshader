@@ -1,3 +1,5 @@
+// Ad Maiorem Dei Gloriam!
+// Credits to https://godotshaders.com/shader/diamond-based-screen-transition/
 shader_type canvas_item;
 
 // Ranges from 0 to 1 over the course of the transition.
