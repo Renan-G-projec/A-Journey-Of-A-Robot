@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b5cyp8ic08ajn"]
+
+[ext_resource type="Script" uid="uid://dg7qrnf0dwij0" path="res://core/scene_manager.gd" id="1_xp4dk"]
+[ext_resource type="Shader" uid="uid://dc32n5ns4hiyc" path="res://assets/shaders/transition_shader.gdshader" id="2_x2ioe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xp4dk"]
+shader = ExtResource("2_x2ioe")
+shader_parameter/progress = 0.0
+shader_parameter/diamondPixelSize = 20.0
+
+[node name="SceneManager" type="CanvasLayer" unique_id=539056480]
+script = ExtResource("1_xp4dk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1509953143]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_xp4dk")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.03662241, 0, 0.0421232, 1)
