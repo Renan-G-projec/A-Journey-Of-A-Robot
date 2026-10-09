@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn0e01vcbuygv"]
 
-[ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scripts/ui/menu.gd" id="1_4ytvr"]
+[ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scenes/menu.gd" id="1_4ytvr"]
 [ext_resource type="PackedScene" uid="uid://d2lp3oifvrs2l" path="res://features/map/background.tscn" id="2_g3eks"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="3_v86rl"]
 [ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="4_13sgg"]
@@ -55,13 +55,6 @@ theme_override_styles/normal = ExtResource("4_13sgg")
 theme_override_styles/pressed = ExtResource("4_13sgg")
 theme_override_styles/hover = ExtResource("5_i6lef")
 text = "Quit Game"
-
-[node name="TransitionRect" type="ColorRect" parent="UI" unique_id=910339729]
-offset_right = 640.0
-offset_bottom = 360.0
-mouse_filter = 2
-mouse_behavior_recursive = 1
-color = Color(0, 0, 0, 0)
 
 [connection signal="pressed" from="UI/Control/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="UI/Control/VBoxContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
