@@ -12,41 +12,28 @@ extends Node2D
 @onready var game_ui: CanvasLayer = $GameUI
 
 
-var is_scene_changing: bool = false
-
-
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
-	
 	fuel_ui.set_jetpack(jetpack)
 	if initial_mission and initial_mission.items.size() >= 2:
 		initial_mission.items[0].set_progress(0)
 		initial_mission.items[1].set_progress(0)
 	
 	if OS.has_feature("editor"): _debug_config()
-		
-
-
+	
 	mission_ui.display()
-	#EventBus.request_start_dialogue_sequence.emit(load("res://features/dialogue/data/test.tres"))
-
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
-	if is_scene_changing: return
 	map.damage_tile(tilemap_coords, damage) 
 
 func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
-	if is_scene_changing: return
 	player_inventory.add_item(ore, 1)
 	if ore.name == "Coal":
 		initial_mission.items[0].set_progress(initial_mission.items[0].progress + 1)
 	elif ore.name == "Iron":
 		initial_mission.items[1].set_progress(initial_mission.items[1].progress + 1)
 		
-	if initial_mission.is_completed() and not is_scene_changing:
-		is_scene_changing = true
-		get_tree().paused = false 
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	if initial_mission.is_completed():
+		SceneManager.change_scene_to_file("res://scenes/menu.tscn")
 
 
 func _process(delta: float) -> void:
@@ -62,6 +49,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	map.load_chunks_by_position(player.position, 4)
 
+#region DEBUG
 # This function is for configuring things for debug, suich as infinite inventory and stuff like that
 const COAL_ORE = preload("uid://bko8wv0d2j44d")
 const IRON_ORE = preload("uid://lk30ldug605k")
@@ -81,3 +69,4 @@ func _debug_config() -> void:
 	player_inventory.add_item(IRON_BAR, 999)
 	player_inventory.add_item(COPPER_BAR, 999)
 	print("DEBUG: added processed ores to the inventory!")
+#endregion
