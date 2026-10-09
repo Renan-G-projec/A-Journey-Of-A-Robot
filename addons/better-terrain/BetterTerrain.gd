@@ -1085,7 +1085,7 @@ func update_terrain_area(tm: TileMapLayer, area: Rect2i, and_surrounding_cells :
 	for c in additional_cells:
 		_update_tile_immediate(tm, c, ts_meta, types, cache)
 
-func update_terrain_area_sliced(tm: TileMapLayer, area: Rect2i, and_surrounding_cells := true) -> void:
+func update_terrain_area_sliced_chunk(tm: TileMapLayer, area: Rect2i, and_surrounding_cells := true) -> void:
 	if !tm or !tm.tile_set:
 		return
 	area = area.abs()
@@ -1122,6 +1122,7 @@ func update_terrain_area_sliced(tm: TileMapLayer, area: Rect2i, and_surrounding_
 				await tm.get_tree().process_frame
 	for c in additional_cells:
 		_update_tile_immediate(tm, c, ts_meta, types, cache)
+	EventBus.chunk_loaded.emit()
 
 ## For a [TileMapLayer], create a changeset that will
 ## be calculated via a [WorkerThreadPool], so it will not delay processing the current
