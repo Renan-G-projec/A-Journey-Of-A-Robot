@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://cx0cv7c4c0b38"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_rrrx3"]
+[ext_resource type="Texture2D" uid="uid://dr33tlu5drxa0" path="res://assets/sprites/rubyOreIcon.png" id="2_5t21c"]
+
+[resource]
+script = ExtResource("1_rrrx3")
+name = "Ruby"
+texture = ExtResource("2_5t21c")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

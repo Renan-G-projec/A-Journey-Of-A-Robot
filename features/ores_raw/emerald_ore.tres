@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dmtdr1nmn7nwb"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_tivs4"]
+[ext_resource type="Texture2D" uid="uid://ckxqt6cu6cr1e" path="res://assets/sprites/emeralOreIcon.png" id="2_3yrl3"]
+
+[resource]
+script = ExtResource("1_tivs4")
+texture = ExtResource("2_3yrl3")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

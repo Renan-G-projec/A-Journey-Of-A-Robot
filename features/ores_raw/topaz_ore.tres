@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://bdinqwho5446f"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_xwne6"]
+[ext_resource type="Texture2D" uid="uid://oinfvvyy4byh" path="res://assets/sprites/topazOreIcon.png" id="2_asrvr"]
+
+[resource]
+script = ExtResource("1_xwne6")
+name = "Topaz"
+texture = ExtResource("2_asrvr")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"
