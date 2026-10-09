@@ -22,6 +22,9 @@ const PLANET_BOTTOM := CHUNK_WIDTH * NUMBER_OF_LAYERS + 10
 @onready var coal: InventoryItem = preload("res://features/ores_raw/coal_ore.tres")
 @onready var iron: InventoryItem = preload("res://features/ores_raw/iron_ore.tres")
 @onready var copper: InventoryItem = preload("res://features/ores_raw/copper_ore.tres")
+@onready var topaz: InventoryItem = preload("res://features/ores_raw/topaz_ore.tres")
+@onready var emerald: InventoryItem = preload("res://features/ores_raw/emerald_ore.tres")
+@onready var ruby: InventoryItem = preload("res://features/ores_raw/ruby_ore.tres")
 
 @export var tile_base_life: float = 100.0
 var tiles_life: Dictionary[Vector2i, float] = {}
@@ -105,9 +108,12 @@ func _generate_ores_in_tiles(tiles: Array[Vector2i], layer: LayerData) -> void:
 
 func _get_ore_in_atlas(ore: Enums.Ores) -> Vector2i:
 	match ore:
-		Enums.Ores.COAL: return Vector2i(0, 0)
-		Enums.Ores.IRON: return Vector2i(1, 0)
-		Enums.Ores.COPPER: return Vector2i(2, 0)
+		Enums.Ores.COAL: return Vector2i(1, 0)
+		Enums.Ores.IRON: return Vector2i(2, 0)
+		Enums.Ores.COPPER: return Vector2i(3, 0)
+		Enums.Ores.TOPAZ: return Vector2i(4, 0)
+		Enums.Ores.EMERALD: return Vector2i(5, 0)
+		Enums.Ores.RUBY: return Vector2i(0, 0)
 	return Vector2i(0, 0)
 
 func _place_ore(position: Vector2i, ore: Enums.Ores) -> void:
@@ -132,9 +138,15 @@ func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 	var ore_id: Vector2i = ore_layer.get_cell_atlas_coords(local_map_coords)
 	match ore_id.x:
 		0:
-			return coal
+			return ruby
 		1:
-			return iron
+			return coal
 		2:
+			return iron
+		3: 
 			return copper
+		4:
+			return topaz
+		5:
+			return emerald
 	return null
