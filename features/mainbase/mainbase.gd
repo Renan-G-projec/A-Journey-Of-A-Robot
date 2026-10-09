@@ -8,8 +8,8 @@ func _process(delta: float) -> void:
 	if interact_area.has_overlapping_bodies():
 		if Input.is_action_just_pressed("Interact"):
 			EventBus.request_open_menu.emit(EventBus.MenuType.MAINBASE)
-
-
+		elif Input.is_action_just_pressed("ui_cancel"):
+			EventBus.request_close_menu.emit()
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player:
