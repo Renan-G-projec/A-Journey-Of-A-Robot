@@ -17,3 +17,4 @@ signal request_comming_soon_popup()
 signal request_start_dialogue_sequence(dialogue_sequence: DialogueSequence)
 
 signal block_mined(block_type: int)
+signal chunk_loaded()

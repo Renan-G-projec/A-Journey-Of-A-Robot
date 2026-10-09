@@ -96,7 +96,7 @@ func _load_chunk(chunk_index: int) -> void:
 		BetterTerrain.set_cells(layer, tiles_to_place, layers[layer_index].terrain_id)
 		_generate_ores_in_tiles(tiles_to_place, layers[layer_index])
 		await get_tree().physics_frame
-	BetterTerrain.update_terrain_area_sliced(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
+	BetterTerrain.update_terrain_area_sliced_chunk(layer, Rect2i(initial_x, -20, CHUNK_WIDTH, PLANET_BOTTOM + 20))
 	
 func _generate_ores_in_tiles(tiles: Array[Vector2i], layer: LayerData) -> void:
 	const perlin_zoom := 0.2
