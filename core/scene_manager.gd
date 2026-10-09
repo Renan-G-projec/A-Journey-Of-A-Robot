@@ -46,6 +46,7 @@ func change_scene_to_file_with_loading(file: String, progress_signal: Signal, nu
 	tween_fade_in.tween_method(set_progress, 0.0, 1.0, transition_duration)
 	await tween_fade_in.finished
 	
+	%ProgressBar.visible = true
 	await _fade_progress_bar(1.0).finished
 	
 	var new_scene: Node = scene.instantiate()
@@ -59,6 +60,7 @@ func change_scene_to_file_with_loading(file: String, progress_signal: Signal, nu
 	transition_rect.rotation_degrees += 180
 	
 	await _fade_progress_bar(0.0).finished
+	%ProgressBar.visible = false
 	
 	var tween_fade_out: Tween = create_tween()
 	tween_fade_out.tween_method(set_progress, 1.0, 0.0, transition_duration)
