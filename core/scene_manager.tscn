@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
 color = Color(0.03662241, 0, 0.0421232, 1)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=594338633]
@@ -43,6 +44,7 @@ grow_vertical = 2
 scale = Vector2(1e-05, 1)
 pivot_offset_ratio = Vector2(0.5, 0)
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_styles/background = ExtResource("3_3jigw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_x2ioe")
 max_value = 4.0
