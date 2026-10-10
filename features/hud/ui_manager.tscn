@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://features/techtree/techtree_scene.tscn" id="3_js4l8"]
 [ext_resource type="PackedScene" uid="uid://bo106h7edf70k" path="res://features/crafting/crafting_scene.tscn" id="3_yp0ob"]
 [ext_resource type="PackedScene" uid="uid://1r6oorpy2bjc" path="res://features/building/building_scene.tscn" id="5_ybivm"]
-[ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="5_yp0ob"]
 
 [node name="UiManager" type="Control" unique_id=1331567166 node_paths=PackedStringArray("menus")]
 layout_mode = 3
@@ -78,9 +77,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("5_yp0ob")
-theme_override_styles/pressed = ExtResource("5_yp0ob")
-theme_override_styles/hover = ExtResource("5_yp0ob")
 text = "Coming Soon..."
 
 [connection signal="pressed" from="MenuPanel/ComingSoon" to="." method="_on_coming_soon_pressed"]
