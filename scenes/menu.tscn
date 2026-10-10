@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bn0e01vcbuygv"]
 
 [ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scenes/menu.gd" id="1_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://dgnif8lcpk68m" path="res://assets/sprites/ui_background.png" id="2_g3eks"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="3_v86rl"]
 [ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="4_13sgg"]
 [ext_resource type="StyleBox" uid="uid://dfw4s6ixw8gew" path="res://assets/styles/menu_buttons_hover.tres" id="5_i6lef"]
@@ -16,8 +17,19 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 script = ExtResource("1_4ytvr")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2098295548]
+scale = Vector2(2, 2)
+repeat_size = Vector2(16, 16)
+autoscroll = Vector2(8, 8)
+repeat_times = 14
+
+[node name="UiBackground" type="Sprite2D" parent="Parallax2D" unique_id=94540287]
+texture = ExtResource("2_g3eks")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=464292609]
 layout_mode = 1
@@ -41,6 +53,7 @@ unique_name_in_owner = true
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_constants/separation = 10
+alignment = 1
 
 [node name="StartGameButton" type="Button" parent="MarginContainer/ButtonsContainer" unique_id=1604259101]
 unique_name_in_owner = true
