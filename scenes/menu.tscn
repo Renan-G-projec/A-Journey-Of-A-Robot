@@ -1,103 +1,67 @@
 [gd_scene format=3 uid="uid://bn0e01vcbuygv"]
 
-[ext_resource type="Script" uid="uid://bccvri6hi4py" path="res://scenes/menu.gd" id="1_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://dgnif8lcpk68m" path="res://assets/sprites/ui_background.png" id="2_g3eks"]
-[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="3_v86rl"]
-[ext_resource type="StyleBox" uid="uid://ds5og857b17o8" path="res://assets/styles/menu_buttons.tres" id="4_13sgg"]
-[ext_resource type="StyleBox" uid="uid://dfw4s6ixw8gew" path="res://assets/styles/menu_buttons_hover.tres" id="5_i6lef"]
-[ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="6_g3eks"]
+[ext_resource type="Texture2D" uid="uid://c6gomibd0vnsm" path="res://assets/sprites/PlayButton.png" id="2_vjb58"]
+[ext_resource type="Script" uid="uid://c0ci4e7eghu27" path="res://scenes/play_button.gd" id="3_mhnvy"]
+[ext_resource type="Script" uid="uid://brqj7owtofuv8" path="res://scenes/camera_2d.gd" id="4_mhnvy"]
 
-[node name="Menu" type="Control" unique_id=509029889]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(3, 3)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_filter = 1
-script = ExtResource("1_4ytvr")
+[sub_resource type="AtlasTexture" id="AtlasTexture_con2f"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnvy"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(48, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(96, 0, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqeox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_con2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytvr")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
+size = Vector2(46, 16)
+
+[node name="Menu" type="Node2D" unique_id=596394197]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2098295548]
-scale = Vector2(2, 2)
-repeat_size = Vector2(16, 16)
+scroll_scale = Vector2(0.448, 1)
+repeat_size = Vector2(64, 64)
 autoscroll = Vector2(8, 8)
-repeat_times = 14
+repeat_times = 10
+follow_viewport = false
 
 [node name="UiBackground" type="Sprite2D" parent="Parallax2D" unique_id=94540287]
+scale = Vector2(4, 4)
 texture = ExtResource("2_g3eks")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=464292609]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -106.0
-offset_top = -59.666668
-offset_right = 106.66667
-offset_bottom = 60.333332
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 30
+[node name="PlayButton" type="AnimatedSprite2D" parent="." unique_id=1827979844]
+sprite_frames = SubResource("SpriteFrames_yqeox")
+script = ExtResource("3_mhnvy")
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="MarginContainer" unique_id=300417090]
-unique_name_in_owner = true
-layout_mode = 2
-offset_transform_enabled = true
-theme_override_constants/separation = 10
-alignment = 1
+[node name="Area2D" type="Area2D" parent="PlayButton" unique_id=1108605950]
 
-[node name="StartGameButton" type="Button" parent="MarginContainer/ButtonsContainer" unique_id=1604259101]
-unique_name_in_owner = true
-layout_mode = 2
-offset_transform_enabled = true
-mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("3_v86rl")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = ExtResource("4_13sgg")
-theme_override_styles/pressed = ExtResource("4_13sgg")
-theme_override_styles/hover = ExtResource("5_i6lef")
-text = "Play Game"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton/Area2D" unique_id=1044323047]
+shape = SubResource("RectangleShape2D_ocxxs")
 
-[node name="QuitGameButton" type="Button" parent="MarginContainer/ButtonsContainer" unique_id=1797176163]
-layout_mode = 2
-offset_transform_enabled = true
-mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("3_v86rl")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = ExtResource("4_13sgg")
-theme_override_styles/pressed = ExtResource("4_13sgg")
-theme_override_styles/hover = ExtResource("5_i6lef")
-text = "Quit Game"
+[node name="Camera2D" type="Camera2D" parent="." unique_id=289366053]
+zoom = Vector2(2, 2)
+script = ExtResource("4_mhnvy")
 
-[node name="SelectedUI" type="NinePatchRect" parent="." unique_id=1546547134]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("6_g3eks")
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[connection signal="pressed" from="MarginContainer/ButtonsContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/ButtonsContainer/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="animation_finished" from="PlayButton" to="PlayButton" method="_on_animation_finished"]
+[connection signal="mouse_entered" from="PlayButton/Area2D" to="PlayButton" method="_on_area_2d_mouse_entered"]
