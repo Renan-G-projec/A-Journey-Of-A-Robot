@@ -19,12 +19,12 @@ const PLANET_BOTTOM := CHUNK_WIDTH * NUMBER_OF_LAYERS + 10
 @onready var ore_layer: TileMapLayer = $OreLayer
 
 # Ore loading
-@onready var coal: InventoryItem = preload("res://features/ores_raw/coal_ore.tres")
-@onready var iron: InventoryItem = preload("res://features/ores_raw/iron_ore.tres")
-@onready var copper: InventoryItem = preload("res://features/ores_raw/copper_ore.tres")
-@onready var topaz: InventoryItem = preload("res://features/ores_raw/topaz_ore.tres")
-@onready var emerald: InventoryItem = preload("res://features/ores_raw/emerald_ore.tres")
-@onready var ruby: InventoryItem = preload("res://features/ores_raw/ruby_ore.tres")
+@onready var coal: InventoryItem = preload("res://features/ores/raw/coal_ore.tres")
+@onready var iron: InventoryItem = preload("res://features/ores/raw/iron_ore.tres")
+@onready var copper: InventoryItem = preload("res://features/ores/raw/copper_ore.tres")
+@onready var topaz: InventoryItem = preload("res://features/ores/raw/topaz_ore.tres")
+@onready var emerald: InventoryItem = preload("res://features/ores/raw/emerald_ore.tres")
+@onready var ruby: InventoryItem = preload("res://features/ores/raw/ruby_ore.tres")
 
 @export var tile_base_life: float = 100.0
 var tiles_life: Dictionary[Vector2i, float] = {}

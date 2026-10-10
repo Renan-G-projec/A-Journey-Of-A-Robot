@@ -2,7 +2,7 @@
 # AUTOLOAD: TechtreeManager
 extends Node
 
-var _root_upgrade: TechtreeUpgrade = preload("res://features/techtree/data/root.tres")
+var _root_upgrade: TechtreeUpgrade = preload("res://features/techtree/data/starting_techs/root.tres")
 
 @export var _unlocked_upgrades: Array[TechtreeUpgrade] = [_root_upgrade]
 signal upgrade_adquired(upgrade: TechtreeUpgrade)

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_uncx2"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_d4bb1"]
-[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores_raw/iron_ore.tres" id="3_6ts6n"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_6ts6n"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="4_6ts6n"]
-[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/smeter.tres" id="5_nbeb5"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="5_nbeb5"]
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="6_6ts6n"]
 
 [sub_resource type="Resource" id="Resource_h2rhj"]

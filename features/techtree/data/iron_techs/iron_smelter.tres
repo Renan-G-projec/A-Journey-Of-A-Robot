@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://c42o8u6yp0mis"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_5nw8e"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_g2yrq"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="2_b2xje"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_mahca"]
+[ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="4_4dkul"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_8l10o"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="7_qjqrc"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="8_jc00i"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="9_q244x"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="10_vu1k5"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="11_g2ula"]
+
+[sub_resource type="Resource" id="Resource_8g4jx"]
+script = ExtResource("5_8l10o")
+data = Dictionary[ExtResource("1_g2yrq"), int]({
+ExtResource("2_b2xje"): 15,
+ExtResource("3_mahca"): 15,
+ExtResource("4_4dkul"): 5
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_5nw8e")
+name = "Iron Smelter"
+description = "A heavier furnace that handles iron."
+cost = SubResource("Resource_8g4jx")
+prerequisites = Array[ExtResource("1_5nw8e")]([ExtResource("7_qjqrc"), ExtResource("8_jc00i"), ExtResource("9_q244x"), ExtResource("10_vu1k5"), ExtResource("11_g2ula")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

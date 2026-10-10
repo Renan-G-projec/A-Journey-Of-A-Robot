@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://etabvbhfoajw"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_0jj6a"]
+[ext_resource type="Texture2D" uid="uid://cb2if5typ4pg8" path="res://assets/sprites/placeHolder1.png" id="2_ebe2n"]
+
+[resource]
+script = ExtResource("1_0jj6a")
+name = "Emerald Cut"
+texture = ExtResource("2_ebe2n")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

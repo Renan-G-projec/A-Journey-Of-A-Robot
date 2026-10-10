@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://b4j5i8c4364n8"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_yypto"]
+
+[resource]
+script = ExtResource("1_yypto")
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

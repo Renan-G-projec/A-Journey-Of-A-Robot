@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://dqwdf7o8gbnmx"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_hpjcx"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_o1phy"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_n2bi7"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="4_4787q"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="5_bgr2v"]
+
+[sub_resource type="Resource" id="Resource_nunax"]
+script = ExtResource("2_n2bi7")
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_hpjcx")
+name = "Copper Drill"
+description = "A copper-tipped bit that cuts faster than the starter drill."
+cost = SubResource("Resource_nunax")
+prerequisites = Array[ExtResource("1_hpjcx")]([ExtResource("4_4787q"), ExtResource("5_bgr2v")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

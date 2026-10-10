@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="3_go3l1"]
 [ext_resource type="PackedScene" uid="uid://c5fyly0fnhxia" path="res://features/smelter/input_panel.tscn" id="4_16yxu"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="5_suq68"]
-[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores_raw/copper_ore.tres" id="6_kts8q"]
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores_raw/coal_ore.tres" id="7_j6ra2"]
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores/raw/copper_ore.tres" id="6_kts8q"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="7_j6ra2"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="8_35ie4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16yxu"]
@@ -166,9 +166,9 @@ shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="InputPanel" parent="." unique_id=344237744 instance=ExtResource("4_16yxu")]
 visible = false
-offset_left = -48.0
+offset_left = -64.0
 offset_top = -48.0
-offset_right = 16.0
+offset_right = 0.0
 offset_bottom = 0.0
 input = SubResource("Resource_1071v")
 

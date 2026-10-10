@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://b7n68xfd645kl"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_vg8ol"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_vj2y2"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_tgocd"]
+
+[sub_resource type="Resource" id="Resource_kk8d8"]
+script = ExtResource("2_tgocd")
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_vj2y2")
+name = "Copper Bag"
+description = "A copper-plated pack. It carries twice as much as the starter, so you make fewer trips."
+cost = SubResource("Resource_kk8d8")
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

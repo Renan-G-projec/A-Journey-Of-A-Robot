@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://4sjt5gi434ou"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_8e446"]
+[ext_resource type="Texture2D" uid="uid://cb2if5typ4pg8" path="res://assets/sprites/placeHolder1.png" id="2_8e446"]
+
+[resource]
+script = ExtResource("1_8e446")
+name = "Emerald Melted"
+texture = ExtResource("2_8e446")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

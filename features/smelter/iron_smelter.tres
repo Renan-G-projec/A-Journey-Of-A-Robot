@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Machine" format=3 uid="uid://bg3br0p6666vh"]
 
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_ky3hs"]
-[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores_raw/iron_ore.tres" id="3_2ia2n"]
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores_raw/coal_ore.tres" id="3_53fti"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_2ia2n"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="3_53fti"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="4_4loav"]
 [ext_resource type="Script" uid="uid://b62jxijw510eo" path="res://features/smelter/machine_data.gd" id="6_1qwcs"]
 [ext_resource type="Texture2D" uid="uid://bjy0pb47iglds" path="res://assets/sprites/basicSmelter.png" id="7_f0xo2"]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://bgfl6p8jf5ma3"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_gvpi1"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_ppcxi"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_ac68c"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="4_lyhve"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="5_g2tpd"]
+
+[sub_resource type="Resource" id="Resource_jhr2y"]
+script = ExtResource("2_ac68c")
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_gvpi1")
+name = "Copper Bag"
+description = "A copper-plated pack. It carries twice as much as the starter, so you make fewer trips."
+cost = SubResource("Resource_jhr2y")
+prerequisites = Array[ExtResource("1_gvpi1")]([ExtResource("4_lyhve"), ExtResource("5_g2tpd")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

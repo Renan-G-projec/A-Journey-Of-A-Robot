@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dk0yw8nbk34bo"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_4j7mp"]
+[ext_resource type="Texture2D" uid="uid://cb2if5typ4pg8" path="res://assets/sprites/placeHolder1.png" id="2_4j7mp"]
+
+[resource]
+script = ExtResource("1_4j7mp")
+name = "Ruby Melted"
+texture = ExtResource("2_4j7mp")
+metadata/_custom_type_script = "uid://vqhj8nlwq3u7"

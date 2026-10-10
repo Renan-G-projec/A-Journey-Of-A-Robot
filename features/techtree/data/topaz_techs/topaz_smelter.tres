@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://g6eiv3wwpig1"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_72sa3"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_ydkfi"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_35j5p"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_dhhew"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_kfaay"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_afus3"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_l5hb6"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_yauyq"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_515is"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_yxt4i"]
+
+[resource]
+script = ExtResource("1_72sa3")
+name = "Topaz Smelter"
+description = "Melts raw topaz in a furnance. Molten topaz is the first step to cutting it."
+prerequisites = Array[ExtResource("1_72sa3")]([ExtResource("2_ydkfi"), ExtResource("3_35j5p"), ExtResource("4_dhhew"), ExtResource("5_kfaay"), ExtResource("6_afus3"), ExtResource("7_l5hb6"), ExtResource("8_yauyq"), ExtResource("9_515is"), ExtResource("10_yxt4i")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

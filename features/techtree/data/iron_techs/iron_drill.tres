@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://cbqiv1e3l1wyo"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_4swms"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_wwtfd"]
+[ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="2_w6nsw"]
+[ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="3_vcc1a"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="4_71lmt"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="6_3ggrg"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="7_2laxq"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="8_thi33"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="9_5qmnn"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="10_aftl2"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="11_0q4lo"]
+
+[sub_resource type="Resource" id="Resource_b2xje"]
+script = ExtResource("4_71lmt")
+data = Dictionary[ExtResource("1_4swms"), int]({
+ExtResource("2_w6nsw"): 8,
+ExtResource("3_vcc1a"): 5
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_wwtfd")
+cost = SubResource("Resource_b2xje")
+prerequisites = Array[ExtResource("1_wwtfd")]([ExtResource("6_3ggrg"), ExtResource("7_2laxq"), ExtResource("8_thi33"), ExtResource("9_5qmnn"), ExtResource("10_aftl2"), ExtResource("11_0q4lo")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"
