@@ -68,8 +68,7 @@ func close_menu() -> void:
 
 func set_current_menu(type: EventBus.MenuType) -> void:
 	for menu in menus:
-		print(menu)
-		menus[menu].visible = menu == type
+		if menus[menu] && menu == type: menus[menu].open()
 
 func _on_coming_soon_popup_requested() -> void:
 	comming_soon_popup.visible = true
