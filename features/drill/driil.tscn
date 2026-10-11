@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1pyy2io1t04e" path="res://assets/sprites/bigParticle.png" id="4_aubse"]
 [ext_resource type="Shader" uid="uid://dp7je6monj61j" path="res://features/drill/driil_particles.gdshader" id="4_d3qb6"]
 [ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://features/drill/drill_particles.gd" id="6_oha4g"]
+[ext_resource type="AudioStream" uid="uid://b8qps8yw5w5ye" path="res://assets/sounds/laserShoot.wav" id="7_43p6o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ws6u"]
 atlas = ExtResource("2_oha4g")
@@ -74,3 +75,7 @@ lifetime = 5.0
 visibility_rect = Rect2(-2, -2, 4, 4)
 process_material = SubResource("ShaderMaterial_ypvse")
 script = ExtResource("6_oha4g")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=157165265]
+stream = ExtResource("7_43p6o")
+volume_db = -40.0

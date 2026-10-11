@@ -61,6 +61,8 @@ func _physics_process(delta: float) -> void:
 func mine() -> void:
 	if (is_facing_block): 
 		mined_block.emit(facing_block_coords, damage)
+		$AudioStreamPlayer.pitch_scale = 1.4 * randf()
+		$AudioStreamPlayer.play()
 		if (facing_block_animation_timer < 0): 
 			selected_block_effect.queue_redraw()
 			update_selected_block_effect(true, Vector2(0.7, 0.7))
