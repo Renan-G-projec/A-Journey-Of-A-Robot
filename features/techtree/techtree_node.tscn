@@ -22,8 +22,6 @@ expand_margin_bottom = 3.0
 custom_maximum_size = Vector2(20, 20)
 offset_right = 20.0
 offset_bottom = 20.0
-theme_override_colors/icon_focus_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
-theme_override_colors/icon_pressed_color = Color(0.827451, 0.827451, 0.827451, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_ggpi4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ggpi4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ggpi4")
@@ -37,4 +35,5 @@ script = ExtResource("2_epypp")
 z_index = -1
 width = 4.0
 
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

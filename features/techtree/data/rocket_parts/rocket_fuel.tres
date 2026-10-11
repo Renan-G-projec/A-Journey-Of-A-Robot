@@ -42,6 +42,7 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 [resource]
 script = ExtResource("1_1hyak")
 name = "Rocket Fuel"
+description = "A refined coal-and-ruby mix. Fill the tank and leave."
 cost = SubResource("Resource_kk8d8")
 prerequisites = Array[ExtResource("1_1hyak")]([ExtResource("2_ajg2y"), ExtResource("3_yudsx"), ExtResource("4_bcwgl"), ExtResource("5_fj828"), ExtResource("6_kdfbm"), ExtResource("7_4i3r4"), ExtResource("8_t8ivb"), ExtResource("9_g6pum"), ExtResource("10_0jiaw"), ExtResource("11_gdph5"), ExtResource("12_6fktb"), ExtResource("13_xax74"), ExtResource("14_xnixe"), ExtResource("15_j5fgf"), ExtResource("16_kb5kh"), ExtResource("17_kip06"), ExtResource("18_chrhu"), ExtResource("19_uwqdr"), ExtResource("20_8rm1m"), ExtResource("21_rq7v4"), ExtResource("22_2y2lb"), ExtResource("23_y5d4q"), ExtResource("24_1jnft")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

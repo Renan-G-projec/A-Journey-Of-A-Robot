@@ -355,6 +355,7 @@ theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("26_fpbmg")
 upgrade = ExtResource("52_aturj")
 
+[connection signal="button_up" from="Root" to="Root" method="_on_button_up"]
 [connection signal="toggled" from="Root" to="Root" method="_on_toggled"]
 [connection signal="toggled" from="Root/CopperSmelter" to="Root/CopperSmelter" method="_on_toggled"]
 [connection signal="toggled" from="Root/CopperSmelter/CopperJetpack" to="Root/CopperSmelter/CopperJetpack" method="_on_toggled"]

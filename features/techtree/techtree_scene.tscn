@@ -79,7 +79,7 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -216.0
+offset_left = -220.0
 offset_top = -128.0
 offset_right = -48.0
 offset_bottom = 128.0
@@ -107,6 +107,7 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/CenterContainer" unique_id=516775828]
+custom_minimum_size = Vector2(32, 32)
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_uve0u")
@@ -121,6 +122,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1159405958]
+custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/line_spacing = 3
@@ -128,6 +130,7 @@ theme_override_fonts/font = ExtResource("5_o3sd2")
 theme_override_font_sizes/font_size = 8
 text = "Description
 This upgrade is a placeholder."
+autowrap_mode = 3
 
 [node name="RequirementsLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1483144531]
 layout_mode = 2

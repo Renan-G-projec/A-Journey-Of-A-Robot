@@ -9,7 +9,6 @@ extends Button
 
 var _lines: Array[Line2D] = []
 
-
 @onready var line: Line2D = $Line2D
 
 signal request_ui_techtree_panel(node: TechtreeNode)
@@ -38,8 +37,6 @@ func line_to_parent() -> void:
 	for i in range(targets.size(), _lines.size()):
 		_lines[i].clear_points()
 	
-	
-	
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_TRANSFORM_CHANGED && Engine.is_editor_hint():
 		line_to_parent()
@@ -55,3 +52,14 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	request_ui_techtree_panel.emit(self)
+
+
+
+func _on_focus_exited() -> void:
+	print("_on_focus_exited")
+	if TechtreeManager.has_upgrade(self.upgrade):
+		self_modulate = Color("#d3d3d3")
+		print("UPGARDE BOUGTH")
+	else: 
+		self_modulate = Color.WHITE
+		print("UPGARDE NOR BOUGHT")

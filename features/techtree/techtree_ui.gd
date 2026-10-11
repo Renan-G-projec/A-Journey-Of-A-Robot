@@ -18,6 +18,7 @@ func _ready() -> void:
 	root.request_ui_techtree_panel.emit(root)
 
 func _on_ui_techtree_panel_requested(node: TechtreeNode) -> void:
+	current_node = node
 	icon.texture = node.icon
 	upgrade_name.text = node.upgrade.name
 	upgrade_description.text = node.upgrade.description
@@ -25,11 +26,10 @@ func _on_ui_techtree_panel_requested(node: TechtreeNode) -> void:
 
 	upgrade_button.disabled = TechtreeManager.has_upgrade(node.upgrade) || !current_player_inventory.has_items(node.upgrade.cost)
 	
-	current_node = node
+	if TechtreeManager.has_upgrade(current_node.upgrade) || !current_player_inventory.has_items(current_node.upgrade.cost) || !TechtreeManager.are_prerequisites_met_for_tech(current_node.upgrade): 
+		upgrade_button.disabled = true
 
 func _on_upgrade_button_pressed() -> void:
-	if TechtreeManager.has_upgrade(current_node.upgrade) || !current_player_inventory.has_items(current_node.upgrade.cost): 
-		return
 	current_player_inventory.remove_items(current_node.upgrade.cost)
 	upgrade_button.disabled = true
 	TechtreeManager.add_upgrade(current_node.upgrade)

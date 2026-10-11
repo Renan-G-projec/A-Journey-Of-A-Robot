@@ -22,6 +22,7 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_wwtfd")
+description = "An iron-hardened bit that bites through tougher rock."
 cost = SubResource("Resource_b2xje")
 prerequisites = Array[ExtResource("1_wwtfd")]([ExtResource("6_3ggrg"), ExtResource("7_2laxq"), ExtResource("8_thi33"), ExtResource("9_5qmnn"), ExtResource("10_aftl2"), ExtResource("11_0q4lo")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"
