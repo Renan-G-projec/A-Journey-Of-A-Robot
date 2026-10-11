@@ -8,7 +8,9 @@ func _input(event: InputEvent) -> void:
 		_bounce(Vector2(1.4, 0.6))
 		await create_tween().tween_property($"../Camera2D", "zoom", Vector2(1.7, 1.7), 0.15).set_trans(Tween.TRANS_CUBIC).finished
 		create_tween().tween_property($"../Camera2D", "zoom", Vector2(5.0, 5.0), 2).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-		
+		$AudioStreamPlayer2.pitch_scale = 1.0
+		$AudioStreamPlayer2.play()
+		SoundManager.start_music()
 		play()
 
 func _on_animation_finished() -> void:
@@ -16,10 +18,13 @@ func _on_animation_finished() -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	_bounce()
-	
+	$AudioStreamPlayer.pitch_scale = 1 + 0.5 * randf()
+	$AudioStreamPlayer.play()
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _on_area_2d_mouse_exited() -> void:
+	$AudioStreamPlayer.pitch_scale = 1 - 0.5 * randf()
+	$AudioStreamPlayer.play()
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 func _bounce(_scale: Vector2 = Vector2(0.8, 1.2)) -> void:
