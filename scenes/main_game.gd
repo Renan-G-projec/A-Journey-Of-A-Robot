@@ -21,6 +21,7 @@ func _ready() -> void:
 	if OS.has_feature("editor"): _debug_config()
 	
 	mission_ui.display()
+	SoundManager.start_music()
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 	map.damage_tile(tilemap_coords, damage) 

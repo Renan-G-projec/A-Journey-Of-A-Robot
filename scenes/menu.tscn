@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bn0e01vcbuygv"]
 
+[ext_resource type="Script" uid="uid://cfc5pwp0ssn51" path="res://scenes/menu.gd" id="1_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://dgnif8lcpk68m" path="res://assets/sprites/ui_background.png" id="2_g3eks"]
 [ext_resource type="Texture2D" uid="uid://c6gomibd0vnsm" path="res://assets/sprites/PlayButton.png" id="2_vjb58"]
 [ext_resource type="Script" uid="uid://c0ci4e7eghu27" path="res://scenes/play_button.gd" id="3_mhnvy"]
@@ -38,6 +39,7 @@ animations = [{
 size = Vector2(46, 16)
 
 [node name="Menu" type="Node2D" unique_id=596394197]
+script = ExtResource("1_4ytvr")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2098295548]
 scroll_scale = Vector2(0.448, 1)
