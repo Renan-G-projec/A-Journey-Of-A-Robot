@@ -63,6 +63,12 @@ func mine() -> void:
 		mined_block.emit(facing_block_coords, damage)
 		$AudioStreamPlayer.pitch_scale = 1.4 * randf()
 		$AudioStreamPlayer.play()
+		
+		$Pivot/Sprite2D.scale.x = min(0.5, randf())
+		$Pivot/Sprite2D.scale.y = min(0.5, randf() + 0.3)
+		
+		$Pivot/Sprite2D.modulate = Color(20.0, 20.0, 20.0, 20.0)
+		$Pivot/Sprite2D.queue_redraw()
 		if (facing_block_animation_timer < 0): 
 			selected_block_effect.queue_redraw()
 			update_selected_block_effect(true, Vector2(0.7, 0.7))
@@ -92,6 +98,10 @@ func _process(_delta: float) -> void:
 			process_material.set_shader_parameter("targetPos", sprite.global_position)
 			process_material.set_shader_parameter("initial_velocity", Vector2.from_angle(deg_to_rad(randi_range(0, 360))) * 48)
 			process_material.set_shader_parameter("initial_offset", Vector2(randi_range(-8, 8), randi_range(-4, 4)))
+	$Pivot/Sprite2D.scale.x = lerpf($Pivot/Sprite2D.scale.x, 0.55, 0.1)
+	$Pivot/Sprite2D.scale.y = lerpf($Pivot/Sprite2D.scale.y, 0.55, 0.1)
+	
+	$Pivot/Sprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 func stop_emitting_particles() -> void:
 	particles.emitting = false

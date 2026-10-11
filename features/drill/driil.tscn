@@ -51,11 +51,12 @@ script = ExtResource("1_nystb")
 [node name="Pivot" type="Node2D" parent="." unique_id=774165111]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Pivot" unique_id=517338204]
-position = Vector2(12, 0)
+position = Vector2(8, 0)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_ocxxs")
 autoplay = "default"
 frame_progress = 0.14105907
+offset = Vector2(7.272726, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=808768737]
 target_position = Vector2(0, 0)
