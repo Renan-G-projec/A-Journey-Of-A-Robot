@@ -29,16 +29,6 @@ offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InventoryButton" type="Button" parent="HBoxContainer" unique_id=165385644]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("2_hsg0p")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("1_33gd6")
-theme_override_styles/pressed = ExtResource("2_g5dfe")
-theme_override_styles/hover = ExtResource("2_g5dfe")
-text = "Inventory"
-
 [node name="TechTreeButton" type="Button" parent="HBoxContainer" unique_id=1038092057]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -69,7 +59,6 @@ theme_override_styles/pressed = ExtResource("2_g5dfe")
 theme_override_styles/hover = ExtResource("2_g5dfe")
 text = "Crafting"
 
-[connection signal="pressed" from="HBoxContainer/InventoryButton" to="." method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/TechTreeButton" to="." method="_on_tech_tree_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/BuildingsButton" to="." method="_on_buildings_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/CraftingButton" to="." method="_on_crafting_button_pressed"]
