@@ -61,6 +61,7 @@ func _update_inputs(delta: float) -> void:
 	velocity.y += jetpack.get_jetpack_velocity(delta)
 	
 	if Input.is_action_pressed("MineFacingBlock"):
+		if !Global.can_mine: return
 		if (drill.is_facing_block): drill.start_emitting_particles()
 		drill.mine()
 	else:

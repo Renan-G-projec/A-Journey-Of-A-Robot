@@ -38,7 +38,6 @@ func _on_menu_requested(type: EventBus.MenuType) -> void:
 	
 func _on_menu_close_requested() -> void:
 	close_menu()
-	
 
 func _process(_delta: float) -> void:
 	match state:
@@ -62,9 +61,11 @@ func _process(_delta: float) -> void:
 func open_menu() -> void:
 	state = MenuState.OPENING
 	panel.visible = true
+	Global.can_mine = false
 
 func close_menu() -> void:
 	state = MenuState.CLOSING
+	Global.can_mine = true
 
 func set_current_menu(type: EventBus.MenuType) -> void:
 	for menu in menus:
