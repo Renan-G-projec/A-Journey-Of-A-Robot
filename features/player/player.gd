@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	if !Global.in_dialogue:
 		_update_inputs(delta)
 
+	jetpack.boost = is_on_floor()
 	_was_on_ground = is_on_floor()
 	_prev_y_velocity = velocity.y
 	move_and_slide()
