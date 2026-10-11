@@ -5,13 +5,17 @@ extends CanvasLayer
 var transition_duration = 0.5
 
 @onready var transition_rect: ColorRect = %ColorRect
+var in_transition: bool = false
 
 func change_scene_to_file(file: String) -> void:
+	if in_transition: return
 	assert(FileAccess.file_exists(file), "Error: Trying to change to an unexistent file")
 	var scene: PackedScene = load(file) as PackedScene
 	if !scene: 
 		print_debug("ERROR: Error while loading scene")
 		return
+	
+	in_transition = true
 	
 	var tween: Tween = create_tween()
 	var set_progress: Callable = func (val: float) -> void: 
@@ -28,15 +32,18 @@ func change_scene_to_file(file: String) -> void:
 	tween.tween_method(set_progress, 1.0, 0.0, transition_duration)
 	
 	await tween.finished
+	in_transition = false
 
 func change_scene_to_file_with_loading(file: String, progress_signal: Signal, num_progress_signals: int) -> void:
+	if in_transition: return
 	assert(num_progress_signals > 0, "Error: Tryed to use a loading screen but no progress is needed. Use SceneManager.change_scene_to_file(file: String) -> void instead.")
 	assert(FileAccess.file_exists(file), "Error: Trying to change to an unexistent file")
 	var scene: PackedScene = load(file) as PackedScene
 	if !scene: 
 		print_debug("ERROR: Error while loading scene")
 		return
-		
+
+	in_transition = true
 	%ProgressBar.max_value = num_progress_signals
 	
 	var set_progress: Callable = func (val: float) -> void: 
@@ -65,6 +72,7 @@ func change_scene_to_file_with_loading(file: String, progress_signal: Signal, nu
 	var tween_fade_out: Tween = create_tween()
 	tween_fade_out.tween_method(set_progress, 1.0, 0.0, transition_duration)
 	await tween_fade_out.finished
+	in_transition = false
 	
 func _swap_scenes(scene: Node) -> void:
 	get_tree().current_scene.free()

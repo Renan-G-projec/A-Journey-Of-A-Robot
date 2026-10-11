@@ -51,12 +51,15 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_g3eks")
 
 [node name="PlayButton" type="AnimatedSprite2D" parent="." unique_id=1827979844]
+position = Vector2(0, 8)
 sprite_frames = SubResource("SpriteFrames_yqeox")
+offset = Vector2(0, -8)
 script = ExtResource("3_mhnvy")
 
 [node name="Area2D" type="Area2D" parent="PlayButton" unique_id=1108605950]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton/Area2D" unique_id=1044323047]
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_ocxxs")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=289366053]
