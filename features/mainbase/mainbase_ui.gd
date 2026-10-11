@@ -24,6 +24,7 @@ func _push_menu(menu: Control) -> void:
 	_open_menus_stack.push_back(menu)
 	
 func _pop_menu() -> void:
+	if _open_menus_stack.is_empty(): return
 	_open_menus_stack.back().visible = false
 	_open_menus_stack.pop_back()
 	if _open_menus_stack.is_empty(): EventBus.request_close_menu.emit()

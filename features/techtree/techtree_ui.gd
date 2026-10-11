@@ -1,6 +1,9 @@
 # Ad Maiorem Dei Gloriam!
 extends Control
 
+## Note: I Spent almost an hour trying to implement that parallax background of the menu
+## I almost got it to work but it was the worst thing i've ever seen.
+
 @onready var icon: TextureRect = $Panel/VBoxContainer/CenterContainer/TextureRect
 @onready var upgrade_name: Label = $Panel/VBoxContainer/UpgradeNameLabel
 @onready var upgrade_description: Label = $Panel/VBoxContainer/DescriptionLabel
