@@ -1,7 +1,46 @@
 [gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://citcb51wfrimk"]
 
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_cg4te"]
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_q2a2x"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_e4s8t"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_meuc2"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_4hfbb"]
+[ext_resource type="Resource" uid="uid://etabvbhfoajw" path="res://features/ores/cut/emerald_cut.tres" id="3_rf44h"]
+[ext_resource type="Resource" uid="uid://cx0cv7c4c0b38" path="res://features/ores/raw/ruby_ore.tres" id="4_gan4l"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_x4h5t"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_dmb5k"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_xw25o"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_rctmi"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_q2a2x"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_meuc2"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_rf44h"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_gan4l"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_xw25o"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_71r5a"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="13_bc22c"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="14_4rd17"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="15_7f4q3"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_4880y"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="17_d5mqg"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="18_pw0x5"]
+[ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="19_eta5x"]
+[ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="20_foexh"]
+[ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="21_i8gy5"]
+[ext_resource type="Resource" uid="uid://d0lp78edeqolk" path="res://features/techtree/data/ruby_techs/ruby_cutter.tres" id="22_shsvs"]
+
+[sub_resource type="Resource" id="Resource_iol07"]
+script = ExtResource("5_xw25o")
+data = Dictionary[ExtResource("1_q2a2x"), int]({
+ExtResource("2_meuc2"): 8,
+ExtResource("3_rf44h"): 5,
+ExtResource("4_gan4l"): 5
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_cg4te")
+name = "Ruby Jetpack"
+description = "Ruby-powered thrusters with maximum fuel."
+cost = SubResource("Resource_iol07")
+prerequisites = Array[ExtResource("1_cg4te")]([ExtResource("2_e4s8t"), ExtResource("3_4hfbb"), ExtResource("4_x4h5t"), ExtResource("5_dmb5k"), ExtResource("6_rctmi"), ExtResource("7_q2a2x"), ExtResource("8_meuc2"), ExtResource("9_rf44h"), ExtResource("10_gan4l"), ExtResource("11_xw25o"), ExtResource("12_71r5a"), ExtResource("13_bc22c"), ExtResource("14_4rd17"), ExtResource("15_7f4q3"), ExtResource("16_4880y"), ExtResource("17_d5mqg"), ExtResource("18_pw0x5"), ExtResource("19_eta5x"), ExtResource("20_foexh"), ExtResource("21_i8gy5"), ExtResource("22_shsvs")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

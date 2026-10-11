@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://d0lp78edeqolk"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_k5v8q"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_rx003"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_3t7dw"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_qfd23"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_0kn48"]
+[ext_resource type="Resource" uid="uid://etabvbhfoajw" path="res://features/ores/cut/emerald_cut.tres" id="3_ysq5h"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_mom1c"]
+[ext_resource type="Resource" uid="uid://cx0cv7c4c0b38" path="res://features/ores/raw/ruby_ore.tres" id="4_mp5r3"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_4bsx4"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_u8scw"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_sk6ks"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_k5v8q"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_3t7dw"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_ysq5h"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_mp5r3"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_u8scw"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_n3vrk"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="13_7cja4"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="14_1yaor"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="15_6ryfe"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_gteve"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="17_7e2ca"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="18_faiyi"]
+[ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="19_17bbo"]
+[ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="20_xuavg"]
+[ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="21_pr2rt"]
+
+[sub_resource type="Resource" id="Resource_iol07"]
+script = ExtResource("5_u8scw")
+data = Dictionary[ExtResource("1_k5v8q"), int]({
+ExtResource("2_3t7dw"): 8,
+ExtResource("3_ysq5h"): 5,
+ExtResource("4_mp5r3"): 5
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("1_rx003")
+name = "Ruby Cutter"
+description = "The final cutter, for the heart of the rocket."
+cost = SubResource("Resource_iol07")
+prerequisites = Array[ExtResource("1_rx003")]([ExtResource("2_qfd23"), ExtResource("3_0kn48"), ExtResource("4_mom1c"), ExtResource("5_4bsx4"), ExtResource("6_sk6ks"), ExtResource("7_k5v8q"), ExtResource("8_3t7dw"), ExtResource("9_ysq5h"), ExtResource("10_mp5r3"), ExtResource("11_u8scw"), ExtResource("12_n3vrk"), ExtResource("13_7cja4"), ExtResource("14_1yaor"), ExtResource("15_6ryfe"), ExtResource("16_gteve"), ExtResource("17_7e2ca"), ExtResource("18_faiyi"), ExtResource("19_17bbo"), ExtResource("20_xuavg"), ExtResource("21_pr2rt")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"

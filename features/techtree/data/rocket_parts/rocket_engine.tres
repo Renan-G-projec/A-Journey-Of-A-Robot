@@ -1,7 +1,48 @@
 [gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://crdfrsiymqkyc"]
 
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_mkt74"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_o2irr"]
+[ext_resource type="Resource" uid="uid://cocfbxnv6vhtb" path="res://features/ores/cut/ruby_cut.tres" id="2_dh24y"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_j6fto"]
+[ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="3_2cj5x"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_ua3v2"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_dnoe8"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="4_tm22o"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_pei4w"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_v3knq"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_3t3bl"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_mkt74"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_dh24y"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_2cj5x"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_tm22o"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_pei4w"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_idrxv"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="13_ba62e"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="14_yrrb2"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="15_j11ag"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_f6c2d"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="17_4schg"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="18_uunus"]
+[ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="19_8vkms"]
+[ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="20_levtm"]
+[ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="21_4ht6a"]
+[ext_resource type="Resource" uid="uid://d0lp78edeqolk" path="res://features/techtree/data/ruby_techs/ruby_cutter.tres" id="22_ha82r"]
+[ext_resource type="Resource" uid="uid://c2t0kx56rp2dg" path="res://features/techtree/data/ruby_techs/ruby_drill.tres" id="23_5v1jh"]
+[ext_resource type="Resource" uid="uid://b7n68xfd645kl" path="res://features/techtree/data/rocket_parts/rocket_silo.tres" id="24_1oalc"]
+
+[sub_resource type="Resource" id="Resource_kk8d8"]
+script = ExtResource("5_pei4w")
+data = Dictionary[ExtResource("1_mkt74"), int]({
+ExtResource("2_dh24y"): 10,
+ExtResource("3_2cj5x"): 20,
+ExtResource("4_tm22o"): 6
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_o2irr")
+name = "Rocket Engine"
+description = "Rebuilds the ship’s engine with a ruby core."
+cost = SubResource("Resource_kk8d8")
+prerequisites = Array[ExtResource("1_o2irr")]([ExtResource("2_j6fto"), ExtResource("3_ua3v2"), ExtResource("4_dnoe8"), ExtResource("5_v3knq"), ExtResource("6_3t3bl"), ExtResource("7_mkt74"), ExtResource("8_dh24y"), ExtResource("9_2cj5x"), ExtResource("10_tm22o"), ExtResource("11_pei4w"), ExtResource("12_idrxv"), ExtResource("13_ba62e"), ExtResource("14_yrrb2"), ExtResource("15_j11ag"), ExtResource("16_f6c2d"), ExtResource("17_4schg"), ExtResource("18_uunus"), ExtResource("19_8vkms"), ExtResource("20_levtm"), ExtResource("21_4ht6a"), ExtResource("22_ha82r"), ExtResource("23_5v1jh"), ExtResource("24_1oalc")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

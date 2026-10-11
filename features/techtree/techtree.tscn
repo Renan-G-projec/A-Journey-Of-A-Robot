@@ -6,54 +6,60 @@
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="5_151rp"]
 [ext_resource type="Texture2D" uid="uid://b8olycbo7hbq1" path="res://assets/sprites/jetpackStage1TechTree.png" id="5_cpugh"]
 [ext_resource type="Texture2D" uid="uid://dwf1rduokp5m1" path="res://assets/sprites/bagStage1TechTree.png" id="6_eljxr"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_itwcw"]
 [ext_resource type="Texture2D" uid="uid://bb8scfhg75f3b" path="res://assets/sprites/drillStage1TechTree.png" id="7_bsxbt"]
-[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="7_itwcw"]
 [ext_resource type="Texture2D" uid="uid://dik7ffx68mwl8" path="res://assets/sprites/furnanceStage2TechTree.png" id="8_36a4q"]
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="8_wcopp"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="8_wcopp"]
 [ext_resource type="Texture2D" uid="uid://dulwhfvb7mvrj" path="res://assets/sprites/jetpackStage2TechTree.png" id="9_kdtvn"]
-[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores/raw/copper_ore.tres" id="9_rgamx"]
-[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="10_r1ko8"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="10_rgamx"]
 [ext_resource type="Texture2D" uid="uid://db5oj43a05p5r" path="res://assets/sprites/bagStage2TechTree.png" id="10_xofbj"]
-[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="11_do458"]
 [ext_resource type="Texture2D" uid="uid://buctxpe6gi2xg" path="res://assets/sprites/drllStage2TechTree.png" id="11_weedu"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="12_r1ko8"]
 [ext_resource type="Texture2D" uid="uid://fitj62k27ycr" path="res://assets/sprites/furnanceStage3TechTree.png" id="12_tuots"]
 [ext_resource type="Texture2D" uid="uid://csgtvg2vtxfom" path="res://assets/sprites/jetpackStage3TechTree.png" id="13_dy5y6"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="14_2dni8"]
 [ext_resource type="Texture2D" uid="uid://dp6knvsamggfh" path="res://assets/sprites/bagStage3TechTree.png" id="14_6vd06"]
 [ext_resource type="Texture2D" uid="uid://cxi62wc3lqc3x" path="res://assets/sprites/drllStage3TechTree.png" id="15_s77i4"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="16_ju2nq"]
 [ext_resource type="Texture2D" uid="uid://dgskk5ojdbks6" path="res://assets/sprites/furnanceStage4TechTree.png" id="16_lu64l"]
 [ext_resource type="Texture2D" uid="uid://dtnkbypucphhk" path="res://assets/sprites/jetpackStage4TechTree.png" id="17_fpbmg"]
 [ext_resource type="Texture2D" uid="uid://noa0jcaeji2t" path="res://assets/sprites/bagStage4TechTree.png" id="18_0ov8m"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="18_t8r16"]
 [ext_resource type="Texture2D" uid="uid://cb2if5typ4pg8" path="res://assets/sprites/placeHolder1.png" id="18_wcopp"]
 [ext_resource type="Texture2D" uid="uid://s28uqm8hotae" path="res://assets/sprites/drillStage4TechTree.png" id="19_4kq22"]
 [ext_resource type="Texture2D" uid="uid://0ds7rrgwxbfo" path="res://assets/sprites/furnanceStage5TechTree.png" id="20_itwcw"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="20_tx5ix"]
 [ext_resource type="Texture2D" uid="uid://8i8pnfnw32ld" path="res://assets/sprites/jetpackStage5TechTree.png" id="21_wcopp"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="22_gtv0f"]
 [ext_resource type="Texture2D" uid="uid://by0ek838h1afg" path="res://assets/sprites/bagStage5TechTree.png" id="22_rgamx"]
 [ext_resource type="Texture2D" uid="uid://b1gdgkwamo4ey" path="res://assets/sprites/drillStage5TechTree.png" id="23_r1ko8"]
 [ext_resource type="Texture2D" uid="uid://0kwrqrjur3y5" path="res://assets/sprites/rocketSilo.png" id="24_s77i4"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="24_xf8pf"]
 [ext_resource type="Texture2D" uid="uid://drfoiylkbd8ec" path="res://assets/sprites/rocketEngine.png" id="25_lu64l"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="26_dxrby"]
 [ext_resource type="Texture2D" uid="uid://b7sh11yal7on2" path="res://assets/sprites/rocketFuel.png" id="26_fpbmg"]
-
-[sub_resource type="Resource" id="Resource_pvojc"]
-script = ExtResource("10_r1ko8")
-data = Dictionary[ExtResource("7_itwcw"), int]({
-ExtResource("8_wcopp"): 10,
-ExtResource("9_rgamx"): 4
-})
-metadata/_custom_type_script = "uid://crbcquplyyvye"
-
-[sub_resource type="Resource" id="Resource_6a3l4"]
-script = ExtResource("11_do458")
-name = "Smelter"
-description = "Where... You can smelt things?"
-cost = SubResource("Resource_pvojc")
-prerequisites = Array[ExtResource("11_do458")]([ExtResource("2_ocdmj")])
-metadata/_custom_type_script = "uid://bkkycdtutquhl"
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="28_lkxu1"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="30_88x5w"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="31_f3t2f"]
+[ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="33_gljmv"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="35_8nyot"]
+[ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="37_xyya8"]
+[ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="39_t4unr"]
+[ext_resource type="Resource" uid="uid://d0lp78edeqolk" path="res://features/techtree/data/ruby_techs/ruby_cutter.tres" id="40_y1wcl"]
+[ext_resource type="Resource" uid="uid://citcb51wfrimk" path="res://features/techtree/data/ruby_techs/ruby_jetpack.tres" id="42_7hyla"]
+[ext_resource type="Resource" uid="uid://b4j5i8c4364n8" path="res://features/techtree/data/ruby_techs/ruby_bag.tres" id="44_ldnw0"]
+[ext_resource type="Resource" uid="uid://c2t0kx56rp2dg" path="res://features/techtree/data/ruby_techs/ruby_drill.tres" id="46_yv40x"]
+[ext_resource type="Resource" uid="uid://b7n68xfd645kl" path="res://features/techtree/data/rocket_parts/rocket_silo.tres" id="48_to7t2"]
+[ext_resource type="Resource" uid="uid://crdfrsiymqkyc" path="res://features/techtree/data/rocket_parts/rocket_engine.tres" id="50_mksjx"]
+[ext_resource type="Resource" uid="uid://dbqrigmjowj5t" path="res://features/techtree/data/rocket_parts/rocket_fuel.tres" id="52_aturj"]
 
 [node name="Techtree" type="Control" unique_id=922205304]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 378.0
+offset_right = 378.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -70,7 +76,7 @@ theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 toggle_mode = false
 upgrade = ExtResource("2_ocdmj")
 
-[node name="Smelter" parent="Root" unique_id=1097369655 instance=ExtResource("1_8kas3")]
+[node name="CopperSmelter" parent="Root" unique_id=1097369655 instance=ExtResource("1_8kas3")]
 layout_mode = 1
 offset_left = 1.0
 offset_top = 53.0
@@ -81,7 +87,7 @@ theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("5_151rp")
 upgrade = ExtResource("3_2udi8")
 
-[node name="CopperJetpack" parent="Root/Smelter" unique_id=494073144 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="CopperJetpack" parent="Root/CopperSmelter" unique_id=494073144 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 50.0
 offset_top = 50.0
@@ -90,10 +96,10 @@ offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("5_cpugh")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("6_itwcw")
 extra_parents = [NodePath("../CopperDrill/IronSmelter")]
 
-[node name="CopperBag" parent="Root/Smelter" unique_id=393401043 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="CopperBag" parent="Root/CopperSmelter" unique_id=393401043 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -43.0
 offset_top = 50.0
@@ -102,10 +108,10 @@ offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("6_eljxr")
-upgrade = SubResource("Resource_6a3l4")
+upgrade = ExtResource("8_wcopp")
 extra_parents = [NodePath("../CopperDrill/IronSmelter")]
 
-[node name="CopperDrill" parent="Root/Smelter" unique_id=770310295 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="CopperDrill" parent="Root/CopperSmelter" unique_id=770310295 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 50.0
@@ -114,19 +120,19 @@ offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("7_bsxbt")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("10_rgamx")
 extra_parents = [NodePath(".")]
 
-[node name="IronSmelter" parent="Root/Smelter/CopperDrill" unique_id=1012839656 instance=ExtResource("1_8kas3")]
+[node name="IronSmelter" parent="Root/CopperSmelter/CopperDrill" unique_id=1012839656 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("8_36a4q")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("12_r1ko8")
 
-[node name="IronJetpack" parent="Root/Smelter/CopperDrill/IronSmelter" unique_id=243305942 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="IronJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter" unique_id=243305942 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 48.0
 offset_top = 50.0
@@ -135,10 +141,10 @@ offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("9_kdtvn")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("14_2dni8")
 extra_parents = [NodePath("../IronDrill/TopazSmelter")]
 
-[node name="IronBag" parent="Root/Smelter/CopperDrill/IronSmelter" unique_id=192308314 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="IronBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter" unique_id=192308314 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -47.0
 offset_top = 50.0
@@ -147,37 +153,37 @@ offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("10_xofbj")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("16_ju2nq")
 extra_parents = [NodePath("../IronDrill/TopazSmelter")]
 
-[node name="IronDrill" parent="Root/Smelter/CopperDrill/IronSmelter" unique_id=1484869998 instance=ExtResource("1_8kas3")]
+[node name="IronDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter" unique_id=1484869998 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 50.0
 offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("11_weedu")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("18_t8r16")
 
-[node name="TopazSmelter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill" unique_id=592925566 instance=ExtResource("1_8kas3")]
+[node name="TopazSmelter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill" unique_id=592925566 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("12_tuots")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("20_tx5ix")
 
-[node name="TopazCutter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" unique_id=2020649360 instance=ExtResource("1_8kas3")]
+[node name="TopazCutter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" unique_id=2020649360 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("18_wcopp")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("22_gtv0f")
 
-[node name="TopazJetpack" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=725720166 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="TopazJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=725720166 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 46.0
 offset_top = 49.0
@@ -186,10 +192,10 @@ offset_bottom = 69.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("13_dy5y6")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("24_xf8pf")
 extra_parents = [NodePath("../TopazDrill/EmeraldSmelter")]
 
-[node name="TopazBag" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=1791382902 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="TopazBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=1791382902 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -49.0
 offset_top = 49.0
@@ -198,10 +204,10 @@ offset_bottom = 69.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("14_6vd06")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("26_dxrby")
 extra_parents = [NodePath("../TopazDrill/EmeraldSmelter")]
 
-[node name="TopazDrill" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=641877411 instance=ExtResource("1_8kas3")]
+[node name="TopazDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=641877411 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 49.0
@@ -210,18 +216,18 @@ offset_bottom = 69.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("15_s77i4")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("28_lkxu1")
 
-[node name="EmeraldSmelter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" unique_id=1121812778 instance=ExtResource("1_8kas3")]
+[node name="EmeraldSmelter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" unique_id=1121812778 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("16_lu64l")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("30_88x5w")
 
-[node name="EmeraldCutter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" unique_id=1193207629 instance=ExtResource("1_8kas3")]
+[node name="EmeraldCutter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" unique_id=1193207629 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 51.0
@@ -230,9 +236,9 @@ offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("18_wcopp")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("31_f3t2f")
 
-[node name="EmeraldJetpack" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1489933892 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="EmeraldJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1489933892 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 46.0
 offset_top = 43.0
@@ -241,10 +247,10 @@ offset_bottom = 63.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("17_fpbmg")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("33_gljmv")
 extra_parents = [NodePath("../EmeraldDrill/RubySmelter")]
 
-[node name="EmeraldBag" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=597540585 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
+[node name="EmeraldBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=597540585 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -48.0
 offset_top = 43.0
@@ -253,10 +259,10 @@ offset_bottom = 63.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("18_0ov8m")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("35_8nyot")
 extra_parents = [NodePath("../EmeraldDrill/RubySmelter")]
 
-[node name="EmeraldDrill" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1087251094 instance=ExtResource("1_8kas3")]
+[node name="EmeraldDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1087251094 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 43.0
@@ -265,27 +271,27 @@ offset_bottom = 63.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("19_4kq22")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("37_xyya8")
 
-[node name="RubySmelter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" unique_id=1614909566 instance=ExtResource("1_8kas3")]
+[node name="RubySmelter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" unique_id=1614909566 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("20_itwcw")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("39_t4unr")
 
-[node name="RubyCutter" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" unique_id=1595297623 instance=ExtResource("1_8kas3")]
+[node name="RubyCutter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" unique_id=1595297623 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 57.0
 offset_bottom = 77.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("18_wcopp")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("40_y1wcl")
 
-[node name="RubyJetpack" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=888091181 instance=ExtResource("1_8kas3")]
+[node name="RubyJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=888091181 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 58.0
@@ -294,9 +300,9 @@ offset_bottom = 78.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("21_wcopp")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("42_7hyla")
 
-[node name="RubyBag" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=1781292306 instance=ExtResource("1_8kas3")]
+[node name="RubyBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=1781292306 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -44.0
 offset_top = 58.0
@@ -305,9 +311,9 @@ offset_bottom = 78.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("22_rgamx")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("44_ldnw0")
 
-[node name="RubyDrill" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=831173161 instance=ExtResource("1_8kas3")]
+[node name="RubyDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=831173161 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 59.0
@@ -316,18 +322,18 @@ offset_bottom = 79.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("23_r1ko8")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("46_yv40x")
 
-[node name="RocketSilo" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" unique_id=42381712 instance=ExtResource("1_8kas3")]
+[node name="RocketSilo" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" unique_id=42381712 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_top = 51.0
 offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("24_s77i4")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("48_to7t2")
 
-[node name="RocketEngine" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=2035026347 instance=ExtResource("1_8kas3")]
+[node name="RocketEngine" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=2035026347 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = -28.0
 offset_top = 51.0
@@ -336,9 +342,9 @@ offset_bottom = 71.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("25_lu64l")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("50_mksjx")
 
-[node name="RocketFuel" parent="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=1626653577 instance=ExtResource("1_8kas3")]
+[node name="RocketFuel" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=1626653577 instance=ExtResource("1_8kas3")]
 layout_mode = 0
 offset_left = 43.0
 offset_top = 52.0
@@ -347,32 +353,32 @@ offset_bottom = 72.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("26_fpbmg")
-upgrade = ExtResource("3_2udi8")
+upgrade = ExtResource("52_aturj")
 
 [connection signal="toggled" from="Root" to="Root" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter" to="Root/Smelter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperJetpack" to="Root/Smelter/CopperJetpack" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperBag" to="Root/Smelter/CopperBag" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill" to="Root/Smelter/CopperDrill" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter" to="Root/Smelter/CopperDrill/IronSmelter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronJetpack" to="Root/Smelter/CopperDrill/IronSmelter/IronJetpack" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronBag" to="Root/Smelter/CopperDrill/IronSmelter/IronBag" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazJetpack" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazJetpack" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazBag" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazBag" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldJetpack" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldJetpack" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldBag" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldBag" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyJetpack" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyJetpack" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyBag" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyBag" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketEngine" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketEngine" method="_on_toggled"]
-[connection signal="toggled" from="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketFuel" to="Root/Smelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketFuel" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter" to="Root/CopperSmelter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperJetpack" to="Root/CopperSmelter/CopperJetpack" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperBag" to="Root/CopperSmelter/CopperBag" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill" to="Root/CopperSmelter/CopperDrill" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter" to="Root/CopperSmelter/CopperDrill/IronSmelter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronJetpack" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronJetpack" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronBag" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronBag" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazJetpack" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazJetpack" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazBag" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazBag" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldJetpack" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldJetpack" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldBag" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldBag" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyJetpack" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyJetpack" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyBag" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyBag" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketEngine" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketEngine" method="_on_toggled"]
+[connection signal="toggled" from="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketFuel" to="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo/RocketFuel" method="_on_toggled"]

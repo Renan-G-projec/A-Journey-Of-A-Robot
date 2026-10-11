@@ -1,7 +1,41 @@
 [gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://br1gitgk8vkvm"]
 
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_j8dmr"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_jdrio"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_wt55d"]
+[ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="3_t5irw"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="4_8rg5t"]
+[ext_resource type="Resource" uid="uid://4sjt5gi434ou" path="res://features/ores/melted/emerald_melted.tres" id="4_om3v0"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="7_x35yp"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="8_n6vc5"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="9_m4bdy"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="10_veyw8"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="11_416uc"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="12_xp3wo"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="13_qcpjn"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="14_dxlh5"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="15_rxi36"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="16_miatt"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="17_tx7c5"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="18_6m5ur"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="19_8fabp"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="20_2ip4c"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="21_55wrc"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="22_bnq28"]
+
+[sub_resource type="Resource" id="Resource_5i5r7"]
+script = ExtResource("4_8rg5t")
+data = Dictionary[ExtResource("1_j8dmr"), int]({
+ExtResource("2_wt55d"): 4,
+ExtResource("3_t5irw"): 6,
+ExtResource("4_om3v0"): 3
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_jdrio")
+name = "Emerald Drill"
+description = "An emerald-tuned bit that reaches the ruby layer."
+cost = SubResource("Resource_5i5r7")
+prerequisites = Array[ExtResource("1_jdrio")]([ExtResource("7_x35yp"), ExtResource("8_n6vc5"), ExtResource("9_m4bdy"), ExtResource("10_veyw8"), ExtResource("11_416uc"), ExtResource("12_xp3wo"), ExtResource("13_qcpjn"), ExtResource("14_dxlh5"), ExtResource("15_rxi36"), ExtResource("16_miatt"), ExtResource("17_tx7c5"), ExtResource("18_6m5ur"), ExtResource("19_8fabp"), ExtResource("20_2ip4c"), ExtResource("21_55wrc"), ExtResource("22_bnq28")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

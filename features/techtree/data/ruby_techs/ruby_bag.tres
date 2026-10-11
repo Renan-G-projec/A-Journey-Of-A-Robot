@@ -1,7 +1,46 @@
 [gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://b4j5i8c4364n8"]
 
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_ti2d0"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_yypto"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_jy26u"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_y0042"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_k5wug"]
+[ext_resource type="Resource" uid="uid://etabvbhfoajw" path="res://features/ores/cut/emerald_cut.tres" id="3_mwwek"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_jatbx"]
+[ext_resource type="Resource" uid="uid://cx0cv7c4c0b38" path="res://features/ores/raw/ruby_ore.tres" id="4_m1eq7"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_j6d42"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_vmrs5"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_t1y6w"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_ti2d0"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_y0042"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_mwwek"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_m1eq7"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_j6d42"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_6kmdt"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="13_bu2pf"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="14_5pmnv"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="15_pyg31"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_imibf"]
+[ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="17_2vq2q"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="18_gouwt"]
+[ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="19_glsjm"]
+[ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="20_s72d2"]
+[ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="21_xwk54"]
+[ext_resource type="Resource" uid="uid://d0lp78edeqolk" path="res://features/techtree/data/ruby_techs/ruby_cutter.tres" id="22_uo58a"]
+
+[sub_resource type="Resource" id="Resource_iol07"]
+script = ExtResource("5_j6d42")
+data = Dictionary[ExtResource("1_ti2d0"), int]({
+ExtResource("2_y0042"): 8,
+ExtResource("3_mwwek"): 5,
+ExtResource("4_m1eq7"): 5
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("1_yypto")
+name = "Ruby Bag"
+description = "The best pack you can make. 280 kg."
+cost = SubResource("Resource_iol07")
+prerequisites = Array[ExtResource("1_yypto")]([ExtResource("2_jy26u"), ExtResource("3_k5wug"), ExtResource("4_jatbx"), ExtResource("5_vmrs5"), ExtResource("6_t1y6w"), ExtResource("7_ti2d0"), ExtResource("8_y0042"), ExtResource("9_mwwek"), ExtResource("10_m1eq7"), ExtResource("11_j6d42"), ExtResource("12_6kmdt"), ExtResource("13_bu2pf"), ExtResource("14_5pmnv"), ExtResource("15_pyg31"), ExtResource("16_imibf"), ExtResource("17_2vq2q"), ExtResource("18_gouwt"), ExtResource("19_glsjm"), ExtResource("20_s72d2"), ExtResource("21_xwk54"), ExtResource("22_uo58a")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"
