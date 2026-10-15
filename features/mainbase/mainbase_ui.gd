@@ -5,7 +5,6 @@ var _open_menus_stack: Array[Control] = []
 
 func _ready() -> void:
 	$Panel.visible = false;
-	open()
 
 func open() -> void:
 	if $Panel.visible: return
