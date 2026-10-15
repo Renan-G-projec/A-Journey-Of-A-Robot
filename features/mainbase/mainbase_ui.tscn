@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpgb2kvtttha5" path="res://features/mainbase/mainbase_ui.gd" id="1_g5dfe"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="2_hsg0p"]
 [ext_resource type="StyleBox" uid="uid://1rmrmx1yvklb" path="res://assets/styles/button_normal.tres" id="3_uj02a"]
+[ext_resource type="StyleBox" uid="uid://b5f6xt7td8t1c" path="res://assets/styles/button_hover.tres" id="4_2paer"]
 [ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://features/techtree/techtree_scene.tscn" id="5_f1e32"]
 [ext_resource type="PackedScene" uid="uid://1r6oorpy2bjc" path="res://features/building/building_scene.tscn" id="6_uj02a"]
 [ext_resource type="PackedScene" uid="uid://bo106h7edf70k" path="res://features/crafting/crafting_scene.tscn" id="7_2paer"]
@@ -42,6 +43,7 @@ mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = ExtResource("3_uj02a")
+theme_override_styles/hover = ExtResource("4_2paer")
 text = "Tech Tree"
 
 [node name="BuildingsButton" type="Button" parent="BaseMenuUI" unique_id=606560543]
@@ -51,6 +53,7 @@ mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = ExtResource("3_uj02a")
+theme_override_styles/hover = ExtResource("4_2paer")
 text = "Buildings"
 
 [node name="CraftingButton" type="Button" parent="BaseMenuUI" unique_id=830777465]
@@ -60,6 +63,7 @@ mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = ExtResource("3_uj02a")
+theme_override_styles/hover = ExtResource("4_2paer")
 text = "Crafting"
 
 [node name="TechTreeUI" parent="." unique_id=895753709 instance=ExtResource("5_f1e32")]
