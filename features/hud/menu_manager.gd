@@ -12,8 +12,8 @@ enum MenuState {
 @export_range(0.0, 1.0, 0.01) var overlay_step: float = 0.08
 
 @onready var overlay: ColorRect = $ColorRect
-@onready var panel: Panel = $MenuPanel
-@onready var comming_soon_popup: Button = $MenuPanel/ComingSoon
+@onready var panel: PanelContainer = $PanelContainer
+@onready var comming_soon_popup: Button = $PanelContainer/MarginContainer/ComingSoon
 @onready var panel_initial_x_scale: float = panel.scale.x
 @onready var overlay_alpha: float = overlay.color.a
 
