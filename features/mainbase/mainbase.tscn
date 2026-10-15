@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0vfpi1drjd1i" path="res://features/mainbase/mainbase.gd" id="1_mv2x5"]
 [ext_resource type="Texture2D" uid="uid://35wrtd74fpjm" path="res://assets/sprites/main_base.png" id="2_dqdq5"]
+[ext_resource type="PackedScene" uid="uid://y8pmf0omvia6" path="res://features/mainbase/mainbase_ui.tscn" id="3_dqdq5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocxxs"]
 size = Vector2(143, 65)
@@ -40,5 +41,11 @@ shape = SubResource("RectangleShape2D_ocxxs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1784676245]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_ocxxs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=709587807]
+layer = 5
+
+[node name="MainBaseUI" parent="CanvasLayer" unique_id=931917098 instance=ExtResource("3_dqdq5")]
+unique_name_in_owner = true
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

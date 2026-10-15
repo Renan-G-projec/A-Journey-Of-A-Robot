@@ -1,34 +1,12 @@
 [gd_scene format=3 uid="uid://hx00a0a61yb3"]
 
-[ext_resource type="StyleBox" uid="uid://b7dam2p4kmwkr" path="res://assets/styles/mission_ui_style.tres" id="1_1x505"]
 [ext_resource type="Script" uid="uid://bdpekavetmwn6" path="res://features/techtree/techtree_ui.gd" id="1_g2tlt"]
 [ext_resource type="Script" uid="uid://cn4gwdsfsbxev" path="res://features/techtree/scroll_container.gd" id="1_xoi5o"]
 [ext_resource type="PackedScene" uid="uid://c4nf3m3efiyqh" path="res://features/techtree/techtree.tscn" id="2_1x505"]
+[ext_resource type="StyleBox" uid="uid://tplp70auydhe" path="res://assets/styles/panel.tres" id="2_pdbh3"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_uve0u"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="5_o3sd2"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3sd2"]
-bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
-skew = Vector2(0.623, 0)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2tlt"]
-content_margin_top = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.65406823, 0.65406823, 0.65406823, 1)
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+[ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="7_pdbh3"]
 
 [node name="TechTreeUI" type="Control" unique_id=895753709]
 layout_mode = 3
@@ -40,22 +18,27 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_g2tlt")
 
-[node name="ScrollContainer" type="Panel" parent="." unique_id=14390172]
-clip_contents = true
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=148858328]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 16.0
-offset_top = -76.0
-offset_right = 200.0
-offset_bottom = 76.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -128.0
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ScrollContainer" type="Panel" parent="MarginContainer" unique_id=14390172]
+clip_contents = true
+layout_mode = 2
 mouse_default_cursor_shape = 6
-theme_override_styles/panel = ExtResource("1_1x505")
+theme_override_styles/panel = ExtResource("2_pdbh3")
 script = ExtResource("1_xoi5o")
 
-[node name="Techtree" parent="ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
+[node name="Techtree" parent="MarginContainer/ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
 z_index = 2
 layout_mode = 1
 anchors_preset = 8
@@ -64,9 +47,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -84.0
-offset_top = -125.0
-offset_right = -44.0
-offset_bottom = -85.0
+offset_top = -20.0
+offset_right = -52.0
+offset_bottom = 12.0
 
 [node name="Panel" type="Panel" parent="." unique_id=866635428]
 layout_mode = 1
@@ -75,13 +58,14 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -112.0
+offset_left = -128.0
 offset_top = -74.0
-offset_bottom = 78.0
+offset_right = -16.0
+offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
-theme_override_styles/panel = ExtResource("1_1x505")
+theme_override_styles/panel = ExtResource("2_pdbh3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=244150944]
 layout_mode = 1
@@ -138,13 +122,7 @@ custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
-theme_override_fonts/font = ExtResource("5_o3sd2")
-theme_override_font_sizes/font_size = 6
-theme_override_styles/normal = SubResource("StyleBoxFlat_o3sd2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_o3sd2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_o3sd2")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o3sd2")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_g2tlt")
+theme = ExtResource("7_pdbh3")
 disabled = true
 text = "Upgrade"
 

@@ -2,74 +2,118 @@
 
 [ext_resource type="Script" uid="uid://cpgb2kvtttha5" path="res://features/mainbase/mainbase_ui.gd" id="1_g5dfe"]
 [ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="2_nmfbq"]
+[ext_resource type="Texture2D" uid="uid://cnt08602podb5" path="res://assets/sprites/FrameUI.png" id="2_uj02a"]
 [ext_resource type="PackedScene" uid="uid://hx00a0a61yb3" path="res://features/techtree/techtree_scene.tscn" id="5_f1e32"]
 [ext_resource type="PackedScene" uid="uid://1r6oorpy2bjc" path="res://features/building/building_scene.tscn" id="6_uj02a"]
 [ext_resource type="PackedScene" uid="uid://bo106h7edf70k" path="res://features/crafting/crafting_scene.tscn" id="7_2paer"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ocxxs"]
+texture = ExtResource("2_uj02a")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 48, 48)
+
 [node name="MainBaseUI" type="Control" unique_id=931917098]
 layout_mode = 3
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_g5dfe")
 
-[node name="BaseMenuUI" type="HBoxContainer" parent="." unique_id=2071083760]
-unique_name_in_owner = true
+[node name="Panel" type="Panel" parent="." unique_id=1981664285]
+custom_minimum_size = Vector2(296, 160)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.0
-offset_top = -14.75
-offset_right = 139.0
-offset_bottom = 14.75
+offset_left = -148.0
+offset_top = -80.0
+offset_right = 148.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ocxxs")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1440716018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="BaseMenuUI" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=2071083760]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="TechTreeButton" type="Button" parent="BaseMenuUI" unique_id=1038092057]
+[node name="TechTreeButton" type="Button" parent="Panel/MarginContainer/BaseMenuUI" unique_id=1038092057]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_nmfbq")
 text = "Tech Tree"
 
-[node name="BuildingsButton" type="Button" parent="BaseMenuUI" unique_id=606560543]
+[node name="BuildingsButton" type="Button" parent="Panel/MarginContainer/BaseMenuUI" unique_id=606560543]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_nmfbq")
 text = "Buildings"
 
-[node name="CraftingButton" type="Button" parent="BaseMenuUI" unique_id=830777465]
+[node name="CraftingButton" type="Button" parent="Panel/MarginContainer/BaseMenuUI" unique_id=830777465]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_nmfbq")
 text = "Crafting"
 
-[node name="TechTreeUI" parent="." unique_id=895753709 instance=ExtResource("5_f1e32")]
+[node name="TechTreeUI" parent="Panel" unique_id=895753709 instance=ExtResource("5_f1e32")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
+layout_mode = 0
+anchors_preset = 0
+offset_left = -56.0
+offset_top = -16.0
+offset_right = -56.0
+offset_bottom = -16.0
 
-[node name="BuildingsUI" parent="." unique_id=83823365 instance=ExtResource("6_uj02a")]
+[node name="BuildingsUI" parent="Panel" unique_id=83823365 instance=ExtResource("6_uj02a")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
+layout_mode = 0
+anchors_preset = 0
+offset_left = -56.0
+offset_top = -16.0
+offset_right = -56.0
+offset_bottom = -16.0
 
-[node name="CraftingUI" parent="." unique_id=939916802 instance=ExtResource("7_2paer")]
+[node name="CraftingUI" parent="Panel" unique_id=939916802 instance=ExtResource("7_2paer")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
+layout_mode = 0
+anchors_preset = 0
+offset_left = -56.0
+offset_top = -16.0
+offset_right = -56.0
+offset_bottom = -16.0
 
-[connection signal="pressed" from="BaseMenuUI/TechTreeButton" to="." method="_on_tech_tree_button_pressed"]
-[connection signal="pressed" from="BaseMenuUI/BuildingsButton" to="." method="_on_buildings_button_pressed"]
-[connection signal="pressed" from="BaseMenuUI/CraftingButton" to="." method="_on_crafting_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/TechTreeButton" to="." method="_on_tech_tree_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/BuildingsButton" to="." method="_on_buildings_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/CraftingButton" to="." method="_on_crafting_button_pressed"]
