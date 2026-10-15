@@ -1,0 +1,19 @@
+[gd_resource type="Theme" format=3 uid="uid://b7kwlqijr1h1s"]
+
+[ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="1_cr73q"]
+[ext_resource type="StyleBox" uid="uid://b5f6xt7td8t1c" path="res://assets/styles/button_hover.tres" id="1_lcmpk"]
+[ext_resource type="StyleBox" uid="uid://b7pxt2c8emp3c" path="res://assets/styles/button_pressed.tres" id="2_cr73q"]
+[ext_resource type="StyleBox" uid="uid://1rmrmx1yvklb" path="res://assets/styles/button_normal.tres" id="3_tpvj3"]
+
+[resource]
+Button/constants/outline_size = 5
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_cr73q")
+Button/styles/hover = ExtResource("1_lcmpk")
+Button/styles/hover_mirrored = ExtResource("1_lcmpk")
+Button/styles/hover_pressed = ExtResource("2_cr73q")
+Button/styles/hover_pressed_mirrored = ExtResource("2_cr73q")
+Button/styles/normal = ExtResource("3_tpvj3")
+Button/styles/normal_mirrored = ExtResource("3_tpvj3")
+Button/styles/pressed = ExtResource("2_cr73q")
+Button/styles/pressed_mirrored = ExtResource("2_cr73q")
