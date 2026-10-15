@@ -8,17 +8,13 @@
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="5_o3sd2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3sd2"]
-content_margin_top = 10.0
-content_margin_bottom = 10.0
 bg_color = Color(0.0033606587, 0.004811262, 0.00048203164, 1)
+skew = Vector2(0.623, 0)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2tlt"]
 content_margin_top = 10.0
@@ -50,10 +46,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 52.0
-offset_top = -128.0
-offset_right = 376.0
-offset_bottom = 128.0
+offset_left = 16.0
+offset_top = -76.0
+offset_right = 200.0
+offset_bottom = 76.0
 grow_vertical = 2
 mouse_default_cursor_shape = 6
 theme_override_styles/panel = ExtResource("1_1x505")
@@ -79,10 +75,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -128.0
-offset_right = -48.0
-offset_bottom = 128.0
+offset_left = -112.0
+offset_top = -74.0
+offset_bottom = 78.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 1
@@ -90,21 +85,15 @@ theme_override_styles/panel = ExtResource("1_1x505")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=244150944]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.0
-offset_top = -112.0
-offset_right = 72.0
-offset_bottom = 112.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 4
+theme_override_constants/separation = 0
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer" unique_id=339381664]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(64, 48)
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/CenterContainer" unique_id=516775828]
@@ -112,23 +101,24 @@ custom_minimum_size = Vector2(32, 32)
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_uve0u")
+expand_mode = 2
 
 [node name="UpgradeNameLabel" type="Label" parent="Panel/VBoxContainer" unique_id=483457065]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("5_o3sd2")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 6
 text = "Upgrade Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1159405958]
-custom_minimum_size = Vector2(150, 30)
+custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/line_spacing = 3
 theme_override_fonts/font = ExtResource("5_o3sd2")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 4
 text = "Description
 This upgrade is a placeholder."
 autowrap_mode = 3
@@ -136,18 +126,20 @@ autowrap_mode = 3
 [node name="RequirementsLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1483144531]
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_constants/line_spacing = 3
+theme_override_constants/line_spacing = 1
 theme_override_fonts/font = ExtResource("5_o3sd2")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 4
 text = "Requires
     - 10 iron
     - 120 coal"
 
 [node name="UpgradeButton" type="Button" parent="Panel/VBoxContainer" unique_id=1135553137]
+custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("5_o3sd2")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 6
 theme_override_styles/normal = SubResource("StyleBoxFlat_o3sd2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o3sd2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o3sd2")

@@ -39,6 +39,7 @@ alignment = 1
 [node name="TechTreeButton" type="Button" parent="BaseMenuUI" unique_id=1038092057]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = ExtResource("1_33gd6")
@@ -49,6 +50,7 @@ text = "Tech Tree"
 [node name="BuildingsButton" type="Button" parent="BaseMenuUI" unique_id=606560543]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = ExtResource("1_33gd6")
@@ -59,6 +61,7 @@ text = "Buildings"
 [node name="CraftingButton" type="Button" parent="BaseMenuUI" unique_id=830777465]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_hsg0p")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = ExtResource("1_33gd6")
