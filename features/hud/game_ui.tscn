@@ -23,10 +23,9 @@ grow_vertical = 2
 
 [node name="FuelUI" parent="Control" unique_id=1653505830 instance=ExtResource("2_u001w")]
 layout_mode = 1
-offset_left = 8.0
 offset_top = 8.0
-offset_right = -568.0
-offset_bottom = -348.0
+offset_right = -320.0
+offset_bottom = -172.0
 
 [node name="PlayerInventoryInterface" parent="Control" unique_id=257689911 instance=ExtResource("1_rns2u")]
 layout_mode = 1
@@ -45,9 +44,9 @@ layout_mode = 1
 anchor_top = 0.125
 anchor_bottom = 0.125
 offset_left = 8.0
-offset_top = -21.0
+offset_top = 1.5
 offset_right = 128.0
-offset_bottom = 21.0
+offset_bottom = 48.0
 text = "Grab 15 coal ores
 Grab 10 iron ores"
 current_mission = ExtResource("5_bt76a")
@@ -58,21 +57,33 @@ anchors_preset = -1
 anchor_top = 0.26000002
 anchor_bottom = 0.26000002
 offset_left = 8.0
-offset_top = -5.600006
+offset_top = 33.199997
 offset_right = 69.0
-offset_bottom = 5.399994
+offset_bottom = 44.199997
 theme_override_fonts/font = ExtResource("6_e0pfi")
 theme_override_font_sizes/font_size = 10
 text = "Coordinates:"
 script = ExtResource("6_djwj0")
 
-[node name="MenuManager" parent="." unique_id=1331567166 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=837784107]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MenuManager" parent="MarginContainer" unique_id=1331567166 node_paths=PackedStringArray("menus") instance=ExtResource("8_yvtb5")]
 visible = false
+layout_mode = 2
 menus = {
-0: NodePath("MenuPanel/MainBaseMenu"),
-1: NodePath("MenuPanel/TechTreeUI"),
-2: NodePath("MenuPanel/CraftingUI"),
-3: NodePath("MenuPanel/BuildingsUI")
+0: null,
+1: null,
+2: null,
+3: null
 }
 
 [node name="DialogueUI" parent="." unique_id=839026784 instance=ExtResource("9_0nfu8")]

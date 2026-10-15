@@ -76,7 +76,6 @@ stream = ExtResource("6_v86rl")
 volume_db = -40.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=289366053]
-zoom = Vector2(2, 2)
 script = ExtResource("4_mhnvy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1369771291]

@@ -29,15 +29,9 @@ color = Color(0, 0, 0, 0.3882353)
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=443862141]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -150.0
-offset_right = 300.0
-offset_bottom = 150.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -73,6 +67,7 @@ autoscroll = Vector2(16, 16)
 repeat_times = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="PanelContainer/MarginContainer/Container/Parallax2D" unique_id=1344382320]
+position = Vector2(24.036055, 24.036055)
 scale = Vector2(4, 4)
 texture = ExtResource("3_jnabd")
 
