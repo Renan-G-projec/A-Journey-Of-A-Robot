@@ -92,22 +92,21 @@ layout_mode = 1
 [node name="BuildingsUI" parent="Panel" unique_id=83823365 instance=ExtResource("6_uj02a")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 0
-anchors_preset = 0
-offset_left = -56.0
-offset_top = -16.0
-offset_right = -56.0
-offset_bottom = -16.0
+layout_mode = 1
 
 [node name="CraftingUI" parent="Panel" unique_id=939916802 instance=ExtResource("7_2paer")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = -56.0
 offset_top = -16.0
 offset_right = -56.0
 offset_bottom = -16.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/TechTreeButton" to="." method="_on_tech_tree_button_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/BuildingsButton" to="." method="_on_buildings_button_pressed"]

@@ -1,12 +1,12 @@
 extends Control
 
-@onready var icon: TextureRect = $UpgradePanel/VBoxContainer/CenterContainer/TextureRect
+@onready var icon: TextureRect = %Icon
 
 @onready var buildings: Control = $BuildingPanel/Buildings
-@onready var upgrade_name: Label = $UpgradePanel/VBoxContainer/UpgradeNameLabel
-@onready var upgrade_description: Label = $UpgradePanel/VBoxContainer/DescriptionLabel
-@onready var upgrade_requirements: Label = $UpgradePanel/VBoxContainer/RequirementsLabel
-@onready var upgrade_button: Button = $UpgradePanel/VBoxContainer/Button
+@onready var upgrade_name: Label = %BuildName
+@onready var upgrade_description: Label = %DescriptionLabel
+@onready var upgrade_requirements: Label = %RequirementsLabel
+@onready var upgrade_button: Button = %BuildButton
 
 # Called when the node enters the scene tree for the first time.
 var current_node: BuildingButton
