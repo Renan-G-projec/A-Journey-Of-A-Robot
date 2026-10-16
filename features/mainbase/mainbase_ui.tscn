@@ -87,12 +87,7 @@ text = "Crafting"
 [node name="TechTreeUI" parent="Panel" unique_id=895753709 instance=ExtResource("5_f1e32")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 0
-anchors_preset = 0
-offset_left = -56.0
-offset_top = -16.0
-offset_right = -56.0
-offset_bottom = -16.0
+layout_mode = 1
 
 [node name="BuildingsUI" parent="Panel" unique_id=83823365 instance=ExtResource("6_uj02a")]
 unique_name_in_owner = true

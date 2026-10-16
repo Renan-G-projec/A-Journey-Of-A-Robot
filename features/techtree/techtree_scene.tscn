@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://bdpekavetmwn6" path="res://features/techtree/techtree_ui.gd" id="1_g2tlt"]
 [ext_resource type="Script" uid="uid://cn4gwdsfsbxev" path="res://features/techtree/scroll_container.gd" id="1_xoi5o"]
 [ext_resource type="PackedScene" uid="uid://c4nf3m3efiyqh" path="res://features/techtree/techtree.tscn" id="2_1x505"]
-[ext_resource type="StyleBox" uid="uid://tplp70auydhe" path="res://assets/styles/panel.tres" id="2_pdbh3"]
+[ext_resource type="StyleBox" uid="uid://c2j10x7c7jbmq" path="res://assets/styles/subpanel.tres" id="2_pdbh3"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_uve0u"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="5_o3sd2"]
 [ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="7_pdbh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdbh3"]
 
 [node name="TechTreeUI" type="Control" unique_id=895753709]
 layout_mode = 3
@@ -31,14 +33,30 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ScrollContainer" type="Panel" parent="MarginContainer" unique_id=14390172]
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=933648980]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_pdbh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=1770478167]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="ScrollContainer" type="Panel" parent="MarginContainer/Panel/MarginContainer" unique_id=14390172]
 clip_contents = true
 layout_mode = 2
 mouse_default_cursor_shape = 6
-theme_override_styles/panel = ExtResource("2_pdbh3")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pdbh3")
 script = ExtResource("1_xoi5o")
 
-[node name="Techtree" parent="MarginContainer/ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
+[node name="Techtree" parent="MarginContainer/Panel/MarginContainer/ScrollContainer" unique_id=922205304 instance=ExtResource("2_1x505")]
 z_index = 2
 layout_mode = 1
 anchors_preset = 8
@@ -51,43 +69,54 @@ offset_top = -20.0
 offset_right = -52.0
 offset_bottom = 12.0
 
-[node name="Panel" type="Panel" parent="." unique_id=866635428]
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1894990881]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 11
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -128.0
-offset_top = -74.0
-offset_right = -16.0
-offset_bottom = 70.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="MarginContainer2" unique_id=866635428]
+layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("2_pdbh3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=244150944]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/Panel" unique_id=584738285]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 0
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/VBoxContainer" unique_id=339381664]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/Panel/MarginContainer" unique_id=244150944]
+layout_mode = 2
+theme_override_constants/separation = -11
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=339381664]
 custom_minimum_size = Vector2(64, 48)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/CenterContainer" unique_id=516775828]
+[node name="Icon" type="TextureRect" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer/CenterContainer" unique_id=516775828]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 32)
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_uve0u")
 expand_mode = 2
 
-[node name="UpgradeNameLabel" type="Label" parent="Panel/VBoxContainer" unique_id=483457065]
+[node name="UpgradeNameLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=483457065]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("5_o3sd2")
@@ -96,34 +125,36 @@ text = "Upgrade Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1159405958]
+[node name="DescriptionLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1159405958]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/line_spacing = 3
-theme_override_fonts/font = ExtResource("5_o3sd2")
 theme_override_font_sizes/font_size = 4
 text = "Description
 This upgrade is a placeholder."
 autowrap_mode = 3
 
-[node name="RequirementsLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1483144531]
+[node name="RequirementsLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1483144531]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_constants/line_spacing = 1
-theme_override_fonts/font = ExtResource("5_o3sd2")
+theme_override_constants/line_spacing = -1
 theme_override_font_sizes/font_size = 4
 text = "Requires
     - 10 iron
     - 120 coal"
 
-[node name="UpgradeButton" type="Button" parent="Panel/VBoxContainer" unique_id=1135553137]
+[node name="UpgradeButton" type="Button" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1135553137]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 10
+size_flags_vertical = 6
+mouse_default_cursor_shape = 2
 theme = ExtResource("7_pdbh3")
 disabled = true
 text = "Upgrade"
 
-[connection signal="pressed" from="Panel/VBoxContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/Panel/MarginContainer/VBoxContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]

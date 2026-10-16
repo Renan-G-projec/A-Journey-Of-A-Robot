@@ -4,11 +4,11 @@ extends Control
 ## Note: I Spent almost an hour trying to implement that parallax background of the menu
 ## I almost got it to work but it was the worst thing i've ever seen.
 
-@onready var icon: TextureRect = $Panel/VBoxContainer/CenterContainer/TextureRect
-@onready var upgrade_name: Label = $Panel/VBoxContainer/UpgradeNameLabel
-@onready var upgrade_description: Label = $Panel/VBoxContainer/DescriptionLabel
-@onready var upgrade_requirements: Label = $Panel/VBoxContainer/RequirementsLabel
-@onready var upgrade_button: Button = $Panel/VBoxContainer/UpgradeButton
+@onready var icon: TextureRect = %Icon
+@onready var upgrade_name: Label = %UpgradeNameLabel
+@onready var upgrade_description: Label = %DescriptionLabel
+@onready var upgrade_requirements: Label = %RequirementsLabel
+@onready var upgrade_button: Button = %UpgradeButton
 
 @export var current_player_inventory: Inventory = preload("res://features/player/player_inventory.tres")
 var current_node: TechtreeNode
