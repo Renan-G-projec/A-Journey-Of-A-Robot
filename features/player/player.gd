@@ -105,7 +105,6 @@ func _update_ui_inputs() -> void:
 	_update_ui_location()
 
 func _update_ui_location() -> void:
-	$BuildingOutline.global_position = Vector2(current_placing_location.x * 16.0, current_placing_location.y * 16)
 	$Camera2D.global_position = Vector2(current_placing_location.x * 16.0, current_placing_location.y * 16)
 	if (current_placing_scene):
 		current_placing_scene.global_position = Vector2(current_placing_location.x * 16.0, current_placing_location.y * 16)
@@ -120,10 +119,8 @@ func _enter_building_state(building: PackedScene) -> void:
 	current_placing_scene.modulate.a = 0.7
 	add_child(current_placing_scene)
 	is_building = true
-	$BuildingOutline.visible = true
 
 func _exit_building_state() -> void:
 	is_building = false
 	current_placing_scene = null
 	$Camera2D.position = Vector2.ZERO
-	$BuildingOutline.visible = false

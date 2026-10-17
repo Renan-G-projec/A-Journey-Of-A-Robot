@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bemutxqtpltv" path="res://features/drill/driil.tscn" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://ci6lgg81quwwb" path="res://features/player/jetpack.gd" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://ci1xjc3ulwhg0" path="res://features/player/block_placer.gd" id="6_wwvfn"]
-[ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="7_7mbft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_dqkch")
@@ -180,16 +179,5 @@ collision_mask = 2
 
 [node name="Jetpack" type="Node" parent="." unique_id=117200082]
 script = ExtResource("5_qlg0r")
-
-[node name="BuildingOutline" type="NinePatchRect" parent="." unique_id=577526584]
-visible = false
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("7_7mbft")
-region_rect = Rect2(0, 0, 18, 18)
-patch_margin_left = 6
-patch_margin_top = 6
-patch_margin_right = 6
-patch_margin_bottom = 6
 
 [connection signal="mined_block" from="Drill" to="." method="_on_driil_mined_block"]
