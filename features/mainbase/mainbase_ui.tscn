@@ -102,3 +102,5 @@ layout_mode = 1
 [connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/TechTreeButton" to="." method="_on_tech_tree_button_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/BuildingsButton" to="." method="_on_buildings_button_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/BaseMenuUI/CraftingButton" to="." method="_on_crafting_button_pressed"]
+[connection signal="enter_build_mode" from="Panel/BuildingsUI" to="." method="_on_buildings_ui_enter_build_mode"]
+[connection signal="exit_build_mode" from="Panel/BuildingsUI" to="." method="_on_buildings_ui_exit_build_mode"]

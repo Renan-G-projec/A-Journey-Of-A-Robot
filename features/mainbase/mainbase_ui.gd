@@ -56,3 +56,11 @@ func _hide_all() -> void:
 
 func _process(delta: float) -> void:
 	if visible && Input.is_action_just_pressed("ui_cancel"): _pop_menu()
+
+
+func _on_buildings_ui_enter_build_mode(building: PackedScene) -> void:
+	$Panel.visible = false
+
+
+func _on_buildings_ui_exit_build_mode() -> void:
+	$Panel.visible = true

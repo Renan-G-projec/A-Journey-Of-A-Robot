@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	elif !_was_on_ground:
 		_squash(velocity.y / 1000)
-	if !Global.in_dialogue:
+	if !Global.in_dialogue && Global.can_move:
 		_update_inputs(delta)
 
 	jetpack.boost = is_on_floor()

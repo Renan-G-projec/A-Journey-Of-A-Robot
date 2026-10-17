@@ -6,6 +6,7 @@ extends Resource
 @export var stock: int = 0
 @export var id: int = 0
 @export var craft_connection: CraftResource
+@export var building_scene: PackedScene
 
 func get_current_stock() -> int:
 	if craft_connection:

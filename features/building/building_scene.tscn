@@ -40,6 +40,7 @@ mouse_default_cursor_shape = 6
 theme_override_styles/panel = ExtResource("2_0lb3u")
 
 [node name="Buildings" parent="MarginContainer/HBoxContainer/BuildingPanel" unique_id=1721540874 instance=ExtResource("3_w1fg0")]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.040000003
@@ -51,12 +52,12 @@ offset_top = 0.00799942
 offset_right = 1.0199966
 offset_bottom = -3.7919998
 
-[node name="UpgradePanel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=714975557]
+[node name="PlacePanel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=714975557]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = ExtResource("2_0lb3u")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/UpgradePanel" unique_id=1370810085]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/PlacePanel" unique_id=1370810085]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,21 +69,21 @@ theme_override_constants/margin_top = 7
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 7
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer" unique_id=1407496200]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer" unique_id=1407496200]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer" unique_id=314895016]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=314895016]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer/CenterContainer" unique_id=976638543]
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer/CenterContainer" unique_id=976638543]
 unique_name_in_owner = true
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_57wdr")
 
-[node name="BuildName" type="Label" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer" unique_id=1414597787]
+[node name="BuildName" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1414597787]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
@@ -92,7 +93,7 @@ text = "Upgrade Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer" unique_id=53159987]
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=53159987]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
@@ -101,7 +102,7 @@ theme_override_font_sizes/font_size = 4
 text = "Description
 This upgrade is a placeholder."
 
-[node name="RequirementsLabel" type="Label" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer" unique_id=1548462158]
+[node name="RequirementsLabel" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1548462158]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
@@ -111,7 +112,7 @@ text = "Requires
     - 10 iron
     - 120 coal"
 
-[node name="BuildButton" type="Button" parent="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer" unique_id=1122209717]
+[node name="BuildButton" type="Button" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1122209717]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
@@ -121,4 +122,4 @@ theme = ExtResource("6_4jl7d")
 disabled = true
 text = "Build!"
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/UpgradePanel/MarginContainer/VBoxContainer/BuildButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer/BuildButton" to="." method="_on_upgrade_button_pressed"]
