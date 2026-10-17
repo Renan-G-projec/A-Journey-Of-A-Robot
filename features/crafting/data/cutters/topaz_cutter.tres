@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://dr68w4geqbr4t"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_0dmp4"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="2_eq5qd"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_rjnc3"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_urrot"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_we3cm"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_aaxax"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_dmuox"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_qssvh"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_3bbwq"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_1ac2k"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_uvyag"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_aua82"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_i758q"]
+
+[resource]
+script = ExtResource("2_eq5qd")
+prerequisites = Array[ExtResource("1_0dmp4")]([ExtResource("2_rjnc3"), ExtResource("3_urrot"), ExtResource("4_we3cm"), ExtResource("5_aaxax"), ExtResource("6_dmuox"), ExtResource("7_qssvh"), ExtResource("8_3bbwq"), ExtResource("9_1ac2k"), ExtResource("10_uvyag"), ExtResource("11_aua82"), ExtResource("12_i758q")])
+metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

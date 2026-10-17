@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://fgkrvpb6vfsb"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_peplu"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_831lc"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_nn65b"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_likcy"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_y3sry"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_srx5y"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_kdv5t"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_0gvhm"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_ow7vj"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_5sret"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_sktpb"]
+[ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_gn8w7"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="13_gbkm4"]
+[ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="14_kq14k"]
+[ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="15_lo4cs"]
+[ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_mr802"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="17_h5dpy"]
+
+[resource]
+script = ExtResource("17_h5dpy")
+description = "A hotter smelter that can handle emerald."
+prerequisites = Array[ExtResource("1_peplu")]([ExtResource("2_831lc"), ExtResource("3_nn65b"), ExtResource("4_likcy"), ExtResource("5_y3sry"), ExtResource("6_srx5y"), ExtResource("7_kdv5t"), ExtResource("8_0gvhm"), ExtResource("9_ow7vj"), ExtResource("10_5sret"), ExtResource("11_sktpb"), ExtResource("12_gn8w7"), ExtResource("13_gbkm4"), ExtResource("14_kq14k"), ExtResource("15_lo4cs"), ExtResource("16_mr802")])
+metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

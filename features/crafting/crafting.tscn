@@ -1,10 +1,19 @@
 [gd_scene format=3 uid="uid://cghosfhpigliq"]
 
 [ext_resource type="PackedScene" uid="uid://d1886w4d427uf" path="res://features/crafting/crafting_node.tscn" id="1_k7ss6"]
-[ext_resource type="Resource" uid="uid://dcnr5vdx4rxqd" path="res://features/smelter/smelter_crafting.tres" id="3_soryn"]
+[ext_resource type="Resource" uid="uid://i0a3cnduyn22" path="res://features/crafting/data/smelters/copper_smelter.tres" id="3_7456u"]
+[ext_resource type="Texture2D" uid="uid://dik7ffx68mwl8" path="res://assets/sprites/furnanceStage2TechTree.png" id="4_47tfw"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="4_xjirk"]
-[ext_resource type="Texture2D" uid="uid://bb8scfhg75f3b" path="res://assets/sprites/drillStage1TechTree.png" id="5_hb0je"]
-[ext_resource type="Resource" uid="uid://c125bxqrxla8w" path="res://features/drill/drill_crafting.tres" id="5_k7ss6"]
+[ext_resource type="Resource" uid="uid://b35ypxr8470c1" path="res://features/crafting/data/smelters/iron_smelter.tres" id="5_63qh6"]
+[ext_resource type="Texture2D" uid="uid://fitj62k27ycr" path="res://assets/sprites/furnanceStage3TechTree.png" id="6_kocpd"]
+[ext_resource type="Resource" uid="uid://6mtlmna13ry3" path="res://features/crafting/data/smelters/topaz_smelter.tres" id="7_2xgkr"]
+[ext_resource type="Texture2D" uid="uid://dgskk5ojdbks6" path="res://assets/sprites/furnanceStage4TechTree.png" id="8_xshen"]
+[ext_resource type="Resource" uid="uid://fgkrvpb6vfsb" path="res://features/crafting/data/smelters/emerald_smelter.tres" id="9_lu4me"]
+[ext_resource type="Texture2D" uid="uid://0ds7rrgwxbfo" path="res://assets/sprites/furnanceStage5TechTree.png" id="10_w5q4v"]
+[ext_resource type="Resource" uid="uid://ckmwwjsnxhtjt" path="res://features/crafting/data/smelters/ruby_smelter.tres" id="11_op3b6"]
+[ext_resource type="Resource" uid="uid://dr68w4geqbr4t" path="res://features/crafting/data/cutters/topaz_cutter.tres" id="12_af8u3"]
+[ext_resource type="Resource" uid="uid://c7iokdivotd6i" path="res://features/crafting/data/cutters/emerald_cutter.tres" id="13_bu33u"]
+[ext_resource type="Resource" uid="uid://bosdimkv5sfg4" path="res://features/crafting/data/cutters/ruby_cutter.tres" id="14_47tfw"]
 
 [node name="Crafting" type="Control" unique_id=1721540874]
 layout_mode = 3
@@ -14,14 +23,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Smelter" parent="." unique_id=718377064 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+[node name="CopperSmelter" parent="." unique_id=718377064 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+icon = ExtResource("4_xjirk")
+craft_resource = ExtResource("3_7456u")
+
+[node name="IronSmelter" parent="." unique_id=2096825410 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
 offset_left = 32.0
 offset_right = 52.0
-icon = ExtResource("4_xjirk")
-craft_resource = ExtResource("3_soryn")
+icon = ExtResource("4_47tfw")
+craft_resource = ExtResource("5_63qh6")
 
-[node name="Drill" parent="." unique_id=158822291 groups=["CraftButton"] instance=ExtResource("1_k7ss6")]
+[node name="TopazSmelter" parent="." unique_id=232283384 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
 layout_mode = 0
-icon = ExtResource("5_hb0je")
-craft_resource = ExtResource("5_k7ss6")
+offset_left = 64.0
+offset_right = 84.0
+icon = ExtResource("6_kocpd")
+craft_resource = ExtResource("7_2xgkr")
+
+[node name="EmeraldSmelter" parent="." unique_id=291487526 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 116.0
+icon = ExtResource("8_xshen")
+craft_resource = ExtResource("9_lu4me")
+
+[node name="RubySmelter" parent="." unique_id=556559678 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 148.0
+icon = ExtResource("10_w5q4v")
+craft_resource = ExtResource("11_op3b6")
+
+[node name="TopazCutter" parent="." unique_id=1553995734 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 84.0
+offset_bottom = 52.0
+icon = ExtResource("4_xjirk")
+craft_resource = ExtResource("12_af8u3")
+
+[node name="EmeraldCutter" parent="." unique_id=450679117 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 116.0
+offset_bottom = 52.0
+icon = ExtResource("4_xjirk")
+craft_resource = ExtResource("13_bu33u")
+
+[node name="RubyCutter" parent="." unique_id=112754596 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 148.0
+offset_bottom = 52.0
+icon = ExtResource("4_xjirk")
+craft_resource = ExtResource("14_47tfw")

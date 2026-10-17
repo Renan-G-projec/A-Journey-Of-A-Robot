@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://i0a3cnduyn22"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_ej5rb"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_cgm6h"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_168ie"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="4_k8gvj"]
+
+[resource]
+script = ExtResource("4_k8gvj")
+description = "Your first smelter! Burns coal to turn copper ore into plates."
+prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h"), ExtResource("3_168ie")])
+metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

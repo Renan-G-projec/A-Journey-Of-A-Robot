@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://b35ypxr8470c1"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_eyx1m"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_p1nol"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_ip5uj"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_aixco"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_5lx8o"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_rvlv1"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_20rwf"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="8_lomir"]
+
+[resource]
+script = ExtResource("8_lomir")
+description = "A heavier furnace that handles iron."
+prerequisites = Array[ExtResource("1_eyx1m")]([ExtResource("2_p1nol"), ExtResource("3_ip5uj"), ExtResource("4_aixco"), ExtResource("5_5lx8o"), ExtResource("6_rvlv1"), ExtResource("7_20rwf")])
+metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

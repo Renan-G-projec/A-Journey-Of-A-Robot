@@ -16,7 +16,7 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("6_6ts6n")
-name = "Iron Smelter "
+name = "Copper Smelter "
 description = "Time to Smelt! "
 cost = SubResource("Resource_h2rhj")
 prerequisites = Array[ExtResource("4_6ts6n")]([ExtResource("5_nbeb5")])

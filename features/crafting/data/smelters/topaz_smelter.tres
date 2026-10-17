@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://6mtlmna13ry3"]
+
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_4ulfv"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_nuvtv"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_lbuyi"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_qglq2"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_3dr0p"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_l12x2"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_xrxa8"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="8_cck16"]
+[ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_aphqm"]
+[ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_qnmex"]
+[ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_3qakm"]
+[ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="12_kbkxe"]
+
+[resource]
+script = ExtResource("12_kbkxe")
+description = "Melts raw topaz in a furnance. Molten topaz is the first step to cutting it."
+prerequisites = Array[ExtResource("1_4ulfv")]([ExtResource("2_nuvtv"), ExtResource("3_lbuyi"), ExtResource("4_qglq2"), ExtResource("5_3dr0p"), ExtResource("6_l12x2"), ExtResource("7_xrxa8"), ExtResource("8_cck16"), ExtResource("9_aphqm"), ExtResource("10_qnmex"), ExtResource("11_3qakm")])
+metadata/_custom_type_script = "uid://c27hq2xl3ofjw"
