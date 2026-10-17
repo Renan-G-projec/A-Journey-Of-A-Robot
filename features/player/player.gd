@@ -11,7 +11,8 @@ extends CharacterBody2D
 @onready var jetpack: Jetpack = $Jetpack
 @onready var block_placer: BlockPlacer = $%BlockPlacer
 
-
+var _was_on_ground: bool = false
+var _prev_y_velocity: float = 0.0
 
 var facing_direction: int = 1
 
@@ -26,11 +27,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-
-	if !Global.in_dialogue:
+	elif !_was_on_ground:
+		_squash(velocity.y / 1000)
+	if !Global.in_dialogue && Global.can_move:
 		_update_inputs(delta)
 
+	jetpack.boost = is_on_floor()
+	_was_on_ground = is_on_floor()
+	_prev_y_velocity = velocity.y
 	move_and_slide()
 	update_state()
 
@@ -57,6 +61,7 @@ func _update_inputs(delta: float) -> void:
 	velocity.y += jetpack.get_jetpack_velocity(delta)
 	
 	if Input.is_action_pressed("MineFacingBlock"):
+		if !Global.can_mine: return
 		if (drill.is_facing_block): drill.start_emitting_particles()
 		drill.mine()
 	else:
@@ -72,3 +77,8 @@ func _update_inputs(delta: float) -> void:
 	if Input.is_action_just_pressed("PutFacingBlock") && block_inventory.get(current_placing_block, 0) > 0:
 		block_inventory[current_placing_block] -= 1
 		block_placer.place_block(current_placing_block)
+	
+func _squash(power: float) -> void:
+	$Sprite.scale = Vector2(1.4 + power, 0.6 - power)
+	var tween := create_tween()
+	tween.tween_property($Sprite, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_QUAD)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://di140nlm58j4s"]
+
+[ext_resource type="AudioStream" uid="uid://fyaepbwheasw" path="res://assets/sounds/Space Background Music.mp3" id="1_x5bng"]
+[ext_resource type="Script" uid="uid://d1h67ypjme0yy" path="res://core/sound_manager.gd" id="2_ouiub"]
+
+[node name="Node" type="Node" unique_id=828381694]
+script = ExtResource("2_ouiub")
+
+[node name="SoundManager" type="AudioStreamPlayer" parent="." unique_id=1054756636]
+unique_name_in_owner = true
+stream = ExtResource("1_x5bng")
+volume_db = -80.0
+autoplay = true
+parameters/looping = true

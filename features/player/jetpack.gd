@@ -8,6 +8,9 @@ extends Node
 @export var current_fuel: float = 4.0
 @export var impulse: float = 980 * 1.4
 @export var refuel_rate: float = 0.1
+@export var boost_refuel_rate: float = 4.0
+
+var boost: bool = false
 
 var is_active: bool = false
 
@@ -20,6 +23,6 @@ func _physics_process(delta: float) -> void:
 		current_fuel -= delta
 		current_fuel = max(current_fuel, 0)
 	else:
-		current_fuel += refuel_rate * delta
+		if boost:current_fuel += refuel_rate * delta * boost_refuel_rate
+		else: current_fuel += refuel_rate * delta
 		current_fuel = min(current_fuel, max_fuel)
-	
