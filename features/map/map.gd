@@ -150,3 +150,8 @@ func get_ore_at_coord(local_map_coords: Vector2i) -> InventoryItem:
 		5:
 			return emerald
 	return null
+
+func place_building(tile: Vector2i, building: Node2D) -> void:
+	building.get_parent().remove_child(building)
+	add_child(building)
+	building.global_position = tile * 16.0

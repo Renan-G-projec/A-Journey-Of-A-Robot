@@ -6,3 +6,6 @@ signal request_start_dialogue_sequence(dialogue_sequence: DialogueSequence)
 
 signal block_mined(block_type: int)
 signal chunk_loaded()
+
+signal enter_build_mode(building: PackedScene)
+signal exit_build_mode()

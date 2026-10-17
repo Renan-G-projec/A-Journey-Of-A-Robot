@@ -11,7 +11,6 @@ extends Node2D
 @onready var player: Player = $Player
 @onready var game_ui: CanvasLayer = $GameUI
 
-
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
 	if initial_mission and initial_mission.items.size() >= 2:
@@ -21,6 +20,12 @@ func _ready() -> void:
 	if OS.has_feature("editor"): _debug_config()
 	
 	mission_ui.display()
+	
+	# Connecting the buildings menus
+	EventBus.enter_build_mode.connect(enter_building_state)
+	EventBus.exit_build_mode.connect(exit_building_state)
+	
+	player.placed_machine.connect(map.place_building)
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 	map.damage_tile(tilemap_coords, damage) 
@@ -35,7 +40,6 @@ func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
 	if initial_mission.is_completed():
 		SceneManager.change_scene_to_file("res://scenes/menu.tscn")
 
-
 func _process(delta: float) -> void:
 	if not get_tree().paused: 
 		if layer and player:
@@ -48,6 +52,12 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	map.load_chunks_by_position(player.position, 4)
+
+func enter_building_state(building: PackedScene) -> void:
+	Global.can_move = false
+	
+func exit_building_state() -> void:
+	Global.can_move = true
 
 #region DEBUG
 # This function is for configuring things for debug, suich as infinite inventory and stuff like that

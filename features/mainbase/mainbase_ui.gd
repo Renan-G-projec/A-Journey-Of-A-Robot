@@ -4,7 +4,11 @@ extends Control
 var _open_menus_stack: Array[Control] = []
 
 func _ready() -> void:
+	visible = true
 	$Panel.visible = false;
+	
+	EventBus.enter_build_mode.connect(_on_enter_build_mode)
+	EventBus.exit_build_mode.connect(_on_exit_build_mode)
 
 func open() -> void:
 	if $Panel.visible: return
@@ -58,9 +62,8 @@ func _process(delta: float) -> void:
 	if visible && Input.is_action_just_pressed("ui_cancel"): _pop_menu()
 
 
-func _on_buildings_ui_enter_build_mode(building: PackedScene) -> void:
+func _on_enter_build_mode(building: PackedScene) -> void:
 	$Panel.visible = false
 
-
-func _on_buildings_ui_exit_build_mode() -> void:
+func _on_exit_build_mode() -> void:
 	$Panel.visible = true
