@@ -5,9 +5,8 @@
 [ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="2_yauyq"]
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_ydkfi"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_35j5p"]
-[ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="3_515is"]
+[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="3_afus3"]
 [ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_dhhew"]
-[ext_resource type="Resource" uid="uid://bdinqwho5446f" path="res://features/ores/raw/topaz_ore.tres" id="4_yxt4i"]
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_kfaay"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_ue58s"]
 [ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_afus3"]
@@ -16,12 +15,11 @@
 [ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="9_515is"]
 [ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="10_yxt4i"]
 
-[sub_resource type="Resource" id="Resource_g2tpd"]
+[sub_resource type="Resource" id="Resource_s3tt0"]
 script = ExtResource("5_ue58s")
 data = Dictionary[ExtResource("1_l5hb6"), int]({
-ExtResource("2_yauyq"): 8,
-ExtResource("3_515is"): 8,
-ExtResource("4_yxt4i"): 5
+ExtResource("2_yauyq"): 10,
+ExtResource("3_afus3"): 6
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
@@ -29,6 +27,6 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 script = ExtResource("1_72sa3")
 name = "Topaz Smelter"
 description = "Melts raw topaz in a furnance. Molten topaz is the first step to cutting it."
-cost = SubResource("Resource_g2tpd")
+cost = SubResource("Resource_s3tt0")
 prerequisites = Array[ExtResource("1_72sa3")]([ExtResource("2_ydkfi"), ExtResource("3_35j5p"), ExtResource("4_dhhew"), ExtResource("5_kfaay"), ExtResource("6_afus3"), ExtResource("7_l5hb6"), ExtResource("8_yauyq"), ExtResource("9_515is"), ExtResource("10_yxt4i")])
 metadata/_custom_type_script = "uid://bkkycdtutquhl"

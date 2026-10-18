@@ -1,13 +1,32 @@
 [gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://i0a3cnduyn22"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_cgm6h"]
+=======
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_15ccn"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_ej5rb"]
 [ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores/raw/copper_ore.tres" id="2_15ccn"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_168ie"]
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_cgm6h"]
+<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_enncc"]
 [ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="4_7d23c"]
+=======
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores/raw/copper_ore.tres" id="2_enncc"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="3_7d23c"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_168ie"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="4_k8gvj"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="4_ouo02"]
+
+[sub_resource type="Resource" id="Resource_4u76i"]
+script = ExtResource("4_ouo02")
+data = Dictionary[ExtResource("1_15ccn"), int]({
+ExtResource("2_enncc"): 10,
+ExtResource("3_7d23c"): 10
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [sub_resource type="Resource" id="Resource_w03ix"]
 script = ExtResource("2_168ie")
@@ -21,7 +40,12 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 [resource]
 script = ExtResource("4_k8gvj")
 description = "Your first smelter! Burns coal to turn copper ore into plates."
+<<<<<<< Updated upstream
 cost = SubResource("Resource_w03ix")
 stock = 10
 prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h")])
+=======
+cost = SubResource("Resource_4u76i")
+prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h"), ExtResource("3_168ie")])
+>>>>>>> Stashed changes
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

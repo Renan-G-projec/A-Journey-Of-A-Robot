@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="TechtreeUpgrade" format=3 uid="uid://fraw0ruwg41n"]
+
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_oanoe"]
+[ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="2_kkyvg"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="3_oirmm"]
+[ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="4_mbfjc"]
+[ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="5_0mjm1"]
+[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="6_ppqdj"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="7_jvt3d"]
+[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="8_t0ias"]
+[ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="9_xagbc"]
+[ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="10_cd4mb"]
+
+[sub_resource type="Resource" id="Resource_mahca"]
+script = ExtResource("3_oirmm")
+data = Dictionary[ExtResource("1_oanoe"), int]({
+ExtResource("2_kkyvg"): 10
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
+
+[resource]
+script = ExtResource("4_mbfjc")
+name = "Iron Platform"
+description = "A reinforced platform that strengthens the terrain and improves planet stability "
+cost = SubResource("Resource_mahca")
+prerequisites = Array[ExtResource("4_mbfjc")]([ExtResource("5_0mjm1"), ExtResource("6_ppqdj"), ExtResource("7_jvt3d"), ExtResource("8_t0ias"), ExtResource("9_xagbc"), ExtResource("10_cd4mb")])
+metadata/_custom_type_script = "uid://bkkycdtutquhl"
