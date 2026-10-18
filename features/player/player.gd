@@ -58,7 +58,8 @@ func _update_state(delta: float) -> void:
 		State.BUILDING:
 			_update_ui_inputs()
 		State.SELECTING_BLOCK:
-			pass
+			velocity.x = 0
+			_update_sprite()
 
 func _update_gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -74,6 +75,9 @@ func _on_drill_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	
 func _update_sprite() -> void:
 	var going_direction: int = Input.get_axis("GoLeft", "GoRight")
+	if state != State.NORMAL:
+		going_direction = 0
+
 	if going_direction < 0:
 		sprite.play("runningLeft")
 		facing_direction = going_direction

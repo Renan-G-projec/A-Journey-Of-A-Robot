@@ -49,8 +49,8 @@ func _fade_out() -> void:
 	
 	var tween := create_tween()
 	tween.set_parallel()
-	tween.tween_property(self, "position", Vector2.ZERO, 0.2).set_trans(Tween.TRANS_QUAD)
-	tween.tween_property(self, "scale", Vector2.ZERO, 0.2).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "position", Vector2.ZERO, 0.35).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.3).set_trans(Tween.TRANS_QUAD)
 	tween.tween_property(self, "custom_maximum_size", Vector2(0, -1), 0.2).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT).finished
 	await tween.finished
 	
@@ -66,8 +66,8 @@ func _fade_in() -> void:
 	
 	var tween := create_tween()
 	tween.set_parallel()
-	tween.tween_property(self, "position", Vector2(_calculate_block_position(current_block), initial_position.y), 0.2).set_trans(Tween.TRANS_QUAD)
-	tween.tween_property(self, "scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "position", Vector2(_calculate_block_position(current_block), initial_position.y), 0.35).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_QUAD)
 	tween.tween_property(self, "custom_maximum_size", Vector2(max_size.x, -1), 0.2).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN).finished
 	await tween.finished
 	
@@ -78,7 +78,7 @@ func _sync_current_block() -> void:
 	if selected_block_transition_tween:
 		selected_block_transition_tween.kill()
 	selected_block_transition_tween = create_tween()
-	selected_block_transition_tween.tween_property(self, "position", Vector2(_calculate_block_position(current_block), position.y), 0.2)
+	selected_block_transition_tween.tween_property(self, "position", Vector2(_calculate_block_position(current_block), position.y), 0.15)
 
 func _calculate_block_position(block: int) -> float:
 	const block_size: float = 16.0
@@ -101,8 +101,8 @@ func _update_state() -> void:
 
 func _elevate_block(block: int) -> void:
 	var tween := create_tween()
-	tween.tween_property(get_child(block - 1), "offset_transform_scale", selected_block_scale_impulse, 0.15).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(get_child(block - 1), "offset_transform_scale", selected_block_scale_impulse, 0.2).set_trans(Tween.TRANS_QUAD)
 
 func _deelevate_block(block: int) -> void:
 	var tween := create_tween()
-	tween.tween_property(get_child(block - 1), "offset_transform_scale", Vector2.ONE, 0.15).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(get_child(block - 1), "offset_transform_scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_QUAD)
