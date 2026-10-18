@@ -2,6 +2,12 @@
 class_name Player
 extends CharacterBody2D
 
+enum State {
+	NORMAL,
+	BUILDING,
+	SELECTING_BLOCK
+}
+
 @export var SPEED: float = 100.0
 @export var JUMP_VELOCITY: float = -400.0
 
@@ -22,11 +28,11 @@ signal placed_machine(tile: Vector2i, machine: Node2D)
 
 var block_inventory: Dictionary[int, int]
 var current_placing_block: int = 1
-var is_selecting_block: bool = false
 
-var is_building: bool = false
 var current_placing_scene: Node2D = null
 var current_placing_location: Vector2i = Vector2.ZERO
+
+var state: State = State.NORMAL
 
 func _ready() -> void:
 	EventBus.block_mined.connect(add_block_to_inventory)
@@ -34,30 +40,39 @@ func _ready() -> void:
 	EventBus.exit_build_mode.connect(_exit_building_state)
 
 func _physics_process(delta: float) -> void:
+	_update_gravity(delta)
+	_update_state(delta)
+	
+	_prev_y_velocity = velocity.y
+	move_and_slide()
+
+func _update_state(delta: float) -> void:
+	match state:
+		State.NORMAL:
+			if !Global.in_dialogue && Global.can_move:
+				_update_inputs(delta)
+				_update_sprite()
+				if (Input.is_action_just_pressed("OpenBlockSelectionMenu")):
+					state = State.SELECTING_BLOCK
+					$BlockSelection.open()
+		State.BUILDING:
+			_update_ui_inputs()
+		State.SELECTING_BLOCK:
+			pass
+
+func _update_gravity(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	elif !_was_on_ground:
 		_squash(velocity.y / 1000)
-	if !Global.in_dialogue && Global.can_move:
-		_update_inputs(delta)
-		if !is_selecting_block && Input.is_action_just_pressed("OpenBlockSelectionMenu"):
-			is_selecting_block = true
-			Global.can_move = false
-			$BlockSelection.open()
-	if is_building:
-		_update_ui_inputs()
-
 	jetpack.boost = is_on_floor()
 	_was_on_ground = is_on_floor()
-	_prev_y_velocity = velocity.y
-	
-	move_and_slide()
-	_update_state()
 
-func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
+
+func _on_drill_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	mined_block.emit(tilemap_position, damage)
 	
-func _update_state() -> void:
+func _update_sprite() -> void:
 	var going_direction: int = Input.get_axis("GoLeft", "GoRight")
 	if going_direction < 0:
 		sprite.play("runningLeft")
@@ -71,7 +86,6 @@ func _update_state() -> void:
 
 func add_block_to_inventory(block_layer: int) -> void:
 	block_inventory[block_layer] = 1 + block_inventory.get(block_layer, 0)
-	print("player now have: ", block_inventory.get(block_layer))
 
 func _update_inputs(delta: float) -> void:
 	jetpack.is_active = Input.is_action_pressed("UseJetpack")
@@ -125,15 +139,13 @@ func _enter_building_state(building: PackedScene) -> void:
 	current_placing_scene = building.instantiate()
 	current_placing_scene.modulate.a = 0.7
 	add_child(current_placing_scene)
-	is_building = true
+	state = State.BUILDING
 
 func _exit_building_state() -> void:
-	is_building = false
+	state = State.NORMAL
 	current_placing_scene = null
 	$Camera2D.position = Vector2.ZERO
 
-
-func _on_block_selection_selected_block_changed(block_id: Variant) -> void:
+func _on_block_selection_selected_block(block_id: Variant) -> void:
 	current_placing_block = block_id
-	is_selecting_block = false
-	Global.can_move = true
+	state = State.NORMAL
