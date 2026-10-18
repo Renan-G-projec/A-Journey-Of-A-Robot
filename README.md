@@ -13,11 +13,13 @@ Go to the itch.io page https://huntorbehunted83.itch.io/journey-of-a-robot and p
 
 ## Mechanics
 The main game mechanic is mining. The player have a drill and has to mine some ores.
-- The player have a jetpack with fuel that recharges
-- The player can mine with the drill
-- The game have one layer
-- The map is generated on runtime (update: now it is fully procedural generated!)
-- The game have a menu
+- The user can mine ores!
+- (almost) Modular inventory system with godot resources
+- Block Placing system
+- Scrollable tech tree system
+- Crafting system
+- Building system
+- Ore smelting system!
 
 ## Build from source
 You can download the github source code as a ZIP, unzip it and import on the Godot Game Engine. Alternativelly, you can use git:
@@ -40,15 +42,18 @@ and then open on Godot.
 - The Machine input panel is unaligned. It will be fixed next week.
 - The building system (not the block placing, but building machines and placing on the map) is not complete yet.
 
-## Incomplete systems
-These systems are in development. They're NOT fully functional right now but should be connected easily in the future.
-
-- Tech tree:
-![Tech tree](.github/public/v1/TechtreeExample.gif)
-- Smelting ore Machinee:
-![Smelting machine](.github/public/v1/MachineExample.gif)
-- Crafting system:
-![Crafting](.github/plansublic/v2/crafting_system_start.png)
+## Showcase
+Here are some screenshots of the systems (in development!)
+- Tech tree
+*To add image*
+- Crafting system
+*To add image*
+- Building system
+*To add image*
+- Block placing
+*To add image*
+- Ore smelting machine
+*To add image*
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
