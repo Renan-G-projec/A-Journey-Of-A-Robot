@@ -19,7 +19,11 @@ func _on_ui_crafting_panel_requested(node: CraftButton) -> void:
 	%BuildName.text = node.craft_resource.name
 	%DescriptionLabel.text = node.craft_resource.description
 	%RequirementsLabel.text = node.craft_resource.get_requirements_string()
-	%CraftButton.disabled = !current_player_inventory.has_items(node.craft_resource.cost) || !TechtreeManager.has_upgrades(node.craft_resource.prerequisites)
+	var craft_button_enabled = !current_player_inventory.has_items(node.craft_resource.cost) || !TechtreeManager.has_upgrades(node.craft_resource.prerequisites)
+	print("Player Has Items", !current_player_inventory.has_items(node.craft_resource.cost)) 
+	print("Player Has Technology", !TechtreeManager.has_upgrades(node.craft_resource.prerequisites))
+	print(craft_button_enabled)
+	%CraftButton.disabled = craft_button_enabled
 	
 func _on_craft_button_pressed() -> void:
 	print("Craft Button Pressed")

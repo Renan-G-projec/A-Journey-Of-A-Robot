@@ -1,12 +1,26 @@
 [gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://i0a3cnduyn22"]
 
+[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_cgm6h"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_ej5rb"]
+[ext_resource type="Resource" uid="uid://e21t8ysctxhb" path="res://features/ores/raw/copper_ore.tres" id="2_15ccn"]
+[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_168ie"]
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_cgm6h"]
-[ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_168ie"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_enncc"]
+[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="4_7d23c"]
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="4_k8gvj"]
+
+[sub_resource type="Resource" id="Resource_w03ix"]
+script = ExtResource("2_168ie")
+data = Dictionary[ExtResource("1_cgm6h"), int]({
+ExtResource("2_15ccn"): 12,
+ExtResource("3_enncc"): 5,
+ExtResource("4_7d23c"): 4
+})
+metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("4_k8gvj")
 description = "Your first smelter! Burns coal to turn copper ore into plates."
-prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h"), ExtResource("3_168ie")])
+cost = SubResource("Resource_w03ix")
+prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

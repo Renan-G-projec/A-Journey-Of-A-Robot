@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_uptie"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="2_1njko"]
+[ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="2_jpaec"]
 
 [resource]
 script = ExtResource("2_1njko")
+data = Dictionary[ExtResource("1_uptie"), int]({
+ExtResource("2_jpaec"): 9000
+})
 metadata/_custom_type_script = "uid://crbcquplyyvye"

@@ -29,7 +29,9 @@ func are_prerequisites_met_for_tech(upgrade: TechtreeUpgrade) -> bool:
 
 func has_upgrades(upgrades: Array[TechtreeUpgrade]) -> bool:
 	for upgrade in upgrades:
+		print("Upgrade Name", upgrade)
 		if !has_upgrade(upgrade):
+			print("Upgrade Name NOT BOUGTH ", upgrade)
 			return false
 	return true
 		

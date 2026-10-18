@@ -1,6 +1,12 @@
 # Ad Maiorem Dei Gloriam!
+class_name EventBusClass
 extends Node
 # This script is for defining global events without chaining everything up
+enum MenuType {
+	PAUSE,
+}
+
+signal request_open_menu(menu_type: MenuType)
 
 signal request_start_dialogue_sequence(dialogue_sequence: DialogueSequence)
 

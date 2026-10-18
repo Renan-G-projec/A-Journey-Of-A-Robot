@@ -35,7 +35,8 @@ func _process(delta: float) -> void:
 			coords_ui.update_text(current_pos.x, current_pos.y)
 	
 	if Input.is_action_just_pressed("PauseGame"):
-		EventBus.request_open_menu.emit(EventBus.MenuType.PAUSE)
+		EventBus.request_open_menu.emit(EventBusClass.MenuType.PAUSE)
+		
 
 func _physics_process(delta: float) -> void:
 	map.load_chunks_by_position(player.position, 4)

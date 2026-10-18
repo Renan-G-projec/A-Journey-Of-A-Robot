@@ -27,6 +27,9 @@ func add_items(items: Inventory) -> void:
 		add_item(item, items.get_item(item))
 		
 func has_items(items: Inventory) -> bool:
+	if items == null: 
+		print("Item is null")
+		return false
 	for item in items.data:
 		var item_to_check_qtd: int = items.data.get(item, 0)
 		var item_on_inventory_qtd: int = data.get(item, 0)
