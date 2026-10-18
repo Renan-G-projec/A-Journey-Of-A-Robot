@@ -6,7 +6,7 @@ signal selected_block_changed(block_id)
 var active: bool = false
 
 func open() -> void:
-	pass
+	active = true
 
 func select() -> void:
 	pass
