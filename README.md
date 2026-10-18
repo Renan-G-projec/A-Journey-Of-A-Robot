@@ -52,10 +52,13 @@ These systems are in development. They're NOT fully functional right now but sho
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
-- [x] Make the main base
-- [x] Make a tech-tree system
-- [x] Make a crafting system
-- [x] Add a smelting system 
+- [] Add a interact popup when the player gets near interactables
+- [] Add more machines
+- [] Rework the dialogue system
+- [] Add more upgrades to the tech tree
+- [] Add more craftings
+- [] Improve the juice of the building system
+- [] Fix typos along the codebase and make the overall code more legible
 - [] Add more layers (3/7)
 
 
