@@ -6,6 +6,13 @@ extends Node2D
 ## This code mixes particle emission with raycasting and complex behavior
 ## All the particle-related code shall be moved soon to it's own script
 
+var copper_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/copper_techs/copper_drill.tres")
+var iron_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/iron_techs/iron_drill.tres")
+var topaz_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/topaz_techs/topaz_drill.tres")
+var emerald_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/emerald_techs/emerald_drill.tres")
+var ruby_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/ruby_techs/ruby_drill.tres")
+
+
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var sprite: Node2D = $Pivot
 @onready var sprite_animation: AnimatedSprite2D = $Pivot/Sprite2D
@@ -17,6 +24,14 @@ extends Node2D
 @export var damage: float = 4
 @export var select_lerp_effect: Vector2 = Vector2(1.4, 1.4)
 @export var select_lerp_effect_step: float = 0.2
+
+
+var regular_drill_animation: String = "regular_drill"
+var copper_drill_animation: String = "copper_drill"
+var iron_drill_animation: String = "iron_drill"
+var topaz_drill_animation: String = "topaz_drill"
+var emerald_drill_animation: String = "emerald_drill"
+var ruby_drill_animation: String = "ruby_drill"
 
 var is_facing_block: bool = false
 var facing_block_coords: Vector2i = Vector2.ZERO
@@ -73,7 +88,6 @@ func mine() -> void:
 			selected_block_effect.queue_redraw()
 			update_selected_block_effect(true, Vector2(0.7, 0.7))
 			facing_block_animation_timer = facing_block_animation_time
-		
 
 func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = select_lerp_effect, step: float = select_lerp_effect_step) -> void:
 	selected_block_effect.visible = is_facing_block
@@ -82,14 +96,25 @@ func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = sele
 		selected_block_effect.scale = effect_scale
 	selected_block_effect.scale.x = lerp(selected_block_effect.scale.x, 1.0, step)
 	selected_block_effect.scale.y = lerp(selected_block_effect.scale.y, 1.0, step)
-	
 
 func update_timers(delta: float) -> void:
 	facing_block_animation_timer -= delta
-	
+
 func start_emitting_particles() -> void:
 	particles.emitting = true
-	sprite_animation.play()
+	if TechtreeManager.has_upgrade(ruby_drill_tech):
+		sprite_animation.play(ruby_drill_animation)
+	elif TechtreeManager.has_upgrade(emerald_drill_tech):
+		sprite_animation.play(emerald_drill_animation)
+	elif TechtreeManager.has_upgrade(topaz_drill_tech):
+		sprite_animation.play(topaz_drill_animation)
+	elif TechtreeManager.has_upgrade(iron_drill_tech):
+		sprite_animation.play(iron_drill_animation)
+	elif TechtreeManager.has_upgrade(copper_drill_tech):
+		sprite_animation.play(copper_drill_animation)
+	else:
+		sprite_animation.play(regular_drill_animation)
+
 
 func _process(_delta: float) -> void:
 	if particles.emitting:
@@ -102,6 +127,27 @@ func _process(_delta: float) -> void:
 	$Pivot/Sprite2D.scale.y = lerpf($Pivot/Sprite2D.scale.y, 0.55, 0.1)
 	
 	$Pivot/Sprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	
+	if TechtreeManager.has_upgrade(ruby_drill_tech):
+		damage = 14
+		range = 9
+	elif TechtreeManager.has_upgrade(emerald_drill_tech):
+		damage = 12
+		range = 8
+	elif TechtreeManager.has_upgrade(topaz_drill_tech):
+		damage = 10
+		range = 7
+	elif TechtreeManager.has_upgrade(iron_drill_tech):
+		damage = 8
+		range = 6
+	elif TechtreeManager.has_upgrade(copper_drill_tech):
+		damage = 6
+		range = 5
+	else:
+		damage = 4
+		range = 4
+		
+		
 
 func stop_emitting_particles() -> void:
 	particles.emitting = false

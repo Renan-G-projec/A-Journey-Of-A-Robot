@@ -1,40 +1,175 @@
 [gd_scene format=3 uid="uid://bemutxqtpltv"]
 
 [ext_resource type="Script" uid="uid://dk7plu8wtyjiw" path="res://features/drill/driil.gd" id="1_nystb"]
+[ext_resource type="Texture2D" uid="uid://bk32pytei1cl" path="res://assets/sprites/drill_copper.png" id="2_1v1gs"]
 [ext_resource type="Texture2D" uid="uid://raho3cg8icxc" path="res://assets/sprites/drill.png" id="2_oha4g"]
 [ext_resource type="Texture2D" uid="uid://b73oa65a7koh0" path="res://assets/sprites/selectedBlocSprite.png" id="3_ypvse"]
 [ext_resource type="Texture2D" uid="uid://c1pyy2io1t04e" path="res://assets/sprites/bigParticle.png" id="4_aubse"]
+[ext_resource type="Texture2D" uid="uid://e64l7lbtus2j" path="res://assets/sprites/drill_emerald.png" id="4_clesy"]
 [ext_resource type="Shader" uid="uid://dp7je6monj61j" path="res://features/drill/driil_particles.gdshader" id="4_d3qb6"]
+[ext_resource type="Texture2D" uid="uid://bheffpcbffrdo" path="res://assets/sprites/drill_iron.png" id="5_1wq60"]
+[ext_resource type="Texture2D" uid="uid://dnrqivtk2knvb" path="res://assets/sprites/drill_ruby.png" id="6_7yi1g"]
 [ext_resource type="Script" uid="uid://jn5mum5cuf13" path="res://features/drill/drill_particles.gd" id="6_oha4g"]
 [ext_resource type="AudioStream" uid="uid://b8qps8yw5w5ye" path="res://assets/sounds/laserShoot.wav" id="7_43p6o"]
+[ext_resource type="Texture2D" uid="uid://bve8jhgi4bi4n" path="res://assets/sprites/drill_topaz.png" id="7_pcl3m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ws6u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2y35"]
+atlas = ExtResource("2_1v1gs")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keysd"]
+atlas = ExtResource("2_1v1gs")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxedq"]
+atlas = ExtResource("2_1v1gs")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7wtu"]
+atlas = ExtResource("4_clesy")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne8fr"]
+atlas = ExtResource("4_clesy")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bjci"]
+atlas = ExtResource("4_clesy")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tu2w"]
+atlas = ExtResource("5_1wq60")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb2t8"]
+atlas = ExtResource("5_1wq60")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugoed"]
+atlas = ExtResource("5_1wq60")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u1px"]
 atlas = ExtResource("2_oha4g")
 region = Rect2(0, 0, 13, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bb5bj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5fk4"]
 atlas = ExtResource("2_oha4g")
 region = Rect2(0, 12, 13, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xldem"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_es06c"]
 atlas = ExtResource("2_oha4g")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl67t"]
+atlas = ExtResource("6_7yi1g")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ow3c"]
+atlas = ExtResource("6_7yi1g")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkbs4"]
+atlas = ExtResource("6_7yi1g")
+region = Rect2(0, 24, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4m16"]
+atlas = ExtResource("7_pcl3m")
+region = Rect2(0, 0, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6aek"]
+atlas = ExtResource("7_pcl3m")
+region = Rect2(0, 12, 13, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge8sg"]
+atlas = ExtResource("7_pcl3m")
 region = Rect2(0, 24, 13, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ocxxs"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ws6u")
+"texture": SubResource("AtlasTexture_v2y35")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bb5bj")
+"texture": SubResource("AtlasTexture_keysd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xldem")
+"texture": SubResource("AtlasTexture_pxedq")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"copper_drill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7wtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne8fr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bjci")
+}],
+"loop": 1,
+"name": &"emerald_drill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tu2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb2t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugoed")
+}],
+"loop": 1,
+"name": &"iron_drill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u1px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5fk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es06c")
+}],
+"loop": 1,
+"name": &"regular_drill",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl67t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ow3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkbs4")
+}],
+"loop": 1,
+"name": &"ruby_drill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4m16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6aek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge8sg")
+}],
+"loop": 1,
+"name": &"topaz_drill",
+"speed": 5.0
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ypvse"]
@@ -54,8 +189,8 @@ script = ExtResource("1_nystb")
 position = Vector2(8, 0)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_ocxxs")
-autoplay = "default"
-frame_progress = 0.14105907
+animation = &"regular_drill"
+autoplay = "regular_drill"
 offset = Vector2(7.272726, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=808768737]
