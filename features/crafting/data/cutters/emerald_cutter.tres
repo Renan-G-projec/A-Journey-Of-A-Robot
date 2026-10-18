@@ -1,28 +1,16 @@
 [gd_resource type="Resource" script_class="CraftResource" format=3 uid="uid://c7iokdivotd6i"]
 
-[ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_8ph3c"]
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_jjbq0"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_suo0d"]
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_gwhec"]
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="2_j5jt3"]
-<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="2_vohgb"]
-=======
-[ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_suo0d"]
-[ext_resource type="Resource" uid="uid://dyshuulfur38h" path="res://features/ores/bars/iron_bar.tres" id="3_vohgb"]
->>>>>>> Stashed changes
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_xjabn"]
 [ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="3_yn6dh"]
 [ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_h16i4"]
-<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="4_rdvb2"]
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_iohsv"]
 [ext_resource type="Resource" uid="uid://dmtdr1nmn7nwb" path="res://features/ores/raw/emerald_ore.tres" id="5_rn0tn"]
-=======
-[ext_resource type="Resource" uid="uid://4sjt5gi434ou" path="res://features/ores/melted/emerald_melted.tres" id="4_yn6dh"]
-[ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_iohsv"]
-[ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_rdvb2"]
->>>>>>> Stashed changes
 [ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_ind72"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="6_vh12b"]
 [ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_8ph3c"]
@@ -37,7 +25,6 @@
 [ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="16_fe6oj"]
 [ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="17_j3hvr"]
 
-<<<<<<< Updated upstream
 [sub_resource type="Resource" id="Resource_24wak"]
 script = ExtResource("6_vh12b")
 data = Dictionary[ExtResource("1_suo0d"), int]({
@@ -45,24 +32,11 @@ ExtResource("2_vohgb"): 20,
 ExtResource("3_yn6dh"): 10,
 ExtResource("4_rdvb2"): 8,
 ExtResource("5_rn0tn"): 23
-=======
-[sub_resource type="Resource" id="Resource_vggjl"]
-script = ExtResource("5_rdvb2")
-data = Dictionary[ExtResource("1_8ph3c"), int]({
-ExtResource("2_suo0d"): 4,
-ExtResource("3_vohgb"): 6,
-ExtResource("4_yn6dh"): 3
->>>>>>> Stashed changes
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("2_j5jt3")
-<<<<<<< Updated upstream
 cost = SubResource("Resource_24wak")
-=======
-description = "Precision cutting for molten emerald."
-cost = SubResource("Resource_vggjl")
->>>>>>> Stashed changes
 prerequisites = Array[ExtResource("1_jjbq0")]([ExtResource("2_gwhec"), ExtResource("3_xjabn"), ExtResource("4_h16i4"), ExtResource("5_iohsv"), ExtResource("6_ind72"), ExtResource("7_8ph3c"), ExtResource("8_suo0d"), ExtResource("9_vohgb"), ExtResource("10_yn6dh"), ExtResource("11_rdvb2"), ExtResource("12_rn0tn"), ExtResource("13_vh12b"), ExtResource("14_ce8e8"), ExtResource("15_5hyvt"), ExtResource("16_fe6oj"), ExtResource("17_j3hvr")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

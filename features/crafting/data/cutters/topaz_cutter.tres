@@ -7,11 +7,7 @@
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_rjnc3"]
 [ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="3_1ac2k"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_urrot"]
-<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://bdinqwho5446f" path="res://features/ores/raw/topaz_ore.tres" id="4_uvyag"]
-=======
-[ext_resource type="Resource" uid="uid://ujie8re0sjx6" path="res://features/ores/melted/topaz_melted.tres" id="4_uvyag"]
->>>>>>> Stashed changes
 [ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_we3cm"]
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_aaxax"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_aua82"]
@@ -23,31 +19,17 @@
 [ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="11_aua82"]
 [ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="12_i758q"]
 
-<<<<<<< Updated upstream
 [sub_resource type="Resource" id="Resource_ouo02"]
 script = ExtResource("5_aua82")
 data = Dictionary[ExtResource("1_qssvh"), int]({
 ExtResource("2_3bbwq"): 12,
 ExtResource("3_1ac2k"): 8,
 ExtResource("4_uvyag"): 15
-=======
-[sub_resource type="Resource" id="Resource_abomt"]
-script = ExtResource("5_aua82")
-data = Dictionary[ExtResource("1_qssvh"), int]({
-ExtResource("2_3bbwq"): 6,
-ExtResource("3_1ac2k"): 4,
-ExtResource("4_uvyag"): 3
->>>>>>> Stashed changes
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("2_eq5qd")
-<<<<<<< Updated upstream
 cost = SubResource("Resource_ouo02")
-=======
-description = "Molds and cuts molten topaz into clean gems."
-cost = SubResource("Resource_abomt")
->>>>>>> Stashed changes
 prerequisites = Array[ExtResource("1_0dmp4")]([ExtResource("2_rjnc3"), ExtResource("3_urrot"), ExtResource("4_we3cm"), ExtResource("5_aaxax"), ExtResource("6_dmuox"), ExtResource("7_qssvh"), ExtResource("8_3bbwq"), ExtResource("9_1ac2k"), ExtResource("10_uvyag"), ExtResource("11_aua82"), ExtResource("12_i758q")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

@@ -116,8 +116,6 @@ func _get_ore_in_atlas(ore: Enums.Ores) -> Vector2i:
 		Enums.Ores.RUBY: return Vector2i(0, 0)
 	return Vector2i(0, 0)
 
-	
-
 func _place_ore(position: Vector2i, ore: Enums.Ores) -> void:
 	ore_layer.set_cell(position, 1, _get_ore_in_atlas(ore))
 
