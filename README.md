@@ -2,7 +2,7 @@
 # A-Journey-Of-A-Robot
 A 2D Game about mining on a planet while managing the planet stability
 
-![Game screenshot](.github/public/v2/main_base_showcase.png)
+![Game screenshot](.github/public/screenshots/main.png)
 
 ## About
 The game is made on the Godot Engine tool and is about mining on a planet. The project is on early stage, so no many features are implemented by now.
@@ -13,14 +13,17 @@ Go to the itch.io page https://huntorbehunted83.itch.io/journey-of-a-robot and p
 
 ## Mechanics
 The main game mechanic is mining. The player have a drill and has to mine some ores.
-- The player have a jetpack with fuel that recharges
-- The player can mine with the drill
-- The game have one layer
-- The map is generated on runtime (update: now it is fully procedural generated!)
-  - The map has a total of 5 sections
-	- The premise of the map is that the farther the user goes away from the origin, the more varied the terrin will become. 
-	- The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
-- The game have a menu
+- The user can mine ores!
+- (almost) Modular inventory system with godot resources
+- Block Placing system
+- Scrollable tech tree system
+- Crafting system
+- Building system
+- Ore smelting system
+- Main Base
+	- Stack based menu
+- Quest system based on scripts (not the most modular)
+- Dialogue system (still not implemented)
 
 ## Build from source
 You can download the github source code as a ZIP, unzip it and import on the Godot Game Engine. Alternativelly, you can use git:
@@ -33,34 +36,37 @@ and then open on Godot.
 - The input mapping is the following:
 - D / Right -> Goes right
 - A / Left -> Goes left
+- S / Down -> Opens the blocks selection menu
 - E -> Interacts with special elements (such as machines and the main base)
 - Space -> Activates the jetpack
 - Click -> Mines the ores
-- Right-click -> Places the ores
+- Right-click -> Places the blocks (selected by clicking to go down)
 
 ## Notes
-- The UI for the block placing is not done yet. You can place the amount of blocks that you placed
 - The Machine input panel is unaligned. It will be fixed next week.
 - The building system (not the block placing, but building machines and placing on the map) is not complete yet.
 
-## Incomplete systems
-These systems are in development. They're NOT fully functional right now but should be connected easily in the future.
+## Showcase
+Here are some screenshots of the systems (in development!)
+There are MUCH more.
 
-- Tech tree:
-![Tech tree](.github/public/v1/TechtreeExample.gif)
-- Smelting ore Machinee:
-![Smelting machine](.github/public/v1/MachineExample.gif)
-- Crafting system:
-![Crafting](.github/plansublic/v2/crafting_system_start.png)
-- Block placing:
-![Block placing](.github/public/v2/block_placing.gif)
+- Tech tree
+[TechTree](.github/public/screenshots/techtree.png)
+- Crafting system
+[Crafting](.github/public/screenshots/crafting.png)
+- Block placing
+[PlacingBlocks](.github/public/screenshots/placing_blocks.png)
+
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
-- [x] Make the main base
-- [x] Make a tech-tree system
-- [] Make a crafting system (in progress...)
-- [x] Add a smelting system 
+- [] Add a interact popup when the player gets near interactables
+- [] Add more machines
+- [] Rework the dialogue system
+- [] Add more upgrades to the tech tree
+- [] Add more craftings
+- [] Improve the juice of the building system
+- [] Fix typos along the codebase and make the overall code more legible
 - [] Add more layers (3/7)
 
 
