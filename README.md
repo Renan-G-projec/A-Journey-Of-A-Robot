@@ -17,9 +17,6 @@ The main game mechanic is mining. The player have a drill and has to mine some o
 - The player can mine with the drill
 - The game have one layer
 - The map is generated on runtime (update: now it is fully procedural generated!)
-  - The map has a total of 5 sections
-	- The premise of the map is that the farther the user goes away from the origin, the more varied the terrin will become. 
-	- The holes in the map come from a noise function, and any tile with a high noise value will be deleted 
 - The game have a menu
 
 ## Build from source
@@ -33,13 +30,13 @@ and then open on Godot.
 - The input mapping is the following:
 - D / Right -> Goes right
 - A / Left -> Goes left
+- S / Down -> Opens the blocks selection menu
 - E -> Interacts with special elements (such as machines and the main base)
 - Space -> Activates the jetpack
 - Click -> Mines the ores
-- Right-click -> Places the ores
+- Right-click -> Places the blocks (selected by clicking to go down)
 
 ## Notes
-- The UI for the block placing is not done yet. You can place the amount of blocks that you placed
 - The Machine input panel is unaligned. It will be fixed next week.
 - The building system (not the block placing, but building machines and placing on the map) is not complete yet.
 
@@ -52,14 +49,12 @@ These systems are in development. They're NOT fully functional right now but sho
 ![Smelting machine](.github/public/v1/MachineExample.gif)
 - Crafting system:
 ![Crafting](.github/plansublic/v2/crafting_system_start.png)
-- Block placing:
-![Block placing](.github/public/v2/block_placing.gif)
 
 ## Future plans
 The game isn't complete yet. The next features are planned:
 - [x] Make the main base
 - [x] Make a tech-tree system
-- [] Make a crafting system (in progress...)
+- [x] Make a crafting system
 - [x] Add a smelting system 
 - [] Add more layers (3/7)
 
