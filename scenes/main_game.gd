@@ -1,40 +1,31 @@
 extends Node2D
 
 @onready var player_inventory: Inventory = preload("res://features/player/player_inventory.tres")
-@onready var initial_mission: Mission = preload("res://features/missions/data/initial_mission.tres")
 @onready var map: Map = $Map
-@onready var mission_ui: MissionUI = $GameUI/Control/MissionUI
-@onready var fuel_ui: FuelUI = $GameUI/Control/FuelUI
+@onready var mission_ui: MissionUI = $GameUI/MarginContainer/Control/VBoxContainer/MissionUI
+@onready var fuel_ui: FuelUI = $GameUI/MarginContainer/Control/VBoxContainer/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
-@onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
+@onready var coords_ui: CoordsUI = $GameUI/MarginContainer/Control/VBoxContainer/CoordsUI
 @onready var layer: TileMapLayer = $Map/PlanetLayers
 @onready var player: Player = $Player
 @onready var game_ui: CanvasLayer = $GameUI
 
-
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
-	if initial_mission and initial_mission.items.size() >= 2:
-		initial_mission.items[0].set_progress(0)
-		initial_mission.items[1].set_progress(0)
 	
 	if OS.has_feature("editor"): _debug_config()
 	
-	mission_ui.display()
+	# Connecting the buildings menus
+	EventBus.enter_build_mode.connect(enter_building_state)
+	EventBus.exit_build_mode.connect(exit_building_state)
+	
+	player.placed_machine.connect(map.place_building)
 
 func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 	map.damage_tile(tilemap_coords, damage) 
 
 func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
 	player_inventory.add_item(ore, 1)
-	if ore.name == "Coal":
-		initial_mission.items[0].set_progress(initial_mission.items[0].progress + 1)
-	elif ore.name == "Iron":
-		initial_mission.items[1].set_progress(initial_mission.items[1].progress + 1)
-		
-	if initial_mission.is_completed():
-		SceneManager.change_scene_to_file("res://scenes/menu.tscn")
-
 
 func _process(delta: float) -> void:
 	if not get_tree().paused: 
@@ -48,6 +39,12 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	map.load_chunks_by_position(player.position, 4)
+
+func enter_building_state(building: PackedScene) -> void:
+	Global.can_move = false
+	
+func exit_building_state() -> void:
+	Global.can_move = true
 
 #region DEBUG
 # This function is for configuring things for debug, suich as infinite inventory and stuff like that

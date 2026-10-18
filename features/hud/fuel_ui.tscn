@@ -3,32 +3,24 @@
 [ext_resource type="Script" uid="uid://c6f4faw0q1dvn" path="res://features/player/fuel_ui.gd" id="1_2nqf5"]
 [ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="2_orxie"]
 
-[node name="FuelUI" type="Control" unique_id=1653505830]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2, 2)
+[node name="FuelUI" type="HBoxContainer" unique_id=1922487444]
+offset_right = 51.0
+offset_bottom = 12.0
+theme_override_constants/separation = 1
+alignment = 1
 script = ExtResource("1_2nqf5")
 
+[node name="Label" type="Label" parent="." unique_id=60787185]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 8
+text = "Fuel:"
+
 [node name="Fuel" type="ProgressBar" parent="." unique_id=1878716213]
-layout_mode = 0
-offset_left = 11.0
-offset_top = -2.5
-offset_right = 41.0
-offset_bottom = 6.0
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("2_orxie")
 value = 100.0
 show_percentage = false
-
-[node name="Label" type="Label" parent="." unique_id=60787185]
-layout_mode = 0
-offset_left = 2.0
-offset_right = 39.0
-offset_bottom = 23.0
-scale = Vector2(0.25, 0.25)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 16
-text = "Fuel:"

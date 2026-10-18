@@ -78,10 +78,8 @@ upgrade = ExtResource("2_ocdmj")
 
 [node name="CopperSmelter" parent="Root" unique_id=1097369655 instance=ExtResource("1_8kas3")]
 layout_mode = 1
-offset_left = 1.0
-offset_top = 53.0
-offset_right = 21.0
-offset_bottom = 73.0
+offset_top = 56.0
+offset_bottom = 76.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("5_151rp")
@@ -89,10 +87,10 @@ upgrade = ExtResource("3_2udi8")
 
 [node name="CopperJetpack" parent="Root/CopperSmelter" unique_id=494073144 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 70.0
-offset_bottom = 70.0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 60.0
+offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("5_cpugh")
@@ -101,10 +99,10 @@ extra_parents = [NodePath("../CopperDrill/IronSmelter")]
 
 [node name="CopperBag" parent="Root/CopperSmelter" unique_id=393401043 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -43.0
-offset_top = 50.0
-offset_right = -23.0
-offset_bottom = 70.0
+offset_left = -40.0
+offset_top = 48.0
+offset_right = -20.0
+offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("6_eljxr")
@@ -113,10 +111,8 @@ extra_parents = [NodePath("../CopperDrill/IronSmelter")]
 
 [node name="CopperDrill" parent="Root/CopperSmelter" unique_id=770310295 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 50.0
-offset_right = 22.0
-offset_bottom = 70.0
+offset_top = 48.0
+offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("7_bsxbt")
@@ -185,10 +181,10 @@ upgrade = ExtResource("22_gtv0f")
 
 [node name="TopazJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=725720166 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 49.0
-offset_right = 66.0
-offset_bottom = 69.0
+offset_left = 48.0
+offset_top = 45.0
+offset_right = 68.0
+offset_bottom = 65.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("13_dy5y6")
@@ -197,10 +193,10 @@ extra_parents = [NodePath("../TopazDrill/EmeraldSmelter")]
 
 [node name="TopazBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=1791382902 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -49.0
-offset_top = 49.0
-offset_right = -29.0
-offset_bottom = 69.0
+offset_left = -48.0
+offset_top = 45.0
+offset_right = -28.0
+offset_bottom = 65.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("14_6vd06")
@@ -209,10 +205,8 @@ extra_parents = [NodePath("../TopazDrill/EmeraldSmelter")]
 
 [node name="TopazDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=641877411 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 49.0
-offset_right = 18.0
-offset_bottom = 69.0
+offset_top = 45.0
+offset_bottom = 65.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("15_s77i4")
@@ -220,8 +214,8 @@ upgrade = ExtResource("28_lkxu1")
 
 [node name="EmeraldSmelter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill" unique_id=1121812778 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_top = 51.0
-offset_bottom = 71.0
+offset_top = 48.0
+offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("16_lu64l")
@@ -229,10 +223,8 @@ upgrade = ExtResource("30_88x5w")
 
 [node name="EmeraldCutter" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter" unique_id=1193207629 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 51.0
-offset_right = 22.0
-offset_bottom = 71.0
+offset_top = 48.0
+offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("18_wcopp")
@@ -264,10 +256,8 @@ extra_parents = [NodePath("../EmeraldDrill/RubySmelter")]
 
 [node name="EmeraldDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1087251094 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 43.0
-offset_right = 18.0
-offset_bottom = 63.0
+offset_top = 40.0
+offset_bottom = 60.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("19_4kq22")
@@ -293,10 +283,10 @@ upgrade = ExtResource("40_y1wcl")
 
 [node name="RubyJetpack" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=888091181 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 58.0
-offset_right = 69.0
-offset_bottom = 78.0
+offset_left = 48.0
+offset_top = 60.0
+offset_right = 68.0
+offset_bottom = 80.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("21_wcopp")
@@ -304,10 +294,10 @@ upgrade = ExtResource("42_7hyla")
 
 [node name="RubyBag" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=1781292306 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -44.0
-offset_top = 58.0
-offset_right = -24.0
-offset_bottom = 78.0
+offset_left = -48.0
+offset_top = 60.0
+offset_right = -28.0
+offset_bottom = 80.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("22_rgamx")
@@ -315,10 +305,8 @@ upgrade = ExtResource("44_ldnw0")
 
 [node name="RubyDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=831173161 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 59.0
-offset_right = 21.0
-offset_bottom = 79.0
+offset_top = 60.0
+offset_bottom = 80.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("23_r1ko8")
@@ -335,10 +323,10 @@ upgrade = ExtResource("48_to7t2")
 
 [node name="RocketEngine" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=2035026347 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 51.0
-offset_right = -8.0
-offset_bottom = 71.0
+offset_left = -48.0
+offset_top = 53.0
+offset_right = -28.0
+offset_bottom = 73.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("25_lu64l")
@@ -346,10 +334,10 @@ upgrade = ExtResource("50_mksjx")
 
 [node name="RocketFuel" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter/RubyDrill/RocketSilo" unique_id=1626653577 instance=ExtResource("1_8kas3")]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 52.0
-offset_right = 63.0
-offset_bottom = 72.0
+offset_left = 48.0
+offset_top = 53.0
+offset_right = 68.0
+offset_bottom = 73.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
 icon = ExtResource("26_fpbmg")

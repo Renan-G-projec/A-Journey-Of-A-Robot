@@ -26,6 +26,7 @@ CraftingManger="*uid://c1ny0pomvscir"
 BuildingManger="*uid://c3rnxccaxi2wr"
 SceneManager="*uid://b5cyp8ic08ajn"
 SoundManager="*uid://di140nlm58j4s"
+MissionManager="*uid://dq7vidkid1vgd"
 
 [debug]
 

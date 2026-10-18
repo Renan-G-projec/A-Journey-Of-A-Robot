@@ -4,60 +4,47 @@
 [ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://features/hud/game_ui.gd" id="1_u001w"]
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://features/hud/fuel_ui.tscn" id="2_u001w"]
 [ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://features/missions/mission_ui.tscn" id="4_u2dgd"]
-[ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://features/missions/data/initial_mission.tres" id="5_bt76a"]
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://features/map/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="PackedScene" uid="uid://dqv06wk2a6uff" path="res://features/dialogue/dialogue_ui.tscn" id="9_0nfu8"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=435670059]
 script = ExtResource("1_u001w")
 
-[node name="Control" type="Control" parent="." unique_id=695698216]
-layout_mode = 3
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1791128320]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="FuelUI" parent="Control" unique_id=1653505830 instance=ExtResource("2_u001w")]
-layout_mode = 1
-offset_top = 8.0
-offset_right = -320.0
-offset_bottom = -172.0
+[node name="PlayerInventoryInterface" parent="MarginContainer" unique_id=257689911 instance=ExtResource("1_rns2u")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
 
-[node name="PlayerInventoryInterface" parent="Control" unique_id=257689911 instance=ExtResource("1_rns2u")]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 248.0
-offset_top = 16.0
-offset_right = 248.0
-offset_bottom = 16.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
+[node name="Control" type="Control" parent="MarginContainer" unique_id=695698216]
+layout_mode = 2
 
-[node name="MissionUI" parent="Control" unique_id=1778661354 instance=ExtResource("4_u2dgd")]
-layout_mode = 1
-anchor_top = 0.24400002
-anchor_bottom = 0.24400002
-offset_left = 8.0
-offset_top = -19.920002
-offset_right = 80.0
-offset_bottom = 20.079998
-text = "Grab 15 coal ores
-Grab 10 iron ores"
-current_mission = ExtResource("5_bt76a")
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control" unique_id=53147888]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 51.0
+theme_override_constants/separation = 7
 
-[node name="CoordsUI" type="Label" parent="Control" unique_id=824360746]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.386
-anchor_bottom = 0.386
-offset_left = 8.0
-offset_top = -5.4800034
-offset_right = 69.0
-offset_bottom = 5.5199966
+[node name="FuelUI" parent="MarginContainer/Control/VBoxContainer" unique_id=1653505830 instance=ExtResource("2_u001w")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MissionUI" parent="MarginContainer/Control/VBoxContainer" unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+layout_mode = 2
+
+[node name="CoordsUI" type="Label" parent="MarginContainer/Control/VBoxContainer" unique_id=824360746]
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Coordinates:"
 script = ExtResource("6_djwj0")
