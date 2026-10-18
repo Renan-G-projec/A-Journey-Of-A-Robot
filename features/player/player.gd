@@ -4,12 +4,13 @@ extends CharacterBody2D
 
 @export var SPEED: float = 100.0
 @export var JUMP_VELOCITY: float = -400.0
+
 @export var inventory: Inventory
 
 @onready var drill: Drill = $Drill
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var jetpack: Jetpack = $Jetpack
-@onready var block_placer: BlockPlacer = $%BlockPlacer
+@onready var block_placer: BlockPlacer = %BlockPlacer
 
 var _was_on_ground: bool = false
 var _prev_y_velocity: float = 0.0
@@ -27,7 +28,7 @@ var current_placing_scene: Node2D = null
 var current_placing_location: Vector2i = Vector2.ZERO
 
 func _ready() -> void:
-	EventBus.block_mined.connect(_on_block_mined)
+	EventBus.block_mined.connect(add_block_to_inventory)
 	EventBus.enter_build_mode.connect(_enter_building_state)
 	EventBus.exit_build_mode.connect(_exit_building_state)
 
@@ -46,12 +47,12 @@ func _physics_process(delta: float) -> void:
 	_prev_y_velocity = velocity.y
 	
 	move_and_slide()
-	update_state()
+	_update_state()
 
 func _on_driil_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	mined_block.emit(tilemap_position, damage)
 	
-func update_state() -> void:
+func _update_state() -> void:
 	var going_direction: int = Input.get_axis("GoLeft", "GoRight")
 	if going_direction < 0:
 		sprite.play("runningLeft")
@@ -63,8 +64,9 @@ func update_state() -> void:
 		if (facing_direction < 0): sprite.play("idleLeft")
 		else: sprite.play("idleRight")
 
-func _on_block_mined(block_type: int) -> void:
-	block_inventory[block_type] = 1 + block_inventory.get(block_type, 0)
+func add_block_to_inventory(block_layer: int) -> void:
+	block_inventory[block_layer] = 1 + block_inventory.get(block_layer, 0)
+	print("player now have: ", block_inventory.get(block_layer))
 
 func _update_inputs(delta: float) -> void:
 	jetpack.is_active = Input.is_action_pressed("UseJetpack")

@@ -170,7 +170,6 @@ position = Vector2(0, -7)
 
 [node name="BlockPlacer" type="Node2D" parent="." unique_id=1117125684]
 unique_name_in_owner = true
-visible = false
 position = Vector2(0, -7)
 script = ExtResource("6_wwvfn")
 
