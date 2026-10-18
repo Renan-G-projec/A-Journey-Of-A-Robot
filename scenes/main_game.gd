@@ -2,10 +2,10 @@ extends Node2D
 
 @onready var player_inventory: Inventory = preload("res://features/player/player_inventory.tres")
 @onready var map: Map = $Map
-@onready var mission_ui: MissionUI = $GameUI/Control/MissionUI
-@onready var fuel_ui: FuelUI = $GameUI/Control/FuelUI
+@onready var mission_ui: MissionUI = $GameUI/Control/VBoxContainer/MissionUI
+@onready var fuel_ui: FuelUI = $GameUI/Control/VBoxContainer/FuelUI
 @onready var jetpack: Jetpack = $Player/Jetpack
-@onready var coords_ui: CoordsUI = $GameUI/Control/CoordsUI
+@onready var coords_ui: CoordsUI = $GameUI/Control/VBoxContainer/CoordsUI
 @onready var layer: TileMapLayer = $Map/PlanetLayers
 @onready var player: Player = $Player
 @onready var game_ui: CanvasLayer = $GameUI

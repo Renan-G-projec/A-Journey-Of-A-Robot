@@ -18,45 +18,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="FuelUI" parent="Control" unique_id=1653505830 instance=ExtResource("2_u001w")]
-layout_mode = 1
-offset_top = 8.0
-offset_right = -320.0
-offset_bottom = -172.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=53147888]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 51.0
+theme_override_constants/separation = 7
 
-[node name="PlayerInventoryInterface" parent="Control" unique_id=257689911 instance=ExtResource("1_rns2u")]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 248.0
-offset_top = 16.0
-offset_right = 248.0
-offset_bottom = 16.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
+[node name="FuelUI" parent="Control/VBoxContainer" unique_id=1653505830 instance=ExtResource("2_u001w")]
+layout_mode = 2
+size_flags_vertical = 3
 
-[node name="MissionUI" parent="Control" unique_id=1778661354 instance=ExtResource("4_u2dgd")]
-layout_mode = 1
-anchor_top = 0.24400002
-anchor_bottom = 0.24400002
-offset_left = 8.0
-offset_top = -19.920002
-offset_right = 80.0
-offset_bottom = 20.079998
+[node name="MissionUI" parent="Control/VBoxContainer" unique_id=1778661354 instance=ExtResource("4_u2dgd")]
+layout_mode = 2
 
-[node name="CoordsUI" type="Label" parent="Control" unique_id=824360746]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.386
-anchor_bottom = 0.386
-offset_left = 8.0
-offset_top = -5.4800034
-offset_right = 69.0
-offset_bottom = 5.5199966
+[node name="CoordsUI" type="Label" parent="Control/VBoxContainer" unique_id=824360746]
+layout_mode = 2
 theme_override_font_sizes/font_size = 7
 text = "Coordinates:"
 script = ExtResource("6_djwj0")
+
+[node name="PlayerInventoryInterface" parent="." unique_id=257689911 instance=ExtResource("1_rns2u")]
+visible = false
+offset_top = 20.0
+offset_right = 88.0
+offset_bottom = 20.0
+grow_horizontal = 2
 
 [node name="DialogueUI" parent="." unique_id=839026784 instance=ExtResource("9_0nfu8")]
 visible = false
