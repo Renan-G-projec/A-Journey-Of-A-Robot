@@ -3,10 +3,10 @@ extends Control
 @onready var icon: TextureRect = %Icon
 
 @onready var buildings: Control = %Buildings
-@onready var upgrade_name: Label = %BuildName
+@onready var upgrade_name: Label = %UpgradeNameLabel
 @onready var upgrade_description: Label = %DescriptionLabel
 @onready var upgrade_requirements: Label = %RequirementsLabel
-@onready var upgrade_button: Button = %BuildButton
+@onready var upgrade_button: Button = %UpgradeButton
 
 # Called when the node enters the scene tree for the first time.
 var current_node: BuildingButton

@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cghosfhpigliq" path="res://features/crafting/crafting.tscn" id="2_4ifg1"]
 [ext_resource type="StyleBox" uid="uid://c2j10x7c7jbmq" path="res://assets/styles/subpanel.tres" id="2_ao1kp"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="3_4ifg1"]
+[ext_resource type="Script" uid="uid://cliingfd38jhk" path="res://features/crafting/crafting_scroll_container.gd" id="3_hp3b8"]
 [ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="6_s8jtm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5fuv"]
 
 [node name="CraftingUI" type="Control" unique_id=83823365]
 layout_mode = 3
@@ -16,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4ifg1")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1305404692]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=970778325]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,23 +32,41 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="CraftingPanel" type="Panel" parent="MarginContainer" unique_id=1483135280]
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=586057678]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_ao1kp")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=1450359722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="ScrollContainer" type="Panel" parent="MarginContainer/Panel/MarginContainer" unique_id=1562577954]
 clip_contents = true
 layout_mode = 2
 mouse_default_cursor_shape = 6
-theme_override_styles/panel = ExtResource("2_ao1kp")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e5fuv")
+script = ExtResource("3_hp3b8")
 
-[node name="Crafting" parent="MarginContainer/CraftingPanel" unique_id=1721540874 instance=ExtResource("2_4ifg1")]
+[node name="Crafting" parent="MarginContainer/Panel/MarginContainer/ScrollContainer" unique_id=1721540874 instance=ExtResource("2_4ifg1")]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.086
-anchor_top = 0.109000005
-anchor_right = 0.086
-anchor_bottom = 0.109000005
-offset_left = -7.76
-offset_top = -0.13199806
-offset_right = 120.24
-offset_bottom = 31.868
+anchor_left = 0.08400001
+anchor_top = 0.317
+anchor_right = 0.91600007
+anchor_bottom = 0.768
+offset_left = 0.063999176
+offset_top = -0.013999939
+offset_right = -0.06401062
+offset_bottom = -0.055999756
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1938276444]
 layout_mode = 1

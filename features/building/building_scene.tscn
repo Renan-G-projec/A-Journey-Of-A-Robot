@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bdss6j3dddqc1" path="res://features/building/building_ui.gd" id="1_w1fg0"]
 [ext_resource type="StyleBox" uid="uid://c2j10x7c7jbmq" path="res://assets/styles/subpanel.tres" id="2_0lb3u"]
+[ext_resource type="Script" uid="uid://cb5gchns0opr3" path="res://features/building/building_scroll_container.gd" id="3_e1wqq"]
 [ext_resource type="PackedScene" uid="uid://cyc3uo56110th" path="res://features/building/buildings.tscn" id="3_w1fg0"]
 [ext_resource type="Texture2D" uid="uid://desc4bbpn04mk" path="res://icon.svg" id="4_57wdr"]
 [ext_resource type="FontFile" uid="uid://crac75pvc8fh1" path="res://core/fonts/Minecraft.ttf" id="5_7j1h3"]
 [ext_resource type="Theme" uid="uid://b7kwlqijr1h1s" path="res://assets/styles/game_theme.tres" id="6_4jl7d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83opc"]
 
 [node name="BuildingsUI" type="Control" unique_id=83823365]
 layout_mode = 3
@@ -16,11 +19,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w1fg0")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=765402803]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1325646705]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -128.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 16
@@ -28,36 +32,61 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=168189133]
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1716177586]
 layout_mode = 2
-
-[node name="BuildingPanel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=1483135280]
-custom_minimum_size = Vector2(140, 0)
-clip_contents = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_default_cursor_shape = 6
 theme_override_styles/panel = ExtResource("2_0lb3u")
 
-[node name="Buildings" parent="MarginContainer/HBoxContainer/BuildingPanel" unique_id=1721540874 instance=ExtResource("3_w1fg0")]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=49181060]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="ScrollContainer" type="Panel" parent="MarginContainer/Panel/MarginContainer" unique_id=194111200]
+clip_contents = true
+layout_mode = 2
+mouse_default_cursor_shape = 6
+theme_override_styles/panel = SubResource("StyleBoxEmpty_83opc")
+script = ExtResource("3_e1wqq")
+
+[node name="Buildings" parent="MarginContainer/Panel/MarginContainer/ScrollContainer" unique_id=1721540874 instance=ExtResource("3_w1fg0")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.040000003
-anchor_top = 0.082
-anchor_right = 0.395
-anchor_bottom = 0.257
-offset_left = 4.039999
-offset_top = 0.00799942
-offset_right = 1.0199966
-offset_bottom = -3.7919998
+anchor_left = 0.08400001
+anchor_top = 0.317
+anchor_right = 0.91600007
+anchor_bottom = 0.768
+offset_left = 0.063999176
+offset_top = -0.013999939
+offset_right = -0.06401062
+offset_bottom = -0.055999756
 
-[node name="PlacePanel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=714975557]
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1030884065]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="MarginContainer2" unique_id=954159160]
 layout_mode = 2
-size_flags_horizontal = 3
+mouse_filter = 1
 theme_override_styles/panel = ExtResource("2_0lb3u")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/PlacePanel" unique_id=1370810085]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/Panel" unique_id=1224933939]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,21 +98,23 @@ theme_override_constants/margin_top = 7
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 7
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer" unique_id=1407496200]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/Panel/MarginContainer" unique_id=1171555835]
 layout_mode = 2
-theme_override_constants/separation = 2
+theme_override_constants/separation = -11
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=314895016]
-custom_minimum_size = Vector2(64, 64)
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=913200304]
+custom_minimum_size = Vector2(64, 48)
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer/CenterContainer" unique_id=976638543]
+[node name="Icon" type="TextureRect" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer/CenterContainer" unique_id=1226308740]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
 custom_maximum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_57wdr")
+expand_mode = 2
 
-[node name="BuildName" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1414597787]
+[node name="UpgradeNameLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1690468900]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
@@ -93,16 +124,18 @@ text = "Upgrade Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=53159987]
+[node name="DescriptionLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1914126031]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 20)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_constants/line_spacing = -1
+theme_override_constants/line_spacing = 3
 theme_override_font_sizes/font_size = 4
 text = "Description
 This upgrade is a placeholder."
+autowrap_mode = 3
 
-[node name="RequirementsLabel" type="Label" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1548462158]
+[node name="RequirementsLabel" type="Label" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=1714842822]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
@@ -112,14 +145,13 @@ text = "Requires
     - 10 iron
     - 120 coal"
 
-[node name="BuildButton" type="Button" parent="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer" unique_id=1122209717]
+[node name="UpgradeButton" type="Button" parent="MarginContainer2/Panel/MarginContainer/VBoxContainer" unique_id=2143520489]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 6
 mouse_default_cursor_shape = 2
 theme = ExtResource("6_4jl7d")
 disabled = true
-text = "Build!"
-
-[connection signal="pressed" from="MarginContainer/HBoxContainer/PlacePanel/MarginContainer/VBoxContainer/BuildButton" to="." method="_on_upgrade_button_pressed"]
+text = "Upgrade"
