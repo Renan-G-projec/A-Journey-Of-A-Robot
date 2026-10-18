@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bemutxqtpltv" path="res://features/drill/driil.tscn" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://ci6lgg81quwwb" path="res://features/player/jetpack.gd" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://ci1xjc3ulwhg0" path="res://features/player/block_placer.gd" id="6_wwvfn"]
+[ext_resource type="Script" uid="uid://3fpvv6c2hh52" path="res://features/player/block_selection.gd" id="7_47rrt"]
+[ext_resource type="Texture2D" uid="uid://dlh5t6spk1luk" path="res://assets/sprites/Layer1.png" id="7_k34i2"]
+[ext_resource type="Texture2D" uid="uid://bbxbdk8vxv8tb" path="res://assets/sprites/layer2.png" id="8_47rrt"]
+[ext_resource type="Texture2D" uid="uid://x4jvjd0wp3r4" path="res://assets/sprites/layer3.png" id="9_uqugw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_dqkch")
@@ -170,7 +174,6 @@ position = Vector2(0, -7)
 
 [node name="BlockPlacer" type="Node2D" parent="." unique_id=1117125684]
 unique_name_in_owner = true
-visible = false
 position = Vector2(0, -7)
 script = ExtResource("6_wwvfn")
 
@@ -180,4 +183,35 @@ collision_mask = 2
 [node name="Jetpack" type="Node" parent="." unique_id=117200082]
 script = ExtResource("5_qlg0r")
 
+[node name="BlockSelection" type="HBoxContainer" parent="." unique_id=198506109]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -40.0
+offset_right = 28.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/separation = 4
+alignment = 1
+script = ExtResource("7_47rrt")
+
+[node name="Layer1" type="TextureRect" parent="BlockSelection" unique_id=2070568370]
+layout_mode = 2
+texture = ExtResource("7_k34i2")
+
+[node name="Layer2" type="TextureRect" parent="BlockSelection" unique_id=93352911]
+layout_mode = 2
+texture = ExtResource("8_47rrt")
+
+[node name="Layer3" type="TextureRect" parent="BlockSelection" unique_id=1496624735]
+layout_mode = 2
+texture = ExtResource("9_uqugw")
+
 [connection signal="mined_block" from="Drill" to="." method="_on_driil_mined_block"]
+[connection signal="selected_block_changed" from="BlockSelection" to="." method="_on_block_selection_selected_block_changed"]

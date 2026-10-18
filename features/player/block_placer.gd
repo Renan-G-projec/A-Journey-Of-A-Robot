@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	var collider: TileMapLayer = ray.get_collider() as TileMapLayer
 	if collider:
 		is_looking = true
-		var collision_coords: Vector2 = ray.get_collision_point() + Vector2(-0.1, -0.1)
+		var collision_coords: Vector2 = ray.get_collision_point() - ray.get_collision_point() * 0.1
 		var collision_tile := Vector2i(int(floorf(collision_coords.x / collider.tile_set.tile_size.x)), int(floorf(collision_coords.y / collider.tile_set.tile_size.y)))
 		
 		looking_layer = collider
