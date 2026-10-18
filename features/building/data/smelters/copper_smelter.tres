@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://dyc4vhqp612o"]
+
+[ext_resource type="Resource" uid="uid://i0a3cnduyn22" path="res://features/crafting/data/smelters/copper_smelter.tres" id="1_642g1"]
+[ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="2_r6tjq"]
+
+[resource]
+script = ExtResource("2_r6tjq")
+name = "Copper Smelter"
+description = "Your first smelter! Burns coal to turn copper ore into plates."
+craft_connection = ExtResource("1_642g1")
+metadata/_custom_type_script = "uid://dw2gwutjx4hku"

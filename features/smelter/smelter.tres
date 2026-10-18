@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://cuardbv7jon0h"]
 
 [ext_resource type="PackedScene" uid="uid://bkg5px6rfrwxc" path="res://features/smelter/smelter.tscn" id="1_thag8"]
-[ext_resource type="Resource" uid="uid://dcnr5vdx4rxqd" path="res://features/smelter/smelter_crafting.tres" id="2_u688i"]
+[ext_resource type="Resource" uid="uid://fgkrvpb6vfsb" path="res://features/crafting/data/smelters/emerald_smelter.tres" id="2_thag8"]
 [ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="3_7861n"]
 
 [resource]
 script = ExtResource("3_7861n")
 name = "Smelter"
 description = "TDF "
-craft_connection = ExtResource("2_u688i")
+craft_connection = ExtResource("2_thag8")
 building_scene = ExtResource("1_thag8")
 metadata/_custom_type_script = "uid://dw2gwutjx4hku"

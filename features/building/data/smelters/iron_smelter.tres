@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://jih4yu7txgqy"]
+
+[ext_resource type="Resource" uid="uid://b35ypxr8470c1" path="res://features/crafting/data/smelters/iron_smelter.tres" id="1_nlmb3"]
+[ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="2_pb21x"]
+
+[resource]
+script = ExtResource("2_pb21x")
+name = "Iron Smelter"
+description = "A heavier furnace that handles iron."
+craft_connection = ExtResource("1_nlmb3")
+metadata/_custom_type_script = "uid://dw2gwutjx4hku"

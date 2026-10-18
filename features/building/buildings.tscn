@@ -2,6 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://dtrx03ds6ngif" path="res://features/building/building_node.tscn" id="1_pgn8r"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="2_ir8li"]
+[ext_resource type="Resource" uid="uid://dyc4vhqp612o" path="res://features/building/data/smelters/copper_smelter.tres" id="3_pexyl"]
+[ext_resource type="Texture2D" uid="uid://dik7ffx68mwl8" path="res://assets/sprites/furnanceStage2TechTree.png" id="3_w6pkg"]
+[ext_resource type="Texture2D" uid="uid://fitj62k27ycr" path="res://assets/sprites/furnanceStage3TechTree.png" id="4_422ob"]
+[ext_resource type="Texture2D" uid="uid://dgskk5ojdbks6" path="res://assets/sprites/furnanceStage4TechTree.png" id="5_dha6p"]
+[ext_resource type="Resource" uid="uid://jih4yu7txgqy" path="res://features/building/data/smelters/iron_smelter.tres" id="5_stglh"]
+[ext_resource type="Texture2D" uid="uid://0ds7rrgwxbfo" path="res://assets/sprites/furnanceStage5TechTree.png" id="6_6p0nm"]
+[ext_resource type="Resource" uid="uid://qivuoxucuca5" path="res://features/building/data/smelters/topaz_smelter.tres" id="7_3ph75"]
+[ext_resource type="Texture2D" uid="uid://5dfexxi05215" path="res://assets/sprites/cutterStage3TechTree.png" id="8_t776f"]
+[ext_resource type="Resource" uid="uid://ba1dsgn3huqac" path="res://features/building/data/cutters/topaz_cutter.tres" id="9_o08ck"]
+[ext_resource type="Resource" uid="uid://rp6l350b1yxf" path="res://features/building/data/smelters/emerald_smelter.tres" id="11_jrio6"]
+[ext_resource type="Texture2D" uid="uid://bkwankdxqv7ca" path="res://assets/sprites/cutterStage4TechTree.png" id="12_cg7k0"]
+[ext_resource type="Resource" uid="uid://dufytf1etxc6o" path="res://features/building/data/cutters/emerald_cutter.tres" id="13_cgtft"]
+[ext_resource type="Resource" uid="uid://b1tny1j4wr0tx" path="res://features/building/data/smelters/ruby_smelter.tres" id="15_7dhe4"]
+[ext_resource type="Texture2D" uid="uid://crsrhovaytyoi" path="res://assets/sprites/cutterStage5TechTree.png" id="16_4jdfk"]
+[ext_resource type="Resource" uid="uid://b7ox51ux6wsg" path="res://features/building/data/cutters/ruby_cutter.tres" id="17_meo01"]
 
 [node name="Buildings" type="Control" unique_id=1721540874]
 layout_mode = 3
@@ -11,6 +26,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BuildingNode" parent="." unique_id=2096825410 instance=ExtResource("1_pgn8r")]
+[node name="CopperSmelter" parent="." unique_id=2096825410 instance=ExtResource("1_pgn8r")]
 layout_mode = 0
 icon = ExtResource("2_ir8li")
+building_resource = ExtResource("3_pexyl")
+
+[node name="IronSmelter" parent="." unique_id=161397476 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 52.0
+icon = ExtResource("3_w6pkg")
+building_resource = ExtResource("5_stglh")
+
+[node name="TopazSmelter" parent="." unique_id=1835080818 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 84.0
+icon = ExtResource("4_422ob")
+building_resource = ExtResource("7_3ph75")
+
+[node name="TopazCutter" parent="." unique_id=1473105006 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 84.0
+offset_bottom = 52.0
+icon = ExtResource("8_t776f")
+building_resource = ExtResource("9_o08ck")
+
+[node name="EmeraldSmelter" parent="." unique_id=1309618159 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 116.0
+icon = ExtResource("5_dha6p")
+building_resource = ExtResource("11_jrio6")
+
+[node name="EmeraldCutter" parent="." unique_id=1937252689 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 116.0
+offset_bottom = 52.0
+icon = ExtResource("12_cg7k0")
+building_resource = ExtResource("13_cgtft")
+
+[node name="RubySmelter" parent="." unique_id=984892776 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 148.0
+icon = ExtResource("6_6p0nm")
+building_resource = ExtResource("15_7dhe4")
+
+[node name="RubyCutter" parent="." unique_id=1915622560 instance=ExtResource("1_pgn8r")]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 148.0
+offset_bottom = 52.0
+icon = ExtResource("16_4jdfk")
+building_resource = ExtResource("17_meo01")

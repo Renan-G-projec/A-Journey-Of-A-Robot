@@ -11,9 +11,12 @@
 [ext_resource type="Resource" uid="uid://fgkrvpb6vfsb" path="res://features/crafting/data/smelters/emerald_smelter.tres" id="9_lu4me"]
 [ext_resource type="Texture2D" uid="uid://0ds7rrgwxbfo" path="res://assets/sprites/furnanceStage5TechTree.png" id="10_w5q4v"]
 [ext_resource type="Resource" uid="uid://ckmwwjsnxhtjt" path="res://features/crafting/data/smelters/ruby_smelter.tres" id="11_op3b6"]
+[ext_resource type="Texture2D" uid="uid://5dfexxi05215" path="res://assets/sprites/cutterStage3TechTree.png" id="12_2xgkr"]
 [ext_resource type="Resource" uid="uid://dr68w4geqbr4t" path="res://features/crafting/data/cutters/topaz_cutter.tres" id="12_af8u3"]
 [ext_resource type="Resource" uid="uid://c7iokdivotd6i" path="res://features/crafting/data/cutters/emerald_cutter.tres" id="13_bu33u"]
 [ext_resource type="Resource" uid="uid://bosdimkv5sfg4" path="res://features/crafting/data/cutters/ruby_cutter.tres" id="14_47tfw"]
+[ext_resource type="Texture2D" uid="uid://bkwankdxqv7ca" path="res://assets/sprites/cutterStage4TechTree.png" id="14_xshen"]
+[ext_resource type="Texture2D" uid="uid://crsrhovaytyoi" path="res://assets/sprites/cutterStage5TechTree.png" id="16_lu4me"]
 
 [node name="Crafting" type="Control" unique_id=1721540874]
 layout_mode = 3
@@ -63,7 +66,7 @@ offset_left = 64.0
 offset_top = 32.0
 offset_right = 84.0
 offset_bottom = 52.0
-icon = ExtResource("4_xjirk")
+icon = ExtResource("12_2xgkr")
 craft_resource = ExtResource("12_af8u3")
 
 [node name="EmeraldCutter" parent="." unique_id=450679117 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
@@ -72,7 +75,7 @@ offset_left = 96.0
 offset_top = 32.0
 offset_right = 116.0
 offset_bottom = 52.0
-icon = ExtResource("4_xjirk")
+icon = ExtResource("14_xshen")
 craft_resource = ExtResource("13_bu33u")
 
 [node name="RubyCutter" parent="." unique_id=112754596 groups=["CraftButton", "CraftButtons"] instance=ExtResource("1_k7ss6")]
@@ -81,5 +84,5 @@ offset_left = 128.0
 offset_top = 32.0
 offset_right = 148.0
 offset_bottom = 52.0
-icon = ExtResource("4_xjirk")
+icon = ExtResource("16_lu4me")
 craft_resource = ExtResource("14_47tfw")

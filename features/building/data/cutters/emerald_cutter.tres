@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://dufytf1etxc6o"]
+
+[ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="1_hld1g"]
+[ext_resource type="Resource" uid="uid://c7iokdivotd6i" path="res://features/crafting/data/cutters/emerald_cutter.tres" id="1_i243h"]
+
+[resource]
+script = ExtResource("1_hld1g")
+craft_connection = ExtResource("1_i243h")
+metadata/_custom_type_script = "uid://dw2gwutjx4hku"

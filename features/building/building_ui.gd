@@ -27,6 +27,7 @@ func request_ui_building_panel(node: BuildingButton) -> void:
 	upgrade_description.text = node.building_resource.description
 	upgrade_requirements.text = node.building_resource.get_requirements_string()
 	BuildingManger.sync_stock(node.building_resource)
+	print("node.building_resource.stock")
 	if node.building_resource.stock >= 1:
 		upgrade_button.disabled = false
 	else:

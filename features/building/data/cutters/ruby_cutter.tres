@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BuildingResource" format=3 uid="uid://b7ox51ux6wsg"]
+
+[ext_resource type="Resource" uid="uid://bosdimkv5sfg4" path="res://features/crafting/data/cutters/ruby_cutter.tres" id="1_u4gde"]
+[ext_resource type="Script" uid="uid://dw2gwutjx4hku" path="res://features/building/building_upgrades.gd" id="1_w6wkx"]
+
+[resource]
+script = ExtResource("1_w6wkx")
+craft_connection = ExtResource("1_u4gde")
+metadata/_custom_type_script = "uid://dw2gwutjx4hku"

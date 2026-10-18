@@ -22,5 +22,6 @@ metadata/_custom_type_script = "uid://crbcquplyyvye"
 script = ExtResource("4_k8gvj")
 description = "Your first smelter! Burns coal to turn copper ore into plates."
 cost = SubResource("Resource_w03ix")
+stock = 10
 prerequisites = Array[ExtResource("1_ej5rb")]([ExtResource("2_cgm6h")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"
