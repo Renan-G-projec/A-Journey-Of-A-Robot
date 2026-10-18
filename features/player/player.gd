@@ -22,6 +22,7 @@ signal placed_machine(tile: Vector2i, machine: Node2D)
 
 var block_inventory: Dictionary[int, int]
 var current_placing_block: int = 1
+var is_selecting_block: bool = false
 
 var is_building: bool = false
 var current_placing_scene: Node2D = null
@@ -39,6 +40,10 @@ func _physics_process(delta: float) -> void:
 		_squash(velocity.y / 1000)
 	if !Global.in_dialogue && Global.can_move:
 		_update_inputs(delta)
+		if !is_selecting_block && Input.is_action_just_pressed("OpenBlockSelectionMenu"):
+			is_selecting_block = true
+			Global.can_move = false
+			$BlockSelection.open()
 	if is_building:
 		_update_ui_inputs()
 
@@ -126,3 +131,9 @@ func _exit_building_state() -> void:
 	is_building = false
 	current_placing_scene = null
 	$Camera2D.position = Vector2.ZERO
+
+
+func _on_block_selection_selected_block_changed(block_id: Variant) -> void:
+	current_placing_block = block_id
+	is_selecting_block = false
+	Global.can_move = true
