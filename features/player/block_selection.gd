@@ -7,15 +7,23 @@ enum State {
 	CLOSING,
 	CLOSED
 }
-var state: State = State.CLOSED
 
 signal selected_block(block_id: int)
 
-var current_block: int = 1
+@export var selected_block_scale_impulse: Vector2 = Vector2.ONE *  1.2
+
+var current_block: int = 1:
+	set(val):
+		val = clamp(val, 1, num_blocks)
+		if val != current_block:
+			_deelevate_block(current_block)
+		current_block = val
+		_elevate_block(current_block)
+		
+var state: State = State.CLOSED
 var num_blocks: int
 var max_size: Vector2
 var initial_position: Vector2
-
 var selected_block_transition_tween: Tween
 
 func _ready() -> void:
@@ -82,14 +90,19 @@ func _calculate_block_position(block: int) -> float:
 func _update_state() -> void:
 	match state:
 		State.SELECTING:
-			if Input.is_action_just_pressed("SelectLeftBlockSelectionMenu"):
-				current_block -= 1
-				current_block = clamp(current_block, 1, num_blocks)
-				_sync_current_block()
-			if Input.is_action_just_pressed("SelectRightBlockSelectionMenu"):
-				current_block += 1
-				current_block = clamp(current_block, 1, num_blocks)
-				_sync_current_block()
+			
+			current_block += int(Input.is_action_just_pressed("SelectRightBlockSelectionMenu")) - int(Input.is_action_just_pressed("SelectLeftBlockSelectionMenu"))
+	
+			_sync_current_block()
+			
 			if Input.is_action_just_pressed("SelectBlockOnSelectionMenu"):
 				select()
 				close()
+
+func _elevate_block(block: int) -> void:
+	var tween := create_tween()
+	tween.tween_property(get_child(block - 1), "offset_transform_scale", selected_block_scale_impulse, 0.15).set_trans(Tween.TRANS_QUAD)
+
+func _deelevate_block(block: int) -> void:
+	var tween := create_tween()
+	tween.tween_property(get_child(block - 1), "offset_transform_scale", Vector2.ONE, 0.15).set_trans(Tween.TRANS_QUAD)

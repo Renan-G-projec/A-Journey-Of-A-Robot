@@ -202,14 +202,17 @@ script = ExtResource("7_47rrt")
 
 [node name="Layer1" type="TextureRect" parent="BlockSelection" unique_id=2070568370]
 layout_mode = 2
+offset_transform_enabled = true
 texture = ExtResource("7_k34i2")
 
 [node name="Layer2" type="TextureRect" parent="BlockSelection" unique_id=93352911]
 layout_mode = 2
+offset_transform_enabled = true
 texture = ExtResource("8_47rrt")
 
 [node name="Layer3" type="TextureRect" parent="BlockSelection" unique_id=1496624735]
 layout_mode = 2
+offset_transform_enabled = true
 texture = ExtResource("9_uqugw")
 
 [connection signal="mined_block" from="Drill" to="." method="_on_drill_mined_block"]
