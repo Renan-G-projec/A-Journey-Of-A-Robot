@@ -1,11 +1,10 @@
 # Ad Maiorem Dei Gloriam!
-class_name Mission
-extends Resource
+@abstract class_name Mission
+extends RefCounted
 
-@export var items: Array[MissionItem]
-		
-func is_completed() -> bool:
-	return items.all(is_mission_item_completed)
-	
-func is_mission_item_completed(item: MissionItem) -> bool:
-	return item.progress >= item.maximum
+signal completed
+signal changed
+
+var name: String
+
+@abstract func get_string() -> String

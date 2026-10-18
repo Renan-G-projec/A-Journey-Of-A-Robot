@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var player_inventory: Inventory = preload("res://features/player/player_inventory.tres")
-@onready var initial_mission: Mission = preload("res://features/missions/data/initial_mission.tres")
 @onready var map: Map = $Map
 @onready var mission_ui: MissionUI = $GameUI/Control/MissionUI
 @onready var fuel_ui: FuelUI = $GameUI/Control/FuelUI
@@ -13,13 +12,8 @@ extends Node2D
 
 func _ready() -> void:
 	fuel_ui.set_jetpack(jetpack)
-	if initial_mission and initial_mission.items.size() >= 2:
-		initial_mission.items[0].set_progress(0)
-		initial_mission.items[1].set_progress(0)
 	
 	if OS.has_feature("editor"): _debug_config()
-	
-	mission_ui.display()
 	
 	# Connecting the buildings menus
 	EventBus.enter_build_mode.connect(enter_building_state)
@@ -32,13 +26,6 @@ func _on_player_mined_block(tilemap_coords: Vector2i, damage: float) -> void:
 
 func _on_map_ore_block_destructed(ore: InventoryItem) -> void:
 	player_inventory.add_item(ore, 1)
-	if ore.name == "Coal":
-		initial_mission.items[0].set_progress(initial_mission.items[0].progress + 1)
-	elif ore.name == "Iron":
-		initial_mission.items[1].set_progress(initial_mission.items[1].progress + 1)
-		
-	if initial_mission.is_completed():
-		SceneManager.change_scene_to_file("res://scenes/menu.tscn")
 
 func _process(delta: float) -> void:
 	if not get_tree().paused: 

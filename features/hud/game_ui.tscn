@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://plwgmoaboe6e" path="res://features/hud/game_ui.gd" id="1_u001w"]
 [ext_resource type="PackedScene" uid="uid://d0c18hhbo0vr1" path="res://features/hud/fuel_ui.tscn" id="2_u001w"]
 [ext_resource type="PackedScene" uid="uid://btutqnkv4hfmc" path="res://features/missions/mission_ui.tscn" id="4_u2dgd"]
-[ext_resource type="Resource" uid="uid://ckfnpssy0lsnt" path="res://features/missions/data/initial_mission.tres" id="5_bt76a"]
 [ext_resource type="Script" uid="uid://bjxavj7xjt7t4" path="res://features/map/coord_ui.gd" id="6_djwj0"]
 [ext_resource type="PackedScene" uid="uid://dqv06wk2a6uff" path="res://features/dialogue/dialogue_ui.tscn" id="9_0nfu8"]
 
@@ -45,9 +44,6 @@ offset_left = 8.0
 offset_top = -19.920002
 offset_right = 80.0
 offset_bottom = 20.079998
-text = "Grab 15 coal ores
-Grab 10 iron ores"
-current_mission = ExtResource("5_bt76a")
 
 [node name="CoordsUI" type="Label" parent="Control" unique_id=824360746]
 layout_mode = 1
