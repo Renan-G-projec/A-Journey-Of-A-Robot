@@ -43,6 +43,17 @@ func select() -> void:
 
 func close() -> void:
 	_fade_out()
+
+func set_block_quantity(block_layer: int, new_quantity: int) -> void:
+	var child: TextureRect = get_child(block_layer - 1)
+	if !child:
+		print_debug("Error: Could not find the block of layer ", block_layer, " on block selection while trying to update UI.")
+		return
+	var label: Label = child.get_child(0) as Label
+	if !label:
+		print_debug("Error: Block of layer ", block_layer, " should have a child of type Label in the selection menu.")
+		return
+	label.text = str(new_quantity)
 	
 func _fade_out() -> void:
 	state = State.CLOSING

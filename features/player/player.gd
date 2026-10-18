@@ -69,7 +69,6 @@ func _update_gravity(delta: float) -> void:
 	jetpack.boost = is_on_floor()
 	_was_on_ground = is_on_floor()
 
-
 func _on_drill_mined_block(tilemap_position: Vector2i, damage: float) -> void:
 	mined_block.emit(tilemap_position, damage)
 	
@@ -90,6 +89,7 @@ func _update_sprite() -> void:
 
 func add_block_to_inventory(block_layer: int) -> void:
 	block_inventory[block_layer] = 1 + block_inventory.get(block_layer, 0)
+	$BlockSelection.set_block_quantity(block_layer, block_inventory[block_layer])
 
 func _update_inputs(delta: float) -> void:
 	jetpack.is_active = Input.is_action_pressed("UseJetpack")

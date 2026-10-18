@@ -37,5 +37,7 @@ Button/styles/normal = ExtResource("3_tpvj3")
 Button/styles/normal_mirrored = ExtResource("3_tpvj3")
 Button/styles/pressed = ExtResource("2_cr73q")
 Button/styles/pressed_mirrored = ExtResource("2_cr73q")
+Label/constants/outline_size = 5
+Label/font_sizes/font_size = 8
 ProgressBar/styles/background = SubResource("StyleBoxTexture_pv0cp")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_ht8tx")
