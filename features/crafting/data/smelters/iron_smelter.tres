@@ -2,51 +2,30 @@
 
 [ext_resource type="Script" uid="uid://bkkycdtutquhl" path="res://features/techtree/techtree_upgrade.gd" id="1_eyx1m"]
 [ext_resource type="Script" uid="uid://vqhj8nlwq3u7" path="res://features/inventory/inventory_item.gd" id="1_rvlv1"]
-<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="2_20rwf"]
-=======
-[ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="2_20rwf"]
->>>>>>> Stashed changes
 [ext_resource type="Resource" uid="uid://cvjvmus2ylxx2" path="res://features/techtree/data/starting_techs/root.tres" id="2_p1nol"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_ip5uj"]
 [ext_resource type="Resource" uid="uid://lk30ldug605k" path="res://features/ores/raw/iron_ore.tres" id="3_lomir"]
 [ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_aixco"]
-<<<<<<< Updated upstream
 [ext_resource type="Resource" uid="uid://bko8wv0d2j44d" path="res://features/ores/raw/coal_ore.tres" id="4_hlvas"]
-=======
-[ext_resource type="Resource" uid="uid://dofq3p1g0fv5w" path="res://features/ores/bars/copper_bar.tres" id="4_hlvas"]
->>>>>>> Stashed changes
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_5lx8o"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_6cqua"]
 [ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_rvlv1"]
 [ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="7_20rwf"]
 [ext_resource type="Script" uid="uid://c27hq2xl3ofjw" path="res://features/crafting/crafting_upgrade.gd" id="8_lomir"]
 
-<<<<<<< Updated upstream
 [sub_resource type="Resource" id="Resource_k8gvj"]
 script = ExtResource("5_6cqua")
 data = Dictionary[ExtResource("1_rvlv1"), int]({
 ExtResource("2_20rwf"): 8,
 ExtResource("3_lomir"): 16,
 ExtResource("4_hlvas"): 6
-=======
-[sub_resource type="Resource" id="Resource_g5gtn"]
-script = ExtResource("5_6cqua")
-data = Dictionary[ExtResource("1_rvlv1"), int]({
-ExtResource("2_20rwf"): 15,
-ExtResource("3_lomir"): 15,
-ExtResource("4_hlvas"): 5
->>>>>>> Stashed changes
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 
 [resource]
 script = ExtResource("8_lomir")
 description = "A heavier furnace that handles iron."
-<<<<<<< Updated upstream
 cost = SubResource("Resource_k8gvj")
-=======
-cost = SubResource("Resource_g5gtn")
->>>>>>> Stashed changes
 prerequisites = Array[ExtResource("1_eyx1m")]([ExtResource("2_p1nol"), ExtResource("3_ip5uj"), ExtResource("4_aixco"), ExtResource("5_5lx8o"), ExtResource("6_rvlv1"), ExtResource("7_20rwf")])
 metadata/_custom_type_script = "uid://c27hq2xl3ofjw"

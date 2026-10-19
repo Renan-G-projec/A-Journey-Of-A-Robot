@@ -6,8 +6,8 @@
 [ext_resource type="Resource" uid="uid://csjcxp6vg1j0j" path="res://features/ores/cut/topaz_cut.tres" id="2_3uvd3"]
 [ext_resource type="Resource" uid="uid://etabvbhfoajw" path="res://features/ores/cut/emerald_cut.tres" id="3_h0v16"]
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_uf7fn"]
-[ext_resource type="Resource" uid="uid://dk0yw8nbk34bo" path="res://features/ores/melted/ruby_melted.tres" id="4_hxrym"]
 [ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="4_pvb55"]
+[ext_resource type="Resource" uid="uid://cx0cv7c4c0b38" path="res://features/ores/raw/ruby_ore.tres" id="4_x2deg"]
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="5_egi7i"]
 [ext_resource type="Script" uid="uid://crbcquplyyvye" path="res://features/inventory/inventory.gd" id="5_qkbb4"]
 [ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_6co1m"]
@@ -33,7 +33,7 @@ script = ExtResource("5_qkbb4")
 data = Dictionary[ExtResource("1_hxrym"), int]({
 ExtResource("2_3uvd3"): 8,
 ExtResource("3_h0v16"): 5,
-ExtResource("4_hxrym"): 5
+ExtResource("4_x2deg"): 5
 })
 metadata/_custom_type_script = "uid://crbcquplyyvye"
 

@@ -5,23 +5,25 @@
 [ext_resource type="Resource" uid="uid://driwf6ps5jk2n" path="res://features/techtree/data/copper_techs/copper_smelter.tres" id="3_2udi8"]
 [ext_resource type="Texture2D" uid="uid://bo0kepnwkipta" path="res://assets/sprites/furnanceStage1TechTree.png" id="5_151rp"]
 [ext_resource type="Texture2D" uid="uid://b8olycbo7hbq1" path="res://assets/sprites/jetpackStage1TechTree.png" id="5_cpugh"]
+[ext_resource type="Texture2D" uid="uid://dwf1rduokp5m1" path="res://assets/sprites/bagStage1TechTree.png" id="6_eljxr"]
 [ext_resource type="Resource" uid="uid://dgpbmr8om8ut1" path="res://features/techtree/data/copper_techs/copper_jetpack.tres" id="6_itwcw"]
-[ext_resource type="Texture2D" uid="uid://c6mftpy0qr761" path="res://assets/sprites/platformStage1TechTree.png" id="7_88x5w"]
 [ext_resource type="Texture2D" uid="uid://bb8scfhg75f3b" path="res://assets/sprites/drillStage1TechTree.png" id="7_bsxbt"]
 [ext_resource type="Texture2D" uid="uid://dik7ffx68mwl8" path="res://assets/sprites/furnanceStage2TechTree.png" id="8_36a4q"]
-[ext_resource type="Resource" uid="uid://b1jx72qujiqcx" path="res://features/techtree/data/copper_techs/copper_platform.tres" id="8_f3t2f"]
+[ext_resource type="Resource" uid="uid://bgfl6p8jf5ma3" path="res://features/techtree/data/copper_techs/copper_bag.tres" id="8_wcopp"]
 [ext_resource type="Texture2D" uid="uid://dulwhfvb7mvrj" path="res://assets/sprites/jetpackStage2TechTree.png" id="9_kdtvn"]
 [ext_resource type="Resource" uid="uid://dqwdf7o8gbnmx" path="res://features/techtree/data/copper_techs/copper_drill.tres" id="10_rgamx"]
+[ext_resource type="Texture2D" uid="uid://db5oj43a05p5r" path="res://assets/sprites/bagStage2TechTree.png" id="10_xofbj"]
 [ext_resource type="Texture2D" uid="uid://buctxpe6gi2xg" path="res://assets/sprites/drllStage2TechTree.png" id="11_weedu"]
 [ext_resource type="Resource" uid="uid://c42o8u6yp0mis" path="res://features/techtree/data/iron_techs/iron_smelter.tres" id="12_r1ko8"]
 [ext_resource type="Texture2D" uid="uid://fitj62k27ycr" path="res://assets/sprites/furnanceStage3TechTree.png" id="12_tuots"]
 [ext_resource type="Texture2D" uid="uid://csgtvg2vtxfom" path="res://assets/sprites/jetpackStage3TechTree.png" id="13_dy5y6"]
 [ext_resource type="Resource" uid="uid://b2icemsxwbp88" path="res://features/techtree/data/iron_techs/iron_jetpack.tres" id="14_2dni8"]
-[ext_resource type="Texture2D" uid="uid://2balxq11nqmd" path="res://assets/sprites/platformStage2TechTree.png" id="15_gljmv"]
+[ext_resource type="Texture2D" uid="uid://dp6knvsamggfh" path="res://assets/sprites/bagStage3TechTree.png" id="14_6vd06"]
 [ext_resource type="Texture2D" uid="uid://cxi62wc3lqc3x" path="res://assets/sprites/drllStage3TechTree.png" id="15_s77i4"]
-[ext_resource type="Resource" uid="uid://fraw0ruwg41n" path="res://features/techtree/data/iron_techs/iron_platform.tres" id="16_8nyot"]
+[ext_resource type="Resource" uid="uid://jvjj8fbebp8n" path="res://features/techtree/data/iron_techs/iron_bag.tres" id="16_ju2nq"]
 [ext_resource type="Texture2D" uid="uid://dgskk5ojdbks6" path="res://assets/sprites/furnanceStage4TechTree.png" id="16_lu64l"]
 [ext_resource type="Texture2D" uid="uid://dtnkbypucphhk" path="res://assets/sprites/jetpackStage4TechTree.png" id="17_fpbmg"]
+[ext_resource type="Texture2D" uid="uid://noa0jcaeji2t" path="res://assets/sprites/bagStage4TechTree.png" id="18_0ov8m"]
 [ext_resource type="Resource" uid="uid://cbqiv1e3l1wyo" path="res://features/techtree/data/iron_techs/iron_drill.tres" id="18_t8r16"]
 [ext_resource type="Texture2D" uid="uid://cb2if5typ4pg8" path="res://assets/sprites/placeHolder1.png" id="18_wcopp"]
 [ext_resource type="Texture2D" uid="uid://s28uqm8hotae" path="res://assets/sprites/drillStage4TechTree.png" id="19_4kq22"]
@@ -29,25 +31,23 @@
 [ext_resource type="Resource" uid="uid://g6eiv3wwpig1" path="res://features/techtree/data/topaz_techs/topaz_smelter.tres" id="20_tx5ix"]
 [ext_resource type="Texture2D" uid="uid://8i8pnfnw32ld" path="res://assets/sprites/jetpackStage5TechTree.png" id="21_wcopp"]
 [ext_resource type="Resource" uid="uid://fbhht0lh8g27" path="res://features/techtree/data/topaz_techs/topaz_cutter.tres" id="22_gtv0f"]
+[ext_resource type="Texture2D" uid="uid://by0ek838h1afg" path="res://assets/sprites/bagStage5TechTree.png" id="22_rgamx"]
 [ext_resource type="Texture2D" uid="uid://b1gdgkwamo4ey" path="res://assets/sprites/drillStage5TechTree.png" id="23_r1ko8"]
 [ext_resource type="Texture2D" uid="uid://0kwrqrjur3y5" path="res://assets/sprites/rocketSilo.png" id="24_s77i4"]
 [ext_resource type="Resource" uid="uid://b7bxsla881rsw" path="res://features/techtree/data/topaz_techs/topaz_jetpack.tres" id="24_xf8pf"]
 [ext_resource type="Texture2D" uid="uid://drfoiylkbd8ec" path="res://assets/sprites/rocketEngine.png" id="25_lu64l"]
-[ext_resource type="Texture2D" uid="uid://b3lpkd7mell8g" path="res://assets/sprites/platformStage3TechTree.png" id="25_xyya8"]
+[ext_resource type="Resource" uid="uid://ubvw5girbbg7" path="res://features/techtree/data/topaz_techs/topaz_bag.tres" id="26_dxrby"]
 [ext_resource type="Texture2D" uid="uid://b7sh11yal7on2" path="res://assets/sprites/rocketFuel.png" id="26_fpbmg"]
-[ext_resource type="Resource" uid="uid://crve3uhc3peb" path="res://features/techtree/data/topaz_techs/topaz_platform.tres" id="26_t4unr"]
 [ext_resource type="Resource" uid="uid://bqiri7xjkride" path="res://features/techtree/data/topaz_techs/topaz_drill.tres" id="28_lkxu1"]
 [ext_resource type="Resource" uid="uid://dmldawsx1r0r6" path="res://features/techtree/data/emerald_techs/emerald_smelter.tres" id="30_88x5w"]
 [ext_resource type="Resource" uid="uid://yo35qhnm88yn" path="res://features/techtree/data/emerald_techs/emerald_cutter.tres" id="31_f3t2f"]
 [ext_resource type="Resource" uid="uid://dl6sxsih00a21" path="res://features/techtree/data/emerald_techs/emerald_jetpack.tres" id="33_gljmv"]
-[ext_resource type="Texture2D" uid="uid://bkvgp8ml8lb42" path="res://assets/sprites/platformStage4TechTree.png" id="34_y1wcl"]
-[ext_resource type="Resource" uid="uid://bmfbqlbn7ici7" path="res://features/techtree/data/emerald_techs/emerald_platform.tres" id="35_7hyla"]
+[ext_resource type="Resource" uid="uid://cqafj7pf11qfj" path="res://features/techtree/data/emerald_techs/emerald_bag.tres" id="35_8nyot"]
 [ext_resource type="Resource" uid="uid://br1gitgk8vkvm" path="res://features/techtree/data/emerald_techs/emerald_drill.tres" id="37_xyya8"]
 [ext_resource type="Resource" uid="uid://bbyi68fytgoti" path="res://features/techtree/data/ruby_techs/ruby_smelter.tres" id="39_t4unr"]
 [ext_resource type="Resource" uid="uid://d0lp78edeqolk" path="res://features/techtree/data/ruby_techs/ruby_cutter.tres" id="40_y1wcl"]
 [ext_resource type="Resource" uid="uid://citcb51wfrimk" path="res://features/techtree/data/ruby_techs/ruby_jetpack.tres" id="42_7hyla"]
-[ext_resource type="Texture2D" uid="uid://5apfnjwyu65" path="res://assets/sprites/platformStage5TechTree.png" id="43_ldnw0"]
-[ext_resource type="Resource" uid="uid://dcsp7hfv5bt3v" path="res://features/techtree/data/ruby_techs/ruby_platform.tres" id="44_yv40x"]
+[ext_resource type="Resource" uid="uid://b4j5i8c4364n8" path="res://features/techtree/data/ruby_techs/ruby_bag.tres" id="44_ldnw0"]
 [ext_resource type="Resource" uid="uid://c2t0kx56rp2dg" path="res://features/techtree/data/ruby_techs/ruby_drill.tres" id="46_yv40x"]
 [ext_resource type="Resource" uid="uid://b7n68xfd645kl" path="res://features/techtree/data/rocket_parts/rocket_silo.tres" id="48_to7t2"]
 [ext_resource type="Resource" uid="uid://crdfrsiymqkyc" path="res://features/techtree/data/rocket_parts/rocket_engine.tres" id="50_mksjx"]
@@ -105,8 +105,8 @@ offset_right = -20.0
 offset_bottom = 68.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-icon = ExtResource("7_88x5w")
-upgrade = ExtResource("8_f3t2f")
+icon = ExtResource("6_eljxr")
+upgrade = ExtResource("8_wcopp")
 extra_parents = [NodePath("../CopperDrill/IronSmelter")]
 
 [node name="CopperDrill" parent="Root/CopperSmelter" unique_id=770310295 node_paths=PackedStringArray("extra_parents") instance=ExtResource("1_8kas3")]
@@ -148,8 +148,8 @@ offset_right = -27.0
 offset_bottom = 70.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-icon = ExtResource("15_gljmv")
-upgrade = ExtResource("16_8nyot")
+icon = ExtResource("10_xofbj")
+upgrade = ExtResource("16_ju2nq")
 extra_parents = [NodePath("../IronDrill/TopazSmelter")]
 
 [node name="IronDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter" unique_id=1484869998 instance=ExtResource("1_8kas3")]
@@ -199,8 +199,8 @@ offset_right = -28.0
 offset_bottom = 65.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-icon = ExtResource("25_xyya8")
-upgrade = ExtResource("26_t4unr")
+icon = ExtResource("14_6vd06")
+upgrade = ExtResource("26_dxrby")
 extra_parents = [NodePath("../TopazDrill/EmeraldSmelter")]
 
 [node name="TopazDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter" unique_id=641877411 instance=ExtResource("1_8kas3")]
@@ -250,8 +250,8 @@ offset_right = -28.0
 offset_bottom = 63.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-icon = ExtResource("34_y1wcl")
-upgrade = ExtResource("35_7hyla")
+icon = ExtResource("18_0ov8m")
+upgrade = ExtResource("35_8nyot")
 extra_parents = [NodePath("../EmeraldDrill/RubySmelter")]
 
 [node name="EmeraldDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter" unique_id=1087251094 instance=ExtResource("1_8kas3")]
@@ -300,8 +300,8 @@ offset_right = -28.0
 offset_bottom = 80.0
 theme_override_colors/icon_pressed_color = Color(0.21176471, 0.21568628, 0.21568628, 1)
 theme_override_colors/icon_hover_color = Color(0.827451, 0.827451, 0.827451, 1)
-icon = ExtResource("43_ldnw0")
-upgrade = ExtResource("44_yv40x")
+icon = ExtResource("22_rgamx")
+upgrade = ExtResource("44_ldnw0")
 
 [node name="RubyDrill" parent="Root/CopperSmelter/CopperDrill/IronSmelter/IronDrill/TopazSmelter/TopazCutter/TopazDrill/EmeraldSmelter/EmeraldCutter/EmeraldDrill/RubySmelter/RubyCutter" unique_id=831173161 instance=ExtResource("1_8kas3")]
 layout_mode = 0

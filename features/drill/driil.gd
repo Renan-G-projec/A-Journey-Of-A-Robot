@@ -6,20 +6,12 @@ extends Node2D
 ## This code mixes particle emission with raycasting and complex behavior
 ## All the particle-related code shall be moved soon to it's own script
 
-<<<<<<< Updated upstream
 var copper_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/copper_techs/copper_drill.tres")
 var iron_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/iron_techs/iron_drill.tres")
 var topaz_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/topaz_techs/topaz_drill.tres")
 var emerald_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/emerald_techs/emerald_drill.tres")
 var ruby_drill_tech: TechtreeUpgrade = preload("res://features/techtree/data/ruby_techs/ruby_drill.tres")
 
-=======
-var copper_drill: TechtreeUpgrade = preload("res://features/techtree/data/copper_techs/copper_drill.tres")
-var iron_drill: TechtreeUpgrade = preload("res://features/techtree/data/iron_techs/iron_drill.tres")
-var topaz_drill: TechtreeUpgrade = preload("res://features/techtree/data/topaz_techs/topaz_drill.tres")
-var emerald_drill: TechtreeUpgrade = preload("res://features/techtree/data/emerald_techs/emerald_drill.tres")
-var ruby_drill: TechtreeUpgrade = preload("res://features/techtree/data/ruby_techs/ruby_drill.tres")
->>>>>>> Stashed changes
 
 @onready var raycast: RayCast2D = $RayCast2D
 @onready var sprite: Node2D = $Pivot
@@ -28,8 +20,8 @@ var ruby_drill: TechtreeUpgrade = preload("res://features/techtree/data/ruby_tec
 @onready var particles: GPUParticles2D = $GPUParticles2D
 
 # Size in tiles
-@export var range: int
-@export var damage: float
+@export var range: int = 4
+@export var damage: float = 4
 @export var select_lerp_effect: Vector2 = Vector2(1.4, 1.4)
 @export var select_lerp_effect_step: float = 0.2
 
@@ -96,11 +88,7 @@ func mine() -> void:
 			selected_block_effect.queue_redraw()
 			update_selected_block_effect(true, Vector2(0.7, 0.7))
 			facing_block_animation_timer = facing_block_animation_time
-<<<<<<< Updated upstream
 
-=======
-		
->>>>>>> Stashed changes
 func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = select_lerp_effect, step: float = select_lerp_effect_step) -> void:
 	selected_block_effect.visible = is_facing_block
 	if (!is_facing_block): return
@@ -108,11 +96,7 @@ func update_selected_block_effect(reset_lerp: bool, effect_scale: Vector2 = sele
 		selected_block_effect.scale = effect_scale
 	selected_block_effect.scale.x = lerp(selected_block_effect.scale.x, 1.0, step)
 	selected_block_effect.scale.y = lerp(selected_block_effect.scale.y, 1.0, step)
-<<<<<<< Updated upstream
 
-=======
-	
->>>>>>> Stashed changes
 func update_timers(delta: float) -> void:
 	facing_block_animation_timer -= delta
 
@@ -133,30 +117,6 @@ func start_emitting_particles() -> void:
 
 
 func _process(_delta: float) -> void:
-	if TechtreeManager.has_upgrade(ruby_drill):
-		damage = 14
-		range = 9
-		print("Ruby Drill")
-	elif TechtreeManager.has_upgrade(emerald_drill):
-		damage = 12
-		range = 8
-		print("Emerald Drill")
-	elif TechtreeManager.has_upgrade(topaz_drill):
-		damage = 10
-		range = 7
-		print("Topaz Drill")
-	elif TechtreeManager.has_upgrade(iron_drill):
-		damage = 8
-		range = 6
-		print("Iron Drill")
-	elif TechtreeManager.has_upgrade(copper_drill):
-		damage = 6
-		range = 5
-		print("Copper Drill")
-	else: 
-		damage = 4 
-		range = 4 
-		print("Regular Drill")
 	if particles.emitting:
 		var process_material: ShaderMaterial = particles.process_material as ShaderMaterial
 		if process_material:
