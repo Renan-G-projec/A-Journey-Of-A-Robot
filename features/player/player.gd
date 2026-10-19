@@ -110,8 +110,10 @@ func _update_inputs(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	if Input.is_action_just_pressed("PutFacingBlock") && block_inventory.get(current_placing_block, 0) > 0:
-		block_inventory[current_placing_block] -= 1
-		block_placer.place_block(current_placing_block)
+		var success: bool = block_placer.place_block(current_placing_block)
+		if success:
+			block_inventory[current_placing_block] -= 1
+			$BlockSelection.set_block_quantity(current_placing_block, block_inventory[current_placing_block])
 
 func _update_ui_inputs() -> void:
 	if Input.is_action_just_pressed("BuildingModeGoRight"): current_placing_location.x += 1
